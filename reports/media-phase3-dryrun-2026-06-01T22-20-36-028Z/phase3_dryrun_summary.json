@@ -1,0 +1,33 @@
+{
+  "runId": "media-phase3-dryrun-2026-06-01T22-20-36-028Z",
+  "generatedAt": "2026-06-01T22:20:36.341Z",
+  "mode": "dry-run-read-only",
+  "totals": {
+    "mediaAssetRows": 524,
+    "filesystemFiles": 435,
+    "currentNodeMediaReferences": 4547,
+    "remainingWordpressReferences": 5662,
+    "candidateRows": 7796
+  },
+  "candidateCounts": {
+    "blocked_cleanup_risk": 102,
+    "retain": 152,
+    "cleanup_candidate_review_only": 283,
+    "blocked_fix_required": 1597,
+    "retain_historical_order_snapshot": 5662
+  },
+  "recommendationCounts": {
+    "do_not_delete_record_until_missing_file_investigated": 102,
+    "retain_no_action": 151,
+    "candidate_for_future_media_library_cleanup_after_manual_approval": 270,
+    "retain_admin_upload": 1,
+    "candidate_for_future_filesystem_review_after_media_library_check": 13,
+    "investigate_broken_node_media_reference": 1597,
+    "do_not_rewrite_order_history": 5662
+  },
+  "safeguards": [
+    "No database writes executed",
+    "No filesystem changes executed",
+    "All cleanup candidates are review-only until explicit approval"
+  ]
+}

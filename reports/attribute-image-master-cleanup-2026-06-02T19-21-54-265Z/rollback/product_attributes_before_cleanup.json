@@ -1,0 +1,115 @@
+[
+  {
+    "id": 2,
+    "productId": 390050,
+    "attributeId": 18,
+    "activeValueIds": [
+      214,
+      215,
+      216
+    ],
+    "isImageMaster": 1,
+    "sortOrder": 1,
+    "createdAt": "2026-05-01T11:51:09.000Z"
+  },
+  {
+    "id": 7,
+    "productId": 390051,
+    "attributeId": 18,
+    "activeValueIds": [
+      276,
+      277,
+      278,
+      279,
+      284,
+      283,
+      280,
+      282,
+      281
+    ],
+    "isImageMaster": 1,
+    "sortOrder": 1,
+    "createdAt": "2026-05-01T11:51:20.000Z"
+  },
+  {
+    "id": 10,
+    "productId": 390052,
+    "attributeId": 18,
+    "activeValueIds": [
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266
+    ],
+    "isImageMaster": 1,
+    "sortOrder": 1,
+    "createdAt": "2026-05-01T11:51:36.000Z"
+  },
+  {
+    "id": 13,
+    "productId": 390053,
+    "attributeId": 18,
+    "activeValueIds": [
+      248,
+      249,
+      250,
+      251,
+      252
+    ],
+    "isImageMaster": 1,
+    "sortOrder": 1,
+    "createdAt": "2026-05-01T11:51:52.000Z"
+  },
+  {
+    "id": 16,
+    "productId": 390054,
+    "attributeId": 18,
+    "activeValueIds": [
+      238,
+      239,
+      240,
+      241,
+      242
+    ],
+    "isImageMaster": 1,
+    "sortOrder": 1,
+    "createdAt": "2026-05-01T11:52:13.000Z"
+  },
+  {
+    "id": 22,
+    "productId": 390056,
+    "attributeId": 18,
+    "activeValueIds": [
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228
+    ],
+    "isImageMaster": 1,
+    "sortOrder": 1,
+    "createdAt": "2026-05-01T11:53:15.000Z"
+  },
+  {
+    "id": 25,
+    "productId": 390057,
+    "attributeId": 18,
+    "activeValueIds": [
+      294,
+      295,
+      296
+    ],
+    "isImageMaster": 1,
+    "sortOrder": 1,
+    "createdAt": "2026-05-01T11:53:40.000Z"
+  }
+]

@@ -1,0 +1,794 @@
+[
+  {
+    "url": "/media/wordpress-migration/2021/07/Details-classic-157-gray-gold.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2021/07/Details-classic-157-gray-gold.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "96439",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/Details-classic-157-marble-gold.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2021/07/Details-classic-157-marble-gold.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "103048",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/big-capsules-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2021/07/big-capsules-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "258758",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "89144",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "141366",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "232658",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BEECH-DETAILS-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-BEECH-DETAILS-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "133473",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BEIGE-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-BEIGE-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "90449",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BLACK-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-BLACK-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "69669",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BLUE-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-BLUE-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "73003",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-GREEN-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-GREEN-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "78201",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-GREY-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-GREY-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "78527",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-PINK-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-PINK-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "93039",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-RED-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-RED-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "75921",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-WHITE-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-112-WHITE-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "88424",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "103373",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BLUE-DETAILS-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-BLUE-DETAILS-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "95633",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BLUE-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-BLUE-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "72899",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-GRAY-DETAILS-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-GRAY-DETAILS-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "99843",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-GRAY-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-GRAY-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "76543",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-GREEN-DETAILS-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-GREEN-DETAILS-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "98142",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-GREEN-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-GREEN-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "78464",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-PINK-DETAILS-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-PINK-DETAILS-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "110518",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-PINK-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-PINK-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "90765",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-RED-DETAILS-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-RED-DETAILS-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "96979",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-RED-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-RED-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "73519",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-WHITE-DETAILS-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-WHITE-DETAILS-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "105028",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-WHITE-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-167-WHITE-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "88424",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-BLACK-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-62-BLACK-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "58322",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-BLUE-DETAILS-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-62-BLUE-DETAILS-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "58579",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-GREEN-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-62-GREEN-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "60083",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-PINK-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-62-PINK-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "65940",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-RED-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-62-RED-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "58388",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-WHITE-DETAILS.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/COUNTRY-62-WHITE-DETAILS.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "62818",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-2-BROWN-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/CURVE-2-BROWN-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "195589",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-2-DARK-RED-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/CURVE-2-DARK-RED-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "195098",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-2-LIGHT-BLUE-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/CURVE-2-LIGHT-BLUE-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "195603",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-2-Navy-Blue-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/CURVE-2-Navy-Blue-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "187942",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-2-ROYAL-GREEN-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/CURVE-2-ROYAL-GREEN-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "192127",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-BEECH.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-BEECH.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "138061",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-BEIGE.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-BEIGE.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "134263",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-BLUE.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-BLUE.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "111393",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-GRAY.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-GRAY.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "117034",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-GREEN.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-GREEN.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "121721",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-PINK.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-PINK.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "122250",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-RED.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-RED.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "109262",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-WHITE-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-WHITE-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "127270",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-WHITE.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-167-WHITE.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "88424",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BEECH.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BEECH.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "138061",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BEIGE.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BEIGE.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "134263",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BLACK.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BLACK.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "104370",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BLUE.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-BLUE.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "111393",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-GREEN.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-GREEN.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "121721",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-PINK.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-PINK.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "122250",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-RED.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-RED.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "109262",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-WHITE.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-COUNTRY-62-WHITE.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "127270",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-BROWN-B.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-BROWN-B.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "108181",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-BROWN.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-BROWN.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "70674",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-DARK-RED-B.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-DARK-RED-B.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "107042",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-DARK-RED.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-DARK-RED.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "75372",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-LIGHT-BLUE-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-LIGHT-BLUE-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "75790",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-LIGHT-BLUE-B.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-LIGHT-BLUE-B.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "140248",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-NAVY-BLUE-B.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-NAVY-BLUE-B.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "110932",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-NAVY-BLUE.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-NAVY-BLUE.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "72490",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-ROYAL-GREEN-B.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-ROYAL-GREEN-B.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "114184",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/DETAILS-CURVE-ROYAL-GREEN.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/DETAILS-CURVE-ROYAL-GREEN.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "71733",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-beige-3.jpeg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/01/Roshina-1-beige-3.jpeg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "199250",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-light-green-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/01/Roshina-1-light-green-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "38255",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-light-green-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/01/Roshina-1-light-green-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "102560",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-light-green-3.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/01/Roshina-1-light-green-3.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "183382",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-light-green-4.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/01/Roshina-1-light-green-4.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "216171",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-light-green-5.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/01/Roshina-1-light-green-5.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "204862",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/country-62-4x4-1-scaled.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/08/country-62-4x4-1-scaled.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "242641",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/09/221121-model-2.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/09/221121-model-2.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "98159",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/09/chandeler-1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/09/chandeler-1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "1703628",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR1-gray-opened.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR1-gray-opened.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "189464",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR1-gray-opened.webp",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR1-gray-opened.webp",
+    "ok": true,
+    "status": 200,
+    "contentLength": "74338",
+    "contentType": "image/webp",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-black-closed.webp",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR3-black-closed.webp",
+    "ok": true,
+    "status": 200,
+    "contentLength": "122900",
+    "contentType": "image/webp",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-black-opened.webp",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR3-black-opened.webp",
+    "ok": true,
+    "status": 200,
+    "contentLength": "131698",
+    "contentType": "image/webp",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-gray-closed.webp",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR3-gray-closed.webp",
+    "ok": true,
+    "status": 200,
+    "contentLength": "124744",
+    "contentType": "image/webp",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-gray-opened.webp",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR3-gray-opened.webp",
+    "ok": true,
+    "status": 200,
+    "contentLength": "134992",
+    "contentType": "image/webp",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR4-black.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR4-black.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "159735",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR5-black.webp",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR5-black.webp",
+    "ok": true,
+    "status": 200,
+    "contentLength": "78442",
+    "contentType": "image/webp",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR6-black.webp",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2023/12/MR6-black.webp",
+    "ok": true,
+    "status": 200,
+    "contentLength": "37640",
+    "contentType": "image/webp",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/GFX3678-Edit-websize.png",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2025/02/GFX3678-Edit-websize.png",
+    "ok": true,
+    "status": 200,
+    "contentLength": "2085179",
+    "contentType": "image/png",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mubkhar-coil-holder.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2025/02/Mubkhar-coil-holder.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "1633743",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/black-mubkhar1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2025/02/black-mubkhar1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "92881",
+    "contentType": "image/jpeg",
+    "error": ""
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/petrol-mubkhar1.jpg",
+    "httpUrl": "https://app.coveinterior.com/media/wordpress-migration/2025/02/petrol-mubkhar1.jpg",
+    "ok": true,
+    "status": 200,
+    "contentLength": "97237",
+    "contentType": "image/jpeg",
+    "error": ""
+  }
+]

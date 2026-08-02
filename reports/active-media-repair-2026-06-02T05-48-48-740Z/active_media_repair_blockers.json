@@ -1,0 +1,156 @@
+[
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0076",
+    "url": "/media/wordpress-migration/2023/10/Secret-Potion-",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390131"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0076",
+    "url": "/media/wordpress-migration/2023/10/Secret-Potion-",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390132"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0076",
+    "url": "/media/wordpress-migration/2023/10/Secret-Potion-",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390133"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390169"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390170"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390171"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390172"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390173"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390174"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390175"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390176"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390177"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "products",
+      "column": "images",
+      "id": "390178"
+    },
+    "representation": "json"
+  },
+  {
+    "type": "db_fix_target_url_not_found_in_record",
+    "repairId": "AMR-0090",
+    "url": "/media/wordpress-migration/2024/01/",
+    "ref": {
+      "table": "categories",
+      "column": "image",
+      "id": "360106"
+    },
+    "representation": "plain_string_no_match"
+  }
+]

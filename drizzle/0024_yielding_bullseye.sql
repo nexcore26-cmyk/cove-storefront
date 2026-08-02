@@ -1,0 +1,2 @@
+ALTER TABLE `store_settings` MODIFY COLUMN `paymentGateway` enum('myfatoorah','cod') NOT NULL DEFAULT 'myfatoorah';--> statement-breakpoint
+ALTER TABLE `store_settings` ADD `codEnabled` boolean DEFAULT false NOT NULL;

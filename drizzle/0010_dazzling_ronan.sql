@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `invoiceKey` varchar(512);

@@ -1,0 +1,395 @@
+[
+  {
+    "table": "products",
+    "id": "390178",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D8%B3%D9%85%D8%A7%D8%A1-%D8%A7%D9%84%D9%84%D9%87-%D8%A7%D9%84%D8%AD%D8%B3%D9%86%D9%89-%D8%A7%D9%84%D8%B1%D8%A8%D8%A7%D8%B9%D9%8A%D8%A9-450.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-اسماء-الله-الحسنى-الرباعية-450.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390177",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D8%B7%D8%A7%D9%88%D9%88%D8%B3-150.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-الطاووس-150.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390176",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-130.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-الأبواب-130.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390175",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%AA%D9%83%D8%B1%D8%A7%D8%B1-%D8%A7%D9%84%D9%84%D9%87-130.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-تكرار-الله-130.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390174",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D8%A8%D8%B3%D9%85%D9%84%D8%A9-60.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-البسملة-60.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390173",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D8%B9%D9%81%D9%88-150.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-العفو-150.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390172",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D9%83%D9%86-%D8%AC%D9%85%D9%8A%D9%84%D8%A7%D9%8B-60.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-كن-جميلاً-60.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390171",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D9%82-140.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-الفلق-140.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390170",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D9%83%D8%B1%D8%B3%D9%8A-150.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-الكرسي-150.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390169",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D9%84%D8%A7-%D8%A7%D9%84%D9%87-%D8%A7%D9%84%D8%A7-%D8%A7%D9%84%D9%84%D9%87-130.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2024/01/لوحة-لا-اله-الا-الله-130.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390137",
+    "column": "images",
+    "oldValue": "[\"/media/admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2023/11/dark-paint.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390133",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2023/10/Secret-Potion-%E2%80%93-N3.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2023/10/Secret-Potion-–-N3.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390132",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2023/10/Secret-Potion-%E2%80%93-N1.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "products",
+    "id": "390131",
+    "column": "images",
+    "oldValue": "[\"/media/wordpress-migration/2023/10/Secret-Potion-%E2%80%93-N1.jpeg\"]",
+    "newValue": "[\"/media/wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg\"]",
+    "actionType": "set_product_gallery",
+    "detail": {
+      "imageCount": 1
+    }
+  },
+  {
+    "table": "categories",
+    "id": "360106",
+    "column": "image",
+    "oldValue": "/media/wordpress-migration/2024/01/%D9%84%D9%88%D8%AD%D8%A9-%D8%A7%D9%84%D8%A8%D8%B3%D9%85%D9%84%D8%A9-60.webp",
+    "newValue": "/media/wordpress-migration/2024/01/لوحة-البسملة-60.webp",
+    "actionType": "set_category_image",
+    "detail": {
+      "slug": "store-vendors"
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30001,
+    "column": "config",
+    "oldValue": "{\"slides\":[{\"image\":\"https://coveinterior.com/wp-content/uploads/2022/07/3-1.jpg\",\"ctaLink\":\"/pages/projects\",\"titleAr\":\"عن كوف للتصميم الداخلي\",\"titleEn\":\"About Cove Interior\",\"ctaTextAr\":\"معرض أعمالنا\",\"ctaTextEn\":\"Our Portfolio\",\"subtitleAr\":\"نصنع مساحات تُلهم منذ عام 2007\",\"subtitleEn\":\"Crafting spaces that inspire since 2007\"}]}",
+    "newValue": "{\"slides\":[{\"image\":\"/media/wordpress-migration/2022/07/3-1.jpg\",\"ctaLink\":\"/pages/projects\",\"titleAr\":\"عن كوف للتصميم الداخلي\",\"titleEn\":\"About Cove Interior\",\"ctaTextAr\":\"معرض أعمالنا\",\"ctaTextEn\":\"Our Portfolio\",\"subtitleAr\":\"نصنع مساحات تُلهم منذ عام 2007\",\"subtitleEn\":\"Crafting spaces that inspire since 2007\"}]}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/3-1.jpg",
+          "to": "/media/wordpress-migration/2022/07/3-1.jpg",
+          "count": 1,
+          "filename": "3-1.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30005,
+    "column": "config",
+    "oldValue": "{\"slides\":[{\"image\":\"https://coveinterior.com/wp-content/uploads/2022/07/main-2-1.jpg\",\"ctaLink\":\"/pages/contact\",\"titleAr\":\"الخدمات المقدمة للعملاء\",\"titleEn\":\"Client Services\",\"ctaTextAr\":\"تواصل معنا\",\"ctaTextEn\":\"Contact Us\",\"subtitleAr\":\"تصميم داخلي، إشراف، تأثيث واستشارات\",\"subtitleEn\":\"Interior design, supervision, furnishing & consultancy\"}]}",
+    "newValue": "{\"slides\":[{\"image\":\"/media/wordpress-migration/2022/07/main-2-1.jpg\",\"ctaLink\":\"/pages/contact\",\"titleAr\":\"الخدمات المقدمة للعملاء\",\"titleEn\":\"Client Services\",\"ctaTextAr\":\"تواصل معنا\",\"ctaTextEn\":\"Contact Us\",\"subtitleAr\":\"تصميم داخلي، إشراف، تأثيث واستشارات\",\"subtitleEn\":\"Interior design, supervision, furnishing & consultancy\"}]}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/main-2-1.jpg",
+          "to": "/media/wordpress-migration/2022/07/main-2-1.jpg",
+          "count": 1,
+          "filename": "main-2-1.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30012,
+    "column": "config",
+    "oldValue": "{\"slides\":[{\"image\":\"https://coveinterior.com/wp-content/uploads/2022/07/main-2-1.jpg\",\"titleAr\":\"معرض الأعمال\",\"titleEn\":\"Company Portfolio\",\"subtitleAr\":\"تصاميم ثلاثية الأبعاد، مشاريع حقيقية ومقارنات\",\"subtitleEn\":\"3D designs, real projects & before/after comparisons\"}]}",
+    "newValue": "{\"slides\":[{\"image\":\"/media/wordpress-migration/2022/07/main-2-1.jpg\",\"titleAr\":\"معرض الأعمال\",\"titleEn\":\"Company Portfolio\",\"subtitleAr\":\"تصاميم ثلاثية الأبعاد، مشاريع حقيقية ومقارنات\",\"subtitleEn\":\"3D designs, real projects & before/after comparisons\"}]}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/main-2-1.jpg",
+          "to": "/media/wordpress-migration/2022/07/main-2-1.jpg",
+          "count": 1,
+          "filename": "main-2-1.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30013,
+    "column": "config",
+    "oldValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-2 md:grid-cols-3 gap-4 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2017/06/7.jpg\\\" alt=\\\"غرف النوم\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">غرف النوم</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/3-1.jpg\\\" alt=\\\"صالات الاستقبال\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">صالات الاستقبال</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/8.png\\\" alt=\\\"غرف الطعام\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">غرف الطعام</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/5.jpg\\\" alt=\\\"حمامات السباحة\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">حمامات السباحة</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/18.jpg\\\" alt=\\\"حمامات\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">حمامات</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/20.jpg\\\" alt=\\\"محلات تجارية\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">محلات تجارية</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-2 md:grid-cols-3 gap-4 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2017/06/7.jpg\\\" alt=\\\"Bedrooms\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Bedrooms</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/3-1.jpg\\\" alt=\\\"Hall & Living\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Hall & Living</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/8.png\\\" alt=\\\"Dining Rooms\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Dining Rooms</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/5.jpg\\\" alt=\\\"Swimming Pools\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Swimming Pools</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/18.jpg\\\" alt=\\\"Toilette – Bathroom\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Toilette – Bathroom</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/20.jpg\\\" alt=\\\"Commercial Shops\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Commercial Shops</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"فئات التصميم ثلاثي الأبعاد\",\"titleEn\":\"3D Design Categories\"}",
+    "newValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-2 md:grid-cols-3 gap-4 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2017/06/7.jpg\\\" alt=\\\"غرف النوم\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">غرف النوم</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/3-1.jpg\\\" alt=\\\"صالات الاستقبال\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">صالات الاستقبال</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/8.png\\\" alt=\\\"غرف الطعام\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">غرف الطعام</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/5.jpg\\\" alt=\\\"حمامات السباحة\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">حمامات السباحة</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/18.jpg\\\" alt=\\\"حمامات\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">حمامات</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/20.jpg\\\" alt=\\\"محلات تجارية\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">محلات تجارية</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-2 md:grid-cols-3 gap-4 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2017/06/7.jpg\\\" alt=\\\"Bedrooms\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Bedrooms</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/3-1.jpg\\\" alt=\\\"Hall & Living\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Hall & Living</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/8.png\\\" alt=\\\"Dining Rooms\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Dining Rooms</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/5.jpg\\\" alt=\\\"Swimming Pools\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Swimming Pools</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/18.jpg\\\" alt=\\\"Toilette – Bathroom\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Toilette – Bathroom</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/20.jpg\\\" alt=\\\"Commercial Shops\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-black/40 flex items-end p-4\\\"><span class=\\\"text-white font-semibold text-lg\\\">Commercial Shops</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"فئات التصميم ثلاثي الأبعاد\",\"titleEn\":\"3D Design Categories\"}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2017/06/7.jpg",
+          "to": "/media/wordpress-migration/2017/06/7.jpg",
+          "count": 2,
+          "filename": "7.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/3-1.jpg",
+          "to": "/media/wordpress-migration/2022/07/3-1.jpg",
+          "count": 2,
+          "filename": "3-1.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/8.png",
+          "to": "/media/wordpress-migration/2022/07/8.png",
+          "count": 2,
+          "filename": "8.png"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/5.jpg",
+          "to": "/media/wordpress-migration/2022/07/5.jpg",
+          "count": 2,
+          "filename": "5.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/18.jpg",
+          "to": "/media/wordpress-migration/2022/07/18.jpg",
+          "count": 2,
+          "filename": "18.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/20.jpg",
+          "to": "/media/wordpress-migration/2022/07/20.jpg",
+          "count": 2,
+          "filename": "20.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30014,
+    "column": "config",
+    "oldValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/main-2-1.jpg\\\" alt=\\\"نوون\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">نوون</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/IMG_0245.jpg\\\" alt=\\\"فيلا خاصة 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 1</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/main-1-1.jpg\\\" alt=\\\"فيلا خاصة 2\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 2</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/11/ASK4690-websize-1.jpg\\\" alt=\\\"فيلا خاصة 3\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 3</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2024/06/DSF3306-websize.jpg\\\" alt=\\\"فيلا خاصة 4\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 4</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/main-2-1.jpg\\\" alt=\\\"Nuun\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Nuun</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/IMG_0245.jpg\\\" alt=\\\"Private Villa 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 1</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/main-1-1.jpg\\\" alt=\\\"Private Villa 2\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 2</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/11/ASK4690-websize-1.jpg\\\" alt=\\\"Private Villa 3\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 3</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2024/06/DSF3306-websize.jpg\\\" alt=\\\"Private Villa 4\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 4</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"المشاريع الحقيقية\",\"titleEn\":\"Real Projects\"}",
+    "newValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/main-2-1.jpg\\\" alt=\\\"نوون\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">نوون</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/IMG_0245.jpg\\\" alt=\\\"فيلا خاصة 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 1</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/main-1-1.jpg\\\" alt=\\\"فيلا خاصة 2\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 2</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg\\\" alt=\\\"فيلا خاصة 3\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 3</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2024/06/DSF3306-websize.jpg\\\" alt=\\\"فيلا خاصة 4\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">فيلا خاصة 4</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/main-2-1.jpg\\\" alt=\\\"Nuun\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Nuun</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/IMG_0245.jpg\\\" alt=\\\"Private Villa 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 1</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/main-1-1.jpg\\\" alt=\\\"Private Villa 2\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 2</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg\\\" alt=\\\"Private Villa 3\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 3</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2024/06/DSF3306-websize.jpg\\\" alt=\\\"Private Villa 4\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Private Villa 4</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"المشاريع الحقيقية\",\"titleEn\":\"Real Projects\"}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/main-2-1.jpg",
+          "to": "/media/wordpress-migration/2022/07/main-2-1.jpg",
+          "count": 2,
+          "filename": "main-2-1.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/IMG_0245.jpg",
+          "to": "/media/wordpress-migration/2022/07/IMG_0245.jpg",
+          "count": 2,
+          "filename": "IMG_0245.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/main-1-1.jpg",
+          "to": "/media/wordpress-migration/2022/07/main-1-1.jpg",
+          "count": 2,
+          "filename": "main-1-1.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/11/ASK4690-websize-1.jpg",
+          "to": "/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg",
+          "count": 2,
+          "filename": "ASK4690-websize-1.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2024/06/DSF3306-websize.jpg",
+          "to": "/media/wordpress-migration/2024/06/DSF3306-websize.jpg",
+          "count": 2,
+          "filename": "DSF3306-websize.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30015,
+    "column": "config",
+    "oldValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/1-feature-ar.jpg\\\" alt=\\\"مقارنة 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">مقارنة 1</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/1.png\\\" alt=\\\"Comparison 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Comparison 1</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"ثلاثي الأبعاد مقابل الحقيقي\",\"titleEn\":\"3D vs Real — Before & After\"}",
+    "newValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/1-feature-ar.jpg\\\" alt=\\\"مقارنة 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">مقارنة 1</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/1.png\\\" alt=\\\"Comparison 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Comparison 1</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"ثلاثي الأبعاد مقابل الحقيقي\",\"titleEn\":\"3D vs Real — Before & After\"}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/1.png",
+          "to": "/media/wordpress-migration/2022/07/1.png",
+          "count": 1,
+          "filename": "1.png"
+        }
+      ]
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30016,
+    "column": "config",
+    "oldValue": "{\"slides\":[{\"image\":\"https://coveinterior.com/wp-content/uploads/2022/07/cove-events.jpg\",\"titleAr\":\"الفعاليات\",\"titleEn\":\"Events\",\"subtitleAr\":\"معارض، منتديات ومقابلات إعلامية\",\"subtitleEn\":\"Exhibitions, forums, and media appearances\"}]}",
+    "newValue": "{\"slides\":[{\"image\":\"/media/wordpress-migration/2022/07/cove-events.jpg\",\"titleAr\":\"الفعاليات\",\"titleEn\":\"Events\",\"subtitleAr\":\"معارض، منتديات ومقابلات إعلامية\",\"subtitleEn\":\"Exhibitions, forums, and media appearances\"}]}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/cove-events.jpg",
+          "to": "/media/wordpress-migration/2022/07/cove-events.jpg",
+          "count": 1,
+          "filename": "cove-events.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "table": "page_blocks",
+    "id": 30017,
+    "column": "config",
+    "oldValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg\\\" alt=\\\"دعوى من شركة حسن أبل\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">دعوى من شركة حسن أبل</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Engineers-Without-Borders-Forum-.jpg\\\" alt=\\\"منتدى مهندسون بلا حدود\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">منتدى مهندسون بلا حدود</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Alawatan-TV-Interview-1-2.jpg\\\" alt=\\\"مقابلة ملعب الوطن\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">مقابلة ملعب الوطن</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Visitors-1.jpg\\\" alt=\\\"صور تذكارية مع شخصيات مختلفة\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">صور تذكارية مع شخصيات مختلفة</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Italy-Meeting.jpg\\\" alt=\\\"الملتقى الإيطالي\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">الملتقى الإيطالي</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Conference-in-Kuwait-2.jpg\\\" alt=\\\"صور مؤتمر (الكويت)\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">صور مؤتمر (الكويت)</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg\\\" alt=\\\"Special Invitation From Hasan Abul Company\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Special Invitation From Hasan Abul Company</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Engineers-Without-Borders-Forum-.jpg\\\" alt=\\\"Engineers Without Borders Forum\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Engineers Without Borders Forum</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Alawatan-TV-Interview-1-2.jpg\\\" alt=\\\"Alawatan TV Interview\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Alawatan TV Interview</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Visitors-1.jpg\\\" alt=\\\"Visitors\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Visitors</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Italy-Meeting.jpg\\\" alt=\\\"Italy Meeting\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Italy Meeting</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/Conference-in-Kuwait-2.jpg\\\" alt=\\\"Conference in Kuwait\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Conference in Kuwait</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"فعالياتنا\",\"titleEn\":\"Our Events\"}",
+    "newValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg\\\" alt=\\\"دعوى من شركة حسن أبل\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">دعوى من شركة حسن أبل</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg\\\" alt=\\\"منتدى مهندسون بلا حدود\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">منتدى مهندسون بلا حدود</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg\\\" alt=\\\"مقابلة ملعب الوطن\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">مقابلة ملعب الوطن</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Visitors-1.jpg\\\" alt=\\\"صور تذكارية مع شخصيات مختلفة\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">صور تذكارية مع شخصيات مختلفة</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Italy-Meeting.jpg\\\" alt=\\\"الملتقى الإيطالي\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">الملتقى الإيطالي</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg\\\" alt=\\\"صور مؤتمر (الكويت)\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">صور مؤتمر (الكويت)</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg\\\" alt=\\\"Special Invitation From Hasan Abul Company\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Special Invitation From Hasan Abul Company</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg\\\" alt=\\\"Engineers Without Borders Forum\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Engineers Without Borders Forum</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg\\\" alt=\\\"Alawatan TV Interview\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Alawatan TV Interview</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Visitors-1.jpg\\\" alt=\\\"Visitors\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Visitors</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Italy-Meeting.jpg\\\" alt=\\\"Italy Meeting\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Italy Meeting</span></div>\\n  </div>\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg\\\" alt=\\\"Conference in Kuwait\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\\\"><span class=\\\"text-white font-semibold\\\">Conference in Kuwait</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"فعالياتنا\",\"titleEn\":\"Our Events\"}",
+    "actionType": "rewrite_approved_wp_media_urls",
+    "detail": {
+      "hits": [
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+          "to": "/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+          "count": 2,
+          "filename": "Special-Invitation-From-Hasan-Abul-Company-.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/Engineers-Without-Borders-Forum-.jpg",
+          "to": "/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg",
+          "count": 2,
+          "filename": "Engineers-Without-Borders-Forum-.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/Alawatan-TV-Interview-1-2.jpg",
+          "to": "/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg",
+          "count": 2,
+          "filename": "Alawatan-TV-Interview-1-2.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/Visitors-1.jpg",
+          "to": "/media/wordpress-migration/2022/07/Visitors-1.jpg",
+          "count": 2,
+          "filename": "Visitors-1.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/Italy-Meeting.jpg",
+          "to": "/media/wordpress-migration/2022/07/Italy-Meeting.jpg",
+          "count": 2,
+          "filename": "Italy-Meeting.jpg"
+        },
+        {
+          "from": "https://coveinterior.com/wp-content/uploads/2022/07/Conference-in-Kuwait-2.jpg",
+          "to": "/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg",
+          "count": 2,
+          "filename": "Conference-in-Kuwait-2.jpg"
+        }
+      ]
+    }
+  }
+]

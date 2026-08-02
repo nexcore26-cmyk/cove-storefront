@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `customBoxConfig` json DEFAULT ('null');

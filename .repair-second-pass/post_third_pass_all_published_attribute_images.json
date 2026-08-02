@@ -1,0 +1,3393 @@
+{
+  "generatedAt": "2026-06-02T16:04:06.637Z",
+  "scope": {
+    "productStatus": "active",
+    "excludedType": "simple",
+    "scopedProductCount": 48,
+    "scopedProductsWithProductAttributes": 33
+  },
+  "summary": {
+    "productsWithAnyMissingActiveValueImages": 0,
+    "productsWithImageDataButNonImageDisplayType": 15,
+    "attributeCount": 14
+  },
+  "byAttribute": {
+    "Select capsule size": {
+      "displayTypes": {
+        "image": 1
+      },
+      "products": 1,
+      "activeValues": 2,
+      "withImages": 2,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select tray color": {
+      "displayTypes": {
+        "image": 1
+      },
+      "products": 1,
+      "activeValues": 2,
+      "withImages": 2,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select tray size": {
+      "displayTypes": {
+        "image": 1
+      },
+      "products": 1,
+      "activeValues": 4,
+      "withImages": 4,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Size": {
+      "displayTypes": {
+        "button": 15
+      },
+      "products": 15,
+      "activeValues": 15,
+      "withImages": 15,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select color": {
+      "displayTypes": {
+        "image": 7
+      },
+      "products": 7,
+      "activeValues": 43,
+      "withImages": 43,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select steel": {
+      "displayTypes": {
+        "image": 7
+      },
+      "products": 7,
+      "activeValues": 9,
+      "withImages": 9,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select top surface": {
+      "displayTypes": {
+        "image": 7
+      },
+      "products": 7,
+      "activeValues": 9,
+      "withImages": 9,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select coffee capsule tray size (for interior of drawer)": {
+      "displayTypes": {
+        "image": 13
+      },
+      "products": 13,
+      "activeValues": 26,
+      "withImages": 26,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select Mini Roshina box set": {
+      "displayTypes": {
+        "image": 2
+      },
+      "products": 2,
+      "activeValues": 6,
+      "withImages": 6,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select mubkhar set": {
+      "displayTypes": {
+        "image": 1
+      },
+      "products": 1,
+      "activeValues": 3,
+      "withImages": 3,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select R1 box set": {
+      "displayTypes": {
+        "image": 1
+      },
+      "products": 1,
+      "activeValues": 4,
+      "withImages": 4,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select box set": {
+      "displayTypes": {
+        "image": 7
+      },
+      "products": 7,
+      "activeValues": 14,
+      "withImages": 14,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Select tissue box": {
+      "displayTypes": {
+        "image": 3
+      },
+      "products": 3,
+      "activeValues": 6,
+      "withImages": 6,
+      "missingImages": 0,
+      "missingLabels": []
+    },
+    "Trash bin": {
+      "displayTypes": {
+        "image": 3
+      },
+      "products": 3,
+      "activeValues": 6,
+      "withImages": 6,
+      "missingImages": 0,
+      "missingLabels": []
+    }
+  },
+  "products": [
+    {
+      "productId": 390122,
+      "name": "trays",
+      "slug": "trays",
+      "type": "variable",
+      "category": "accessories",
+      "categorySlug": "accessories",
+      "attributes": [
+        {
+          "productId": 390122,
+          "productAttributeId": 91,
+          "attributeId": 25,
+          "attributeName": "Select capsule size",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            367,
+            368
+          ],
+          "activeValues": [
+            {
+              "id": 367,
+              "label": "4x4 (small capsule)",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 368,
+              "label": "6x6 (big capsule)",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390122,
+          "productAttributeId": 92,
+          "attributeId": 26,
+          "attributeName": "Select tray color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            371,
+            372
+          ],
+          "activeValues": [
+            {
+              "id": 371,
+              "label": "Gray",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 372,
+              "label": "Beige",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390122,
+          "productAttributeId": 93,
+          "attributeId": 27,
+          "attributeName": "Select tray size",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            377,
+            378,
+            379,
+            380
+          ],
+          "activeValues": [
+            {
+              "id": 377,
+              "label": "Width 36.30 cm - Depth 36.70 cm - Height 4.00 cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/classic-157-225-4x4-1-700x495.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 378,
+              "label": "Width 55.20 cm - Depth 35.70 cm - Height 3.80 cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/curve-4x4-1-700x495.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/curve-4x4-1-700x495.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/curve-4x4-1-700x495.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 379,
+              "label": "Width 44.20 cm - Depth 35.00 cm - Height 4.50 cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/country-167-4x4-1-700x495.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/country-167-4x4-1-700x495.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/country-167-4x4-1-700x495.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 380,
+              "label": "Width 42.70 cm - Depth 35.00 cm - Height 4.50 cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/08/country-112-4x4-1-700x493.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/08/country-112-4x4-1-700x493.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/08/country-112-4x4-1-700x493.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 4,
+          "activeValuesWithImage": 4,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 8,
+        "activeValuesWithImage": 8,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 3,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390050,
+      "name": "Classic 157",
+      "slug": "classic-157",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390050,
+          "productAttributeId": 1,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            330
+          ],
+          "activeValues": [
+            {
+              "id": 330,
+              "label": "Width 157cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390050,
+          "productAttributeId": 2,
+          "attributeId": 18,
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            214,
+            215,
+            216
+          ],
+          "activeValues": [
+            {
+              "id": 214,
+              "label": "157 Classic Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-430x430.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-430x430.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-430x430.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 215,
+              "label": "157 Classic Gray / White",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gray-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gray-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gray-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 216,
+              "label": "157 Classic Marble / Gray",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-marble-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-marble-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-marble-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 3,
+          "activeValuesWithImage": 3,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390050,
+          "productAttributeId": 3,
+          "attributeId": 22,
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            357,
+            358
+          ],
+          "activeValues": [
+            {
+              "id": 357,
+              "label": "Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/gold.png"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 358,
+              "label": "Silver",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/silver.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/silver.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/silver.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390050,
+          "productAttributeId": 4,
+          "attributeId": 20,
+          "attributeName": "Select top surface",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            350,
+            349
+          ],
+          "activeValues": [
+            {
+              "id": 349,
+              "label": "Solid top",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 350,
+              "label": "Clear glass",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390050,
+          "productAttributeId": 5,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 10,
+        "activeValuesWithImage": 10,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 4,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390087,
+      "name": "Classic 157 Bohemian",
+      "slug": "classic-157-bohemian",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390087,
+          "productAttributeId": 66,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            330
+          ],
+          "activeValues": [
+            {
+              "id": 330,
+              "label": "Width 157cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390087,
+          "productAttributeId": 67,
+          "attributeId": 22,
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            357
+          ],
+          "activeValues": [
+            {
+              "id": 357,
+              "label": "Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/gold.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390087,
+          "productAttributeId": 68,
+          "attributeId": 20,
+          "attributeName": "Select top surface",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            350
+          ],
+          "activeValues": [
+            {
+              "id": 350,
+              "label": "Clear glass",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390087,
+          "productAttributeId": 69,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 5,
+        "activeValuesWithImage": 5,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 3,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390120,
+      "name": "Classic 157 gold",
+      "slug": "classic-157-gold",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390120,
+          "productAttributeId": 171,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            330
+          ],
+          "activeValues": [
+            {
+              "id": 330,
+              "label": "Width 157cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390120,
+          "productAttributeId": 172,
+          "attributeId": 22,
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            357
+          ],
+          "activeValues": [
+            {
+              "id": 357,
+              "label": "Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/gold.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390120,
+          "productAttributeId": 173,
+          "attributeId": 20,
+          "attributeName": "Select top surface",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            349
+          ],
+          "activeValues": [
+            {
+              "id": 349,
+              "label": "Solid top",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 3,
+        "activeValuesWithImage": 3,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 2,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390084,
+      "name": "Classic 157 Gray / White",
+      "slug": "classic-157-gray-white",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390084,
+          "productAttributeId": 58,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            330
+          ],
+          "activeValues": [
+            {
+              "id": 330,
+              "label": "Width 157cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390084,
+          "productAttributeId": 59,
+          "attributeId": 22,
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            357
+          ],
+          "activeValues": [
+            {
+              "id": 357,
+              "label": "Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/gold.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390084,
+          "productAttributeId": 60,
+          "attributeId": 20,
+          "attributeName": "Select top surface",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            350
+          ],
+          "activeValues": [
+            {
+              "id": 350,
+              "label": "Clear glass",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390084,
+          "productAttributeId": 61,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 5,
+        "activeValuesWithImage": 5,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 3,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390057,
+      "name": "Classic 225",
+      "slug": "classic-225",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390057,
+          "productAttributeId": 24,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            333
+          ],
+          "activeValues": [
+            {
+              "id": 333,
+              "label": "Width 225cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390057,
+          "productAttributeId": 25,
+          "attributeId": 18,
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            294,
+            295,
+            296
+          ],
+          "activeValues": [
+            {
+              "id": 294,
+              "label": "225 Classic Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 295,
+              "label": "225 Classic Gray / White",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gray-gold-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gray-gold-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gray-gold-1.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 296,
+              "label": "225 Classic Marble / Gray",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-marble-gold.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-marble-gold.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-marble-gold.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 3,
+          "activeValuesWithImage": 3,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390057,
+          "productAttributeId": 26,
+          "attributeId": 22,
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            357,
+            358
+          ],
+          "activeValues": [
+            {
+              "id": 357,
+              "label": "Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/gold.png"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 358,
+              "label": "Silver",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/silver.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/silver.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/silver.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390057,
+          "productAttributeId": 27,
+          "attributeId": 20,
+          "attributeName": "Select top surface",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            350,
+            349
+          ],
+          "activeValues": [
+            {
+              "id": 349,
+              "label": "Solid top",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 350,
+              "label": "Clear glass",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390057,
+          "productAttributeId": 28,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 10,
+        "activeValuesWithImage": 10,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 4,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390088,
+      "name": "Classic 225 Bohemian",
+      "slug": "classic-225-bohemian",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390088,
+          "productAttributeId": 70,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            333
+          ],
+          "activeValues": [
+            {
+              "id": 333,
+              "label": "Width 225cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390088,
+          "productAttributeId": 71,
+          "attributeId": 22,
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            357
+          ],
+          "activeValues": [
+            {
+              "id": 357,
+              "label": "Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/gold.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390088,
+          "productAttributeId": 72,
+          "attributeId": 20,
+          "attributeName": "Select top surface",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            349
+          ],
+          "activeValues": [
+            {
+              "id": 349,
+              "label": "Solid top",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390088,
+          "productAttributeId": 73,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 5,
+        "activeValuesWithImage": 5,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 3,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390180,
+      "name": "Classic 225 Brown",
+      "slug": "classic-225-brown",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390180,
+          "productAttributeId": 122,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            333
+          ],
+          "activeValues": [
+            {
+              "id": 333,
+              "label": "Width 225cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390180,
+          "productAttributeId": 123,
+          "attributeId": 22,
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            357
+          ],
+          "activeValues": [
+            {
+              "id": 357,
+              "label": "Gold",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/gold.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/gold.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390180,
+          "productAttributeId": 124,
+          "attributeId": 20,
+          "attributeName": "Select top surface",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            350
+          ],
+          "activeValues": [
+            {
+              "id": 350,
+              "label": "Clear glass",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/classic-157-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390180,
+          "productAttributeId": 125,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            353,
+            354
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 5,
+        "activeValuesWithImage": 5,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 3,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390089,
+      "name": "Classic 225 Gold",
+      "slug": "classic-225-gold",
+      "type": "variable",
+      "category": "Classic",
+      "categorySlug": "classic",
+      "attributes": [
+        {
+          "productId": 390089,
+          "productAttributeId": 74,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            333
+          ],
+          "activeValues": [
+            {
+              "id": 333,
+              "label": "Width 225cm, Depth 53cm, Height 86cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 1,
+        "activeValuesWithImage": 1,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 0,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390052,
+      "name": "Country 112",
+      "slug": "country-112",
+      "type": "variable",
+      "category": "Country",
+      "categorySlug": "country",
+      "attributes": [
+        {
+          "productId": 390052,
+          "productAttributeId": 9,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            332
+          ],
+          "activeValues": [
+            {
+              "id": 332,
+              "label": "Width 112cm, Depth 57cm, Height 90cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEECH-WOOD-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEECH-WOOD-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEECH-WOOD-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390052,
+          "productAttributeId": 10,
+          "attributeId": 18,
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            258,
+            259,
+            260,
+            261,
+            262,
+            263,
+            264,
+            265,
+            266
+          ],
+          "activeValues": [
+            {
+              "id": 258,
+              "label": "Country 112 Beech Wood / Botticino Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEECH-WOOD-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEECH-WOOD-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEECH-WOOD-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 259,
+              "label": "Country 112 Beige / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEIGE-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEIGE-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BEIGE-1-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 260,
+              "label": "Country 112 Black / Black Marquina Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BLACK-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BLACK-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BLACK-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 261,
+              "label": "Country 112 Blue / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BLUE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BLUE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-BLUE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 262,
+              "label": "Country 112 Green / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-GREEN-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-GREEN-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-GREEN-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 263,
+              "label": "Country 112 Grey / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-GREY-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-GREY-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-GREY-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 264,
+              "label": "Country 112 Pink / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-PINK-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-PINK-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-PINK-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 265,
+              "label": "Country 112 Red / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-RED-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-RED-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-RED-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 266,
+              "label": "Country 112 White / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-WHITE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-WHITE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-112-WHITE-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 9,
+          "activeValuesWithImage": 9,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390052,
+          "productAttributeId": 11,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 12,
+        "activeValuesWithImage": 12,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 2,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390056,
+      "name": "Country 167",
+      "slug": "country-167",
+      "type": "variable",
+      "category": "Country",
+      "categorySlug": "country",
+      "attributes": [
+        {
+          "productId": 390056,
+          "productAttributeId": 21,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            338
+          ],
+          "activeValues": [
+            {
+              "id": 338,
+              "label": "Width 167cm, Depth 57cm, Height 90cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEECH-2-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEECH-2-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEECH-2-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390056,
+          "productAttributeId": 22,
+          "attributeId": 18,
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            220,
+            221,
+            222,
+            223,
+            224,
+            225,
+            226,
+            227,
+            228
+          ],
+          "activeValues": [
+            {
+              "id": 220,
+              "label": "Country 167 Beach Wood/ Botticino Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEECH-2-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEECH-2-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEECH-2-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 221,
+              "label": "Country 167 Beige / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEIGE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEIGE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BEIGE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 222,
+              "label": "Country 167 Black / Black Marquina Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BLACK-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BLACK-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BLACK-1-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 223,
+              "label": "Country 167 Blue / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BLUE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BLUE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-BLUE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 224,
+              "label": "Country 167 Gray / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-GRAY-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-GRAY-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-GRAY-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 225,
+              "label": "Country 167 Green / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-GREEN-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-GREEN-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-GREEN-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 226,
+              "label": "Country 167 Pink / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-PINK-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-PINK-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-PINK-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 227,
+              "label": "Country 167 Red / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-RED-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-RED-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-RED-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 228,
+              "label": "Country 167 White / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-WHITE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-WHITE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-167-WHITE-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 9,
+          "activeValuesWithImage": 9,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390056,
+          "productAttributeId": 23,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 12,
+        "activeValuesWithImage": 12,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 2,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390051,
+      "name": "Country 62",
+      "slug": "country-62",
+      "type": "variable",
+      "category": "Country",
+      "categorySlug": "country",
+      "attributes": [
+        {
+          "productId": 390051,
+          "productAttributeId": 6,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            331
+          ],
+          "activeValues": [
+            {
+              "id": 331,
+              "label": "Width 62cm, Depth 57cm, Height 90cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390051,
+          "productAttributeId": 7,
+          "attributeId": 18,
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            276,
+            277,
+            278,
+            279,
+            284,
+            283,
+            280,
+            282,
+            281
+          ],
+          "activeValues": [
+            {
+              "id": 276,
+              "label": "Country 62 Beech Wood / Botticino Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEECH-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEECH-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEECH-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 277,
+              "label": "Country 62 Beige / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 278,
+              "label": "Country 62 Black / Black Marquina Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BLACK-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BLACK-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BLACK-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 279,
+              "label": "COUNTRY 62 Blue / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BLUE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BLUE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BLUE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 280,
+              "label": "Country 62 Pink / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-PINK-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-PINK-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-PINK-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 281,
+              "label": "Country 62 White / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-WHITE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-WHITE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-WHITE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 282,
+              "label": "Country 62 Red / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-RED-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-RED-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-RED-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 283,
+              "label": "Country 62 Green / Bianco Rossa Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-GREEN-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-GREEN-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-GREEN-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 284,
+              "label": "Country 62 Gray / White Marble",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/COUNTRY-62-BEIGE-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 9,
+          "activeValuesWithImage": 9,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390051,
+          "productAttributeId": 8,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 12,
+        "activeValuesWithImage": 12,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 2,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390053,
+      "name": "Curve 120",
+      "slug": "curve-120",
+      "type": "variable",
+      "category": "Curve",
+      "categorySlug": "curve",
+      "attributes": [
+        {
+          "productId": 390053,
+          "productAttributeId": 12,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            341
+          ],
+          "activeValues": [
+            {
+              "id": 341,
+              "label": "Width 120cm, Depth 55cm, Height 90cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-BROWN-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-BROWN-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-BROWN-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390053,
+          "productAttributeId": 13,
+          "attributeId": 18,
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            248,
+            249,
+            250,
+            251,
+            252
+          ],
+          "activeValues": [
+            {
+              "id": 248,
+              "label": "Curve Brown / White Carrara",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-BROWN-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-BROWN-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-BROWN-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 249,
+              "label": "CURVE Dark Red / Travertine",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-DARK-RED-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-DARK-RED-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-DARK-RED-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 250,
+              "label": "Curve Light Blue / Travertine",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-LIGHT-BLUE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-LIGHT-BLUE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-LIGHT-BLUE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 251,
+              "label": "Curve Navy Blue / White Carrara",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-NAVY-BLUE-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-NAVY-BLUE-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-NAVY-BLUE-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 252,
+              "label": "Curve Royal Green / Travertine",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-ROYAL-GREEN-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-ROYAL-GREEN-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-ROYAL-GREEN-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 5,
+          "activeValuesWithImage": 5,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390053,
+          "productAttributeId": 14,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 8,
+        "activeValuesWithImage": 8,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 2,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390054,
+      "name": "Curve 180",
+      "slug": "curve-180",
+      "type": "variable",
+      "category": "Curve",
+      "categorySlug": "curve",
+      "attributes": [
+        {
+          "productId": 390054,
+          "productAttributeId": 15,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            340
+          ],
+          "activeValues": [
+            {
+              "id": 340,
+              "label": "Width 180cm, Depth 55cm, Height 90cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Brown-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Brown-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Brown-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390054,
+          "productAttributeId": 16,
+          "attributeId": 18,
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            238,
+            239,
+            240,
+            241,
+            242
+          ],
+          "activeValues": [
+            {
+              "id": 238,
+              "label": "Curve 180 Brown / White Carrara",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Brown-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Brown-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Brown-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 239,
+              "label": "Curve 180 Dark Red / Travertine",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Dark-red-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Dark-red-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Dark-red-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 240,
+              "label": "Curve 180 Light Blue / Travertine",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Light-blue-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Light-blue-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Light-blue-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 241,
+              "label": "Curve 180 Navy Blue / White Carrara",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Navy-blue-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Navy-blue-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Navy-blue-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 242,
+              "label": "Curve 180 Royal Green / Travertine",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Royal-green-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Royal-green-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/07/CURVE-180-Royal-green-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 5,
+          "activeValuesWithImage": 5,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390054,
+          "productAttributeId": 17,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 8,
+        "activeValuesWithImage": 8,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 2,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390058,
+      "name": "DeCaf",
+      "slug": "decaf",
+      "type": "variable",
+      "category": "Mini Caf",
+      "categorySlug": "mini-caf",
+      "attributes": [
+        {
+          "productId": 390058,
+          "productAttributeId": 29,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            346
+          ],
+          "activeValues": [
+            {
+              "id": 346,
+              "label": "Width 119cm, Depth 55cm, Height 90cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/10/4-700x700.jpeg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/10/4-700x700.jpeg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/10/4-700x700.jpeg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390058,
+          "productAttributeId": 30,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 3,
+        "activeValuesWithImage": 3,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390055,
+      "name": "Mini Caf",
+      "slug": "mini-caf",
+      "type": "variable",
+      "category": "Mini Caf",
+      "categorySlug": "mini-caf",
+      "attributes": [
+        {
+          "productId": 390055,
+          "productAttributeId": 18,
+          "attributeId": 19,
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "activeValueIds": [
+            344
+          ],
+          "activeValues": [
+            {
+              "id": 344,
+              "label": "Width 60cm, Depth 55cm, Height 90cm",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2022/08/1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2022/08/1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2022/08/1-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 1,
+          "activeValuesWithImage": 1,
+          "activeValuesMissingImage": []
+        },
+        {
+          "productId": 390055,
+          "productAttributeId": 19,
+          "attributeId": 21,
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            354,
+            353
+          ],
+          "activeValues": [
+            {
+              "id": 353,
+              "label": "Small capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 354,
+              "label": "Big capsule",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 3,
+        "activeValuesWithImage": 3,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 1
+      }
+    },
+    {
+      "productId": 390207,
+      "name": "Mini Roshina Beige",
+      "slug": "mini-roshina-beige",
+      "type": "variable",
+      "category": "Mini Roshina ",
+      "categorySlug": "mini-roshina",
+      "attributes": [
+        {
+          "productId": 390207,
+          "productAttributeId": 142,
+          "attributeId": 33,
+          "attributeName": "Select Mini Roshina box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            457,
+            420,
+            428,
+            422
+          ],
+          "activeValues": [
+            {
+              "id": 457,
+              "label": "Basic set (Only Box)",
+              "swatch": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+              "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+              "galleryImages": [
+                "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 420,
+              "label": "Basic set + Roshina Mubkhar",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 428,
+              "label": "Full set (Only Box)",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 422,
+              "label": "Full set + Roshina Mubkhar",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 4,
+          "activeValuesWithImage": 4,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 4,
+        "activeValuesWithImage": 4,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390148,
+      "name": "Mini Roshina Gray",
+      "slug": "mini-roshina-gray",
+      "type": "variable",
+      "category": "Mini Roshina ",
+      "categorySlug": "mini-roshina",
+      "attributes": [
+        {
+          "productId": 390148,
+          "productAttributeId": 102,
+          "attributeId": 33,
+          "attributeName": "Select Mini Roshina box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            458,
+            430
+          ],
+          "activeValues": [
+            {
+              "id": 458,
+              "label": "Basic set (Only Box)",
+              "swatch": "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg",
+              "image": "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg",
+              "galleryImages": [
+                "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 430,
+              "label": "Full set (Only Box)",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/12/MR2-gray-closed.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/12/MR2-gray-closed.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/12/MR2-gray-closed.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390206,
+      "name": "Roshina Mubkhar Petrol",
+      "slug": "roshina-mubkhar-petrol",
+      "type": "variable",
+      "category": "Mubkhar",
+      "categorySlug": "mubkhar",
+      "attributes": [
+        {
+          "productId": 390206,
+          "productAttributeId": 141,
+          "attributeId": 30,
+          "attributeName": "Select mubkhar set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            397,
+            398,
+            399
+          ],
+          "activeValues": [
+            {
+              "id": 397,
+              "label": "Roshina Mubkhar only",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 398,
+              "label": "Roshina 1 basic + Roshina Mubkhar",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 399,
+              "label": "Roshina 1 full + Roshina Mubkhar",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 3,
+          "activeValuesWithImage": 3,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 3,
+        "activeValuesWithImage": 3,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390064,
+      "name": "Roshina 1 Petrol",
+      "slug": "roshina-1-petrol",
+      "type": "variable",
+      "category": "Roshina 1 ",
+      "categorySlug": "roshina-1",
+      "attributes": [
+        {
+          "productId": 390064,
+          "productAttributeId": 36,
+          "attributeId": 32,
+          "attributeName": "Select R1 box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            411,
+            412,
+            413,
+            414
+          ],
+          "activeValues": [
+            {
+              "id": 411,
+              "label": "Basic set (Only Box)",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 412,
+              "label": "Full set (Only Box)",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 413,
+              "label": "Basic set + Roshina Mubkhar",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 414,
+              "label": "Full set + Roshina Mubkhar",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-1-petrol-1-700x700.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 4,
+          "activeValuesWithImage": 4,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 4,
+        "activeValuesWithImage": 4,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390066,
+      "name": "Roshina 2 Cement green",
+      "slug": "roshina-2-cement-green",
+      "type": "variable",
+      "category": "Roshina 2 ",
+      "categorySlug": "roshina-2",
+      "attributes": [
+        {
+          "productId": 390066,
+          "productAttributeId": 38,
+          "attributeId": 24,
+          "attributeName": "Select box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            459,
+            432
+          ],
+          "activeValues": [
+            {
+              "id": 459,
+              "label": "Basic set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 432,
+              "label": "Full set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390068,
+      "name": "Roshina 2 Dark Green",
+      "slug": "roshina-2-dark-green",
+      "type": "variable",
+      "category": "Roshina 2 ",
+      "categorySlug": "roshina-2",
+      "attributes": [
+        {
+          "productId": 390068,
+          "productAttributeId": 40,
+          "attributeId": 24,
+          "attributeName": "Select box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            460,
+            434
+          ],
+          "activeValues": [
+            {
+              "id": 460,
+              "label": "Basic set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-2-430x430.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-2-430x430.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-2-430x430.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 434,
+              "label": "Full set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-1.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390071,
+      "name": "Roshina 2 Off White",
+      "slug": "roshina-2-off-white",
+      "type": "variable",
+      "category": "Roshina 2 ",
+      "categorySlug": "roshina-2",
+      "attributes": [
+        {
+          "productId": 390071,
+          "productAttributeId": 43,
+          "attributeId": 24,
+          "attributeName": "Select box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            461,
+            436
+          ],
+          "activeValues": [
+            {
+              "id": 461,
+              "label": "Basic set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-2-150x150.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-2-150x150.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-2-150x150.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 436,
+              "label": "Full set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-1.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390119,
+      "name": "Roshina 2 Wooden",
+      "slug": "roshina-2-wooden",
+      "type": "variable",
+      "category": "Roshina 2 ",
+      "categorySlug": "roshina-2",
+      "attributes": [
+        {
+          "productId": 390119,
+          "productAttributeId": 85,
+          "attributeId": 24,
+          "attributeName": "Select box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            462,
+            438
+          ],
+          "activeValues": [
+            {
+              "id": 462,
+              "label": "Basic set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-2-darkveneer-wood-2-150x150.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-2-darkveneer-wood-2-150x150.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-2-darkveneer-wood-2-150x150.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 438,
+              "label": "Full set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-wooden-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-wooden-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-wooden-1.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390114,
+      "name": "Roshina 3 Camel",
+      "slug": "roshina-3-camel-web",
+      "type": "variable",
+      "category": "Roshina 3",
+      "categorySlug": "roshina-3",
+      "attributes": [
+        {
+          "productId": 390114,
+          "productAttributeId": 80,
+          "attributeId": 24,
+          "attributeName": "Select box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            439,
+            440
+          ],
+          "activeValues": [
+            {
+              "id": 439,
+              "label": "Basic set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 440,
+              "label": "Full set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390115,
+      "name": "Roshina 3 Light Blue",
+      "slug": "roshina-3-light-blue",
+      "type": "variable",
+      "category": "Roshina 3",
+      "categorySlug": "roshina-3",
+      "attributes": [
+        {
+          "productId": 390115,
+          "productAttributeId": 81,
+          "attributeId": 24,
+          "attributeName": "Select box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            441,
+            442
+          ],
+          "activeValues": [
+            {
+              "id": 441,
+              "label": "Basic set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 442,
+              "label": "Full set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390117,
+      "name": "Roshina 3 Maroon",
+      "slug": "roshina-3-maroon",
+      "type": "variable",
+      "category": "Roshina 3",
+      "categorySlug": "roshina-3",
+      "attributes": [
+        {
+          "productId": 390117,
+          "productAttributeId": 83,
+          "attributeId": 24,
+          "attributeName": "Select box set",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            443,
+            444
+          ],
+          "activeValues": [
+            {
+              "id": 443,
+              "label": "Basic set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 444,
+              "label": "Full set",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+              "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390163,
+      "name": "Tissue box Beige",
+      "slug": "tissue-box-beige",
+      "type": "variable",
+      "category": "Tissue boxes",
+      "categorySlug": "tissue-boxes",
+      "attributes": [
+        {
+          "productId": 390163,
+          "productAttributeId": 116,
+          "attributeId": 31,
+          "attributeName": "Select tissue box",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            463,
+            446
+          ],
+          "activeValues": [
+            {
+              "id": 463,
+              "label": "Single",
+              "swatch": "/media/wordpress-migration/2023/12/tissue-box-beige.jpg",
+              "image": "/media/wordpress-migration/2023/12/tissue-box-beige.jpg",
+              "galleryImages": [
+                "/media/wordpress-migration/2023/12/tissue-box-beige.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 446,
+              "label": "set with trash bin",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390165,
+      "name": "Tissue box Black",
+      "slug": "tissue-box-black",
+      "type": "variable",
+      "category": "Tissue boxes",
+      "categorySlug": "tissue-boxes",
+      "attributes": [
+        {
+          "productId": 390165,
+          "productAttributeId": 118,
+          "attributeId": 31,
+          "attributeName": "Select tissue box",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            464,
+            448
+          ],
+          "activeValues": [
+            {
+              "id": 464,
+              "label": "Single",
+              "swatch": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+              "image": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+              "galleryImages": [
+                "/media/wordpress-migration/2023/12/tissue-box-black.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 448,
+              "label": "set with trash bin",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390164,
+      "name": "Tissue box Bronze",
+      "slug": "tissue-box-bronze",
+      "type": "variable",
+      "category": "Tissue boxes",
+      "categorySlug": "tissue-boxes",
+      "attributes": [
+        {
+          "productId": 390164,
+          "productAttributeId": 117,
+          "attributeId": 31,
+          "attributeName": "Select tissue box",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            465,
+            450
+          ],
+          "activeValues": [
+            {
+              "id": 465,
+              "label": "Single",
+              "swatch": "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+              "image": "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+              "galleryImages": [
+                "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 450,
+              "label": "set with trash bin",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390203,
+      "name": "Beige Trash Bin",
+      "slug": "beige-trash-bin",
+      "type": "variable",
+      "category": "Trash bin",
+      "categorySlug": "trash-bin",
+      "attributes": [
+        {
+          "productId": 390203,
+          "productAttributeId": 138,
+          "attributeId": 29,
+          "attributeName": "Trash bin",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            466,
+            452
+          ],
+          "activeValues": [
+            {
+              "id": 466,
+              "label": "Single",
+              "swatch": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+              "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+              "galleryImages": [
+                "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 452,
+              "label": "Set with Tissue Boxes",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390201,
+      "name": "Black Trash Bin",
+      "slug": "black-trash-bin",
+      "type": "variable",
+      "category": "Trash bin",
+      "categorySlug": "trash-bin",
+      "attributes": [
+        {
+          "productId": 390201,
+          "productAttributeId": 136,
+          "attributeId": 29,
+          "attributeName": "Trash bin",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            467,
+            454
+          ],
+          "activeValues": [
+            {
+              "id": 467,
+              "label": "Single",
+              "swatch": "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+              "image": "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+              "galleryImages": [
+                "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 454,
+              "label": "Set with Tissue Boxes",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    },
+    {
+      "productId": 390202,
+      "name": "Bronze Trash Bin",
+      "slug": "bronze-trash-bin",
+      "type": "variable",
+      "category": "Trash bin",
+      "categorySlug": "trash-bin",
+      "attributes": [
+        {
+          "productId": 390202,
+          "productAttributeId": 137,
+          "attributeId": 29,
+          "attributeName": "Trash bin",
+          "displayType": "image",
+          "attributeType": "global",
+          "activeValueIds": [
+            468,
+            456
+          ],
+          "activeValues": [
+            {
+              "id": 468,
+              "label": "Single",
+              "swatch": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+              "image": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+              "galleryImages": [
+                "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png"
+              ],
+              "hasImage": true
+            },
+            {
+              "id": 456,
+              "label": "Set with Tissue Boxes",
+              "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+              "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+              "galleryImages": [
+                "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png"
+              ],
+              "hasImage": true
+            }
+          ],
+          "activeValueCount": 2,
+          "activeValuesWithImage": 2,
+          "activeValuesMissingImage": []
+        }
+      ],
+      "totals": {
+        "activeValues": 2,
+        "activeValuesWithImage": 2,
+        "activeValuesMissingImage": 0,
+        "imageDisplayAttributes": 1,
+        "nonImageDisplayAttributesWithImages": 0
+      }
+    }
+  ]
+}

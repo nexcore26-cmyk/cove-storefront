@@ -1,0 +1,91 @@
+{
+  "runId": "media-phase3a-2026-06-01T22-30-33-811Z",
+  "startedAt": "2026-06-01T22:30:33.838Z",
+  "mode": "dry-run",
+  "target": {
+    "table": "page_blocks",
+    "id": 30015,
+    "column": "config",
+    "oldUrl": "https://coveinterior.com/wp-content/uploads/2022/07/1-feature-ar.jpg",
+    "newUrl": "/media/wordpress-migration/2022/07/1.png",
+    "expectedBlockType": "text_html",
+    "reason": "Replace the single remaining non-order WordPress media URL in Arabic page-block HTML with the verified Node media asset already used by the English counterpart."
+  },
+  "safeguards": [
+    "Single-record scope: page_blocks.id=30015 only",
+    "Exact old URL replacement only",
+    "Target Node media file must exist on disk",
+    "Target media_assets row must exist",
+    "Apply mode writes rollback backup row before update",
+    "No Media Library cleanup and no filesystem deletion"
+  ],
+  "targetFile": {
+    "path": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1.png",
+    "exists": true
+  },
+  "targetMediaAssets": [
+    {
+      "id": 344,
+      "url": "/media/wordpress-migration/2022/07/1.png",
+      "sourceUrl": "https://coveinterior.com/wp-content/uploads/2022/07/1.png",
+      "mimeType": "image/png",
+      "sizeBytes": 671347,
+      "sha256": "4163f4a0a2862abe1ae97b76354caaac6cca5788a4fd899ec74d8a47efff9b6e",
+      "originalFilename": "1.png"
+    }
+  ],
+  "currentRecord": {
+    "id": 30015,
+    "pageId": 30001,
+    "blockType": "text_html"
+  },
+  "currentOccurrences": {
+    "oldUrl": 1,
+    "newUrl": 1
+  },
+  "proposedChanges": 1,
+  "skippedCount": 0,
+  "appliedChanges": 0,
+  "postCheck": {
+    "oldUrlOccurrences": 1,
+    "newUrlOccurrences": 1
+  },
+  "remainingNonOrderWordpressReferenceCounts": [
+    {
+      "tableName": "page_blocks",
+      "columnName": "config",
+      "countRows": 1
+    },
+    {
+      "tableName": "pages",
+      "columnName": "puckData",
+      "countRows": 0
+    },
+    {
+      "tableName": "homepage_sections",
+      "columnName": "imageUrl",
+      "countRows": 0
+    },
+    {
+      "tableName": "products",
+      "columnName": "images",
+      "countRows": 0
+    },
+    {
+      "tableName": "categories",
+      "columnName": "image",
+      "countRows": 0
+    },
+    {
+      "tableName": "product_variants",
+      "columnName": "image",
+      "countRows": 0
+    },
+    {
+      "tableName": "product_variants",
+      "columnName": "galleryImages",
+      "countRows": 0
+    }
+  ],
+  "finishedAt": "2026-06-01T22:30:33.867Z"
+}

@@ -1,0 +1,100 @@
+{
+  "runId": "media-phase4b-cleanup-2026-06-02T05-04-25-284Z",
+  "startedAt": "2026-06-02T05:04:25.350Z",
+  "mode": "preflight-only",
+  "approvalCsv": "/home/manus/cove-storefront/scripts/phase4b_approval_ready_candidates.csv",
+  "expectedRows": 189,
+  "approvedRows": 189,
+  "rowCounts": {
+    "byKind": {
+      "media_asset": 176,
+      "filesystem_file": 13
+    },
+    "byClassification": {
+      "cleanup_candidate_review_only": 176,
+      "filesystem_only_review_only": 13
+    }
+  },
+  "safeguards": [
+    "CSV approval list must contain exactly the expected row count.",
+    "Every row must be approvalRequired=yes and remain inside /media/wordpress-migration/.",
+    "Every approved URL must have zero detected commerce, CMS, or historical order references at preflight time.",
+    "Media Library deletion candidates must still have exactly one matching media_assets row by id and URL.",
+    "Filesystem-only candidates must still have no media_assets row for the approved URL.",
+    "Every approved file is copied into a rollback directory and hashed before deletion.",
+    "Media Library row backups are written to JSON and SQL restore files before any DELETE statement.",
+    "Database deletions are performed inside a transaction with id+url predicates."
+  ],
+  "database": "cove_storefront",
+  "preflight": {
+    "blockers": 0,
+    "warnings": 0,
+    "activeTargets": [
+      {
+        "table": "products",
+        "id": "id",
+        "columns": [
+          "images"
+        ],
+        "usageClass": "commerce_active"
+      },
+      {
+        "table": "categories",
+        "id": "id",
+        "columns": [
+          "image"
+        ],
+        "usageClass": "commerce_active"
+      },
+      {
+        "table": "product_variants",
+        "id": "id",
+        "columns": [
+          "image",
+          "galleryImages"
+        ],
+        "usageClass": "commerce_active"
+      },
+      {
+        "table": "pages",
+        "id": "id",
+        "columns": [
+          "puckData"
+        ],
+        "usageClass": "cms_active"
+      },
+      {
+        "table": "page_blocks",
+        "id": "id",
+        "columns": [
+          "config"
+        ],
+        "usageClass": "cms_active"
+      },
+      {
+        "table": "homepage_sections",
+        "id": "id",
+        "columns": [
+          "imageUrl"
+        ],
+        "usageClass": "cms_active"
+      },
+      {
+        "table": "order_items",
+        "id": "id",
+        "columns": [
+          "image"
+        ],
+        "usageClass": "historical_order_snapshot"
+      }
+    ],
+    "skippedTargets": [],
+    "usageRowsDetected": 9864,
+    "approvedRowsWithReferences": 0,
+    "approvedRowsMissingFiles": 0,
+    "approvedRowsWithFileSizeMismatch": 0
+  },
+  "applied": false,
+  "reason": "preflight_only_mode",
+  "finishedAt": "2026-06-02T05:04:25.636Z"
+}

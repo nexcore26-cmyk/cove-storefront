@@ -1,0 +1,19 @@
+[
+  {
+    "index": 1,
+    "sourceUrl": "https://coveinterior.com/wp-content/uploads/2022/08/BG-1024x576-1.png",
+    "key": "wordpress-migration/2022/08/BG-1024x576-1.png",
+    "url": "/media/wordpress-migration/2022/08/BG-1024x576-1.png",
+    "filename": "BG-1024x576-1.png",
+    "destPath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/BG-1024x576-1.png",
+    "action": "processed",
+    "fileStatus": "downloaded",
+    "dbStatus": "record_created",
+    "verifyStatus": "http_200",
+    "httpStatus": 200,
+    "sizeBytes": 59356,
+    "sha256": "d3e1317690e0b418f9f1e4f7b8073b105d24a6aad8a4fce75974f6ae7feda5a5",
+    "mediaAssetId": 524,
+    "error": ""
+  }
+]

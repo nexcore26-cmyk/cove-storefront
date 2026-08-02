@@ -1,0 +1,200 @@
+{
+  "generatedAt": "2026-06-02T19:22:43.849Z",
+  "evidenceProducts": 34,
+  "variantGalleryAggregate": {
+    "variants": 630,
+    "variantsWithGallery": "630",
+    "minGallery": 1,
+    "maxGallery": 7
+  },
+  "missingGallerySamples": [],
+  "attributeImageMasterAggregate": [
+    {
+      "isImageMaster": 0,
+      "count": 170
+    }
+  ],
+  "sampleGalleryMissingFiles": [],
+  "sampledRows": [
+    {
+      "slug": "beige-trash-bin",
+      "id": 210104,
+      "sku": "17195",
+      "name": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 210105,
+      "sku": "17195",
+      "name": "Set with Tissue Boxes",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 240104,
+      "sku": "17195",
+      "name": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 240105,
+      "sku": "17195",
+      "name": "Set with Tissue Boxes",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 240377,
+      "sku": "17195",
+      "name": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 240379,
+      "sku": "17195",
+      "name": "Set with Tissue Boxes",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 270041,
+      "sku": "17195",
+      "name": "",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 270042,
+      "sku": "17195",
+      "name": "",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 300104,
+      "sku": "17195",
+      "name": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 300105,
+      "sku": "17195",
+      "name": "Set with Tissue Boxes",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 330104,
+      "sku": "17195",
+      "name": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    },
+    {
+      "slug": "beige-trash-bin",
+      "id": 330105,
+      "sku": "17195",
+      "name": "Set with Tissue Boxes",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+        "/media/wordpress-migration/2025/02/Beige-2.jpg",
+        "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+        "/media/wordpress-migration/2025/02/beige-3.jpg",
+        "/media/wordpress-migration/2025/02/beige-4.jpg"
+      ],
+      "galleryCount": 5
+    }
+  ]
+}

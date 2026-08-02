@@ -1,0 +1,116 @@
+{
+  "backedUpAt": "2026-06-16T07:48:09.237Z",
+  "table": "products",
+  "affectedRows": 4,
+  "updateRows": 4,
+  "fieldsUpdated": [
+    "description",
+    "descriptionAr"
+  ],
+  "rows": [
+    {
+      "id": 390050,
+      "slug": "classic-157",
+      "name": "Classic 157",
+      "nameAr": "كلاسيك 157",
+      "beforeMatches": [
+        {
+          "field": "description",
+          "matchedPatterns": [
+            "wpbakery_shortcode",
+            "woodmart_shortcode_attr",
+            "any_raw_shortcode"
+          ]
+        }
+      ],
+      "description": "A coffee table with a space for a small refrigerator and a flat glass window optional on top allow amazingly viewing of the coffee capsules and tea essentials. One of the main features of Classic, other than having a lot of storage space, is that it can be used as a buffet for the dining rooms.\r\n\r\nMaterials:\r\nWood - glass door finish - steel.\r\n\r\nSize:\r\nWidth 157cm, Depth 53cm, Height 86cm.\r\n<ol>\r\n \t<li>Do not clean the piece with chemicals.</li>\r\n \t<li>Do not spray water on the piece for the purpose of cleaning.</li>\r\n \t<li>Please avoid sharp tools to avoid scratches.</li>\r\n \t<li>If hot drinks fall on the marble, please clean it for a period not exceeding a minute with a tissue or a towel dampened with a small amount of water, because natural marble can absorb, which causes stains.</li>\r\n \t<li>Do not clean bronze with chemicals.</li>\r\n \t<li>Not to disassemble and install the piece more than once because the quality of wood does not withstand the exit and entry of the screw more than once (direction from the factory).</li>\r\n</ol>\r\nCleaning method: Use a soft towel dampened with very little water.Width 43cm, Depth 48cm, Height 50cm.\r\n\r\n<span style=\"color: #ff0000;\">The fridge is not included with the Coffee Table.</span>This module takes 90 - 120 days starting next month.\r\nGCC country to make an order please<span style=\"color: #9d7d39;\"> <a style=\"color: #9d7d39;\" href=\"https://wa.me/96599809595\" target=\"_blank\" rel=\"noopener\">click here</a></span>[vc_empty_space woodmart_hide_large=\"0\" woodmart_hide_medium=\"0\" woodmart_hide_small=\"0\"]",
+      "descriptionAr": "<p style=\"text-align: right;\">طاولة قهوة مع مساحة لثلاجة صغيرة ونافذة زجاجية مسطحة اختيارية في الأعلى تتيح مشاهدة كبسولات القهوة ومستلزمات الشاي بشكل مذهل. من السمات الرئيسية لـ Classic ، بخلاف وجود مساحة تخزين كبيرة ، أنه يمكن استخدامه كبوفيه في غرف الطعام.</p>\r\n<p style=\"text-align: right;\">المواد:\r\nالخشب - زجاج الباب التشطيب - الصلب.</p>\r\n<p style=\"text-align: right;\">بحجم:\r\nالعرض 157 سم ، العمق 53 سم ، الارتفاع 86 سم.</p>\r\n\r\n<ol>\r\n \t<li style=\"text-align: right;\">عدم تنظيف القطعة بمواد كيميائية.</li>\r\n \t<li style=\"text-align: right;\">عدم رش الماء على القطعة بغرض التنظيف.</li>\r\n \t<li style=\"text-align: right;\">يرجى تجنب الادوات الحادة لتفادي الخدوش.</li>\r\n \t<li style=\"text-align: right;\">في حال سقوط مشروبات ساخنة على الرخام يرجى تنظيفها بمدة لا تتجاوز الدقيقة بمناديل أو فوطة مبللة بكمية بسيطة من الماء لأن الرخام الطبيعي له قابلية للامتصاص مما يسبب البقع.</li>\r\n \t<li style=\"text-align: right;\">عدم تنظيف البرونز بالمواد الكيميائية.</li>\r\n</ol>\r\n<p style=\"text-align: right;\">طريقة التنظيف : بواسطة فوطة ناعمة مبللة بكمية قليلة جداً من الماء .</p>\r\n\r\n<p style=\"text-align: right;\">العرض 43 سم ، العمق 48 سم ، الارتفاع 50 سم.</p>\r\n<p style=\"text-align: right;\"><span style=\"color: #ff0000;\"> طاولة القهوة لا تشمل الثلاجة.</span></p>\r\n\r\n<p style=\"text-align: right;\">تستغرق طلبية الطاولة 90-120 يومًا بدءًا من الشهر التالي.</p>\r\n<p style=\"text-align: right;\">لطلب طاولات القهوة لدول الخليج  يرجى <span style=\"color: # 9d7d39؛;\"><a style=\"color: # 9d7d39؛;\" href=\"https://wa.me/96599809595\" target=\"_ blank\" rel=\"noopener\"><span style=\"color: #9d7d39;\">الضغط هنا</span> </a> </span></p>",
+      "shortDescription": "",
+      "shortDescriptionAr": ""
+    },
+    {
+      "id": 390084,
+      "slug": "classic-157-gray-white",
+      "name": "Classic 157 Gray / White",
+      "nameAr": "Classic 157 Gray / White",
+      "beforeMatches": [
+        {
+          "field": "description",
+          "matchedPatterns": [
+            "wpbakery_shortcode",
+            "woodmart_shortcode_attr",
+            "any_raw_shortcode"
+          ]
+        },
+        {
+          "field": "descriptionAr",
+          "matchedPatterns": [
+            "wpbakery_shortcode",
+            "woodmart_shortcode_attr",
+            "any_raw_shortcode"
+          ]
+        }
+      ],
+      "description": "A coffee table with a space for a small refrigerator and a flat glass window optional on top allow amazingly viewing of the coffee capsules and tea essentials. One of the main features of Classic, other than having a lot of storage space, is that it can be used as a buffet for the dining rooms.\r\n\r\nMaterials:\r\nWood - glass door finish - steel.\r\n\r\nSize:\r\nWidth 157cm, Depth 53cm, Height 86cm.\r\n<ol>\r\n \t<li>Do not clean the piece with chemicals.</li>\r\n \t<li>Do not spray water on the piece for the purpose of cleaning.</li>\r\n \t<li>Please avoid sharp tools to avoid scratches.</li>\r\n \t<li>If hot drinks fall on the marble, please clean it for a period not exceeding a minute with a tissue or a towel dampened with a small amount of water, because natural marble can absorb, which causes stains.</li>\r\n \t<li>Do not clean bronze with chemicals.</li>\r\n \t<li>Not to disassemble and install the piece more than once because the quality of wood does not withstand the exit and entry of the screw more than once (direction from the factory).</li>\r\n</ol>\r\nCleaning method: Use a soft towel dampened with very little water.Width 43cm, Depth 48cm, Height 50cm.\r\n\r\n<span style=\"color: #ff0000;\">The fridge is not included with the Coffee Table.</span>This module takes 90 - 120 days starting next month.\r\nGCC country to make an order please<span style=\"color: #9d7d39;\"> <a style=\"color: #9d7d39;\" href=\"https://wa.me/96599809595\" target=\"_blank\" rel=\"noopener\">click here</a></span>[vc_empty_space woodmart_hide_large=\"0\" woodmart_hide_medium=\"0\" woodmart_hide_small=\"0\"]",
+      "descriptionAr": "A coffee table with a space for a small refrigerator and a flat glass window optional on top allow amazingly viewing of the coffee capsules and tea essentials. One of the main features of Classic, other than having a lot of storage space, is that it can be used as a buffet for the dining rooms.\r\n\r\nMaterials:\r\nWood - glass door finish - steel.\r\n\r\nSize:\r\nWidth 157cm, Depth 53cm, Height 86cm.\r\n<ol>\r\n \t<li>Do not clean the piece with chemicals.</li>\r\n \t<li>Do not spray water on the piece for the purpose of cleaning.</li>\r\n \t<li>Please avoid sharp tools to avoid scratches.</li>\r\n \t<li>If hot drinks fall on the marble, please clean it for a period not exceeding a minute with a tissue or a towel dampened with a small amount of water, because natural marble can absorb, which causes stains.</li>\r\n \t<li>Do not clean bronze with chemicals.</li>\r\n \t<li>Not to disassemble and install the piece more than once because the quality of wood does not withstand the exit and entry of the screw more than once (direction from the factory).</li>\r\n</ol>\r\nCleaning method: Use a soft towel dampened with very little water.Width 43cm, Depth 48cm, Height 50cm.\r\n\r\n<span style=\"color: #ff0000;\">The fridge is not included with the Coffee Table.</span>This module takes 90 - 120 days starting next month.\r\nGCC country to make an order please<span style=\"color: #9d7d39;\"> <a style=\"color: #9d7d39;\" href=\"https://wa.me/96599809595\" target=\"_blank\" rel=\"noopener\">click here</a></span>[vc_empty_space woodmart_hide_large=\"0\" woodmart_hide_medium=\"0\" woodmart_hide_small=\"0\"]",
+      "shortDescription": "",
+      "shortDescriptionAr": ""
+    },
+    {
+      "id": 390087,
+      "slug": "classic-157-bohemian",
+      "name": "Classic 157 Bohemian",
+      "nameAr": "Classic 157 Bohemian",
+      "beforeMatches": [
+        {
+          "field": "description",
+          "matchedPatterns": [
+            "wpbakery_shortcode",
+            "woodmart_shortcode_attr",
+            "any_raw_shortcode"
+          ]
+        },
+        {
+          "field": "descriptionAr",
+          "matchedPatterns": [
+            "wpbakery_shortcode",
+            "woodmart_shortcode_attr",
+            "any_raw_shortcode"
+          ]
+        }
+      ],
+      "description": "A coffee table with a space for a small refrigerator and a flat glass window optional on top allow amazingly viewing of the coffee capsules and tea essentials. One of the main features of Classic, other than having a lot of storage space, is that it can be used as a buffet for the dining rooms.\r\n\r\nMaterials:\r\nWood - glass door finish - steel.\r\n\r\nSize:\r\nWidth 157cm, Depth 53cm, Height 86cm.\r\n<ol>\r\n \t<li>Do not clean the piece with chemicals.</li>\r\n \t<li>Do not spray water on the piece for the purpose of cleaning.</li>\r\n \t<li>Please avoid sharp tools to avoid scratches.</li>\r\n \t<li>If hot drinks fall on the marble, please clean it for a period not exceeding a minute with a tissue or a towel dampened with a small amount of water, because natural marble can absorb, which causes stains.</li>\r\n \t<li>Do not clean bronze with chemicals.</li>\r\n \t<li>Not to disassemble and install the piece more than once because the quality of wood does not withstand the exit and entry of the screw more than once (direction from the factory).</li>\r\n</ol>\r\nCleaning method: Use a soft towel dampened with very little water.Width 43cm, Depth 48cm, Height 50cm.\r\n\r\n<span style=\"color: #ff0000;\">The fridge is not included with the Coffee Table.</span>This module takes 90 - 120 days starting next month.\r\nGCC country to make an order please<span style=\"color: #9d7d39;\"> <a style=\"color: #9d7d39;\" href=\"https://wa.me/96599809595\" target=\"_blank\" rel=\"noopener\">click here</a></span>[vc_empty_space woodmart_hide_large=\"0\" woodmart_hide_medium=\"0\" woodmart_hide_small=\"0\"]",
+      "descriptionAr": "A coffee table with a space for a small refrigerator and a flat glass window optional on top allow amazingly viewing of the coffee capsules and tea essentials. One of the main features of Classic, other than having a lot of storage space, is that it can be used as a buffet for the dining rooms.\r\n\r\nMaterials:\r\nWood - glass door finish - steel.\r\n\r\nSize:\r\nWidth 157cm, Depth 53cm, Height 86cm.\r\n<ol>\r\n \t<li>Do not clean the piece with chemicals.</li>\r\n \t<li>Do not spray water on the piece for the purpose of cleaning.</li>\r\n \t<li>Please avoid sharp tools to avoid scratches.</li>\r\n \t<li>If hot drinks fall on the marble, please clean it for a period not exceeding a minute with a tissue or a towel dampened with a small amount of water, because natural marble can absorb, which causes stains.</li>\r\n \t<li>Do not clean bronze with chemicals.</li>\r\n \t<li>Not to disassemble and install the piece more than once because the quality of wood does not withstand the exit and entry of the screw more than once (direction from the factory).</li>\r\n</ol>\r\nCleaning method: Use a soft towel dampened with very little water.Width 43cm, Depth 48cm, Height 50cm.\r\n\r\n<span style=\"color: #ff0000;\">The fridge is not included with the Coffee Table.</span>This module takes 90 - 120 days starting next month.\r\nGCC country to make an order please<span style=\"color: #9d7d39;\"> <a style=\"color: #9d7d39;\" href=\"https://wa.me/96599809595\" target=\"_blank\" rel=\"noopener\">click here</a></span>[vc_empty_space woodmart_hide_large=\"0\" woodmart_hide_medium=\"0\" woodmart_hide_small=\"0\"]",
+      "shortDescription": "",
+      "shortDescriptionAr": ""
+    },
+    {
+      "id": 390120,
+      "slug": "classic-157-gold",
+      "name": "Classic 157 gold",
+      "nameAr": "Classic 157 gold",
+      "beforeMatches": [
+        {
+          "field": "description",
+          "matchedPatterns": [
+            "wpbakery_shortcode",
+            "woodmart_shortcode_attr",
+            "any_raw_shortcode"
+          ]
+        },
+        {
+          "field": "descriptionAr",
+          "matchedPatterns": [
+            "wpbakery_shortcode",
+            "woodmart_shortcode_attr",
+            "any_raw_shortcode"
+          ]
+        }
+      ],
+      "description": "A coffee table with a space for a small refrigerator and a flat glass window optional on top allow amazingly viewing of the coffee capsules and tea essentials. One of the main features of Classic, other than having a lot of storage space, is that it can be used as a buffet for the dining rooms.\r\n\r\nMaterials:\r\nWood - glass door finish - steel.\r\n\r\nSize:\r\nWidth 157cm, Depth 53cm, Height 86cm.\r\n<ol>\r\n \t<li>Do not clean the piece with chemicals.</li>\r\n \t<li>Do not spray water on the piece for the purpose of cleaning.</li>\r\n \t<li>Please avoid sharp tools to avoid scratches.</li>\r\n \t<li>If hot drinks fall on the marble, please clean it for a period not exceeding a minute with a tissue or a towel dampened with a small amount of water, because natural marble can absorb, which causes stains.</li>\r\n \t<li>Do not clean bronze with chemicals.</li>\r\n \t<li>Not to disassemble and install the piece more than once because the quality of wood does not withstand the exit and entry of the screw more than once (direction from the factory).</li>\r\n</ol>\r\nCleaning method: Use a soft towel dampened with very little water.Width 43cm, Depth 48cm, Height 50cm.\r\n\r\n<span style=\"color: #ff0000;\">The fridge is not included with the Coffee Table.</span>This module takes 90 - 120 days starting next month.\r\nGCC country to make an order please<span style=\"color: #9d7d39;\"> <a style=\"color: #9d7d39;\" href=\"https://wa.me/96599809595\" target=\"_blank\" rel=\"noopener\">click here</a></span>[vc_empty_space woodmart_hide_large=\"0\" woodmart_hide_medium=\"0\" woodmart_hide_small=\"0\"]",
+      "descriptionAr": "A coffee table with a space for a small refrigerator and a flat glass window optional on top allow amazingly viewing of the coffee capsules and tea essentials. One of the main features of Classic, other than having a lot of storage space, is that it can be used as a buffet for the dining rooms.\r\n\r\nMaterials:\r\nWood - glass door finish - steel.\r\n\r\nSize:\r\nWidth 157cm, Depth 53cm, Height 86cm.\r\n<ol>\r\n \t<li>Do not clean the piece with chemicals.</li>\r\n \t<li>Do not spray water on the piece for the purpose of cleaning.</li>\r\n \t<li>Please avoid sharp tools to avoid scratches.</li>\r\n \t<li>If hot drinks fall on the marble, please clean it for a period not exceeding a minute with a tissue or a towel dampened with a small amount of water, because natural marble can absorb, which causes stains.</li>\r\n \t<li>Do not clean bronze with chemicals.</li>\r\n \t<li>Not to disassemble and install the piece more than once because the quality of wood does not withstand the exit and entry of the screw more than once (direction from the factory).</li>\r\n</ol>\r\nCleaning method: Use a soft towel dampened with very little water.Width 43cm, Depth 48cm, Height 50cm.\r\n\r\n<span style=\"color: #ff0000;\">The fridge is not included with the Coffee Table.</span>This module takes 90 - 120 days starting next month.\r\nGCC country to make an order please<span style=\"color: #9d7d39;\"> <a style=\"color: #9d7d39;\" href=\"https://wa.me/96599809595\" target=\"_blank\" rel=\"noopener\">click here</a></span>[vc_empty_space woodmart_hide_large=\"0\" woodmart_hide_medium=\"0\" woodmart_hide_small=\"0\"]",
+      "shortDescription": "",
+      "shortDescriptionAr": ""
+    }
+  ]
+}

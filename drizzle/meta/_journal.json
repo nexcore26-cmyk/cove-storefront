@@ -1,0 +1,202 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1777223710327,
+      "tag": "0000_broad_wallflower",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1777223890710,
+      "tag": "0001_rich_ken_ellis",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1777240789911,
+      "tag": "0002_giant_dagger",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1777337498223,
+      "tag": "0003_next_phil_sheldon",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1777378442054,
+      "tag": "0004_gifted_ozymandias",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1777390009827,
+      "tag": "0005_curvy_spectrum",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1777399297687,
+      "tag": "0006_melted_the_hunter",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1777404905740,
+      "tag": "0007_dusty_morbius",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1777405928256,
+      "tag": "0008_unusual_mauler",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1777458041545,
+      "tag": "0009_lean_grey_gargoyle",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1777463563498,
+      "tag": "0010_dazzling_ronan",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1777463979516,
+      "tag": "0011_nostalgic_leader",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1777469068735,
+      "tag": "0012_mysterious_terrax",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1777469851468,
+      "tag": "0013_brainy_tomas",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1777476032320,
+      "tag": "0014_nervous_menace",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1777506373593,
+      "tag": "0015_nebulous_tigra",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "5",
+      "when": 1777507191709,
+      "tag": "0016_mixed_unicorn",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "5",
+      "when": 1777507936923,
+      "tag": "0017_lonely_vance_astro",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "5",
+      "when": 1777514283034,
+      "tag": "0018_wonderful_doctor_octopus",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "5",
+      "when": 1777570813715,
+      "tag": "0019_majestic_cerise",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "5",
+      "when": 1777571059860,
+      "tag": "0020_tricky_kid_colt",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "5",
+      "when": 1777612363932,
+      "tag": "0021_light_black_widow",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "5",
+      "when": 1777616904634,
+      "tag": "0022_curvy_pyro",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "5",
+      "when": 1777627278639,
+      "tag": "0023_glorious_rocket_raccoon",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "5",
+      "when": 1777704842153,
+      "tag": "0024_yielding_bullseye",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1777705223042,
+      "tag": "0025_payment_gateways",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "5",
+      "when": 1777725600000,
+      "tag": "0027_return_requests",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1777789175061,
+      "tag": "0028_phase2_email_templates_currency_rates",
+      "breakpoints": true
+    }
+  ]
+}

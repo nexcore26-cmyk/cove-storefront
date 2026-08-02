@@ -1,0 +1,16 @@
+[
+  {
+    "table": "page_blocks",
+    "id": 30015,
+    "column": "config",
+    "oldValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"https://coveinterior.com/wp-content/uploads/2022/07/1-feature-ar.jpg\\\" alt=\\\"مقارنة 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">مقارنة 1</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/1.png\\\" alt=\\\"Comparison 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Comparison 1</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"ثلاثي الأبعاد مقابل الحقيقي\",\"titleEn\":\"3D vs Real — Before & After\"}",
+    "newValue": "{\"bodyAr\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/1.png\\\" alt=\\\"مقارنة 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">مقارنة 1</span></div>\\n  </div>\\n</div>\",\"bodyEn\":\"<div class=\\\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\\\">\\n  <div class=\\\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\\\">\\n    <img src=\\\"/media/wordpress-migration/2022/07/1.png\\\" alt=\\\"Comparison 1\\\" class=\\\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\\\" />\\n    <div class=\\\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\\\"><span class=\\\"text-white font-semibold text-xl\\\">Comparison 1</span></div>\\n  </div>\\n</div>\",\"titleAr\":\"ثلاثي الأبعاد مقابل الحقيقي\",\"titleEn\":\"3D vs Real — Before & After\"}",
+    "actionType": "phase3a_rewrite_remaining_page_block_wp_media_url",
+    "detail": {
+      "from": "https://coveinterior.com/wp-content/uploads/2022/07/1-feature-ar.jpg",
+      "to": "/media/wordpress-migration/2022/07/1.png",
+      "replacements": 1,
+      "reason": "Replace the single remaining non-order WordPress media URL in Arabic page-block HTML with the verified Node media asset already used by the English counterpart."
+    }
+  }
+]

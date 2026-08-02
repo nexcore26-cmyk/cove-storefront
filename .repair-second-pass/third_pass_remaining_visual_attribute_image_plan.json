@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "scope": "third-pass remaining visual active values after second-pass repair, all status=publish non-simple products",
+    "cloneAssignments": 15,
+    "globalUpdates": 0,
+    "skippedMissingRows": 0,
+    "notes": "All assignments are product-specific clones to avoid applying shared labels such as Basic set or Single globally across unrelated products."
+  },
+  "globalUpdates": [],
+  "cloneAssignments": [
+    {
+      "productSlug": "mini-roshina-beige",
+      "productName": null,
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 419,
+      "label": "Basic set (Only Box)",
+      "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    },
+    {
+      "productSlug": "mini-roshina-gray",
+      "productName": null,
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 419,
+      "label": "Basic set (Only Box)",
+      "image": "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg",
+      "galleryImages": [
+        "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    },
+    {
+      "productSlug": "roshina-2-cement-green",
+      "productName": null,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg"
+      ],
+      "evidence": "direct WordPress swatch evidence"
+    },
+    {
+      "productSlug": "roshina-2-dark-green",
+      "productName": null,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-2-430x430.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-2-430x430.jpg"
+      ],
+      "evidence": "direct WordPress swatch evidence"
+    },
+    {
+      "productSlug": "roshina-2-off-white",
+      "productName": null,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-2-150x150.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-2-150x150.jpg"
+      ],
+      "evidence": "direct WordPress swatch evidence"
+    },
+    {
+      "productSlug": "roshina-2-wooden",
+      "productName": null,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-2-darkveneer-wood-2-150x150.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-2-darkveneer-wood-2-150x150.jpg"
+      ],
+      "evidence": "direct WordPress swatch evidence"
+    },
+    {
+      "productSlug": "roshina-3-camel-web",
+      "productName": null,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg"
+      ],
+      "evidence": "direct WordPress swatch evidence"
+    },
+    {
+      "productSlug": "roshina-3-light-blue",
+      "productName": null,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg"
+      ],
+      "evidence": "direct WordPress swatch evidence"
+    },
+    {
+      "productSlug": "roshina-3-maroon",
+      "productName": null,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg"
+      ],
+      "evidence": "direct WordPress swatch evidence"
+    },
+    {
+      "productSlug": "tissue-box-beige",
+      "productName": null,
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2023/12/tissue-box-beige.jpg",
+      "galleryImages": [
+        "/media/wordpress-migration/2023/12/tissue-box-beige.jpg"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    },
+    {
+      "productSlug": "tissue-box-black",
+      "productName": null,
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+      "galleryImages": [
+        "/media/wordpress-migration/2023/12/tissue-box-black.jpg"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    },
+    {
+      "productSlug": "tissue-box-bronze",
+      "productName": null,
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+      "galleryImages": [
+        "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    },
+    {
+      "productSlug": "beige-trash-bin",
+      "productName": null,
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    },
+    {
+      "productSlug": "black-trash-bin",
+      "productName": null,
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    },
+    {
+      "productSlug": "bronze-trash-bin",
+      "productName": null,
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+      "galleryImages": [
+        "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png"
+      ],
+      "evidence": "migrated product primary image from published product gallery"
+    }
+  ],
+  "skippedMissingRows": []
+}

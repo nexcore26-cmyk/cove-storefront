@@ -1,0 +1,212 @@
+{
+  "runId": "media-phase3-inventory-2026-06-01T22-19-34-306Z",
+  "generatedAt": "2026-06-01T22:19:34.895Z",
+  "mode": "read-only",
+  "database": {
+    "tableCount": 48,
+    "mediaAssets": {
+      "exists": true,
+      "columns": [
+        {
+          "COLUMN_NAME": "id",
+          "DATA_TYPE": "int"
+        },
+        {
+          "COLUMN_NAME": "tenantId",
+          "DATA_TYPE": "int"
+        },
+        {
+          "COLUMN_NAME": "key",
+          "DATA_TYPE": "varchar"
+        },
+        {
+          "COLUMN_NAME": "url",
+          "DATA_TYPE": "varchar"
+        },
+        {
+          "COLUMN_NAME": "sourceUrl",
+          "DATA_TYPE": "text"
+        },
+        {
+          "COLUMN_NAME": "sourceSystem",
+          "DATA_TYPE": "varchar"
+        },
+        {
+          "COLUMN_NAME": "mimeType",
+          "DATA_TYPE": "varchar"
+        },
+        {
+          "COLUMN_NAME": "sizeBytes",
+          "DATA_TYPE": "int"
+        },
+        {
+          "COLUMN_NAME": "sha256",
+          "DATA_TYPE": "varchar"
+        },
+        {
+          "COLUMN_NAME": "originalFilename",
+          "DATA_TYPE": "varchar"
+        },
+        {
+          "COLUMN_NAME": "altText",
+          "DATA_TYPE": "text"
+        },
+        {
+          "COLUMN_NAME": "entityType",
+          "DATA_TYPE": "varchar"
+        },
+        {
+          "COLUMN_NAME": "entityId",
+          "DATA_TYPE": "int"
+        },
+        {
+          "COLUMN_NAME": "isActive",
+          "DATA_TYPE": "tinyint"
+        },
+        {
+          "COLUMN_NAME": "createdAt",
+          "DATA_TYPE": "timestamp"
+        },
+        {
+          "COLUMN_NAME": "updatedAt",
+          "DATA_TYPE": "timestamp"
+        }
+      ],
+      "counts": {
+        "total": 524,
+        "active": 524,
+        "wordpressMigration": 521,
+        "adminUploads": 3
+      }
+    }
+  },
+  "filesystem": {
+    "root": "/home/manus/cove-storefront/public/media",
+    "totalFiles": 435,
+    "totalBytes": 228338046,
+    "byTopDir": {
+      "admin-uploads": {
+        "files": 2,
+        "bytes": 577002
+      },
+      "wordpress-migration": {
+        "files": 433,
+        "bytes": 227761044
+      }
+    }
+  },
+  "referenceCounts": [
+    {
+      "table": "categories",
+      "column": "image",
+      "totalRows": 21,
+      "mediaRows": 11,
+      "wpRows": 0,
+      "migrationRows": 11,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "media_assets",
+      "column": "key",
+      "totalRows": 524,
+      "mediaRows": 0,
+      "wpRows": 0,
+      "migrationRows": 521,
+      "adminUploadRows": 3
+    },
+    {
+      "table": "media_assets",
+      "column": "url",
+      "totalRows": 524,
+      "mediaRows": 524,
+      "wpRows": 0,
+      "migrationRows": 521,
+      "adminUploadRows": 3
+    },
+    {
+      "table": "media_assets",
+      "column": "sourceUrl",
+      "totalRows": 524,
+      "mediaRows": 0,
+      "wpRows": 521,
+      "migrationRows": 0,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "media_assets",
+      "column": "sourceSystem",
+      "totalRows": 524,
+      "mediaRows": 0,
+      "wpRows": 0,
+      "migrationRows": 194,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "media_reference_migration_backups",
+      "column": "oldValue",
+      "totalRows": 22,
+      "mediaRows": 14,
+      "wpRows": 8,
+      "migrationRows": 14,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "media_reference_migration_backups",
+      "column": "newValue",
+      "totalRows": 22,
+      "mediaRows": 22,
+      "wpRows": 1,
+      "migrationRows": 22,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "order_items",
+      "column": "image",
+      "totalRows": 9899,
+      "mediaRows": 0,
+      "wpRows": 5662,
+      "migrationRows": 0,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "page_blocks",
+      "column": "config",
+      "totalRows": 20,
+      "mediaRows": 8,
+      "wpRows": 1,
+      "migrationRows": 8,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "product_variants",
+      "column": "image",
+      "totalRows": 2840,
+      "mediaRows": 2840,
+      "wpRows": 0,
+      "migrationRows": 2840,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "product_variants",
+      "column": "galleryImages",
+      "totalRows": 2840,
+      "mediaRows": 1507,
+      "wpRows": 0,
+      "migrationRows": 1507,
+      "adminUploadRows": 0
+    },
+    {
+      "table": "products",
+      "column": "images",
+      "totalRows": 191,
+      "mediaRows": 189,
+      "wpRows": 0,
+      "migrationRows": 188,
+      "adminUploadRows": 1
+    }
+  ],
+  "notes": [
+    "No database writes were executed.",
+    "No files were moved, overwritten, or deleted."
+  ]
+}

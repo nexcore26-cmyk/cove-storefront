@@ -1,0 +1,1 @@
+ALTER TABLE `store_settings` ADD `paymentGateway` enum('myfatoorah','tap','cod') DEFAULT 'cod' NOT NULL;

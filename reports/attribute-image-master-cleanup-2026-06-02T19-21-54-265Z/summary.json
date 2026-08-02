@@ -1,0 +1,14 @@
+{
+  "runId": "attribute-image-master-cleanup-2026-06-02T19-21-54-265Z",
+  "mode": "apply",
+  "rowsBackedUp": 7,
+  "affectedRows": 7,
+  "after": [
+    {
+      "isImageMaster": 0,
+      "count": 170
+    }
+  ],
+  "reportDir": "/home/manus/cove-storefront/reports/attribute-image-master-cleanup-2026-06-02T19-21-54-265Z",
+  "applied": true
+}

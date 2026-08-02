@@ -1,0 +1,1260 @@
+/**
+ * Checkout — Multi-step checkout with GCC address fields
+ * Design: Obsidian Editorial
+ * Steps: 1. Address → 2. Shipping → 3. Payment → 4. Confirmation
+ * Features:
+ *  - Kuwait area dropdown populated from DB (with per-area extra charges)
+ *  - Store Pickup option (name + phone only, no address required)
+ *  - Coupon validation with live discount calculation
+ *  - Country lock after address step
+ */
+import { useState, useMemo, useEffect } from 'react';
+import { useLocation } from 'wouter';
+import { Check, ChevronRight, CreditCard, Smartphone, Banknote, Loader2, Tag, X } from 'lucide-react';
+import Layout from '@/components/layout/Layout';
+import { useCart } from '@/contexts/CartContext';
+import { toast } from 'sonner';
+import { trpc } from '@/lib/trpc';
+import { cleanName } from '@/lib/cleanName';
+
+type Step = 'address' | 'shipping' | 'payment' | 'review';
+
+const COUNTRY_NAMES: Record<string, string> = {
+  KW: 'Kuwait',
+  BH: 'Bahrain',
+  OM: 'Oman',
+  QA: 'Qatar',
+  SA: 'Saudi Arabia',
+  AE: 'United Arab Emirates',
+  US: 'United States',
+  GB: 'United Kingdom',
+  FR: 'France',
+  DE: 'Germany',
+  IT: 'Italy',
+  ES: 'Spain',
+  IN: 'India',
+  CN: 'China',
+  JP: 'Japan',
+  AU: 'Australia',
+  CA: 'Canada',
+};
+
+const getCountryName = (code: string) => COUNTRY_NAMES[code] || code;
+
+const PAYMENT_METHODS_ALL = [
+  { id: 'myfatoorah', name: 'MyFatoorah', desc: 'KNET, Visa, Mastercard, Apple Pay', icon: <CreditCard size={20} /> },
+  { id: 'cod', name: 'Direct Link / Pay by Arrangement', desc: 'Place the order now; our team will contact you with the direct payment link or collection details.', icon: <Banknote size={20} /> },
+];
+
+const steps: { id: Step; label: string }[] = [
+  { id: 'address', label: 'Address' },
+  { id: 'shipping', label: 'Shipping' },
+  { id: 'payment', label: 'Payment' },
+  { id: 'review', label: 'Review' },
+];
+
+function StepIndicator({ current }: { current: Step }) {
+  const currentIdx = steps.findIndex((s) => s.id === current);
+  return (
+    <div className="flex items-center justify-center gap-0 mb-12">
+      {steps.map((step, idx) => {
+        const done = idx < currentIdx;
+        const active = idx === currentIdx;
+        return (
+          <div key={step.id} className="flex items-center">
+            <div className="flex flex-col items-center">
+              <div
+                className="w-8 h-8 flex items-center justify-center text-xs font-semibold transition-all duration-300"
+                style={{
+                  backgroundColor: done ? '#9D7D39' : active ? '#111110' : '#F0EDE8',
+                  color: done || active ? '#FAFAF8' : '#8A8A82',
+                  fontFamily: 'Montserrat, sans-serif',
+                }}
+              >
+                {done ? <Check size={14} /> : idx + 1}
+              </div>
+              <span
+                className="text-[10px] font-semibold tracking-widest uppercase mt-2"
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  color: active ? '#242424' : done ? '#9D7D39' : '#8A8A82',
+                }}
+              >
+                {step.label}
+              </span>
+            </div>
+            {idx < steps.length - 1 && (
+              <div
+                className="w-16 md:w-24 h-px mx-2 mb-5"
+                style={{ backgroundColor: done ? '#9D7D39' : '#E8E4DC' }}
+              />
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function Checkout() {
+  const [, navigate] = useLocation();
+  const { items, subtotal, clearCart } = useCart();
+  const [step, setStep] = useState<Step>('address');
+
+  // Pickup mode: skip address fields, only name + phone
+  const [isPickup, setIsPickup] = useState(false);
+
+  // Form state
+  const [address, setAddress] = useState({
+    firstName: '', lastName: '', phone: '', email: '',
+    country: 'KW', area: '', block: '', street: '', avenue: '', house: '', paci: '', notes: '',
+  });
+
+  // Lock country after leaving address step
+  const [lockedCountry, setLockedCountry] = useState('');
+
+  const [selectedShipping, setSelectedShipping] = useState('');
+  const [selectedPayment, setSelectedPayment] = useState('myfatoorah');
+  const [selectedMfPaymentMethodId, setSelectedMfPaymentMethodId] = useState<number | null>(null);
+
+  // Coupon state
+  const [couponInput, setCouponInput] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState<null | {
+    code: string;
+    type: string;
+    amount: string;
+    freeShipping: boolean;
+    minimumAmount: string | null;
+  }>(null);
+  const [couponError, setCouponError] = useState('');
+  const [couponLoading, setCouponLoading] = useState(false);
+
+  // Kuwait cities from DB (new shipping class system)
+  const [selectedKuwaitCityId, setSelectedKuwaitCityId] = useState<number | undefined>(undefined);
+  const { data: kuwaitCities = [] } = trpc.shipping.listKuwaitCities.useQuery(undefined, {
+    staleTime: 5 * 60 * 1000,
+  });
+  const { data: activeCountryCodes = ['KW'], isLoading: isLoadingCountries } = trpc.shipping.listActiveZoneCountries.useQuery(undefined, {
+    staleTime: 5 * 60 * 1000,
+  });
+  const countryOptions = (activeCountryCodes.length > 0 ? activeCountryCodes : ['KW']).map((code: string) => ({
+    code,
+    name: getCountryName(code),
+  }));
+
+  // Cart items for shipping calculation (with shippingClassId and kuwaitOnly)
+  const cartItemsForShipping = useMemo(() => items.map(i => ({
+    productId: i.productId,
+    variantId: i.variantId ?? null,
+    qty: i.qtyValue,
+    shippingClassId: i.shippingClassId ?? null,
+    kuwaitOnly: i.kuwaitOnly ?? false,
+  })), [items]);
+
+  // Live shipping rate calculation using new calculateCart procedure
+  const shippingCountry = lockedCountry || address.country;
+  const isKuwaitShippingAddress = shippingCountry === 'KW';
+  const shouldCalculateShipping = !isPickup && !!shippingCountry && cartItemsForShipping.length > 0 && (!isKuwaitShippingAddress || !!selectedKuwaitCityId || step !== 'address');
+  const { data: cartShippingData, isLoading: shippingLoading } = trpc.shipping.calculateCart.useQuery(
+    {
+      country: shippingCountry,
+      ...(selectedKuwaitCityId ? { kuwaitCityId: selectedKuwaitCityId } : {}),
+      items: cartItemsForShipping,
+    },
+    { enabled: shouldCalculateShipping }
+  );
+
+  // Shipping cost from calculateCart
+  const baseShippingCost = cartShippingData?.total ?? 0;
+  const shippingSupported = cartShippingData?.supported !== false;
+  const kuwaitOnlyConflict = !shippingSupported && (cartShippingData as any)?.kuwaitOnlyProductIds?.length > 0;
+
+  // If pickup is selected, shipping cost is 0
+  const shippingCost = isPickup ? 0 : baseShippingCost;
+  const shippingPending = !isPickup && !cartShippingData && shouldCalculateShipping;
+
+  // Coupon discount calculation
+  const couponDiscount = useMemo(() => {
+    if (!appliedCoupon) return 0;
+    const amt = parseFloat(appliedCoupon.amount);
+    if (appliedCoupon.type === 'percent') {
+      return Math.min((subtotal * amt) / 100, subtotal);
+    }
+    if (appliedCoupon.type === 'fixed_cart') {
+      return Math.min(amt, subtotal);
+    }
+    return 0; // fixed_product handled at item level (not implemented here)
+  }, [appliedCoupon, subtotal]);
+
+  // Free shipping from coupon
+  const couponFreeShipping = appliedCoupon?.freeShipping ?? false;
+  const effectiveShippingCost = couponFreeShipping ? 0 : shippingCost;
+  const shippingDisplayText = isPickup
+    ? 'Free'
+    : shippingPending || shippingLoading
+    ? 'Calculating…'
+    : effectiveShippingCost === 0
+    ? 'Free'
+    : `${effectiveShippingCost.toFixed(3)} KWD`;
+  const total = subtotal - couponDiscount + effectiveShippingCost;
+
+  // Coupon validation mutation
+  const validateCouponQuery = trpc.coupons.validate.useQuery(
+    { code: couponInput.trim().toUpperCase(), cartTotal: subtotal },
+    { enabled: false }
+  );
+  const utils = trpc.useUtils();
+
+  const handleApplyCoupon = async () => {
+    const code = couponInput.trim().toUpperCase();
+    if (!code) return;
+    setCouponLoading(true);
+    setCouponError('');
+    try {
+      const result = await utils.coupons.validate.fetch({ code, cartTotal: subtotal });
+      setAppliedCoupon({
+        code: result.code,
+        type: result.type,
+        amount: String(result.amount),
+        freeShipping: result.freeShipping ?? false,
+        minimumAmount: result.minimumAmount ? String(result.minimumAmount) : null,
+      });
+      toast.success(`Coupon "${result.code}" applied!`);
+      setCouponInput('');
+    } catch (err: any) {
+      setCouponError(err?.message || 'Invalid coupon code');
+    } finally {
+      setCouponLoading(false);
+    }
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponError('');
+    setCouponInput('');
+  };
+
+  const handleAddressNext = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (isPickup) {
+      if (!address.firstName || !address.phone) {
+        toast.error('Please enter your name and phone number');
+        return;
+      }
+    } else {
+      if (!address.firstName || !address.phone) {
+        toast.error('Please fill in all required fields');
+        return;
+      }
+      if (address.country === 'KW' && (!address.area || !address.block || !address.street || !address.house)) {
+        toast.error('Please fill in all required Kuwait address fields');
+        return;
+      }
+      if (address.country !== 'KW' && (!address.area || !address.house)) {
+        toast.error('Please fill in city and building/house fields');
+        return;
+      }
+    }
+    setLockedCountry(address.country);
+    setStep('shipping');
+  };
+
+  // Fetch active payment gateway from store settings
+  const { data: gatewayData } = trpc.payment.getGateway.useQuery();
+  const activeGateway = gatewayData?.gateway || 'myfatoorah';
+  const codEnabled = gatewayData?.codEnabled ?? false;
+
+  // MyFatoorah remains the default online gateway. Direct Link/COD may coexist when enabled,
+  // but it must not override the customer's selected gateway.
+
+  // MyFatoorah is always available; Direct Link fallback is shown only when enabled in admin settings
+  const availablePaymentMethods = PAYMENT_METHODS_ALL.filter((m) => {
+    if (m.id === 'myfatoorah') return true;
+    if (m.id === 'cod') return codEnabled;
+    return false;
+  });
+
+  const myFatoorahMethodsQuery = trpc.payment.listMethods.useQuery(
+    { amount: Math.max(total, 0.001), currency: 'KWD' },
+    { enabled: selectedPayment === 'myfatoorah' && step === 'review' && total > 0 }
+  );
+  const myFatoorahMethods = myFatoorahMethodsQuery.data || [];
+
+  useEffect(() => {
+    if (selectedPayment !== 'myfatoorah') {
+      setSelectedMfPaymentMethodId(null);
+      return;
+    }
+    if (!myFatoorahMethods.length) return;
+    const stillAvailable = myFatoorahMethods.some((method: any) => method.id === selectedMfPaymentMethodId);
+    if (!stillAvailable) {
+      const cardFallback = myFatoorahMethods.find((method: any) => {
+        const label = `${method.name || ''} ${method.code || ''}`.toLowerCase();
+        return label.includes('visa') || label.includes('master') || label.includes('vm');
+      });
+      setSelectedMfPaymentMethodId((cardFallback || myFatoorahMethods[0]).id);
+    }
+  }, [selectedPayment, myFatoorahMethods, selectedMfPaymentMethodId]);
+
+  const initiatePaymentMutation = trpc.payment.initiate.useMutation({
+    onSuccess: (data) => {
+      window.location.href = data.paymentUrl;
+    },
+    onError: (err) => {
+      toast.error(err.message || 'Failed to initiate payment. Please try again.');
+    },
+  });
+
+  const placeOrderMutation = trpc.orders.place.useMutation({
+    onSuccess: (data) => {
+      if (selectedPayment === 'cod') {
+        clearCart();
+        navigate(`/order-confirmation?order=${data.orderNumber}`);
+      } else {
+        initiatePaymentMutation.mutate({
+          orderId: data.orderId,
+          origin: window.location.origin,
+          paymentMethodId: selectedMfPaymentMethodId || undefined,
+        });
+      }
+    },
+    onError: (err) => {
+      toast.error(err.message || 'Failed to place order. Please try again.');
+    },
+  });
+
+  const isLoading = placeOrderMutation.isPending || initiatePaymentMutation.isPending;
+
+  const handlePlaceOrder = () => {
+    if (items.length === 0) { toast.error('Your cart is empty'); return; }
+    const billingAddress = isPickup
+      ? { country: 'KW', area: 'Store Pickup', block: '', street: '', avenue: '', house: '', paci: '', notes: address.notes }
+      : {
+          country: address.country,
+          city: address.area,
+          area: address.area,
+          block: address.block,
+          street: address.street,
+          avenue: address.avenue,
+          house: address.house,
+          paci: address.paci,
+          notes: address.notes,
+        };
+
+    if (selectedPayment === 'myfatoorah' && myFatoorahMethods.length > 0 && !selectedMfPaymentMethodId) {
+      toast.error('Please choose a MyFatoorah payment option');
+      return;
+    }
+
+    placeOrderMutation.mutate({
+      guestEmail: address.email || undefined,
+      guestName: `${address.firstName} ${address.lastName}`.trim() || undefined,
+      guestPhone: address.phone || undefined,
+      billingAddress,
+      shippingMethod: isPickup ? 'store_pickup' : (selectedShipping || 'delivery'),
+      paymentMethod: selectedPayment,
+      couponCode: appliedCoupon?.code,
+      subtotal,
+      discountTotal: couponDiscount,
+      shippingTotal: effectiveShippingCost,
+      total,
+      items: items.map((item) => ({
+        productId: item.productId,
+        variantId: item.variantId,
+        name: cleanName(item.name),
+        sku: undefined,
+        quantity: item.quantity,
+        qtyValue: item.qtyValue ?? item.quantity,
+        measurementType: item.measurementType ?? 'unit',
+        price: item.price,
+        total: item.price * (item.qtyValue ?? item.quantity),
+      })),
+    });
+  };
+
+  const isKuwait = address.country === 'KW';
+
+  return (
+    <Layout>
+      {/* Page header */}
+      <div
+        className="py-12 border-b"
+        style={{ backgroundColor: '#111110', borderColor: 'rgba(255,255,255,0.08)' }}
+      >
+        <div className="container text-center">
+          <p
+            className="text-xs font-semibold tracking-[0.25em] uppercase mb-2"
+            style={{ color: '#9D7D39', fontFamily: 'Montserrat, sans-serif' }}
+          >
+            Secure Checkout
+          </p>
+          <h1
+            className="text-4xl font-light"
+            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#FAFAF8' }}
+          >
+            Complete Your Order
+          </h1>
+        </div>
+      </div>
+
+      <div className="container py-12">
+        <StepIndicator current={step} />
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* ── Main form area ── */}
+          <div className="lg:col-span-2">
+
+            {/* ── STEP 1: ADDRESS ── */}
+            {step === 'address' && (
+              <form onSubmit={handleAddressNext}>
+                <h2
+                  className="text-2xl font-light mb-6"
+                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#242424' }}
+                >
+                  {isPickup ? 'Store Pickup' : 'Delivery Address'}
+                </h2>
+
+                {/* Pickup toggle */}
+                <div className="flex gap-3 mb-8">
+                  <button
+                    type="button"
+                    onClick={() => setIsPickup(false)}
+                    className="flex-1 py-3 text-xs font-semibold tracking-wider uppercase transition-all duration-150 border"
+                    style={{
+                      fontFamily: 'Montserrat, sans-serif',
+                      borderColor: !isPickup ? '#9D7D39' : '#E8E4DC',
+                      backgroundColor: !isPickup ? 'rgba(157,125,57,0.06)' : 'transparent',
+                      color: !isPickup ? '#9D7D39' : '#8A8A82',
+                    }}
+                  >
+                    🚚 Delivery
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIsPickup(true)}
+                    className="flex-1 py-3 text-xs font-semibold tracking-wider uppercase transition-all duration-150 border"
+                    style={{
+                      fontFamily: 'Montserrat, sans-serif',
+                      borderColor: isPickup ? '#9D7D39' : '#E8E4DC',
+                      backgroundColor: isPickup ? 'rgba(157,125,57,0.06)' : 'transparent',
+                      color: isPickup ? '#9D7D39' : '#8A8A82',
+                    }}
+                  >
+                    🏪 Store Pickup
+                  </button>
+                </div>
+
+                {/* Pickup info banner */}
+                {isPickup && (
+                  <div
+                    className="p-4 mb-6 border-l-2"
+                    style={{ borderColor: '#9D7D39', backgroundColor: 'rgba(157,125,57,0.05)' }}
+                  >
+                    <p className="text-xs font-semibold tracking-wider uppercase mb-1" style={{ color: '#9D7D39', fontFamily: 'Montserrat, sans-serif' }}>
+                      Cove Interior Showroom
+                    </p>
+                    <p className="text-sm" style={{ color: '#242424', fontFamily: 'Montserrat, sans-serif' }}>
+                      Kuwait City — We will contact you to arrange pickup time.
+                    </p>
+                  </div>
+                )}
+
+                {/* Contact info */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={address.firstName}
+                      onChange={(e) => setAddress({ ...address, firstName: e.target.value })}
+                      required
+                      className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                      style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      value={address.lastName}
+                      onChange={(e) => setAddress({ ...address, lastName: e.target.value })}
+                      className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                      style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                      Phone *
+                    </label>
+                    <input
+                      type="tel"
+                      value={address.phone}
+                      onChange={(e) => setAddress({ ...address, phone: e.target.value })}
+                      required
+                      placeholder="+965 XXXX XXXX"
+                      className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                      style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      value={address.email}
+                      onChange={(e) => setAddress({ ...address, email: e.target.value })}
+                      className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                      style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    />
+                  </div>
+                </div>
+
+                {/* Delivery-only fields */}
+                {!isPickup && (
+                  <>
+                    {/* Country */}
+                    <div className="mb-4">
+                      <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                        Country *
+                      </label>
+                      <select
+                        value={address.country}
+                        onChange={(e) => setAddress({ ...address, country: e.target.value, area: '' })}
+                        className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                        style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                      >
+                        {isLoadingCountries && (
+                          <option value={address.country}>Loading countries...</option>
+                        )}
+                        {!isLoadingCountries && countryOptions.map((c) => (
+                          <option key={c.code} value={c.code}>{c.name}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Area/Governorate */}
+                    <div className="mb-4">
+                      <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                        {isKuwait ? 'Area *' : 'City *'}
+                      </label>
+                      {isKuwait ? (
+                        <select
+                          value={address.area}
+                          onChange={(e) => {
+                            const city = kuwaitCities.find((c: any) => c.cityName === e.target.value);
+                            setSelectedKuwaitCityId(city?.id);
+                            setAddress({ ...address, area: e.target.value });
+                          }}
+                          required
+                          className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                          style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                        >
+                          <option value="">Select area...</option>
+                          {kuwaitCities.length > 0
+                            ? kuwaitCities.map((a: any) => (
+                                <option key={a.id} value={a.cityName}>
+                                  {a.cityName}
+                                  {parseFloat(String(a.surcharge)) > 0 ? ` (+${parseFloat(String(a.surcharge)).toFixed(3)} KWD)` : ''}
+                                </option>
+                              ))
+                            : ['Kuwait City', 'Salmiya', 'Hawalli', 'Rumaithiya', 'Mishref', 'Jabriya', 'Bayan', 'Fintas', 'Mangaf', 'Fahaheel', 'Shuwaikh', 'Sabah Al Salem', 'Ahmadi', 'Mahboula', 'Salwa', 'Farwaniya', 'Khaitan', 'Jahra'].map((a) => (
+                                <option key={a} value={a}>{a}</option>
+                              ))
+                          }
+                        </select>
+                      ) : (
+                        <input
+                          type="text"
+                          value={address.area}
+                          onChange={(e) => setAddress({ ...address, area: e.target.value })}
+                          required
+                          className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                          style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                        />
+                      )}
+                    </div>
+
+                    {/* Kuwait-specific fields */}
+                    {isKuwait && (
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                        <div>
+                          <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                            Block *
+                          </label>
+                          <input
+                            type="text"
+                            value={address.block}
+                            onChange={(e) => setAddress({ ...address, block: e.target.value })}
+                            required
+                            placeholder="e.g. 5"
+                            className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                            style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                            Street *
+                          </label>
+                          <input
+                            type="text"
+                            value={address.street}
+                            onChange={(e) => setAddress({ ...address, street: e.target.value })}
+                            required
+                            placeholder="e.g. 12"
+                            className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                            style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                            Avenue
+                          </label>
+                          <input
+                            type="text"
+                            value={address.avenue}
+                            onChange={(e) => setAddress({ ...address, avenue: e.target.value })}
+                            placeholder="Optional"
+                            className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                            style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* House & PACI */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                          House / Building *
+                        </label>
+                        <input
+                          type="text"
+                          value={address.house}
+                          onChange={(e) => setAddress({ ...address, house: e.target.value })}
+                          required
+                          className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                          style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                        />
+                      </div>
+                      {isKuwait && (
+                        <div>
+                          <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                            PACI Number
+                          </label>
+                          <input
+                            type="text"
+                            value={address.paci}
+                            onChange={(e) => setAddress({ ...address, paci: e.target.value })}
+                            placeholder="Optional"
+                            className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors"
+                            style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </>
+                )}
+
+                {/* Notes */}
+                <div className="mb-8">
+                  <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                    {isPickup ? 'Notes' : 'Delivery Notes'}
+                  </label>
+                  <textarea
+                    value={address.notes}
+                    onChange={(e) => setAddress({ ...address, notes: e.target.value })}
+                    rows={3}
+                    placeholder={isPickup ? 'Any special requests...' : 'Any special instructions for delivery...'}
+                    className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors resize-none"
+                    style={{ borderColor: '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                  />
+                </div>
+
+                <button type="submit" className="btn-obsidian flex items-center gap-3">
+                  Continue to Shipping <ChevronRight size={14} />
+                </button>
+              </form>
+            )}
+
+            {/* ── STEP 2: SHIPPING ── */}
+            {step === 'shipping' && (
+              <div>
+                <h2
+                  className="text-2xl font-light mb-8"
+                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#242424' }}
+                >
+                  Shipping Method
+                </h2>
+
+                {isPickup ? (
+                  <div
+                    className="p-5 mb-10 border"
+                    style={{ borderColor: '#9D7D39', backgroundColor: 'rgba(157,125,57,0.04)' }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">🏪</span>
+                      <div>
+                        <p className="text-sm font-medium" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                          Store Pickup — Free
+                        </p>
+                        <p className="text-xs mt-0.5" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>
+                          We will contact you to arrange a pickup time at our Kuwait City showroom.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ) : shippingLoading ? (
+                  <div className="flex items-center gap-2 py-8" style={{ color: '#9D7D39' }}>
+                    <Loader2 size={18} className="animate-spin" />
+                    <span className="text-sm" style={{ fontFamily: 'Montserrat, sans-serif', color: '#8A8A82' }}>Loading shipping rates...</span>
+                  </div>
+                ) : (
+                  <div className="space-y-3 mb-10">
+                    {cartShippingData?.zoneName && (
+                      <p className="text-[10px] font-semibold tracking-wider uppercase mb-3" style={{ color: '#9D7D39', fontFamily: 'Montserrat, sans-serif' }}>
+                        Zone: {cartShippingData.zoneName}
+                      </p>
+                    )}
+                    {kuwaitOnlyConflict && (
+                      <div className="p-4 border border-red-200 bg-red-50 mb-4">
+                        <p className="text-sm text-red-700" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                          Some items in your cart can only be shipped to Kuwait. Please remove them or change your delivery country.
+                        </p>
+                      </div>
+                    )}
+                    {!kuwaitOnlyConflict && cartShippingData && (
+                      <label
+                        className="flex items-center gap-4 p-5 border cursor-pointer transition-all duration-150"
+                        style={{ borderColor: '#9D7D39', backgroundColor: 'rgba(157,125,57,0.04)' }}
+                      >
+                        <input type="radio" name="shipping" value="delivery" checked readOnly className="accent-[#9D7D39]" />
+                        <div className="flex-1">
+                          <p className="text-sm font-medium" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                            {cartShippingData.isKuwait ? 'Kuwait Delivery' : 'GCC Delivery'}
+                          </p>
+                          {cartShippingData.breakdown && cartShippingData.breakdown.length > 0 && (
+                            <div className="mt-1 space-y-0.5">
+                              {(cartShippingData.breakdown as Array<{label: string; cost: number}>).map((b, i) => (
+                                <p key={i} className="text-xs" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>
+                                  {b.label}: {b.cost === 0 ? 'Free' : `${b.cost.toFixed(3)} KWD`}
+                                </p>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        <span
+                          className="text-base font-medium italic flex-shrink-0"
+                          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#9D7D39' }}
+                        >
+                          {cartShippingData.total === 0 ? 'Free' : `${cartShippingData.total.toFixed(3)} KWD`}
+                        </span>
+                      </label>
+                    )}
+                  </div>
+                )}
+
+                <div className="flex gap-4">
+                  <button
+                    onClick={() => setStep('address')}
+                    className="btn-gold-outline"
+                  >
+                    ← Back
+                  </button>
+                  <button
+                    onClick={() => setStep('payment')}
+                    className="btn-obsidian flex items-center gap-3"
+                  >
+                    Continue to Payment <ChevronRight size={14} />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ── STEP 3: PAYMENT ── */}
+            {step === 'payment' && (
+              <div>
+                <h2
+                  className="text-2xl font-light mb-8"
+                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#242424' }}
+                >
+                  Payment Method
+                </h2>
+
+                <div className="space-y-3 mb-10">
+                  {availablePaymentMethods.map((method) => (
+                    <label
+                      key={method.id}
+                      className="flex items-center gap-4 p-5 border cursor-pointer transition-all duration-150"
+                      style={{
+                        borderColor: selectedPayment === method.id ? '#9D7D39' : '#E8E4DC',
+                        backgroundColor: selectedPayment === method.id ? 'rgba(157,125,57,0.04)' : 'transparent',
+                      }}
+                    >
+                      <input
+                        type="radio"
+                        name="payment"
+                        value={method.id}
+                        checked={selectedPayment === method.id}
+                        onChange={() => setSelectedPayment(method.id)}
+                        className="accent-[#9D7D39]"
+                      />
+                      <div
+                        className="w-10 h-10 flex items-center justify-center flex-shrink-0"
+                        style={{ color: '#9D7D39' }}
+                      >
+                        {method.icon}
+                      </div>
+                      <div className="flex-1">
+                        <p
+                          className="text-sm font-medium"
+                          style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                        >
+                          {method.name}
+                        </p>
+                        <p
+                          className="text-xs mt-0.5"
+                          style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}
+                        >
+                          {method.desc}
+                        </p>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+
+                {/* Coupon code input */}
+                <div className="mb-8">
+                  <h3
+                    className="text-xs font-semibold tracking-widest uppercase mb-4"
+                    style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                  >
+                    Coupon Code
+                  </h3>
+                  {appliedCoupon ? (
+                    <div
+                      className="flex items-center justify-between p-4 border"
+                      style={{ borderColor: '#10B981', backgroundColor: 'rgba(16,185,129,0.05)' }}
+                    >
+                      <div className="flex items-center gap-2">
+                        <Tag size={14} style={{ color: '#10B981' }} />
+                        <span className="text-sm font-medium" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                          {appliedCoupon.code}
+                        </span>
+                        <span className="text-xs" style={{ color: '#10B981', fontFamily: 'Montserrat, sans-serif' }}>
+                          {appliedCoupon.type === 'percent'
+                            ? `${parseFloat(appliedCoupon.amount).toFixed(0)}% off`
+                            : appliedCoupon.type === 'fixed_cart'
+                            ? `${parseFloat(appliedCoupon.amount).toFixed(3)} KWD off`
+                            : 'Applied'}
+                          {appliedCoupon.freeShipping ? ' + Free Shipping' : ''}
+                        </span>
+                      </div>
+                      <button
+                        onClick={handleRemoveCoupon}
+                        className="p-1 hover:opacity-70 transition-opacity"
+                        style={{ color: '#8A8A82' }}
+                      >
+                        <X size={14} />
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={couponInput}
+                        onChange={(e) => { setCouponInput(e.target.value); setCouponError(''); }}
+                        onKeyDown={(e) => e.key === 'Enter' && handleApplyCoupon()}
+                        placeholder="Enter coupon code"
+                        className="flex-1 px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39] transition-colors uppercase"
+                        style={{ borderColor: couponError ? '#EF4444' : '#E8E4DC', fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                      />
+                      <button
+                        onClick={handleApplyCoupon}
+                        disabled={couponLoading || !couponInput.trim()}
+                        className="px-5 py-3 text-xs font-semibold tracking-wider uppercase border transition-all duration-150 disabled:opacity-50"
+                        style={{
+                          borderColor: '#9D7D39',
+                          color: '#9D7D39',
+                          fontFamily: 'Montserrat, sans-serif',
+                          backgroundColor: 'transparent',
+                        }}
+                      >
+                        {couponLoading ? <Loader2 size={14} className="animate-spin" /> : 'Apply'}
+                      </button>
+                    </div>
+                  )}
+                  {couponError && (
+                    <p className="text-xs mt-2" style={{ color: '#EF4444', fontFamily: 'Montserrat, sans-serif' }}>
+                      {couponError}
+                    </p>
+                  )}
+                </div>
+
+                {/* Gateway info */}
+                {selectedPayment === 'cod' && (
+                  <div
+                    className="p-4 mb-6 border-l-2"
+                    style={{ borderColor: '#9D7D39', backgroundColor: 'rgba(157,125,57,0.05)' }}
+                  >
+                    <p
+                      className="text-xs font-semibold tracking-wider uppercase mb-2"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#9D7D39' }}
+                    >
+                      Direct Link Payment
+                    </p>
+                    <p
+                      className="text-sm"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    >
+                      Your order will be saved immediately. Our team will contact you to send the direct payment link, confirm collection, or arrange delivery.
+                    </p>
+                  </div>
+                )}
+
+                {(selectedPayment === 'myfatoorah' || selectedPayment === 'tap') && (
+                  <div
+                    className="p-4 mb-6 border-l-2"
+                    style={{ borderColor: '#9D7D39', backgroundColor: 'rgba(157,125,57,0.05)' }}
+                  >
+                    <p
+                      className="text-xs font-semibold tracking-wider uppercase mb-2"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#9D7D39' }}
+                    >
+                      Secure Online Payment
+                    </p>
+                    <p
+                      className="text-sm"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    >
+                      You will be redirected to a secure payment page to complete your order.
+                    </p>
+                  </div>
+                )}
+
+                <div className="flex gap-4">
+                  <button
+                    onClick={() => setStep('shipping')}
+                    className="btn-gold-outline"
+                  >
+                    ← Back
+                  </button>
+                  <button
+                    onClick={() => setStep('review')}
+                    className="btn-obsidian flex items-center gap-3"
+                  >
+                    Review Order <ChevronRight size={14} />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ── STEP 4: REVIEW ── */}
+            {step === 'review' && (
+              <div>
+                <h2
+                  className="text-2xl font-light mb-8"
+                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#242424' }}
+                >
+                  Review & Place Order
+                </h2>
+
+                {/* Address summary */}
+                <div className="p-5 mb-4 border" style={{ borderColor: '#E8E4DC' }}>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3
+                      className="text-xs font-semibold tracking-widest uppercase"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    >
+                      {isPickup ? 'Store Pickup' : 'Delivery Address'}
+                    </h3>
+                    <button
+                      onClick={() => setStep('address')}
+                      className="text-xs transition-colors hover:text-[#9D7D39]"
+                      style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <p
+                    className="text-sm"
+                    style={{ color: '#242424', fontFamily: 'Montserrat, sans-serif' }}
+                  >
+                    {address.firstName} {address.lastName} · {address.phone}
+                  </p>
+                  {!isPickup && (
+                    <p
+                      className="text-sm mt-1"
+                      style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}
+                    >
+                      {address.country === 'KW'
+                        ? `Block ${address.block}, Street ${address.street}${address.avenue ? `, Avenue ${address.avenue}` : ''}, House ${address.house}, ${address.area}, Kuwait`
+                        : `${address.house}, ${address.area}, ${getCountryName(address.country)}`}
+                    </p>
+                  )}
+                </div>
+
+                {/* Shipping summary */}
+                <div className="p-5 mb-4 border" style={{ borderColor: '#E8E4DC' }}>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3
+                      className="text-xs font-semibold tracking-widest uppercase"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    >
+                      Shipping Method
+                    </h3>
+                    <button
+                      onClick={() => setStep('shipping')}
+                      className="text-xs transition-colors hover:text-[#9D7D39]"
+                      style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <p
+                    className="text-sm"
+                    style={{ color: '#242424', fontFamily: 'Montserrat, sans-serif' }}
+                  >
+                    {isPickup
+                      ? 'Store Pickup — Free'
+                      : `${cartShippingData?.isKuwait ? 'Kuwait Delivery' : 'GCC Delivery'} — ${shippingDisplayText}`}
+                  </p>
+                </div>
+
+                {/* Payment summary */}
+                <div className="p-5 mb-8 border" style={{ borderColor: '#E8E4DC' }}>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3
+                      className="text-xs font-semibold tracking-widest uppercase"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    >
+                      Payment Method
+                    </h3>
+                    <button
+                      onClick={() => setStep('payment')}
+                      className="text-xs transition-colors hover:text-[#9D7D39]"
+                      style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <p
+                    className="text-sm"
+                    style={{ color: '#242424', fontFamily: 'Montserrat, sans-serif' }}
+                  >
+                    {PAYMENT_METHODS_ALL.find((m) => m.id === selectedPayment)?.name}
+                  </p>
+                  {appliedCoupon && (
+                    <p className="text-xs mt-2" style={{ color: '#10B981', fontFamily: 'Montserrat, sans-serif' }}>
+                      Coupon "{appliedCoupon.code}" applied — saving {couponDiscount.toFixed(3)} KWD
+                    </p>
+                  )}
+                </div>
+
+                <div className="flex gap-4">
+                  <button
+                    onClick={() => setStep('payment')}
+                    className="btn-gold-outline"
+                  >
+                    ← Back
+                  </button>
+                  <button
+                    onClick={handlePlaceOrder}
+                    disabled={isLoading}
+                    className="btn-obsidian flex items-center gap-3 disabled:opacity-60"
+                    style={{ backgroundColor: '#9D7D39' }}
+                  >
+                    {isLoading ? (
+                      <><Loader2 size={16} className="animate-spin" /> Processing...</>
+                    ) : selectedPayment === 'cod' ? (
+                      <>Place Order & Request Link — {total.toFixed(3)} KWD</>
+                    ) : (
+                      <>Pay {total.toFixed(3)} KWD <ChevronRight size={14} /></>
+                    )}
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ── Order summary sidebar ── */}
+          <div className="lg:col-span-1">
+            <div
+              className="p-6 sticky top-28"
+              style={{ backgroundColor: '#F0EDE8' }}
+            >
+              <h2
+                className="text-xs font-semibold tracking-widest uppercase mb-6"
+                style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+              >
+                Order Summary
+              </h2>
+
+              {/* Items */}
+              <div className="space-y-4 mb-6">
+                {items.map((item) => (
+                  <div key={`${item.productId}-${item.variantId}`} className="flex gap-3">
+                    <div className="relative w-14 h-14 flex-shrink-0">
+                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                      <span
+                        className="absolute -top-1 -right-1 w-5 h-5 text-[10px] font-bold flex items-center justify-center rounded-full"
+                        style={{ backgroundColor: '#9D7D39', color: '#FAFAF8' }}
+                      >
+                        {item.quantity}
+                      </span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p
+                        className="text-xs font-medium truncate"
+                        style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                      >
+                        {cleanName(item.name)}
+                      </p>
+                      <p
+                        className="text-xs mt-0.5"
+                        style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}
+                      >
+                        {item.variantName}
+                      </p>
+                    </div>
+                    <span
+                      className="text-sm font-medium italic flex-shrink-0"
+                      style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#9D7D39' }}
+                    >
+                      {(item.price * item.quantity).toFixed(3)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="gold-rule mb-4" />
+
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between">
+                  <span className="text-xs" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>Subtotal</span>
+                  <span className="text-xs" style={{ color: '#242424', fontFamily: 'Montserrat, sans-serif' }}>{subtotal.toFixed(3)} KWD</span>
+                </div>
+                {couponDiscount > 0 && (
+                  <div className="flex justify-between">
+                    <span className="text-xs" style={{ color: '#10B981', fontFamily: 'Montserrat, sans-serif' }}>
+                      Coupon ({appliedCoupon?.code})
+                    </span>
+                    <span className="text-xs" style={{ color: '#10B981', fontFamily: 'Montserrat, sans-serif' }}>
+                      −{couponDiscount.toFixed(3)} KWD
+                    </span>
+                  </div>
+                )}
+                <div className="flex justify-between">
+                  <span className="text-xs" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>Shipping</span>
+                  <span className="text-xs" style={{ color: '#242424', fontFamily: 'Montserrat, sans-serif' }}>
+                    {shippingDisplayText}
+                  </span>
+                </div>
+                {cartShippingData?.breakdown && cartShippingData.breakdown.length > 1 && !isPickup && (
+                  <div className="flex justify-between">
+                    <span className="text-xs" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>Shipping breakdown</span>
+                    <span className="text-xs" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>
+                      {(cartShippingData.breakdown as Array<{label: string; cost: number}>).map(b => b.label).join(', ')}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <div className="gold-rule mb-4" />
+
+              <div className="flex justify-between">
+                <span
+                  className="text-xs font-semibold tracking-wider uppercase"
+                  style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                >
+                  Total
+                </span>
+                <span
+                  className="text-xl font-medium italic"
+                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#9D7D39' }}
+                >
+                  {total.toFixed(3)} KWD
+                </span>
+              </div>
+            </div>
+              {step === 'review' && selectedPayment === 'myfatoorah' && (
+                <div
+                  className="mt-6 p-5 border"
+                  style={{ backgroundColor: '#FAFAF8', borderColor: '#E8E4DC' }}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3
+                      className="text-xs font-semibold tracking-widest uppercase"
+                      style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                    >
+                      Pay With MyFatoorah
+                    </h3>
+                    {myFatoorahMethodsQuery.isFetching && <Loader2 size={14} className="animate-spin" style={{ color: '#9D7D39' }} />}
+                  </div>
+
+                  {myFatoorahMethodsQuery.isError ? (
+                    <p className="text-xs" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>
+                      Payment options could not be loaded now. We will use the secure card page automatically.
+                    </p>
+                  ) : myFatoorahMethods.length > 0 ? (
+                    <div className="space-y-2">
+                      {myFatoorahMethods.map((method: any) => {
+                        const active = selectedMfPaymentMethodId === method.id;
+                        return (
+                          <button
+                            key={method.id}
+                            type="button"
+                            onClick={() => setSelectedMfPaymentMethodId(method.id)}
+                            className="w-full flex items-center justify-between gap-3 p-3 border text-left transition-all duration-150"
+                            style={{
+                              borderColor: active ? '#9D7D39' : '#E8E4DC',
+                              backgroundColor: active ? 'rgba(157,125,57,0.06)' : '#FFFFFF',
+                            }}
+                          >
+                            <span className="flex items-center gap-3 min-w-0">
+                              {method.imageUrl ? (
+                                <img src={method.imageUrl} alt={method.name} className="w-10 h-7 object-contain bg-white" />
+                              ) : (
+                                <span className="w-10 h-7 flex items-center justify-center border" style={{ borderColor: '#E8E4DC', color: '#9D7D39' }}>
+                                  <CreditCard size={16} />
+                                </span>
+                              )}
+                              <span className="min-w-0">
+                                <span className="block text-sm font-medium truncate" style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}>
+                                  {method.name}
+                                </span>
+                                <span className="block text-[10px] uppercase tracking-wider" style={{ fontFamily: 'Montserrat, sans-serif', color: '#8A8A82' }}>
+                                  {method.direct ? 'Direct gateway' : 'Secure hosted page'}
+                                </span>
+                              </span>
+                            </span>
+                            <span
+                              className="w-4 h-4 rounded-full border flex-shrink-0"
+                              style={{ borderColor: active ? '#9D7D39' : '#CFC7BA', backgroundColor: active ? '#9D7D39' : 'transparent' }}
+                            />
+                          </button>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <p className="text-xs" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>
+                      Loading the available payment options. If none are returned, the secure card page remains available.
+                    </p>
+                  )}
+
+                  <p className="text-[11px] mt-4 leading-relaxed" style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>
+                    Options are synchronized from MyFatoorah for this order amount. Apple Pay or KNET will appear only when enabled by MyFatoorah for the current checkout.
+                  </p>
+                </div>
+              )}
+
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}

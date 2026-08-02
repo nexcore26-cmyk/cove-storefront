@@ -1,0 +1,1 @@
+ALTER TABLE `page_blocks` MODIFY COLUMN `config` json NOT NULL;

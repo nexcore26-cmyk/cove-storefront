@@ -1,0 +1,541 @@
+{
+  "summary": {
+    "sourceMissingRows": 62,
+    "globalValueUpdates": 8,
+    "productSpecificCloneAssignments": 30,
+    "unresolvedRows": 0,
+    "coveredRows": 62,
+    "reasoning": "Shared generic values such as Basic set, Single, and Full set are cloned per product because each product/color has a different source image. Universal or unique values are updated globally."
+  },
+  "globalUpdates": [
+    {
+      "valueId": 294,
+      "attributeId": 18,
+      "attributeName": "Select color",
+      "label": "225 Classic Gold",
+      "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gold.jpg"
+      ],
+      "products": [
+        "classic-225"
+      ],
+      "strategy": "update_existing_global_value"
+    },
+    {
+      "valueId": 295,
+      "attributeId": 18,
+      "attributeName": "Select color",
+      "label": "225 Classic Gray / White",
+      "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gray-gold-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-gray-gold-1.jpg"
+      ],
+      "products": [
+        "classic-225"
+      ],
+      "strategy": "update_existing_global_value"
+    },
+    {
+      "valueId": 296,
+      "attributeId": 18,
+      "attributeName": "Select color",
+      "label": "225 Classic Marble / Gray",
+      "image": "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-marble-gold.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2022/07/classic-225-marble-gold.jpg"
+      ],
+      "products": [
+        "classic-225"
+      ],
+      "strategy": "update_existing_global_value"
+    },
+    {
+      "valueId": 353,
+      "attributeId": 21,
+      "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+      "label": "Small capsule",
+      "image": "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2021/07/small-capsule-bl-430x430.webp"
+      ],
+      "products": [
+        "classic-157",
+        "classic-157-bohemian",
+        "classic-157-gray-white",
+        "classic-225",
+        "classic-225-bohemian",
+        "classic-225-brown",
+        "country-112",
+        "country-167",
+        "country-62",
+        "curve-120",
+        "curve-180",
+        "decaf",
+        "mini-caf"
+      ],
+      "strategy": "update_existing_global_value"
+    },
+    {
+      "valueId": 354,
+      "attributeId": 21,
+      "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+      "label": "Big capsule",
+      "image": "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2021/07/big-capsule-bl-430x430.webp"
+      ],
+      "products": [
+        "classic-157",
+        "classic-157-bohemian",
+        "classic-157-gray-white",
+        "classic-225",
+        "classic-225-bohemian",
+        "classic-225-brown",
+        "country-112",
+        "country-167",
+        "country-62",
+        "curve-120",
+        "curve-180",
+        "decaf",
+        "mini-caf"
+      ],
+      "strategy": "update_existing_global_value"
+    },
+    {
+      "valueId": 397,
+      "attributeId": 30,
+      "attributeName": "Select mubkhar set",
+      "label": "Roshina Mubkhar only",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg"
+      ],
+      "products": [
+        "roshina-mubkhar-petrol"
+      ],
+      "strategy": "update_existing_global_value"
+    },
+    {
+      "valueId": 398,
+      "attributeId": 30,
+      "attributeName": "Select mubkhar set",
+      "label": "Roshina 1 basic + Roshina Mubkhar",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg"
+      ],
+      "products": [
+        "roshina-mubkhar-petrol"
+      ],
+      "strategy": "update_existing_global_value"
+    },
+    {
+      "valueId": 399,
+      "attributeId": 30,
+      "attributeName": "Select mubkhar set",
+      "label": "Roshina 1 full + Roshina Mubkhar",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/Mubkhar-petrol.jpg"
+      ],
+      "products": [
+        "roshina-mubkhar-petrol"
+      ],
+      "strategy": "update_existing_global_value"
+    }
+  ],
+  "cloneAssignments": [
+    {
+      "productSlug": "mini-roshina-beige",
+      "productName": "Mini Roshina Beige",
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 419,
+      "label": "Basic set (Only Box)",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "mini-roshina-beige",
+      "productName": "Mini Roshina Beige",
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 421,
+      "label": "Full set (Only Box)",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "mini-roshina-gray",
+      "productName": "Mini Roshina Gray",
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 419,
+      "label": "Basic set (Only Box)",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/12/MR2-gray-closed.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/12/MR2-gray-closed.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "mini-roshina-gray",
+      "productName": "Mini Roshina Gray",
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 421,
+      "label": "Full set (Only Box)",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/12/MR2-gray-closed.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/12/MR2-gray-closed.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-cement-green",
+      "productName": "Roshina 2 Cement green",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-cement-green",
+      "productName": "Roshina 2 Cement green",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 364,
+      "label": "Full set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-dark-green",
+      "productName": "Roshina 2 Dark Green",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-dark-green",
+      "productName": "Roshina 2 Dark Green",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 364,
+      "label": "Full set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-off-white",
+      "productName": "Roshina 2 Off White",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-off-white",
+      "productName": "Roshina 2 Off White",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 364,
+      "label": "Full set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-wooden",
+      "productName": "Roshina 2 Wooden",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-wooden-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-wooden-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-2-wooden",
+      "productName": "Roshina 2 Wooden",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 364,
+      "label": "Full set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-wooden-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-wooden-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-3-camel-web",
+      "productName": "Roshina 3 Camel",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-3-camel-web",
+      "productName": "Roshina 3 Camel",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 364,
+      "label": "Full set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-3-light-blue",
+      "productName": "Roshina 3 Light Blue",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-3-light-blue",
+      "productName": "Roshina 3 Light Blue",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 364,
+      "label": "Full set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-3-maroon",
+      "productName": "Roshina 3 Maroon",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "roshina-3-maroon",
+      "productName": "Roshina 3 Maroon",
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 364,
+      "label": "Full set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "tissue-box-beige",
+      "productName": "Tissue box Beige",
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "label": "Single",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/12/tissue-box-beige.webp",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/12/tissue-box-beige.webp"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "tissue-box-beige",
+      "productName": "Tissue box Beige",
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 408,
+      "label": "set with trash bin",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "tissue-box-black",
+      "productName": "Tissue box Black",
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "label": "Single",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/12/tissue-box-black.webp",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/12/tissue-box-black.webp"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "tissue-box-black",
+      "productName": "Tissue box Black",
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 408,
+      "label": "set with trash bin",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "tissue-box-bronze",
+      "productName": "Tissue box Bronze",
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "label": "Single",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/12/tissue-box-Bronze.webp",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2023/12/tissue-box-Bronze.webp"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "tissue-box-bronze",
+      "productName": "Tissue box Bronze",
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 408,
+      "label": "set with trash bin",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "beige-trash-bin",
+      "productName": "Beige Trash Bin",
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "label": "Single",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-1-zoom.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-1-zoom.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "beige-trash-bin",
+      "productName": "Beige Trash Bin",
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 394,
+      "label": "Set with Tissue Boxes",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-beige-set.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "black-trash-bin",
+      "productName": "Black Trash Bin",
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "label": "Single",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-1-zoom.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-1-zoom.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "black-trash-bin",
+      "productName": "Black Trash Bin",
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 394,
+      "label": "Set with Tissue Boxes",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "bronze-trash-bin",
+      "productName": "Bronze Trash Bin",
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "label": "Single",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-1-zoom.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-1-zoom.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    },
+    {
+      "productSlug": "bronze-trash-bin",
+      "productName": "Bronze Trash Bin",
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 394,
+      "label": "Set with Tissue Boxes",
+      "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+      "galleryImages": [
+        "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png"
+      ],
+      "strategy": "clone_attribute_value_for_product_activeValueIds"
+    }
+  ],
+  "unresolved": []
+}

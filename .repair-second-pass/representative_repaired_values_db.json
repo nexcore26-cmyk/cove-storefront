@@ -1,0 +1,150 @@
+[
+  {
+    "slug": "bronze-trash-bin",
+    "productName": "Bronze Trash Bin",
+    "attributeName": "Trash bin",
+    "displayType": "image",
+    "valueId": 456,
+    "label": "Set with Tissue Boxes",
+    "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+    "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-bronze-set.png",
+    "activeValueIds": [
+      468,
+      456
+    ]
+  },
+  {
+    "slug": "bronze-trash-bin",
+    "productName": "Bronze Trash Bin",
+    "attributeName": "Trash bin",
+    "displayType": "image",
+    "valueId": 468,
+    "label": "Single",
+    "swatch": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+    "image": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+    "activeValueIds": [
+      468,
+      456
+    ]
+  },
+  {
+    "slug": "mini-roshina-beige",
+    "productName": "Mini Roshina Beige",
+    "attributeName": "Select Mini Roshina box set",
+    "displayType": "image",
+    "valueId": 420,
+    "label": "Basic set + Roshina Mubkhar",
+    "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+    "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+    "activeValueIds": [
+      457,
+      420,
+      428,
+      422
+    ]
+  },
+  {
+    "slug": "mini-roshina-beige",
+    "productName": "Mini Roshina Beige",
+    "attributeName": "Select Mini Roshina box set",
+    "displayType": "image",
+    "valueId": 422,
+    "label": "Full set + Roshina Mubkhar",
+    "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+    "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1-700x700.jpg",
+    "activeValueIds": [
+      457,
+      420,
+      428,
+      422
+    ]
+  },
+  {
+    "slug": "mini-roshina-beige",
+    "productName": "Mini Roshina Beige",
+    "attributeName": "Select Mini Roshina box set",
+    "displayType": "image",
+    "valueId": 428,
+    "label": "Full set (Only Box)",
+    "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg",
+    "image": "https://coveinterior.com/wp-content/uploads/2025/02/Mini-Roshina-1.jpg",
+    "activeValueIds": [
+      457,
+      420,
+      428,
+      422
+    ]
+  },
+  {
+    "slug": "mini-roshina-beige",
+    "productName": "Mini Roshina Beige",
+    "attributeName": "Select Mini Roshina box set",
+    "displayType": "image",
+    "valueId": 457,
+    "label": "Basic set (Only Box)",
+    "swatch": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+    "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+    "activeValueIds": [
+      457,
+      420,
+      428,
+      422
+    ]
+  },
+  {
+    "slug": "roshina-2-cement-green",
+    "productName": "Roshina 2 Cement green",
+    "attributeName": "Select box set",
+    "displayType": "image",
+    "valueId": 432,
+    "label": "Full set",
+    "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg",
+    "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-1.jpg",
+    "activeValueIds": [
+      459,
+      432
+    ]
+  },
+  {
+    "slug": "roshina-2-cement-green",
+    "productName": "Roshina 2 Cement green",
+    "attributeName": "Select box set",
+    "displayType": "image",
+    "valueId": 459,
+    "label": "Basic set",
+    "swatch": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg",
+    "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg",
+    "activeValueIds": [
+      459,
+      432
+    ]
+  },
+  {
+    "slug": "tissue-box-black",
+    "productName": "Tissue box Black",
+    "attributeName": "Select tissue box",
+    "displayType": "image",
+    "valueId": 448,
+    "label": "set with trash bin",
+    "swatch": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+    "image": "https://coveinterior.com/wp-content/uploads/2025/02/trash-bin-black-set.png",
+    "activeValueIds": [
+      464,
+      448
+    ]
+  },
+  {
+    "slug": "tissue-box-black",
+    "productName": "Tissue box Black",
+    "attributeName": "Select tissue box",
+    "displayType": "image",
+    "valueId": 464,
+    "label": "Single",
+    "swatch": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+    "image": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+    "activeValueIds": [
+      464,
+      448
+    ]
+  }
+]

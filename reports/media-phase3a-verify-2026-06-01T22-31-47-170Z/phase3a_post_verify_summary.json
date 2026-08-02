@@ -1,0 +1,96 @@
+{
+  "runId": "media-phase3a-verify-2026-06-01T22-31-47-170Z",
+  "verifiedAt": "2026-06-01T22:31:47.335Z",
+  "target": {
+    "oldUrl": "https://coveinterior.com/wp-content/uploads/2022/07/1-feature-ar.jpg",
+    "targetUrl": "/media/wordpress-migration/2022/07/1.png",
+    "targetPublicUrl": "https://app.coveinterior.com/media/wordpress-migration/2022/07/1.png",
+    "pageBlockId": 30015
+  },
+  "referenceCounts": [
+    {
+      "tableName": "page_blocks",
+      "columnName": "config",
+      "countRows": 0
+    },
+    {
+      "tableName": "pages",
+      "columnName": "puckData",
+      "countRows": 0
+    },
+    {
+      "tableName": "homepage_sections",
+      "columnName": "imageUrl",
+      "countRows": 0
+    },
+    {
+      "tableName": "products",
+      "columnName": "images",
+      "countRows": 0
+    },
+    {
+      "tableName": "categories",
+      "columnName": "image",
+      "countRows": 0
+    },
+    {
+      "tableName": "product_variants",
+      "columnName": "image",
+      "countRows": 0
+    },
+    {
+      "tableName": "product_variants",
+      "columnName": "galleryImages",
+      "countRows": 0
+    }
+  ],
+  "pageBlockCheck": {
+    "recordExists": true,
+    "pageId": 30001,
+    "blockType": "text_html",
+    "oldUrlOccurrences": 0,
+    "targetUrlOccurrences": 2
+  },
+  "mediaAssetCheck": {
+    "count": 1,
+    "rows": [
+      {
+        "id": 344,
+        "url": "/media/wordpress-migration/2022/07/1.png",
+        "sourceUrl": "https://coveinterior.com/wp-content/uploads/2022/07/1.png",
+        "mimeType": "image/png",
+        "sizeBytes": 671347,
+        "sha256": "4163f4a0a2862abe1ae97b76354caaac6cca5788a4fd899ec74d8a47efff9b6e",
+        "originalFilename": "1.png"
+      }
+    ]
+  },
+  "filesystemCheck": {
+    "path": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1.png",
+    "exists": true
+  },
+  "httpCheck": {
+    "url": "https://app.coveinterior.com/media/wordpress-migration/2022/07/1.png",
+    "ok": true,
+    "status": 200,
+    "contentType": "image/png",
+    "contentLength": "671347",
+    "elapsedMs": 112
+  },
+  "rollbackBackupCheck": {
+    "count": 1,
+    "rows": [
+      {
+        "runId": "media-phase3a-2026-06-01T22-30-58-579Z",
+        "tableName": "page_blocks",
+        "recordId": "30015",
+        "columnName": "config",
+        "actionType": "phase3a_rewrite_remaining_page_block_wp_media_url",
+        "oldSha256": "0bed660c86b09186338fd8b5b9a2ff1c38a5224faa7f92f0713bb9211eec6da7",
+        "newSha256": "dd68fec14af2da4345dc705d94d49da8236301ccfcd57f26106c90c95cfdd9d8",
+        "createdAt": "2026-06-01T22:30:58.000Z"
+      }
+    ]
+  },
+  "destructiveCleanupPerformed": false
+}

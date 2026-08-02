@@ -1,0 +1,2 @@
+index,sourceUrl,key,url,filename,destPath,action,fileStatus,dbStatus,verifyStatus,httpStatus,sizeBytes,sha256,mediaAssetId,error
+1,https://coveinterior.com/wp-content/uploads/2022/08/BG-1024x576-1.png,wordpress-migration/2022/08/BG-1024x576-1.png,/media/wordpress-migration/2022/08/BG-1024x576-1.png,BG-1024x576-1.png,/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/BG-1024x576-1.png,processed,downloaded,record_created,http_200,200,59356,d3e1317690e0b418f9f1e4f7b8073b105d24a6aad8a4fce75974f6ae7feda5a5,524,

@@ -1,0 +1,2022 @@
+{
+  "collectedAt": "2026-06-02T05:18:40.961Z",
+  "database": "cove_storefront",
+  "tableCounts": [
+    {
+      "tableName": "__drizzle_migrations",
+      "estimatedRows": 26
+    },
+    {
+      "tableName": "attribute_value_bundle_items",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "attribute_value_stock",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "attribute_values",
+      "estimatedRows": 108
+    },
+    {
+      "tableName": "attributes",
+      "estimatedRows": 16
+    },
+    {
+      "tableName": "bundle_items",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "cart_items",
+      "estimatedRows": 2
+    },
+    {
+      "tableName": "carts",
+      "estimatedRows": 2
+    },
+    {
+      "tableName": "categories",
+      "estimatedRows": 21
+    },
+    {
+      "tableName": "category_translations",
+      "estimatedRows": 25
+    },
+    {
+      "tableName": "coupons",
+      "estimatedRows": 11
+    },
+    {
+      "tableName": "currency_rates",
+      "estimatedRows": 8
+    },
+    {
+      "tableName": "custom_roles",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "customers",
+      "estimatedRows": 101
+    },
+    {
+      "tableName": "email_templates",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "homepage_sections",
+      "estimatedRows": 4
+    },
+    {
+      "tableName": "kuwait_area_charges",
+      "estimatedRows": 40
+    },
+    {
+      "tableName": "kuwait_city_surcharges",
+      "estimatedRows": 132
+    },
+    {
+      "tableName": "media_assets",
+      "estimatedRows": 348
+    },
+    {
+      "tableName": "media_reference_migration_backups",
+      "estimatedRows": 23
+    },
+    {
+      "tableName": "navigation_menu_items",
+      "estimatedRows": 6
+    },
+    {
+      "tableName": "navigation_menus",
+      "estimatedRows": 1
+    },
+    {
+      "tableName": "order_expenses",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "order_items",
+      "estimatedRows": 10091
+    },
+    {
+      "tableName": "orders",
+      "estimatedRows": 3146
+    },
+    {
+      "tableName": "page_blocks",
+      "estimatedRows": 20
+    },
+    {
+      "tableName": "pages",
+      "estimatedRows": 7
+    },
+    {
+      "tableName": "product_attributes",
+      "estimatedRows": 170
+    },
+    {
+      "tableName": "product_reviews",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "product_translations",
+      "estimatedRows": 204
+    },
+    {
+      "tableName": "product_variants",
+      "estimatedRows": 2604
+    },
+    {
+      "tableName": "product_vendors",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "products",
+      "estimatedRows": 158
+    },
+    {
+      "tableName": "return_requests",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "role_permissions",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "shipping_classes",
+      "estimatedRows": 12
+    },
+    {
+      "tableName": "shipping_zones",
+      "estimatedRows": 6
+    },
+    {
+      "tableName": "stock_transfers",
+      "estimatedRows": 22
+    },
+    {
+      "tableName": "store_settings",
+      "estimatedRows": 1
+    },
+    {
+      "tableName": "sync_logs",
+      "estimatedRows": 39
+    },
+    {
+      "tableName": "tenant_modules",
+      "estimatedRows": 9
+    },
+    {
+      "tableName": "tenants",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "users",
+      "estimatedRows": 3
+    },
+    {
+      "tableName": "vendor_commissions",
+      "estimatedRows": 0
+    },
+    {
+      "tableName": "vendors",
+      "estimatedRows": 4
+    },
+    {
+      "tableName": "warehouse_stock",
+      "estimatedRows": 382
+    },
+    {
+      "tableName": "warehouses",
+      "estimatedRows": 3
+    },
+    {
+      "tableName": "wishlists",
+      "estimatedRows": 0
+    }
+  ],
+  "samples": {
+    "products": {
+      "table": "products",
+      "exists": true,
+      "columns": [
+        "id",
+        "wcId",
+        "wcSource",
+        "name",
+        "nameAr",
+        "slug",
+        "sku",
+        "description",
+        "shortDescription",
+        "price",
+        "salePrice",
+        "cog",
+        "currency",
+        "images",
+        "categoryId",
+        "tags",
+        "status",
+        "type",
+        "isFeatured",
+        "isNew",
+        "weight",
+        "dimensionsJson",
+        "wcRawData",
+        "lastSyncedAt",
+        "createdAt",
+        "updatedAt",
+        "measurementType",
+        "customBoxConfig",
+        "shippingClass",
+        "color",
+        "descriptionAr",
+        "shortDescriptionAr",
+        "shippingClassId",
+        "kuwaitOnly",
+        "ogImage",
+        "seoTitle",
+        "seoDescription"
+      ],
+      "selectedColumns": [
+        "id",
+        "name",
+        "slug",
+        "sku",
+        "status",
+        "images",
+        "createdAt",
+        "updatedAt"
+      ],
+      "rows": [
+        {
+          "id": 390178,
+          "name": "لوحة اسماء الله الحسنى الرباعية",
+          "slug": "paint-12",
+          "sku": "12581",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-اسماء-الله-الحسنى-الرباعية-450.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:18:01.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390133,
+          "name": "Secret Potion – N3",
+          "slug": "secret-potion-n3",
+          "sku": "12543",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2023/10/Secret-Potion-–-N3.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:05:24.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390132,
+          "name": "Secret Potion – N2",
+          "slug": "secret-potion-n2",
+          "sku": "12544",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:05:19.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390131,
+          "name": "Secret Potion – N1",
+          "slug": "secret-potion-n1",
+          "sku": "12545",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:05:14.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390169,
+          "name": "لوحة لا اله الا الله",
+          "slug": "paint-3",
+          "sku": "12572",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-لا-اله-الا-الله-130.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:15.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390170,
+          "name": "لوحة الكرسي",
+          "slug": "paint-4",
+          "sku": "12573",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-الكرسي-150.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:20.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390171,
+          "name": "لوحة الفلق",
+          "slug": "paint-5",
+          "sku": "12574",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-الفلق-140.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:25.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390172,
+          "name": "لوحة كن جميلاً",
+          "slug": "paint-6",
+          "sku": "12575",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-كن-جميلاً-60.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:29.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390173,
+          "name": "لوحة العفو",
+          "slug": "paint-7",
+          "sku": "12576",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-العفو-150.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:34.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390174,
+          "name": "لوحة البسملة",
+          "slug": "paint-8",
+          "sku": "12577",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-البسملة-60.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:40.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390175,
+          "name": "لوحة تكرار الله",
+          "slug": "paint-9",
+          "sku": "12578",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-تكرار-الله-130.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:44.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390176,
+          "name": "لوحة الأبواب",
+          "slug": "paint-10",
+          "sku": "12579",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-الأبواب-130.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:50.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390177,
+          "name": "لوحة الطاووس",
+          "slug": "paint-11",
+          "sku": "12580",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/01/لوحة-الطاووس-150.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:17:56.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 390137,
+          "name": "dark painting",
+          "slug": "dark-painting",
+          "sku": "12539",
+          "status": "active",
+          "images": [
+            "/media/admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:05:45.000Z",
+          "updatedAt": "2026-06-01T18:26:33.000Z"
+        },
+        {
+          "id": 390196,
+          "name": "Wall Light A shop",
+          "slug": "wall-light-a-shop",
+          "sku": "",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/10/long.png"
+          ],
+          "createdAt": "2026-05-01T12:19:37.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390191,
+          "name": "Passage Mini Lighter - Black",
+          "slug": "passage-mini-lighter-black",
+          "sku": "12770",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/08/Black-Mini-lighter.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:19:06.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390192,
+          "name": "Passage Mini Lighter - Rose Gold",
+          "slug": "passage-mini-lighter-rose-gold",
+          "sku": "12771",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/08/Rose-Mini-Lighter.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:19:12.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390193,
+          "name": "Country 175",
+          "slug": "country-175",
+          "sku": "10715-1",
+          "status": "draft",
+          "images": [
+            "/media/wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg"
+          ],
+          "createdAt": "2026-05-01T12:19:18.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390194,
+          "name": "Wall Light A",
+          "slug": "wall-light-a-pack",
+          "sku": "",
+          "status": "draft",
+          "images": [
+            "/media/wordpress-migration/2024/10/long.png"
+          ],
+          "createdAt": "2026-05-01T12:19:26.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390195,
+          "name": "Wall Light B",
+          "slug": "wall-light-b-pack",
+          "sku": "",
+          "status": "draft",
+          "images": [
+            "/media/wordpress-migration/2024/10/standard.png"
+          ],
+          "createdAt": "2026-05-01T12:19:32.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390199,
+          "name": "sofa 2",
+          "slug": "sofa-2",
+          "sku": "",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/12/sofa-2.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:19:55.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390239,
+          "name": "Passage Lamp - Red",
+          "slug": "passage-lamp-red",
+          "sku": "12774",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2025/05/Passage-Lamp-Red.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:29:35.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390200,
+          "name": "chair",
+          "slug": "chair",
+          "sku": "",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/12/chair.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:20:02.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390201,
+          "name": "Black Trash Bin",
+          "slug": "black-trash-bin",
+          "sku": "17186",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+            "/media/wordpress-migration/2025/02/Trash-bin-black-1.jpg",
+            "/media/wordpress-migration/2025/02/Beige-2.jpg",
+            "/media/wordpress-migration/2025/02/beige-3.jpg",
+            "/media/wordpress-migration/2025/02/beige-4.jpg"
+          ],
+          "createdAt": "2026-05-01T12:20:10.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        },
+        {
+          "id": 390198,
+          "name": "sofa",
+          "slug": "sofa",
+          "sku": "",
+          "status": "active",
+          "images": [
+            "/media/wordpress-migration/2024/12/sofa.jpeg"
+          ],
+          "createdAt": "2026-05-01T12:19:48.000Z",
+          "updatedAt": "2026-05-26T10:11:39.000Z"
+        }
+      ]
+    },
+    "categories": {
+      "table": "categories",
+      "exists": true,
+      "columns": [
+        "id",
+        "wcId",
+        "wcSource",
+        "name",
+        "nameAr",
+        "slug",
+        "parentId",
+        "description",
+        "image",
+        "channel",
+        "displayOrder",
+        "isActive",
+        "createdAt",
+        "updatedAt"
+      ],
+      "selectedColumns": [
+        "id",
+        "name",
+        "slug",
+        "image",
+        "createdAt",
+        "updatedAt"
+      ],
+      "rows": [
+        {
+          "id": 360106,
+          "name": "Vendors",
+          "slug": "store-vendors",
+          "image": "/media/wordpress-migration/2024/01/لوحة-البسملة-60.webp",
+          "createdAt": "2026-05-01T11:48:56.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 360136,
+          "name": "Roshina 3",
+          "slug": "roshina-3",
+          "image": "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-1.jpg",
+          "createdAt": "2026-05-01T11:49:20.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360109,
+          "name": "Roshina Boxes ",
+          "slug": "roshina-boxes",
+          "image": "/media/wordpress-migration/2023/10/Roshina-boxes.jpg",
+          "createdAt": "2026-05-01T11:48:59.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360111,
+          "name": "accessories",
+          "slug": "accessories",
+          "image": "/media/wordpress-migration/2023/08/accessories-1.jpg",
+          "createdAt": "2026-05-01T11:49:00.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360116,
+          "name": "Classic",
+          "slug": "classic",
+          "image": "/media/wordpress-migration/2022/07/classic-157-gray-gold.jpg",
+          "createdAt": "2026-05-01T11:49:04.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360117,
+          "name": "Country",
+          "slug": "country",
+          "image": "/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS.jpg",
+          "createdAt": "2026-05-01T11:49:05.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360118,
+          "name": "Curve",
+          "slug": "curve",
+          "image": "/media/wordpress-migration/2022/07/CURVE-2-NEUTRAL-GREEN.jpg",
+          "createdAt": "2026-05-01T11:49:06.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360119,
+          "name": "Mini Caf",
+          "slug": "mini-caf",
+          "image": "/media/wordpress-migration/2022/08/3.jpg",
+          "createdAt": "2026-05-01T11:49:06.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360135,
+          "name": "Roshina 2 ",
+          "slug": "roshina-2",
+          "image": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-3.jpg",
+          "createdAt": "2026-05-01T11:49:19.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360105,
+          "name": "Coffee Tables",
+          "slug": "coffee-tables",
+          "image": "/media/wordpress-migration/2023/02/coffee-tables-1-2.jpg",
+          "createdAt": "2026-05-01T11:48:55.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360134,
+          "name": "Roshina 1 ",
+          "slug": "roshina-1",
+          "image": "/media/wordpress-migration/2023/01/Roshina-1-beige-1.jpg",
+          "createdAt": "2026-05-01T11:49:18.000Z",
+          "updatedAt": "2026-05-26T10:11:43.000Z"
+        },
+        {
+          "id": 360122,
+          "name": "Nqosh ",
+          "slug": "nqosh",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:09.000Z",
+          "updatedAt": "2026-05-25T21:38:31.000Z"
+        },
+        {
+          "id": 360121,
+          "name": "BullFrog",
+          "slug": "bullfrog",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:08.000Z",
+          "updatedAt": "2026-05-25T21:38:27.000Z"
+        },
+        {
+          "id": 360120,
+          "name": "BEVEL",
+          "slug": "bevel",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:07.000Z",
+          "updatedAt": "2026-05-25T21:38:24.000Z"
+        },
+        {
+          "id": 360123,
+          "name": "Advocate",
+          "slug": "advocate",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:09.000Z",
+          "updatedAt": "2026-05-25T21:38:19.000Z"
+        },
+        {
+          "id": 360137,
+          "name": "Mini Roshina ",
+          "slug": "mini-roshina",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:20.000Z",
+          "updatedAt": "2026-05-25T21:37:26.000Z"
+        },
+        {
+          "id": 360108,
+          "name": "Mini Cove trays",
+          "slug": "mini-cove-trays",
+          "image": null,
+          "createdAt": "2026-05-01T11:48:58.000Z",
+          "updatedAt": "2026-05-25T21:34:14.000Z"
+        },
+        {
+          "id": 360143,
+          "name": "Wall Light",
+          "slug": "wall-light",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:26.000Z",
+          "updatedAt": "2026-05-25T21:33:49.000Z"
+        },
+        {
+          "id": 360145,
+          "name": "Mubkhar",
+          "slug": "mubkhar",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:29.000Z",
+          "updatedAt": "2026-05-25T21:33:30.000Z"
+        },
+        {
+          "id": 360144,
+          "name": "Trash bin",
+          "slug": "trash-bin",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:27.000Z",
+          "updatedAt": "2026-05-25T21:22:40.000Z"
+        },
+        {
+          "id": 360142,
+          "name": "Tissue boxes",
+          "slug": "tissue-boxes",
+          "image": null,
+          "createdAt": "2026-05-01T11:49:26.000Z",
+          "updatedAt": "2026-05-25T21:22:33.000Z"
+        }
+      ]
+    },
+    "pages": {
+      "table": "pages",
+      "exists": true,
+      "columns": [
+        "id",
+        "slug",
+        "title",
+        "titleAr",
+        "isPublished",
+        "isSystem",
+        "metaTitle",
+        "metaDescription",
+        "puckData",
+        "createdAt",
+        "updatedAt"
+      ],
+      "selectedColumns": [
+        "id",
+        "title",
+        "slug",
+        "puckData",
+        "createdAt",
+        "updatedAt"
+      ],
+      "rows": [
+        {
+          "id": 60003,
+          "title": "Events",
+          "slug": "events",
+          "puckData": null,
+          "createdAt": "2026-04-30T20:55:19.000Z",
+          "updatedAt": "2026-04-30T20:55:19.000Z"
+        },
+        {
+          "id": 30001,
+          "title": "Company Portfolio",
+          "slug": "projects",
+          "puckData": null,
+          "createdAt": "2026-04-30T10:34:46.000Z",
+          "updatedAt": "2026-04-30T20:55:18.000Z"
+        },
+        {
+          "id": 60002,
+          "title": "Client Services",
+          "slug": "client-services",
+          "puckData": null,
+          "createdAt": "2026-04-30T20:55:16.000Z",
+          "updatedAt": "2026-04-30T20:55:16.000Z"
+        },
+        {
+          "id": 60001,
+          "title": "About Us",
+          "slug": "about",
+          "puckData": null,
+          "createdAt": "2026-04-30T20:55:14.000Z",
+          "updatedAt": "2026-04-30T20:55:14.000Z"
+        },
+        {
+          "id": 2,
+          "title": "About Us",
+          "slug": "about-us",
+          "puckData": null,
+          "createdAt": "2026-04-29T17:34:09.000Z",
+          "updatedAt": "2026-04-29T17:34:09.000Z"
+        },
+        {
+          "id": 3,
+          "title": "Contact Us",
+          "slug": "contact-us",
+          "puckData": null,
+          "createdAt": "2026-04-29T17:34:09.000Z",
+          "updatedAt": "2026-04-29T17:34:09.000Z"
+        },
+        {
+          "id": 1,
+          "title": "Homepage",
+          "slug": "home",
+          "puckData": null,
+          "createdAt": "2026-04-29T17:34:08.000Z",
+          "updatedAt": "2026-04-29T17:34:08.000Z"
+        }
+      ]
+    },
+    "pageBlocks": {
+      "table": "page_blocks",
+      "exists": true,
+      "columns": [
+        "id",
+        "pageId",
+        "blockType",
+        "sortOrder",
+        "isVisible",
+        "config",
+        "createdAt",
+        "updatedAt"
+      ],
+      "selectedColumns": [
+        "id",
+        "pageId",
+        "config",
+        "createdAt",
+        "updatedAt"
+      ],
+      "rows": [
+        {
+          "id": 30015,
+          "pageId": 30001,
+          "config": {
+            "bodyAr": "<div class=\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/1.png\" alt=\"مقارنة 1\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">مقارنة 1</span></div>\n  </div>\n</div>",
+            "bodyEn": "<div class=\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/1.png\" alt=\"Comparison 1\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">Comparison 1</span></div>\n  </div>\n</div>",
+            "titleAr": "ثلاثي الأبعاد مقابل الحقيقي",
+            "titleEn": "3D vs Real — Before & After"
+          },
+          "createdAt": "2026-04-30T20:55:19.000Z",
+          "updatedAt": "2026-06-01T22:30:58.000Z"
+        },
+        {
+          "id": 30017,
+          "pageId": 60003,
+          "config": {
+            "bodyAr": "<div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg\" alt=\"دعوى من شركة حسن أبل\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">دعوى من شركة حسن أبل</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg\" alt=\"منتدى مهندسون بلا حدود\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">منتدى مهندسون بلا حدود</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg\" alt=\"مقابلة ملعب الوطن\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">مقابلة ملعب الوطن</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Visitors-1.jpg\" alt=\"صور تذكارية مع شخصيات مختلفة\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">صور تذكارية مع شخصيات مختلفة</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Italy-Meeting.jpg\" alt=\"الملتقى الإيطالي\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">الملتقى الإيطالي</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg\" alt=\"صور مؤتمر (الكويت)\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">صور مؤتمر (الكويت)</span></div>\n  </div>\n</div>",
+            "bodyEn": "<div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg\" alt=\"Special Invitation From Hasan Abul Company\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">Special Invitation From Hasan Abul Company</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg\" alt=\"Engineers Without Borders Forum\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">Engineers Without Borders Forum</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg\" alt=\"Alawatan TV Interview\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">Alawatan TV Interview</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Visitors-1.jpg\" alt=\"Visitors\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">Visitors</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Italy-Meeting.jpg\" alt=\"Italy Meeting\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">Italy Meeting</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg\" alt=\"Conference in Kuwait\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4\"><span class=\"text-white font-semibold\">Conference in Kuwait</span></div>\n  </div>\n</div>",
+            "titleAr": "فعالياتنا",
+            "titleEn": "Our Events"
+          },
+          "createdAt": "2026-04-30T20:55:20.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 30016,
+          "pageId": 60003,
+          "config": {
+            "slides": [
+              {
+                "image": "/media/wordpress-migration/2022/07/cove-events.jpg",
+                "titleAr": "الفعاليات",
+                "titleEn": "Events",
+                "subtitleAr": "معارض، منتديات ومقابلات إعلامية",
+                "subtitleEn": "Exhibitions, forums, and media appearances"
+              }
+            ]
+          },
+          "createdAt": "2026-04-30T20:55:20.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 30001,
+          "pageId": 60001,
+          "config": {
+            "slides": [
+              {
+                "image": "/media/wordpress-migration/2022/07/3-1.jpg",
+                "ctaLink": "/pages/projects",
+                "titleAr": "عن كوف للتصميم الداخلي",
+                "titleEn": "About Cove Interior",
+                "ctaTextAr": "معرض أعمالنا",
+                "ctaTextEn": "Our Portfolio",
+                "subtitleAr": "نصنع مساحات تُلهم منذ عام 2007",
+                "subtitleEn": "Crafting spaces that inspire since 2007"
+              }
+            ]
+          },
+          "createdAt": "2026-04-30T20:55:15.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 30014,
+          "pageId": 30001,
+          "config": {
+            "bodyAr": "<div class=\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/main-2-1.jpg\" alt=\"نوون\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">نوون</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/IMG_0245.jpg\" alt=\"فيلا خاصة 1\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">فيلا خاصة 1</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/main-1-1.jpg\" alt=\"فيلا خاصة 2\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">فيلا خاصة 2</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg\" alt=\"فيلا خاصة 3\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">فيلا خاصة 3</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2024/06/DSF3306-websize.jpg\" alt=\"فيلا خاصة 4\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">فيلا خاصة 4</span></div>\n  </div>\n</div>",
+            "bodyEn": "<div class=\"grid grid-cols-1 md:grid-cols-2 gap-6 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/main-2-1.jpg\" alt=\"Nuun\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">Nuun</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/IMG_0245.jpg\" alt=\"Private Villa 1\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">Private Villa 1</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/main-1-1.jpg\" alt=\"Private Villa 2\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">Private Villa 2</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg\" alt=\"Private Villa 3\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">Private Villa 3</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-video group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2024/06/DSF3306-websize.jpg\" alt=\"Private Villa 4\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6\"><span class=\"text-white font-semibold text-xl\">Private Villa 4</span></div>\n  </div>\n</div>",
+            "titleAr": "المشاريع الحقيقية",
+            "titleEn": "Real Projects"
+          },
+          "createdAt": "2026-04-30T20:55:19.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 30013,
+          "pageId": 30001,
+          "config": {
+            "bodyAr": "<div class=\"grid grid-cols-2 md:grid-cols-3 gap-4 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2017/06/7.jpg\" alt=\"غرف النوم\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">غرف النوم</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/3-1.jpg\" alt=\"صالات الاستقبال\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">صالات الاستقبال</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/8.png\" alt=\"غرف الطعام\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">غرف الطعام</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/5.jpg\" alt=\"حمامات السباحة\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">حمامات السباحة</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/18.jpg\" alt=\"حمامات\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">حمامات</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/20.jpg\" alt=\"محلات تجارية\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">محلات تجارية</span></div>\n  </div>\n</div>",
+            "bodyEn": "<div class=\"grid grid-cols-2 md:grid-cols-3 gap-4 mt-4\">\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2017/06/7.jpg\" alt=\"Bedrooms\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">Bedrooms</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/3-1.jpg\" alt=\"Hall & Living\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">Hall & Living</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/8.png\" alt=\"Dining Rooms\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">Dining Rooms</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/5.jpg\" alt=\"Swimming Pools\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">Swimming Pools</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/18.jpg\" alt=\"Toilette – Bathroom\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">Toilette – Bathroom</span></div>\n  </div>\n  <div class=\"relative overflow-hidden rounded-lg aspect-square group cursor-pointer\">\n    <img src=\"/media/wordpress-migration/2022/07/20.jpg\" alt=\"Commercial Shops\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-500\" />\n    <div class=\"absolute inset-0 bg-black/40 flex items-end p-4\"><span class=\"text-white font-semibold text-lg\">Commercial Shops</span></div>\n  </div>\n</div>",
+            "titleAr": "فئات التصميم ثلاثي الأبعاد",
+            "titleEn": "3D Design Categories"
+          },
+          "createdAt": "2026-04-30T20:55:19.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 30005,
+          "pageId": 60002,
+          "config": {
+            "slides": [
+              {
+                "image": "/media/wordpress-migration/2022/07/main-2-1.jpg",
+                "ctaLink": "/pages/contact",
+                "titleAr": "الخدمات المقدمة للعملاء",
+                "titleEn": "Client Services",
+                "ctaTextAr": "تواصل معنا",
+                "ctaTextEn": "Contact Us",
+                "subtitleAr": "تصميم داخلي، إشراف، تأثيث واستشارات",
+                "subtitleEn": "Interior design, supervision, furnishing & consultancy"
+              }
+            ]
+          },
+          "createdAt": "2026-04-30T20:55:16.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 30012,
+          "pageId": 30001,
+          "config": {
+            "slides": [
+              {
+                "image": "/media/wordpress-migration/2022/07/main-2-1.jpg",
+                "titleAr": "معرض الأعمال",
+                "titleEn": "Company Portfolio",
+                "subtitleAr": "تصاميم ثلاثية الأبعاد، مشاريع حقيقية ومقارنات",
+                "subtitleEn": "3D designs, real projects & before/after comparisons"
+              }
+            ]
+          },
+          "createdAt": "2026-04-30T20:55:18.000Z",
+          "updatedAt": "2026-06-01T21:38:26.000Z"
+        },
+        {
+          "id": 2,
+          "pageId": 1,
+          "config": {
+            "title": "Shop by Category",
+            "columns": 3,
+            "titleAr": "تسوق حسب الفئة",
+            "showName": true,
+            "categoryIds": [
+              360105,
+              360111,
+              360109
+            ]
+          },
+          "createdAt": "2026-04-30T10:34:45.000Z",
+          "updatedAt": "2026-05-25T23:13:35.000Z"
+        },
+        {
+          "id": 1,
+          "pageId": 1,
+          "config": {
+            "slides": [
+              {
+                "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663503619764/cKkGLF3y8cCPRhNzMTjKZq/cove-hero-living-GavFKBCmKwMt5nH9i6y6Be.webp",
+                "title": "Crafted for the Discerning",
+                "ctaLink": "/pages/collections",
+                "ctaText": "",
+                "subtitle": "Discover our curated collection of luxury furniture and home decor."
+              },
+              {
+                "image": "https://d2xsxph8kpxj0f.cloudfront.net/310519663503619764/cKkGLF3y8cCPRhNzMTjKZq/cove-hero-bedroom-cXD9mE9Xq57AYqHGgwPQp2.webp",
+                "title": "New Bedroom Collection",
+                "ctaLink": "/category/main-curve-web",
+                "ctaText": "Shop Bedroom",
+                "subtitle": "Timeless designs for your most personal space."
+              }
+            ],
+            "autoplay": true,
+            "interval": 5000
+          },
+          "createdAt": "2026-04-30T10:34:44.000Z",
+          "updatedAt": "2026-05-05T11:22:44.000Z"
+        },
+        {
+          "id": 30007,
+          "pageId": 60002,
+          "config": {
+            "bodyAr": "<p>نستقبل مواعيد التصميم بشروط وهي بعد اعتماد المخطط المعماري والإنشائي أو أن تكون حالة الموقع على الهيكل الأسود أو الترميم الجذري (معنى الترميم الجذري هو إزالة كاملة للأسقف والارضيات).</p>",
+            "bodyEn": "<p>We accept design appointments based upon one condition: after the completion of the architectural and structural plan, or on the condition that the site is on the black structure or the radical restoration (meaning the whole removal of ceilings and floors).</p>",
+            "titleAr": "سياسة الاتفاق في التصميم",
+            "titleEn": "Design Agreement Policy"
+          },
+          "createdAt": "2026-04-30T20:55:17.000Z",
+          "updatedAt": "2026-04-30T20:55:17.000Z"
+        },
+        {
+          "id": 30008,
+          "pageId": 60002,
+          "config": {
+            "bodyAr": "<p>نوفر خدمة التأثيث بشرط أن يسبقها التصميم والإشراف من قبلنا.</p>",
+            "bodyEn": "<p>We provide furnishing service that is preceded by design and supervision done by us.</p>",
+            "titleAr": "سياسة الاتفاق في التأثيث",
+            "titleEn": "Furnishing Agreement Policy"
+          },
+          "createdAt": "2026-04-30T20:55:17.000Z",
+          "updatedAt": "2026-04-30T20:55:17.000Z"
+        },
+        {
+          "id": 30009,
+          "pageId": 60002,
+          "config": {
+            "bodyAr": "<p>بإمكان العميل الاتفاق بالعقود التالية:</p>\n<ul>\n<li>تصميم ومخططات فقط.</li>\n<li>خدمة التأثيث.</li>\n</ul>",
+            "bodyEn": "<p>The customer can agree on the following contracts:</p>\n<ul>\n<li>Design and blueprints only.</li>\n<li>Furnishing service.</li>\n</ul>",
+            "titleAr": "خيارات العقد المتاحة",
+            "titleEn": "Available Contract Options"
+          },
+          "createdAt": "2026-04-30T20:55:17.000Z",
+          "updatedAt": "2026-04-30T20:55:17.000Z"
+        },
+        {
+          "id": 30010,
+          "pageId": 60002,
+          "config": {
+            "bodyAr": "<ul>\n<li>مخطط الأثاث مع القياسات.</li>\n<li>مخطط نقاط الكهرباء (سويتشات، بلاكات، تلفون، تلفزيون، سماعات، كاميرات، انترنت).</li>\n<li>مخطط نقاط الإضاءة (بالأرض، الحوائط، الأسقف).</li>\n<li>مخطط نقاط الصحي (أماكن الشور، المغسلة، المرحاض، الشطاف، الصرف الصحي).</li>\n<li>مخططات تفصيلية للأسقف والحوائط والأرضيات مع وصف المواد المستخدمة.</li>\n<li>مخططات تفصيلية لقطع أثاث تفصال.</li>\n<li>جدول الكميات (BOQ).</li>\n<li>نسخ من التصميم والمخططات قياس A3/A2 مع نسخة احتياطية USB.</li>\n</ul>",
+            "bodyEn": "<ul>\n<li>Furniture layout with measurements.</li>\n<li>Sketch of electricity points (Switch, plugs, telephone, television, headphones, cameras, Internet).</li>\n<li>Sketch of lighting points (floors, walls, ceilings).</li>\n<li>Sketch of plumbing points (shower areas, sinks, toilets, rinsing, sanitation).</li>\n<li>Detailed plans for ceilings, walls, and floors with full description of materials used.</li>\n<li>Detailed plans for customized furniture.</li>\n<li>Bill of Quantities (BOQ) if any.</li>\n<li>Critical Path Methods (CPM) if any.</li>\n<li>A hard copy of the design and plans in A3/A2 size, with a soft copy USB as reference.</li>\n</ul>",
+            "titleAr": "ماذا يشمل التصميم الداخلي؟",
+            "titleEn": "What Does Interior Design Include?"
+          },
+          "createdAt": "2026-04-30T20:55:17.000Z",
+          "updatedAt": "2026-04-30T20:55:17.000Z"
+        },
+        {
+          "id": 30011,
+          "pageId": 60002,
+          "config": {
+            "bodyAr": "<p>هو جدول يلخص كميات مواد التشطيب كاملة (بالمتر المربع، المتر الطولي، كميات القطع المطلوبة) مع وصف المواد. الفائدة من جدول الكميات يساعد العميل في شراء المواد والتسعير من قبل المقاولين.</p>",
+            "bodyEn": "<p>It is a table/schedule showing the order of items and the steps to be implemented from the beginning of the plumbing and electricity up to the furnishing and final cleaning, showing the time frame of each part with the expected time of completion.</p>",
+            "titleAr": "ما هو جدول المسار الحرج (CPM)؟",
+            "titleEn": "What Is the Critical Path Method (CPM)?"
+          },
+          "createdAt": "2026-04-30T20:55:17.000Z",
+          "updatedAt": "2026-04-30T20:55:17.000Z"
+        },
+        {
+          "id": 30006,
+          "pageId": 60002,
+          "config": {
+            "bodyAr": "<ul>\n<li>التصميم الداخلي (لقطات ثلاثية الأبعاد ومخططات تفصيلية).</li>\n<li>الاشراف على التنفيذ.</li>\n<li>التأثيث.</li>\n<li>الاستشارات.</li>\n</ul>",
+            "bodyEn": "<ul>\n<li>Interior design (3D shots and detailed plans/drawings).</li>\n<li>Implementation supervision.</li>\n<li>Furnishing.</li>\n<li>Consultancy.</li>\n</ul>",
+            "titleAr": "ما هي خدماتنا؟",
+            "titleEn": "What Are Our Services?"
+          },
+          "createdAt": "2026-04-30T20:55:16.000Z",
+          "updatedAt": "2026-04-30T20:55:16.000Z"
+        },
+        {
+          "id": 30004,
+          "pageId": 60001,
+          "config": {
+            "bodyAr": "<ul>\n<li>إدارة المساحات.</li>\n<li>توفير مخطط الأثاث مع تفاصيل كاملة ثنائية وثلاثية الأبعاد.</li>\n<li>الإشراف على المشاريع ومتابعة التقدم.</li>\n<li>إيجاد حلول لأي مشاكل تحدث في الموقع واتخاذ القرار الصحيح.</li>\n<li>تقرير أسبوعي يُظهر نتائج جدول العمل.</li>\n</ul>",
+            "bodyEn": "<ul>\n<li>Spacing Management.</li>\n<li>Providing furniture layout with full 2D &amp; 3D details.</li>\n<li>Supervise projects and follow up on the progress.</li>\n<li>Create solutions for any problems that happened on the site and giving the right decision.</li>\n<li>A weekly report showing results of work schedule.</li>\n</ul>",
+            "titleAr": "مهاراتنا",
+            "titleEn": "Our Skills"
+          },
+          "createdAt": "2026-04-30T20:55:15.000Z",
+          "updatedAt": "2026-04-30T20:55:15.000Z"
+        },
+        {
+          "id": 30003,
+          "pageId": 60001,
+          "config": {
+            "bodyAr": "<p>دافعنا هو جعل جميع العملاء راضين وسعداء من خلال منحهم الأجواء المثالية لمكانهم الخاص.</p>",
+            "bodyEn": "<p>Our incentive is to make all customers satisfied and happy by giving them the perfect atmosphere for their own place.</p>",
+            "titleAr": "دافعنا",
+            "titleEn": "Our Incentive"
+          },
+          "createdAt": "2026-04-30T20:55:15.000Z",
+          "updatedAt": "2026-04-30T20:55:15.000Z"
+        },
+        {
+          "id": 30002,
+          "pageId": 60001,
+          "config": {
+            "bodyAr": "<p>الحياة بشكل عام تقوم على وظائف مختلفة تتداخل مع بعضها البعض، مما يجعل كل منها يحتاج إلى الآخر، وهذا يؤدي إلى استمرارية دورة الحياة وجمالها وتطورها وتقدمها.</p>\n<p>نجد العلاج في الطب، والخطوط في الهندسة، والأرقام في الرياضيات، والمعادن في الجيولوجيا، والوظائف في الإدارة؛ هذه هي ألوان الحياة. الحياة مزيج من الألوان، كلها في صندوق واحد في <strong>كوف للتصميم الداخلي</strong>.</p>\n<p>تم إنشاء بصمة كوف من خلال عمل عالي الكفاءة حيث أصبح الحلم حقيقة. تأسست كوف على يد مصمم كويتي عام 2007، ويطمح إلى أن يكون من أفضل مؤسسات التصميم الداخلي والخارجي في المنطقة.</p>",
+            "bodyEn": "<p>Life, in general, is based on different functions which overlap with each other, making all need each other, and this leads to the continuity of the life cycle, its beauty, its development, and progress.</p>\n<p>We find the treatment in medicine, lines in engineering, numbers in mathematics, minerals in geology, and functions in management; Such are the colors of life. Life is a blend of colors, All of it in one box at <strong>Cove Interior Design</strong>.</p>\n<p>Cove's mark was created through high efficient work in which the dream became a reality. Cove was established by a Kuwaiti designer in 2007, and he aspires to be one of the best interior and exterior design organizations in the area.</p>",
+            "titleAr": "قصتنا",
+            "titleEn": "Our Story"
+          },
+          "createdAt": "2026-04-30T20:55:15.000Z",
+          "updatedAt": "2026-04-30T20:55:15.000Z"
+        },
+        {
+          "id": 3,
+          "pageId": 1,
+          "config": {
+            "limit": 8,
+            "title": "Featured Products",
+            "columns": 4,
+            "titleAr": "منتجات مميزة",
+            "categoryId": null
+          },
+          "createdAt": "2026-04-30T10:34:45.000Z",
+          "updatedAt": "2026-04-30T10:34:45.000Z"
+        }
+      ]
+    },
+    "homeSections": {
+      "table": "homepage_sections",
+      "exists": true,
+      "columns": [
+        "id",
+        "sectionKey",
+        "title",
+        "titleAr",
+        "subtitle",
+        "subtitleAr",
+        "ctaText",
+        "ctaTextAr",
+        "ctaUrl",
+        "imageUrl",
+        "isActive",
+        "sortOrder",
+        "updatedAt"
+      ],
+      "selectedColumns": [
+        "id",
+        "title",
+        "imageUrl",
+        "updatedAt"
+      ],
+      "rows": [
+        {
+          "id": 1,
+          "title": "Where Luxury Meets Living",
+          "imageUrl": null,
+          "updatedAt": "2026-04-29T16:36:10.000Z"
+        },
+        {
+          "id": 2,
+          "title": "Shop by Category",
+          "imageUrl": null,
+          "updatedAt": "2026-04-29T16:36:10.000Z"
+        },
+        {
+          "id": 3,
+          "title": "Crafted for the Connoisseur",
+          "imageUrl": null,
+          "updatedAt": "2026-04-29T16:36:10.000Z"
+        },
+        {
+          "id": 4,
+          "title": "Join the Inner Circle",
+          "imageUrl": null,
+          "updatedAt": "2026-04-29T16:36:10.000Z"
+        }
+      ]
+    },
+    "orders": {
+      "table": "orders",
+      "exists": true,
+      "columns": [
+        "id",
+        "orderNumber",
+        "wcOrderId",
+        "wcSource",
+        "customerId",
+        "customerName",
+        "customerEmail",
+        "customerPhone",
+        "shippingCountry",
+        "shippingArea",
+        "shippingBlock",
+        "shippingStreet",
+        "shippingAvenue",
+        "shippingHouse",
+        "shippingPaci",
+        "shippingNotes",
+        "subtotal",
+        "shippingCost",
+        "discountAmount",
+        "total",
+        "currency",
+        "couponCode",
+        "status",
+        "paymentMethod",
+        "paymentStatus",
+        "paymentReference",
+        "shippingMethod",
+        "trackingNumber",
+        "channel",
+        "paidAt",
+        "shippedAt",
+        "deliveredAt",
+        "createdAt",
+        "updatedAt",
+        "invoiceKey",
+        "createdByUserId",
+        "gatewayRef",
+        "refundId",
+        "refundedAt",
+        "refundAmount",
+        "refundNote",
+        "exchangedFromOrderId",
+        "internalNotes",
+        "paymentInvoiceId",
+        "paymentId",
+        "paymentTransactionId",
+        "paymentGatewayName",
+        "paymentProviderData"
+      ],
+      "selectedColumns": [
+        "id",
+        "orderNumber",
+        "status",
+        "createdAt",
+        "updatedAt",
+        "total"
+      ],
+      "rows": [
+        {
+          "id": 270034,
+          "orderNumber": "CVE-MPS8B92I",
+          "status": "pending",
+          "createdAt": "2026-05-30T10:49:43.000Z",
+          "updatedAt": "2026-05-30T10:49:43.000Z",
+          "total": "8.600"
+        },
+        {
+          "id": 270033,
+          "orderNumber": "CVE-MPS71N8B",
+          "status": "pending",
+          "createdAt": "2026-05-30T10:14:15.000Z",
+          "updatedAt": "2026-05-30T10:14:15.000Z",
+          "total": "8.600"
+        },
+        {
+          "id": 270032,
+          "orderNumber": "CVE-MPS6GRCY",
+          "status": "pending",
+          "createdAt": "2026-05-30T09:58:01.000Z",
+          "updatedAt": "2026-05-30T09:58:01.000Z",
+          "total": "8.600"
+        },
+        {
+          "id": 270031,
+          "orderNumber": "CVE-MPS6G62X",
+          "status": "pending",
+          "createdAt": "2026-05-30T09:57:33.000Z",
+          "updatedAt": "2026-05-30T09:57:33.000Z",
+          "total": "8.600"
+        },
+        {
+          "id": 270030,
+          "orderNumber": "CVE-MPS6G3XQ",
+          "status": "pending",
+          "createdAt": "2026-05-30T09:57:30.000Z",
+          "updatedAt": "2026-05-30T09:57:30.000Z",
+          "total": "8.600"
+        },
+        {
+          "id": 270029,
+          "orderNumber": "CVE-MPN2Y6CK",
+          "status": "pending",
+          "createdAt": "2026-05-26T20:20:44.000Z",
+          "updatedAt": "2026-05-26T20:20:44.000Z",
+          "total": "5.300"
+        },
+        {
+          "id": 270028,
+          "orderNumber": "CVE-MPN2XXPF",
+          "status": "pending",
+          "createdAt": "2026-05-26T20:20:33.000Z",
+          "updatedAt": "2026-05-26T20:20:33.000Z",
+          "total": "5.300"
+        },
+        {
+          "id": 270027,
+          "orderNumber": "CVE-MPN2HW0N",
+          "status": "pending",
+          "createdAt": "2026-05-26T20:08:04.000Z",
+          "updatedAt": "2026-05-26T20:08:04.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270026,
+          "orderNumber": "CVE-MPN2HEQJ",
+          "status": "pending",
+          "createdAt": "2026-05-26T20:07:42.000Z",
+          "updatedAt": "2026-05-26T20:07:42.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270025,
+          "orderNumber": "CVE-MPN2F4D1",
+          "status": "pending",
+          "createdAt": "2026-05-26T20:05:55.000Z",
+          "updatedAt": "2026-05-26T20:05:55.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270024,
+          "orderNumber": "CVE-MPN2CLY2",
+          "status": "pending",
+          "createdAt": "2026-05-26T20:03:58.000Z",
+          "updatedAt": "2026-05-26T20:03:58.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270023,
+          "orderNumber": "CVE-MPN1SB1G",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:48:10.000Z",
+          "updatedAt": "2026-05-26T19:48:10.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270022,
+          "orderNumber": "CVE-MPN1QWFH",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:47:05.000Z",
+          "updatedAt": "2026-05-26T19:47:05.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270021,
+          "orderNumber": "CVE-MPN1QSZI",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:47:00.000Z",
+          "updatedAt": "2026-05-26T19:47:00.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270020,
+          "orderNumber": "CVE-MPN1QE37",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:46:41.000Z",
+          "updatedAt": "2026-05-26T19:46:41.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270019,
+          "orderNumber": "CVE-MPN1QCO5",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:46:39.000Z",
+          "updatedAt": "2026-05-26T19:46:39.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270018,
+          "orderNumber": "CVE-MPN16W0A",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:31:31.000Z",
+          "updatedAt": "2026-05-26T19:31:31.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270017,
+          "orderNumber": "CVE-MPN12YCQ",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:28:28.000Z",
+          "updatedAt": "2026-05-26T19:28:28.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270016,
+          "orderNumber": "CVE-MPN11MK5",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:27:26.000Z",
+          "updatedAt": "2026-05-26T19:27:26.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270015,
+          "orderNumber": "CVE-MPN11ED7",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:27:15.000Z",
+          "updatedAt": "2026-05-26T19:27:15.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270014,
+          "orderNumber": "CVE-MPN115EI",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:27:03.000Z",
+          "updatedAt": "2026-05-26T19:27:03.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270013,
+          "orderNumber": "CVE-MPN10ZXC",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:26:56.000Z",
+          "updatedAt": "2026-05-26T19:26:56.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270012,
+          "orderNumber": "CVE-MPN10RFZ",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:26:45.000Z",
+          "updatedAt": "2026-05-26T19:26:45.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270011,
+          "orderNumber": "CVE-MPN06CJ6",
+          "status": "pending",
+          "createdAt": "2026-05-26T19:03:06.000Z",
+          "updatedAt": "2026-05-26T19:03:06.000Z",
+          "total": "61.000"
+        },
+        {
+          "id": 270010,
+          "orderNumber": "CVE-MPMZ1FPO",
+          "status": "processing",
+          "createdAt": "2026-05-26T18:31:17.000Z",
+          "updatedAt": "2026-05-26T18:31:17.000Z",
+          "total": "3.300"
+        }
+      ]
+    },
+    "orderItems": {
+      "table": "order_items",
+      "exists": true,
+      "columns": [
+        "id",
+        "orderId",
+        "productId",
+        "variantId",
+        "wcProductId",
+        "name",
+        "sku",
+        "image",
+        "quantity",
+        "unitPrice",
+        "totalPrice",
+        "cog",
+        "variantAttributes",
+        "qtyValue",
+        "measurementType",
+        "isGift",
+        "giftNote"
+      ],
+      "selectedColumns": [
+        "id",
+        "orderId",
+        "productId",
+        "name",
+        "image"
+      ],
+      "rows": [
+        {
+          "id": 270034,
+          "orderId": 270034,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        },
+        {
+          "id": 270033,
+          "orderId": 270033,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        },
+        {
+          "id": 270032,
+          "orderId": 270032,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        },
+        {
+          "id": 270031,
+          "orderId": 270031,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        },
+        {
+          "id": 270030,
+          "orderId": 270030,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        },
+        {
+          "id": 270029,
+          "orderId": 270029,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        },
+        {
+          "id": 270028,
+          "orderId": 270028,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        },
+        {
+          "id": 270027,
+          "orderId": 270027,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270026,
+          "orderId": 270026,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270025,
+          "orderId": 270025,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270024,
+          "orderId": 270024,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270023,
+          "orderId": 270023,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270022,
+          "orderId": 270022,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270021,
+          "orderId": 270021,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270020,
+          "orderId": 270020,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270019,
+          "orderId": 270019,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270018,
+          "orderId": 270018,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270017,
+          "orderId": 270017,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270016,
+          "orderId": 270016,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270015,
+          "orderId": 270015,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270014,
+          "orderId": 270014,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270013,
+          "orderId": 270013,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270012,
+          "orderId": 270012,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270011,
+          "orderId": 270011,
+          "productId": 390205,
+          "name": "Roshina Mubkhar Black",
+          "image": null
+        },
+        {
+          "id": 270010,
+          "orderId": 270010,
+          "productId": 390237,
+          "name": "Passage Mini Lighter - Silver",
+          "image": null
+        }
+      ]
+    }
+  },
+  "sampleRoutes": [
+    {
+      "type": "core",
+      "id": "",
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "type": "core",
+      "id": "",
+      "name": "Shop",
+      "url": "/shop"
+    },
+    {
+      "type": "core",
+      "id": "",
+      "name": "Cart",
+      "url": "/cart"
+    },
+    {
+      "type": "product",
+      "id": 390178,
+      "name": "لوحة اسماء الله الحسنى الرباعية",
+      "url": "/products/paint-12"
+    },
+    {
+      "type": "product",
+      "id": 390178,
+      "name": "لوحة اسماء الله الحسنى الرباعية",
+      "url": "/product/paint-12"
+    },
+    {
+      "type": "product",
+      "id": 390178,
+      "name": "لوحة اسماء الله الحسنى الرباعية",
+      "url": "/products/390178"
+    },
+    {
+      "type": "product",
+      "id": 390133,
+      "name": "Secret Potion – N3",
+      "url": "/products/secret-potion-n3"
+    },
+    {
+      "type": "product",
+      "id": 390133,
+      "name": "Secret Potion – N3",
+      "url": "/product/secret-potion-n3"
+    },
+    {
+      "type": "product",
+      "id": 390133,
+      "name": "Secret Potion – N3",
+      "url": "/products/390133"
+    },
+    {
+      "type": "product",
+      "id": 390132,
+      "name": "Secret Potion – N2",
+      "url": "/products/secret-potion-n2"
+    },
+    {
+      "type": "product",
+      "id": 390132,
+      "name": "Secret Potion – N2",
+      "url": "/product/secret-potion-n2"
+    },
+    {
+      "type": "product",
+      "id": 390132,
+      "name": "Secret Potion – N2",
+      "url": "/products/390132"
+    },
+    {
+      "type": "product",
+      "id": 390131,
+      "name": "Secret Potion – N1",
+      "url": "/products/secret-potion-n1"
+    },
+    {
+      "type": "product",
+      "id": 390131,
+      "name": "Secret Potion – N1",
+      "url": "/product/secret-potion-n1"
+    },
+    {
+      "type": "product",
+      "id": 390131,
+      "name": "Secret Potion – N1",
+      "url": "/products/390131"
+    },
+    {
+      "type": "product",
+      "id": 390169,
+      "name": "لوحة لا اله الا الله",
+      "url": "/products/paint-3"
+    },
+    {
+      "type": "product",
+      "id": 390169,
+      "name": "لوحة لا اله الا الله",
+      "url": "/product/paint-3"
+    },
+    {
+      "type": "product",
+      "id": 390169,
+      "name": "لوحة لا اله الا الله",
+      "url": "/products/390169"
+    },
+    {
+      "type": "product",
+      "id": 390170,
+      "name": "لوحة الكرسي",
+      "url": "/products/paint-4"
+    },
+    {
+      "type": "product",
+      "id": 390170,
+      "name": "لوحة الكرسي",
+      "url": "/product/paint-4"
+    },
+    {
+      "type": "product",
+      "id": 390170,
+      "name": "لوحة الكرسي",
+      "url": "/products/390170"
+    },
+    {
+      "type": "product",
+      "id": 390171,
+      "name": "لوحة الفلق",
+      "url": "/products/paint-5"
+    },
+    {
+      "type": "product",
+      "id": 390171,
+      "name": "لوحة الفلق",
+      "url": "/product/paint-5"
+    },
+    {
+      "type": "product",
+      "id": 390171,
+      "name": "لوحة الفلق",
+      "url": "/products/390171"
+    },
+    {
+      "type": "product",
+      "id": 390172,
+      "name": "لوحة كن جميلاً",
+      "url": "/products/paint-6"
+    },
+    {
+      "type": "product",
+      "id": 390172,
+      "name": "لوحة كن جميلاً",
+      "url": "/product/paint-6"
+    },
+    {
+      "type": "product",
+      "id": 390172,
+      "name": "لوحة كن جميلاً",
+      "url": "/products/390172"
+    },
+    {
+      "type": "product",
+      "id": 390173,
+      "name": "لوحة العفو",
+      "url": "/products/paint-7"
+    },
+    {
+      "type": "product",
+      "id": 390173,
+      "name": "لوحة العفو",
+      "url": "/product/paint-7"
+    },
+    {
+      "type": "product",
+      "id": 390173,
+      "name": "لوحة العفو",
+      "url": "/products/390173"
+    },
+    {
+      "type": "product",
+      "id": 390174,
+      "name": "لوحة البسملة",
+      "url": "/products/paint-8"
+    },
+    {
+      "type": "product",
+      "id": 390174,
+      "name": "لوحة البسملة",
+      "url": "/product/paint-8"
+    },
+    {
+      "type": "product",
+      "id": 390174,
+      "name": "لوحة البسملة",
+      "url": "/products/390174"
+    },
+    {
+      "type": "category",
+      "id": 360106,
+      "name": "Vendors",
+      "url": "/categories/store-vendors"
+    },
+    {
+      "type": "category",
+      "id": 360106,
+      "name": "Vendors",
+      "url": "/category/store-vendors"
+    },
+    {
+      "type": "category",
+      "id": 360106,
+      "name": "Vendors",
+      "url": "/categories/360106"
+    },
+    {
+      "type": "category",
+      "id": 360136,
+      "name": "Roshina 3",
+      "url": "/categories/roshina-3"
+    },
+    {
+      "type": "category",
+      "id": 360136,
+      "name": "Roshina 3",
+      "url": "/category/roshina-3"
+    },
+    {
+      "type": "category",
+      "id": 360136,
+      "name": "Roshina 3",
+      "url": "/categories/360136"
+    },
+    {
+      "type": "category",
+      "id": 360109,
+      "name": "Roshina Boxes ",
+      "url": "/categories/roshina-boxes"
+    },
+    {
+      "type": "category",
+      "id": 360109,
+      "name": "Roshina Boxes ",
+      "url": "/category/roshina-boxes"
+    },
+    {
+      "type": "category",
+      "id": 360109,
+      "name": "Roshina Boxes ",
+      "url": "/categories/360109"
+    },
+    {
+      "type": "category",
+      "id": 360111,
+      "name": "accessories",
+      "url": "/categories/accessories"
+    },
+    {
+      "type": "category",
+      "id": 360111,
+      "name": "accessories",
+      "url": "/category/accessories"
+    },
+    {
+      "type": "category",
+      "id": 360111,
+      "name": "accessories",
+      "url": "/categories/360111"
+    },
+    {
+      "type": "category",
+      "id": 360116,
+      "name": "Classic",
+      "url": "/categories/classic"
+    },
+    {
+      "type": "category",
+      "id": 360116,
+      "name": "Classic",
+      "url": "/category/classic"
+    },
+    {
+      "type": "category",
+      "id": 360116,
+      "name": "Classic",
+      "url": "/categories/360116"
+    },
+    {
+      "type": "category",
+      "id": 360117,
+      "name": "Country",
+      "url": "/categories/country"
+    },
+    {
+      "type": "category",
+      "id": 360117,
+      "name": "Country",
+      "url": "/category/country"
+    }
+  ],
+  "sampledMediaUrls": [
+    "/media/wordpress-migration/2024/01/",
+    "/media/wordpress-migration/2023/10/Secret-Potion-",
+    "/media/admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg",
+    "/media/wordpress-migration/2024/10/long.png",
+    "/media/wordpress-migration/2024/08/Black-Mini-lighter.jpeg",
+    "/media/wordpress-migration/2024/08/Rose-Mini-Lighter.jpeg",
+    "/media/wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg",
+    "/media/wordpress-migration/2024/10/standard.png",
+    "/media/wordpress-migration/2024/12/sofa-2.jpeg",
+    "/media/wordpress-migration/2025/05/Passage-Lamp-Red.jpeg",
+    "/media/wordpress-migration/2024/12/chair.jpeg",
+    "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+    "/media/wordpress-migration/2025/02/Trash-bin-black-1.jpg",
+    "/media/wordpress-migration/2025/02/Beige-2.jpg",
+    "/media/wordpress-migration/2025/02/beige-3.jpg",
+    "/media/wordpress-migration/2025/02/beige-4.jpg",
+    "/media/wordpress-migration/2024/12/sofa.jpeg",
+    "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-1.jpg",
+    "/media/wordpress-migration/2023/10/Roshina-boxes.jpg",
+    "/media/wordpress-migration/2023/08/accessories-1.jpg",
+    "/media/wordpress-migration/2022/07/classic-157-gray-gold.jpg",
+    "/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS.jpg",
+    "/media/wordpress-migration/2022/07/CURVE-2-NEUTRAL-GREEN.jpg",
+    "/media/wordpress-migration/2022/08/3.jpg",
+    "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-3.jpg",
+    "/media/wordpress-migration/2023/02/coffee-tables-1-2.jpg",
+    "/media/wordpress-migration/2023/01/Roshina-1-beige-1.jpg",
+    "/media/wordpress-migration/2022/07/1.png",
+    "/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+    "/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg",
+    "/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg",
+    "/media/wordpress-migration/2022/07/Visitors-1.jpg",
+    "/media/wordpress-migration/2022/07/Italy-Meeting.jpg",
+    "/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg",
+    "/media/wordpress-migration/2022/07/cove-events.jpg",
+    "/media/wordpress-migration/2022/07/3-1.jpg",
+    "/media/wordpress-migration/2022/07/main-2-1.jpg",
+    "/media/wordpress-migration/2022/07/IMG_0245.jpg",
+    "/media/wordpress-migration/2022/07/main-1-1.jpg",
+    "/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg",
+    "/media/wordpress-migration/2024/06/DSF3306-websize.jpg",
+    "/media/wordpress-migration/2017/06/7.jpg",
+    "/media/wordpress-migration/2022/07/8.png",
+    "/media/wordpress-migration/2022/07/5.jpg",
+    "/media/wordpress-migration/2022/07/18.jpg",
+    "/media/wordpress-migration/2022/07/20.jpg"
+  ],
+  "reportDir": "/home/manus/cove-storefront/reports/post-cleanup-qa-2026-06-02T05-18-40-856Z"
+}

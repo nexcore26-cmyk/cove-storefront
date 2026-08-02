@@ -1,0 +1,28 @@
+{
+  "runId": "media-phase2-2026-06-01T21-38-04-827Z",
+  "startedAt": "2026-06-01T21:38:05.210Z",
+  "mode": "dry-run",
+  "approvalDir": "/home/manus/cove-storefront/scripts/media-phase2-approval-lists",
+  "approvedRows": {
+    "product": 375,
+    "category": 14,
+    "cmsRewrite": 1935,
+    "variation": 234
+  },
+  "validatedTargetFiles": 376,
+  "missingTargetFiles": 0,
+  "proposedChanges": 22,
+  "proposedChangeCounts": {
+    "products.images:set_product_gallery": 13,
+    "categories.image:set_category_image": 1,
+    "page_blocks.config:rewrite_approved_wp_media_urls": 8
+  },
+  "skippedCount": 15,
+  "skippedReasonCounts": {
+    "existing_admin_upload_reference_not_overwritten": 1,
+    "no_node_category_match": 13,
+    "not_applied_in_phase2_because_all_rows_are_multiple_node_variant_matches": 234
+  },
+  "appliedChanges": 0,
+  "finishedAt": "2026-06-01T21:38:05.210Z"
+}

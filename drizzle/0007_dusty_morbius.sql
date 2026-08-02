@@ -1,0 +1,2 @@
+ALTER TABLE `order_items` ADD `qtyValue` decimal(10,3) DEFAULT '1.000' NOT NULL;--> statement-breakpoint
+ALTER TABLE `order_items` ADD `measurementType` enum('unit','meter','kg','roll','box') DEFAULT 'unit' NOT NULL;

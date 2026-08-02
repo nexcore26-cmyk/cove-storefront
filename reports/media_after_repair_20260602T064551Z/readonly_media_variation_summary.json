@@ -1,0 +1,2451 @@
+{
+  "generatedAt": "2026-06-02T06:46:08.207Z",
+  "appDir": "/home/manus/cove-storefront",
+  "mediaAssets": {
+    "activeCount": 347,
+    "brokenLocalUrlCount": 0,
+    "nonLocalUrlCount": 0,
+    "brokenSamples": [],
+    "nonLocalSamples": []
+  },
+  "activeMediaReferences": {
+    "checkedCount": 9543,
+    "missingCount": 0,
+    "missingSamples": []
+  },
+  "categories": {
+    "coffeeRootIds": [
+      360105
+    ],
+    "coffeeCategoryIds": [
+      360105,
+      360119,
+      360118,
+      360117,
+      360116
+    ],
+    "coffeeCategories": [
+      {
+        "id": 360105,
+        "name": "Coffee Tables",
+        "slug": "coffee-tables",
+        "parentId": null,
+        "isActive": 1,
+        "__table": "categories"
+      },
+      {
+        "id": 360119,
+        "name": "Mini Caf",
+        "slug": "mini-caf",
+        "parentId": 360105,
+        "isActive": 1,
+        "__table": "categories"
+      },
+      {
+        "id": 360118,
+        "name": "Curve",
+        "slug": "curve",
+        "parentId": 360105,
+        "isActive": 1,
+        "__table": "categories"
+      },
+      {
+        "id": 360117,
+        "name": "Country",
+        "slug": "country",
+        "parentId": 360105,
+        "isActive": 1,
+        "__table": "categories"
+      },
+      {
+        "id": 360116,
+        "name": "Classic",
+        "slug": "classic",
+        "parentId": 360105,
+        "isActive": 1,
+        "__table": "categories"
+      }
+    ],
+    "activeCoffeeProductCount": 15
+  },
+  "targetProducts": [
+    {
+      "id": 390087,
+      "slug": "classic-157-bohemian",
+      "name": "Classic 157 Bohemian",
+      "sku": "12465",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2021/07/classic-157-marble-silver.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390087,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390087,
+          "attributeId": 22,
+          "activeValueIds": [],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390087,
+          "attributeId": 20,
+          "activeValueIds": [],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390087,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390207,
+      "slug": "mini-roshina-beige",
+      "name": "Mini Roshina Beige",
+      "sku": "12557",
+      "type": "variable",
+      "categoryId": 360137,
+      "categoryName": "Mini Roshina ",
+      "categorySlug": "mini-roshina",
+      "images": [
+        "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+        "/media/wordpress-migration/2025/02/Mini-Roshina-9.jpg",
+        "/media/wordpress-migration/2025/02/Mini-Roshina-8.jpg",
+        "/media/wordpress-migration/2025/02/Mini-Roshina-3.jpg",
+        "/media/wordpress-migration/2025/02/Mini-Roshina-4.jpg",
+        "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390207,
+          "attributeId": 33,
+          "activeValueIds": [
+            419,
+            420,
+            421,
+            422
+          ],
+          "attributeName": "Select Mini Roshina box set",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [
+            419,
+            420,
+            421,
+            422
+          ],
+          "values": [
+            {
+              "id": 419,
+              "attributeId": 33,
+              "labelEn": "Basic set (Only Box)",
+              "labelAr": "(الصندوق فقط) بدون تعبئة البخور والمعمول",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            },
+            {
+              "id": 420,
+              "attributeId": 33,
+              "labelEn": "Basic set + Roshina Mubkhar",
+              "labelAr": "روشنه ميني بدون تعبئة البخور والمعمول + المبخر الروشنة",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            },
+            {
+              "id": 421,
+              "attributeId": 33,
+              "labelEn": "Full set (Only Box)",
+              "labelAr": "(الصندوق فقط) مع تعبئة البخور والمعمول",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            },
+            {
+              "id": 422,
+              "attributeId": 33,
+              "labelEn": "Full set + Roshina Mubkhar",
+              "labelAr": "روشنه ١ مع تعبئة البخور والمعمول + المبخر الروشنة",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 210095,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 210096,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 210097,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 210098,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 240095,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240096,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240097,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240098,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240360,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240362,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240364,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240365,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 270032,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "",
+          "attributes": [
+            {
+              "id": 19,
+              "name": "Select Mini Roshina box set",
+              "slug": "pa_select-mini-roshina-box-set",
+              "option": "Full set + Roshina Mubkhar"
+            }
+          ],
+          "price": "78.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 270033,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "",
+          "attributes": [
+            {
+              "id": 19,
+              "name": "Select Mini Roshina box set",
+              "slug": "pa_select-mini-roshina-box-set",
+              "option": "Full set (Only Box)"
+            }
+          ],
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 270034,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "",
+          "attributes": [
+            {
+              "id": 19,
+              "name": "Select Mini Roshina box set",
+              "slug": "pa_select-mini-roshina-box-set",
+              "option": "Basic set + Roshina Mubkhar"
+            }
+          ],
+          "price": "55.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 270035,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "",
+          "attributes": [
+            {
+              "id": 19,
+              "name": "Select Mini Roshina box set",
+              "slug": "pa_select-mini-roshina-box-set",
+              "option": "Basic set (Only Box)"
+            }
+          ],
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 300095,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 300096,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 300097,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 300098,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330095,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330096,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": "55.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330097,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330098,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": "78.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330358,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330362,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": "55.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330367,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330372,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": "78.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330665,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330670,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": "55.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330675,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330680,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": "78.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330744,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330749,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": "55.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330755,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330762,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": "78.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330968,
+          "wcVariantId": 17420,
+          "sku": "12557",
+          "name": "Basic set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set (Only Box)"
+          },
+          "price": "39.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330975,
+          "wcVariantId": 17421,
+          "sku": "12557",
+          "name": "Basic set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Basic set + Roshina Mubkhar"
+          },
+          "price": "55.000",
+          "salePrice": "55.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330983,
+          "wcVariantId": 17422,
+          "sku": "12557",
+          "name": "Full set (Only Box)",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set (Only Box)"
+          },
+          "price": "63.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330990,
+          "wcVariantId": 17423,
+          "sku": "12557",
+          "name": "Full set + Roshina Mubkhar",
+          "attributes": {
+            "Select Mini Roshina box set": "Full set + Roshina Mubkhar"
+          },
+          "price": "78.000",
+          "salePrice": "78.000",
+          "image": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+          "galleryImages": [
+            "/media/wordpress-migration/2023/01/roshina-package.jpeg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+              "exists": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coffeeProducts": [
+    {
+      "id": 390050,
+      "slug": "classic-157",
+      "name": "Classic 157",
+      "sku": "1204",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2021/07/classic-157-marble-silver.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390050,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390050,
+          "attributeId": 18,
+          "activeValueIds": [],
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390050,
+          "attributeId": 22,
+          "activeValueIds": [],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390050,
+          "attributeId": 20,
+          "activeValueIds": [],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390050,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390051,
+      "slug": "country-62",
+      "name": "Country 62",
+      "sku": "8074",
+      "type": "variable",
+      "categoryId": 360117,
+      "categoryName": "Country",
+      "categorySlug": "country",
+      "images": [
+        "/media/wordpress-migration/2022/07/COUNTRY-62-BEIGE-DETAILS.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390051,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390051,
+          "attributeId": 18,
+          "activeValueIds": [],
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390051,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390052,
+      "slug": "country-112",
+      "name": "Country 112",
+      "sku": "8093",
+      "type": "variable",
+      "categoryId": 360117,
+      "categoryName": "Country",
+      "categorySlug": "country",
+      "images": [
+        "/media/wordpress-migration/2022/07/COUNTRY-112-BLUE.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390052,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390052,
+          "attributeId": 18,
+          "activeValueIds": [],
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390052,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390053,
+      "slug": "curve-120",
+      "name": "Curve 120",
+      "sku": "8112",
+      "type": "variable",
+      "categoryId": 360118,
+      "categoryName": "Curve",
+      "categorySlug": "curve",
+      "images": [
+        "/media/wordpress-migration/2022/07/CURVE-LIGHT-BLUE-1.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390053,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390053,
+          "attributeId": 18,
+          "activeValueIds": [],
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390053,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390054,
+      "slug": "curve-180",
+      "name": "Curve 180",
+      "sku": "8131",
+      "type": "variable",
+      "categoryId": 360118,
+      "categoryName": "Curve",
+      "categorySlug": "curve",
+      "images": [
+        "/media/wordpress-migration/2022/07/CURVE-180-Royal-green.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390054,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390054,
+          "attributeId": 18,
+          "activeValueIds": [],
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390054,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390055,
+      "slug": "mini-caf",
+      "name": "Mini Caf",
+      "sku": "8150",
+      "type": "variable",
+      "categoryId": 360119,
+      "categoryName": "Mini Caf",
+      "categorySlug": "mini-caf",
+      "images": [
+        "/media/wordpress-migration/2022/07/1-4.jpg",
+        "/media/wordpress-migration/2022/07/2-3.jpg",
+        "/media/wordpress-migration/2022/07/3-4.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390055,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390055,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390055,
+          "attributeId": 23,
+          "activeValueIds": [],
+          "attributeName": "Brand",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390056,
+      "slug": "country-167",
+      "name": "Country 167",
+      "sku": "10715",
+      "type": "variable",
+      "categoryId": 360117,
+      "categoryName": "Country",
+      "categorySlug": "country",
+      "images": [
+        "/media/wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390056,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390056,
+          "attributeId": 18,
+          "activeValueIds": [],
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390056,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390057,
+      "slug": "classic-225",
+      "name": "Classic 225",
+      "sku": "10816",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2022/07/classic-225-gray-gold-1.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390057,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390057,
+          "attributeId": 18,
+          "activeValueIds": [],
+          "attributeName": "Select color",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390057,
+          "attributeId": 22,
+          "activeValueIds": [],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390057,
+          "attributeId": 20,
+          "activeValueIds": [],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390057,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390058,
+      "slug": "decaf",
+      "name": "DeCaf",
+      "sku": "10879",
+      "type": "variable",
+      "categoryId": 360119,
+      "categoryName": "Mini Caf",
+      "categorySlug": "mini-caf",
+      "images": [
+        "/media/wordpress-migration/2022/10/4.jpeg",
+        "/media/wordpress-migration/2022/10/5.jpeg",
+        "/media/wordpress-migration/2022/10/Decaf.jpeg",
+        "/media/wordpress-migration/2022/10/3.jpeg",
+        "/media/wordpress-migration/2022/10/1.jpeg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390058,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390058,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390084,
+      "slug": "classic-157-gray-white",
+      "name": "Classic 157 Gray / White",
+      "sku": "12438",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2021/07/classic-157-marble-silver.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390084,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390084,
+          "attributeId": 22,
+          "activeValueIds": [],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390084,
+          "attributeId": 20,
+          "activeValueIds": [],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390084,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390087,
+      "slug": "classic-157-bohemian",
+      "name": "Classic 157 Bohemian",
+      "sku": "12465",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2021/07/classic-157-marble-silver.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390087,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390087,
+          "attributeId": 22,
+          "activeValueIds": [],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390087,
+          "attributeId": 20,
+          "activeValueIds": [],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390087,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390088,
+      "slug": "classic-225-bohemian",
+      "name": "Classic 225 Bohemian",
+      "sku": "12470",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2022/07/classic-225-gray-gold-1.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390088,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390088,
+          "attributeId": 22,
+          "activeValueIds": [],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390088,
+          "attributeId": 20,
+          "activeValueIds": [],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390088,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390089,
+      "slug": "classic-225-gold",
+      "name": "Classic 225 Gold",
+      "sku": "12486",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2022/07/classic-225-gold.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390089,
+          "attributeId": 19,
+          "activeValueIds": [],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390089,
+          "attributeId": 22,
+          "activeValueIds": [],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390089,
+          "attributeId": 20,
+          "activeValueIds": [],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        },
+        {
+          "productId": 390089,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": []
+    },
+    {
+      "id": 390120,
+      "slug": "classic-157-gold",
+      "name": "Classic 157 gold",
+      "sku": "12745",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2021/07/classic-157-gold.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390120,
+          "attributeId": 19,
+          "activeValueIds": [
+            330
+          ],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [
+            330
+          ],
+          "values": [
+            {
+              "id": 330,
+              "attributeId": 19,
+              "labelEn": "Width 157cm, Depth 53cm, Height 86cm",
+              "labelAr": "العرض 157 سم ، العمق 53 سم ، الارتفاع 86 سم",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        },
+        {
+          "productId": 390120,
+          "attributeId": 22,
+          "activeValueIds": [
+            357
+          ],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [
+            357
+          ],
+          "values": [
+            {
+              "id": 357,
+              "attributeId": 22,
+              "labelEn": "Gold",
+              "labelAr": "ذهبي",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        },
+        {
+          "productId": 390120,
+          "attributeId": 20,
+          "activeValueIds": [
+            349
+          ],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [
+            349
+          ],
+          "values": [
+            {
+              "id": 349,
+              "attributeId": 20,
+              "labelEn": "Solid top",
+              "labelAr": "سطح صلب",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        },
+        {
+          "productId": 390120,
+          "attributeId": 21,
+          "activeValueIds": [],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [],
+          "values": []
+        }
+      ],
+      "variants": [
+        {
+          "id": 180068,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 210197,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 240223,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240506,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 270128,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "",
+          "attributes": [
+            {
+              "id": 3,
+              "name": "Size",
+              "slug": "pa_size",
+              "option": "Width 157cm, Depth 53cm, Height 86cm"
+            },
+            {
+              "id": 6,
+              "name": "Select steel",
+              "slug": "pa_steel-selected",
+              "option": "Gold"
+            },
+            {
+              "id": 4,
+              "name": "Select top surface",
+              "slug": "pa_top-selected",
+              "option": "Solid top"
+            }
+          ],
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 300197,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330292,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330823,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 331171,
+          "wcVariantId": 12746,
+          "sku": "12745",
+          "name": "Width 157cm, Depth 53cm, Height 86cm / Gold / Solid top",
+          "attributes": {
+            "Size": "Width 157cm, Depth 53cm, Height 86cm",
+            "Select steel": "Gold",
+            "Select top surface": "Solid top"
+          },
+          "price": "750.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/details-classic-157-gold-2.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 390180,
+      "slug": "classic-225-brown",
+      "name": "Classic 225 Brown",
+      "sku": "12475",
+      "type": "variable",
+      "categoryId": 360116,
+      "categoryName": "Classic",
+      "categorySlug": "classic",
+      "images": [
+        "/media/wordpress-migration/2022/07/classic-225-gold.jpg"
+      ],
+      "productAttributes": [
+        {
+          "productId": 390180,
+          "attributeId": 19,
+          "activeValueIds": [
+            333
+          ],
+          "attributeName": "Size",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [
+            333
+          ],
+          "values": [
+            {
+              "id": 333,
+              "attributeId": 19,
+              "labelEn": "Width 225cm, Depth 53cm, Height 86cm",
+              "labelAr": "العرض 225 سم ، العمق 53 سم ، الارتفاع 86 سم",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        },
+        {
+          "productId": 390180,
+          "attributeId": 22,
+          "activeValueIds": [
+            357
+          ],
+          "attributeName": "Select steel",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [
+            357
+          ],
+          "values": [
+            {
+              "id": 357,
+              "attributeId": 22,
+              "labelEn": "Gold",
+              "labelAr": "ذهبي",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        },
+        {
+          "productId": 390180,
+          "attributeId": 20,
+          "activeValueIds": [
+            350
+          ],
+          "attributeName": "Select top surface",
+          "displayType": "button",
+          "attributeType": "global",
+          "parsedValueIds": [
+            350
+          ],
+          "values": [
+            {
+              "id": 350,
+              "attributeId": 20,
+              "labelEn": "Clear glass",
+              "labelAr": "زجاج شفاف",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        },
+        {
+          "productId": 390180,
+          "attributeId": 21,
+          "activeValueIds": [
+            353,
+            354
+          ],
+          "attributeName": "Select coffee capsule tray size (for interior of drawer)",
+          "displayType": "image",
+          "attributeType": "global",
+          "parsedValueIds": [
+            353,
+            354
+          ],
+          "values": [
+            {
+              "id": 353,
+              "attributeId": 21,
+              "labelEn": "Small capsule",
+              "labelAr": "كبسولة صغيرة",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            },
+            {
+              "id": 354,
+              "attributeId": 21,
+              "labelEn": "Big capsule",
+              "labelAr": "كبسولة كبيرة",
+              "swatch": null,
+              "image": null,
+              "galleryImages": null,
+              "price": null,
+              "salePrice": null,
+              "isEnabled": 1
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 210112,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 240112,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 240394,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 270047,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "",
+          "attributes": [
+            {
+              "id": 3,
+              "name": "Size",
+              "slug": "pa_size",
+              "option": "Width 225cm, Depth 53cm, Height 86cm"
+            }
+          ],
+          "price": "785.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [],
+          "imageExists": true,
+          "galleryExistence": []
+        },
+        {
+          "id": 300112,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": null,
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330112,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": "785.000",
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330418,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": "785.000",
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330735,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": "785.000",
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 330816,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": "785.000",
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        },
+        {
+          "id": 331066,
+          "wcVariantId": 16066,
+          "sku": "12475",
+          "name": "Width 225cm, Depth 53cm, Height 86cm",
+          "attributes": {
+            "Size": "Width 225cm, Depth 53cm, Height 86cm"
+          },
+          "price": "785.000",
+          "salePrice": "785.000",
+          "image": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+          "galleryImages": [
+            "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+            "/media/wordpress-migration/2021/07/small-capsules-1.jpg"
+          ],
+          "imageExists": true,
+          "galleryExistence": [
+            {
+              "url": "/media/wordpress-migration/2021/07/clear-glass-1.jpg",
+              "exists": true
+            },
+            {
+              "url": "/media/wordpress-migration/2021/07/small-capsules-1.jpg",
+              "exists": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

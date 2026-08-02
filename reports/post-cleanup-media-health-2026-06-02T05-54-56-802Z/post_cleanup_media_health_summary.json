@@ -1,0 +1,14 @@
+{
+  "reportDir": "/home/manus/cove-storefront/reports/post-cleanup-media-health-2026-06-02T05-54-56-802Z",
+  "checkedAt": "2026-06-02T05:54:57.416Z",
+  "referenceRows": 9864,
+  "uniqueReferencedMediaUrls": 335,
+  "missingFiles": 1,
+  "missingMediaAssetRows": 2,
+  "duplicateMediaAssetRows": 0,
+  "skippedTargets": [],
+  "byUsageClass": {
+    "commerce_active": 9842,
+    "cms_active": 22
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "runId": "variant-gallery-migration-2026-06-02T19-20-33-300Z",
+  "generatedAt": "2026-06-02T19:20:33.435Z",
+  "mode": "dry-run",
+  "evidencePath": "/home/manus/cove-storefront/scripts/wp_variation_gallery_evidence.json",
+  "onlyActive": true,
+  "updateImages": true,
+  "evidenceProducts": 34,
+  "productsFound": 33,
+  "totalActiveVariantsInEvidenceProducts": 630,
+  "plannedUpdates": 618,
+  "plannedGalleryUpdates": 618,
+  "plannedImageUpdates": 0,
+  "blockers": 0,
+  "warnings": 1,
+  "reportDir": "/home/manus/cove-storefront/reports/variant-gallery-migration-2026-06-02T19-20-33-300Z",
+  "safeguards": [
+    "Evidence is read from downloaded WooCommerce product pages, not from product attributes.",
+    "All media URLs are converted to /media/wordpress-migration/... and checked against the local public media directory before apply.",
+    "Only active products and active variants are updated by default.",
+    "Affected product_variants rows are backed up to JSON and SQL restore files before database writes.",
+    "Database writes run inside a single transaction and update only product_variants.galleryImages plus image when explicitly requested."
+  ],
+  "applied": false,
+  "reason": "dry_run_mode"
+}

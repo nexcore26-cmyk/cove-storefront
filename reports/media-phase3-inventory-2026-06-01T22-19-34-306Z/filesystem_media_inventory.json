@@ -1,0 +1,2612 @@
+[
+  {
+    "relativePath": "admin-uploads/tenant-1/2026/06/dark-paint-1.jpeg",
+    "mediaUrl": "/media/admin-uploads/tenant-1/2026/06/dark-paint-1.jpeg",
+    "size": 288501,
+    "mtime": "2026-06-01T19:17:34.767Z"
+  },
+  {
+    "relativePath": "admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg",
+    "mediaUrl": "/media/admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg",
+    "size": 288501,
+    "mtime": "2026-06-01T18:26:14.772Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2017/06/5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2017/06/5.jpg",
+    "size": 470462,
+    "mtime": "2026-06-01T21:01:18.591Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2017/06/6.jpg",
+    "mediaUrl": "/media/wordpress-migration/2017/06/6.jpg",
+    "size": 1929229,
+    "mtime": "2026-06-01T21:01:18.743Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2017/06/7.jpg",
+    "mediaUrl": "/media/wordpress-migration/2017/06/7.jpg",
+    "size": 1919632,
+    "mtime": "2026-06-01T21:01:18.927Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2017/06/8.jpg",
+    "mediaUrl": "/media/wordpress-migration/2017/06/8.jpg",
+    "size": 1339870,
+    "mtime": "2026-06-01T21:01:19.043Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2017/06/9.jpg",
+    "mediaUrl": "/media/wordpress-migration/2017/06/9.jpg",
+    "size": 1339594,
+    "mtime": "2026-06-01T21:01:19.183Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/big-capsule-bl.webp",
+    "mediaUrl": "/media/wordpress-migration/2021/07/big-capsule-bl.webp",
+    "size": 52122,
+    "mtime": "2026-06-01T21:01:19.815Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/big-capsules-1.webp",
+    "mediaUrl": "/media/wordpress-migration/2021/07/big-capsules-1.webp",
+    "size": 47198,
+    "mtime": "2026-06-01T21:01:20.279Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/classic-157-gold.jpg",
+    "mediaUrl": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+    "size": 95600,
+    "mtime": "2026-06-01T21:01:20.595Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/classic-157-gray-gold.jpg",
+    "mediaUrl": "/media/wordpress-migration/2021/07/classic-157-gray-gold.jpg",
+    "size": 45877,
+    "mtime": "2026-06-01T21:01:20.815Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/classic-157-marble-gold.jpg",
+    "mediaUrl": "/media/wordpress-migration/2021/07/classic-157-marble-gold.jpg",
+    "size": 47466,
+    "mtime": "2026-06-01T21:01:20.867Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/classic-157-marble-silver.jpg",
+    "mediaUrl": "/media/wordpress-migration/2021/07/classic-157-marble-silver.jpg",
+    "size": 46213,
+    "mtime": "2026-06-01T21:01:21.827Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/small-capsule-bl.webp",
+    "mediaUrl": "/media/wordpress-migration/2021/07/small-capsule-bl.webp",
+    "size": 53974,
+    "mtime": "2026-06-01T21:01:21.883Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2021/07/small-capsules-1.webp",
+    "mediaUrl": "/media/wordpress-migration/2021/07/small-capsules-1.webp",
+    "size": 35980,
+    "mtime": "2026-06-01T21:01:21.939Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/06/arch-plan-8.png",
+    "mediaUrl": "/media/wordpress-migration/2022/06/arch-plan-8.png",
+    "size": 5509,
+    "mtime": "2026-06-01T21:01:22.855Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/06/instagram.png",
+    "mediaUrl": "/media/wordpress-migration/2022/06/instagram.png",
+    "size": 788,
+    "mtime": "2026-06-01T21:01:22.895Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1-1.jpg",
+    "size": 2382628,
+    "mtime": "2026-06-01T21:01:23.027Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1-2.jpg",
+    "size": 388572,
+    "mtime": "2026-06-01T21:01:23.167Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1-3.jpg",
+    "size": 1458532,
+    "mtime": "2026-06-01T21:01:23.247Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1-4.jpg",
+    "size": 67570,
+    "mtime": "2026-06-01T21:01:23.327Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1-6.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1-6.jpg",
+    "size": 192704,
+    "mtime": "2026-06-01T21:01:23.383Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1-int.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1-int.jpg",
+    "size": 133143,
+    "mtime": "2026-06-01T21:01:23.587Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1.JPG.jpeg",
+    "size": 347544,
+    "mtime": "2026-06-01T21:01:23.727Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/1.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/1.png",
+    "size": 671347,
+    "mtime": "2026-06-01T21:01:23.907Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/10-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/10-2.jpg",
+    "size": 377368,
+    "mtime": "2026-06-01T21:01:24.047Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/10.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/10.JPG.jpeg",
+    "size": 2378580,
+    "mtime": "2026-06-01T21:01:24.867Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/10.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/10.jpg",
+    "size": 1900773,
+    "mtime": "2026-06-01T21:01:24.219Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/11.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/11.jpg",
+    "size": 817304,
+    "mtime": "2026-06-01T21:01:25.303Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/12.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/12.jpg",
+    "size": 422731,
+    "mtime": "2026-06-01T21:01:25.615Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/13.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/13.jpg",
+    "size": 854893,
+    "mtime": "2026-06-01T21:01:25.843Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/18-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/18-1.jpg",
+    "size": 1499940,
+    "mtime": "2026-06-01T21:01:26.003Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/18.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/18.jpg",
+    "size": 1394615,
+    "mtime": "2026-06-01T21:01:26.923Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/2-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/2-1.jpg",
+    "size": 2014849,
+    "mtime": "2026-06-01T21:01:27.043Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/2-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/2-2.jpg",
+    "size": 371348,
+    "mtime": "2026-06-01T21:01:27.876Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/2-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/2-3.jpg",
+    "size": 97131,
+    "mtime": "2026-06-01T21:01:28.008Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/2-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/2-5.jpg",
+    "size": 493629,
+    "mtime": "2026-06-01T21:01:28.180Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/2.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/2.JPG.jpeg",
+    "size": 398309,
+    "mtime": "2026-06-01T21:01:28.252Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/20.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/20.jpg",
+    "size": 180878,
+    "mtime": "2026-06-01T21:01:28.344Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/21.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/21.jpg",
+    "size": 279656,
+    "mtime": "2026-06-01T21:01:28.404Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/22.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/22.jpg",
+    "size": 238323,
+    "mtime": "2026-06-01T21:01:28.600Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/23.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/23.jpg",
+    "size": 203069,
+    "mtime": "2026-06-01T21:01:28.744Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/24.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/24.jpg",
+    "size": 71386,
+    "mtime": "2026-06-01T21:01:28.912Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/3-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/3-1.jpg",
+    "size": 351785,
+    "mtime": "2026-06-01T21:01:29.060Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/3-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/3-2.jpg",
+    "size": 2262640,
+    "mtime": "2026-06-01T21:01:29.256Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/3-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/3-3.jpg",
+    "size": 318661,
+    "mtime": "2026-06-01T21:01:29.880Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/3-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/3-4.jpg",
+    "size": 149596,
+    "mtime": "2026-06-01T21:01:30.316Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/3-6.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/3-6.jpg",
+    "size": 415064,
+    "mtime": "2026-06-01T21:01:30.856Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/3.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/3.JPG.jpeg",
+    "size": 2098630,
+    "mtime": "2026-06-01T21:01:31.024Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/31.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/31.jpg",
+    "size": 40392,
+    "mtime": "2026-06-01T21:01:31.912Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/4-1.jpg",
+    "size": 384688,
+    "mtime": "2026-06-01T21:01:32.036Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/4-1.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/4-1.png",
+    "size": 4340381,
+    "mtime": "2026-06-01T21:01:32.192Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/4.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/4.JPG.jpeg",
+    "size": 1930478,
+    "mtime": "2026-06-01T21:01:33.048Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/4.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/4.png",
+    "size": 4009561,
+    "mtime": "2026-06-01T21:01:33.256Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/42.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/42.jpg",
+    "size": 243905,
+    "mtime": "2026-06-01T21:01:33.380Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/43.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/43.jpg",
+    "size": 54749,
+    "mtime": "2026-06-01T21:01:33.440Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/44.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/44.jpg",
+    "size": 57212,
+    "mtime": "2026-06-01T21:01:33.488Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/45.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/45.jpg",
+    "size": 241032,
+    "mtime": "2026-06-01T21:01:33.612Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/46.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/46.jpg",
+    "size": 232507,
+    "mtime": "2026-06-01T21:01:33.748Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/47.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/47.jpg",
+    "size": 224046,
+    "mtime": "2026-06-01T21:01:33.816Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/5-1.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/5-1.png",
+    "size": 4247481,
+    "mtime": "2026-06-01T21:01:33.988Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/5-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/5-2.jpg",
+    "size": 256659,
+    "mtime": "2026-06-01T21:01:34.116Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/5.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/5.JPG.jpeg",
+    "size": 305614,
+    "mtime": "2026-06-01T21:01:34.876Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/5.jpg",
+    "size": 1295989,
+    "mtime": "2026-06-01T21:01:34.260Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/5.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/5.png",
+    "size": 4140342,
+    "mtime": "2026-06-01T21:01:34.968Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/6-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/6-1.jpg",
+    "size": 2232250,
+    "mtime": "2026-06-01T21:01:35.912Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/6-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/6-3.jpg",
+    "size": 375284,
+    "mtime": "2026-06-01T21:01:36.016Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/6.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/6.JPG.jpeg",
+    "size": 2413248,
+    "mtime": "2026-06-01T21:01:37.204Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/6.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/6.jpg",
+    "size": 203211,
+    "mtime": "2026-06-01T21:01:36.224Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/61.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/61.jpg",
+    "size": 141149,
+    "mtime": "2026-06-01T21:01:38.220Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/610.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/610.jpg",
+    "size": 1039519,
+    "mtime": "2026-06-01T21:01:38.408Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/611.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/611.jpg",
+    "size": 845645,
+    "mtime": "2026-06-01T21:01:38.496Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/612.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/612.jpg",
+    "size": 201625,
+    "mtime": "2026-06-01T21:01:38.564Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/62.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/62.jpg",
+    "size": 466394,
+    "mtime": "2026-06-01T21:01:38.644Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/63.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/63.jpg",
+    "size": 819824,
+    "mtime": "2026-06-01T21:01:38.780Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/64.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/64.jpg",
+    "size": 170637,
+    "mtime": "2026-06-01T21:01:38.848Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/65.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/65.jpg",
+    "size": 644263,
+    "mtime": "2026-06-01T21:01:38.956Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/66.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/66.jpg",
+    "size": 134722,
+    "mtime": "2026-06-01T21:01:39.120Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/67.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/67.jpg",
+    "size": 749402,
+    "mtime": "2026-06-01T21:01:39.272Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/68.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/68.jpg",
+    "size": 1092060,
+    "mtime": "2026-06-01T21:01:39.340Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/69.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/69.jpg",
+    "size": 1128307,
+    "mtime": "2026-06-01T21:01:39.980Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/7-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/7-1.jpg",
+    "size": 2473017,
+    "mtime": "2026-06-01T21:01:40.776Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/7-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/7-3.jpg",
+    "size": 263294,
+    "mtime": "2026-06-01T21:01:40.924Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/7.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/7.jpg",
+    "size": 1288210,
+    "mtime": "2026-06-01T21:01:41.044Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/7.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/7.png",
+    "size": 4056600,
+    "mtime": "2026-06-01T21:01:41.300Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/8-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/8-1.jpg",
+    "size": 397467,
+    "mtime": "2026-06-01T21:01:43.236Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/8.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/8.png",
+    "size": 1415035,
+    "mtime": "2026-06-01T21:01:43.596Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/9-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/9-2.jpg",
+    "size": 349897,
+    "mtime": "2026-06-01T21:01:43.692Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/9.JPG.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/9.JPG.jpeg",
+    "size": 2235594,
+    "mtime": "2026-06-01T21:01:43.868Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/9.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/9.jpg",
+    "size": 1062826,
+    "mtime": "2026-06-01T21:01:43.764Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/9.png",
+    "mediaUrl": "/media/wordpress-migration/2022/07/9.png",
+    "size": 3815248,
+    "mtime": "2026-06-01T21:01:44.020Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg",
+    "size": 226309,
+    "mtime": "2026-06-01T21:01:44.284Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BEECH-WOOD.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-BEECH-WOOD.jpg",
+    "size": 78186,
+    "mtime": "2026-06-01T21:01:48.768Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BEIGE-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-BEIGE-1.jpg",
+    "size": 143943,
+    "mtime": "2026-06-01T21:01:48.864Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BLACK.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-BLACK.jpg",
+    "size": 132060,
+    "mtime": "2026-06-01T21:01:49.016Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BLUE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-BLUE.jpg",
+    "size": 134647,
+    "mtime": "2026-06-01T21:01:49.192Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-GREEN.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-GREEN.jpg",
+    "size": 133964,
+    "mtime": "2026-06-01T21:01:49.300Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-GREY.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-GREY.jpg",
+    "size": 140979,
+    "mtime": "2026-06-01T21:01:49.360Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-PINK.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-PINK.jpg",
+    "size": 149850,
+    "mtime": "2026-06-01T21:01:49.412Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-RED.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-RED.jpg",
+    "size": 136679,
+    "mtime": "2026-06-01T21:01:49.464Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-WHITE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-112-WHITE.jpg",
+    "size": 138896,
+    "mtime": "2026-06-01T21:01:49.992Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg",
+    "size": 65390,
+    "mtime": "2026-06-01T21:01:50.616Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS.jpg",
+    "size": 81644,
+    "mtime": "2026-06-01T21:01:50.952Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BEIGE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE.jpg",
+    "size": 66970,
+    "mtime": "2026-06-01T21:01:51.236Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BLACK-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-BLACK-1.jpg",
+    "size": 54507,
+    "mtime": "2026-06-01T21:01:51.300Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BLUE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-BLUE.jpg",
+    "size": 59709,
+    "mtime": "2026-06-01T21:01:51.660Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-GRAY.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-GRAY.jpg",
+    "size": 64790,
+    "mtime": "2026-06-01T21:01:53.452Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-GREEN.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-GREEN.jpg",
+    "size": 60235,
+    "mtime": "2026-06-01T21:01:53.880Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-PINK.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-PINK.jpg",
+    "size": 69569,
+    "mtime": "2026-06-01T21:01:54.028Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-RED.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-RED.jpg",
+    "size": 59631,
+    "mtime": "2026-06-01T21:01:54.200Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-WHITE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-167-WHITE.jpg",
+    "size": 62440,
+    "mtime": "2026-06-01T21:01:54.240Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BEECH.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-BEECH.jpg",
+    "size": 47719,
+    "mtime": "2026-06-01T21:01:54.316Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BEIGE-DETAILS.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-BEIGE-DETAILS.jpg",
+    "size": 64303,
+    "mtime": "2026-06-01T21:01:54.368Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BEIGE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-BEIGE.jpg",
+    "size": 50357,
+    "mtime": "2026-06-01T21:01:54.424Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BLACK.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-BLACK.jpg",
+    "size": 45929,
+    "mtime": "2026-06-01T21:01:54.476Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BLUE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-BLUE.jpg",
+    "size": 47611,
+    "mtime": "2026-06-01T21:01:55.004Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-GREEN.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-GREEN.jpg",
+    "size": 45118,
+    "mtime": "2026-06-01T21:01:55.964Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-PINK.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-PINK.jpg",
+    "size": 54716,
+    "mtime": "2026-06-01T21:01:56.248Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-RED.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-RED.jpg",
+    "size": 48142,
+    "mtime": "2026-06-01T21:01:56.312Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-WHITE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/COUNTRY-62-WHITE.jpg",
+    "size": 53026,
+    "mtime": "2026-06-01T21:01:58.464Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Brown.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-180-Brown.jpg",
+    "size": 55950,
+    "mtime": "2026-06-01T21:01:59.453Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Dark-red.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-180-Dark-red.jpg",
+    "size": 54465,
+    "mtime": "2026-06-01T21:01:59.501Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Light-blue.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-180-Light-blue.jpg",
+    "size": 60337,
+    "mtime": "2026-06-01T21:02:00.017Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Navy-blue.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-180-Navy-blue.jpg",
+    "size": 54891,
+    "mtime": "2026-06-01T21:02:00.977Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Royal-green.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-180-Royal-green.jpg",
+    "size": 57816,
+    "mtime": "2026-06-01T21:02:01.321Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-2-NEUTRAL-GREEN.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-2-NEUTRAL-GREEN.jpg",
+    "size": 197184,
+    "mtime": "2026-06-01T21:02:02.757Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-BROWN.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-BROWN.jpg",
+    "size": 65348,
+    "mtime": "2026-06-01T21:02:04.265Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-DARK-RED.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-DARK-RED.jpg",
+    "size": 64385,
+    "mtime": "2026-06-01T21:02:04.417Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-LIGHT-BLUE-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-LIGHT-BLUE-1.jpg",
+    "size": 71750,
+    "mtime": "2026-06-01T21:02:04.465Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-LIGHT-BLUE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-LIGHT-BLUE.jpg",
+    "size": 71750,
+    "mtime": "2026-06-01T21:02:04.529Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-NAVY-BLUE.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-NAVY-BLUE.jpg",
+    "size": 63252,
+    "mtime": "2026-06-01T21:02:04.873Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/CURVE-ROYAL-GREEN.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/CURVE-ROYAL-GREEN.jpg",
+    "size": 67810,
+    "mtime": "2026-06-01T21:02:05.037Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg",
+    "size": 129897,
+    "mtime": "2026-06-01T21:01:48.436Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg",
+    "size": 612222,
+    "mtime": "2026-06-01T21:02:05.093Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0245.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0245.jpg",
+    "size": 302411,
+    "mtime": "2026-06-01T21:02:05.989Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0247.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0247.jpg",
+    "size": 356942,
+    "mtime": "2026-06-01T21:02:06.345Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0249.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0249.jpg",
+    "size": 243924,
+    "mtime": "2026-06-01T21:02:07.773Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0253.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0253.jpg",
+    "size": 219985,
+    "mtime": "2026-06-01T21:02:08.373Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0255.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0255.jpg",
+    "size": 210084,
+    "mtime": "2026-06-01T21:02:08.745Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0259.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0259.jpg",
+    "size": 331731,
+    "mtime": "2026-06-01T21:02:08.821Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0274.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0274.jpg",
+    "size": 297772,
+    "mtime": "2026-06-01T21:02:09.437Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0283.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0283.jpg",
+    "size": 206359,
+    "mtime": "2026-06-01T21:02:10.113Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0285.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0285.jpg",
+    "size": 183034,
+    "mtime": "2026-06-01T21:02:10.921Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0298.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0298.jpg",
+    "size": 196909,
+    "mtime": "2026-06-01T21:02:10.985Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0304.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0304.jpg",
+    "size": 217473,
+    "mtime": "2026-06-01T21:02:11.049Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0307.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0307.jpg",
+    "size": 229837,
+    "mtime": "2026-06-01T21:02:11.109Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0311.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0311.jpg",
+    "size": 264632,
+    "mtime": "2026-06-01T21:02:11.357Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0312.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0312.jpg",
+    "size": 201034,
+    "mtime": "2026-06-01T21:02:13.105Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0314.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0314.jpg",
+    "size": 217530,
+    "mtime": "2026-06-01T21:02:13.833Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0316.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0316.jpg",
+    "size": 329307,
+    "mtime": "2026-06-01T21:02:14.349Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0319.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0319.jpg",
+    "size": 252990,
+    "mtime": "2026-06-01T21:02:14.405Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0322.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0322.jpg",
+    "size": 201019,
+    "mtime": "2026-06-01T21:02:14.465Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0339.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0339.jpg",
+    "size": 230248,
+    "mtime": "2026-06-01T21:02:14.549Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0341.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0341.jpg",
+    "size": 180123,
+    "mtime": "2026-06-01T21:02:14.621Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0345.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0345.jpg",
+    "size": 338550,
+    "mtime": "2026-06-01T21:02:14.953Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0346.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0346.jpg",
+    "size": 198616,
+    "mtime": "2026-06-01T21:02:15.121Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0353.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0353.jpg",
+    "size": 136791,
+    "mtime": "2026-06-01T21:02:15.177Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0354.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0354.jpg",
+    "size": 176348,
+    "mtime": "2026-06-01T21:02:15.229Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0355.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0355.jpg",
+    "size": 180741,
+    "mtime": "2026-06-01T21:02:15.937Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0357.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0357.jpg",
+    "size": 131336,
+    "mtime": "2026-06-01T21:02:16.021Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0366.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0366.jpg",
+    "size": 191174,
+    "mtime": "2026-06-01T21:02:16.085Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0368.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0368.jpg",
+    "size": 154910,
+    "mtime": "2026-06-01T21:02:16.381Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0369.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0369.jpg",
+    "size": 172539,
+    "mtime": "2026-06-01T21:02:16.773Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0379.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0379.jpg",
+    "size": 199844,
+    "mtime": "2026-06-01T21:02:17.801Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0380.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0380.jpg",
+    "size": 177903,
+    "mtime": "2026-06-01T21:02:18.849Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0383.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0383.jpg",
+    "size": 171651,
+    "mtime": "2026-06-01T21:02:19.361Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0387.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0387.jpg",
+    "size": 181399,
+    "mtime": "2026-06-01T21:02:19.445Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/IMG_0399.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/IMG_0399.jpg",
+    "size": 148478,
+    "mtime": "2026-06-01T21:02:19.505Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/Italy-Meeting.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/Italy-Meeting.jpg",
+    "size": 388709,
+    "mtime": "2026-06-01T21:02:19.569Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+    "size": 413431,
+    "mtime": "2026-06-01T21:02:20.189Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/Visitors-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/Visitors-1.jpg",
+    "size": 135453,
+    "mtime": "2026-06-01T21:02:20.241Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/about-cove-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/about-cove-1.jpg",
+    "size": 12421,
+    "mtime": "2026-06-01T21:01:44.176Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/classic-157-gray-gold.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/classic-157-gray-gold.jpg",
+    "size": 45877,
+    "mtime": "2026-06-01T21:01:44.340Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/classic-225-gold.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+    "size": 73163,
+    "mtime": "2026-06-01T21:01:44.388Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/classic-225-gray-gold-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/classic-225-gray-gold-1.jpg",
+    "size": 41672,
+    "mtime": "2026-06-01T21:01:44.448Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/classic-225-marble-gold.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/classic-225-marble-gold.jpg",
+    "size": 43844,
+    "mtime": "2026-06-01T21:01:44.976Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/clients-services.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/clients-services.jpg",
+    "size": 14484,
+    "mtime": "2026-06-01T21:01:45.928Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/communicate-with-cove.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/communicate-with-cove.jpg",
+    "size": 14242,
+    "mtime": "2026-06-01T21:01:46.264Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/company-profile.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/company-profile.jpg",
+    "size": 14102,
+    "mtime": "2026-06-01T21:01:47.240Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/cove-events.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/cove-events.jpg",
+    "size": 14667,
+    "mtime": "2026-06-01T21:01:59.329Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/cove-furniture.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/cove-furniture.jpg",
+    "size": 14139,
+    "mtime": "2026-06-01T21:01:59.401Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/main-1-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/main-1-1.jpg",
+    "size": 204823,
+    "mtime": "2026-06-01T21:02:19.637Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/main-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/main-1.jpg",
+    "size": 210760,
+    "mtime": "2026-06-01T21:02:19.965Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/07/main-2-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/07/main-2-1.jpg",
+    "size": 153426,
+    "mtime": "2026-06-01T21:02:20.133Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/08/1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/08/1.jpg",
+    "size": 67570,
+    "mtime": "2026-06-01T21:02:20.337Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/08/3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/08/3.jpg",
+    "size": 149596,
+    "mtime": "2026-06-01T21:02:20.861Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/08/BG-1024x576-1.png",
+    "mediaUrl": "/media/wordpress-migration/2022/08/BG-1024x576-1.png",
+    "size": 59356,
+    "mtime": "2026-06-01T21:04:29.285Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/08/address_icon_2.png",
+    "mediaUrl": "/media/wordpress-migration/2022/08/address_icon_2.png",
+    "size": 3523,
+    "mtime": "2026-06-01T21:02:20.893Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/08/coffee-counter.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/08/coffee-counter.jpg",
+    "size": 169108,
+    "mtime": "2026-06-01T21:02:28.333Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/08/email-icon-g.png",
+    "mediaUrl": "/media/wordpress-migration/2022/08/email-icon-g.png",
+    "size": 3111,
+    "mtime": "2026-06-01T21:02:28.401Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/08/phone-icon-g.png",
+    "mediaUrl": "/media/wordpress-migration/2022/08/phone-icon-g.png",
+    "size": 3711,
+    "mtime": "2026-06-01T21:02:28.433Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/10/1.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/10/1.jpeg",
+    "size": 370009,
+    "mtime": "2026-06-01T21:02:28.489Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/10/3.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/10/3.jpeg",
+    "size": 372128,
+    "mtime": "2026-06-01T21:02:28.565Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/10/4.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/10/4.jpeg",
+    "size": 519362,
+    "mtime": "2026-06-01T21:02:28.625Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/10/5.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/10/5.jpeg",
+    "size": 490859,
+    "mtime": "2026-06-01T21:02:28.693Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/10/Decaf.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2022/10/Decaf.jpeg",
+    "size": 447994,
+    "mtime": "2026-06-01T21:02:28.753Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4690-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg",
+    "size": 598873,
+    "mtime": "2026-06-01T21:02:28.841Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4692-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4692-websize.jpg",
+    "size": 650204,
+    "mtime": "2026-06-01T21:02:28.937Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4697-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4697-websize-1.jpg",
+    "size": 534319,
+    "mtime": "2026-06-01T21:02:29.153Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4705-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4705-websize-1.jpg",
+    "size": 656128,
+    "mtime": "2026-06-01T21:02:29.229Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4708-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4708-websize-1.jpg",
+    "size": 594864,
+    "mtime": "2026-06-01T21:02:29.297Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4713-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4713-websize-1.jpg",
+    "size": 541545,
+    "mtime": "2026-06-01T21:02:29.973Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4716-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4716-websize-1.jpg",
+    "size": 602972,
+    "mtime": "2026-06-01T21:02:30.241Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4717-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4717-websize-1.jpg",
+    "size": 590465,
+    "mtime": "2026-06-01T21:02:30.978Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4723-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4723-websize-1.jpg",
+    "size": 564419,
+    "mtime": "2026-06-01T21:02:31.066Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4726-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4726-websize-1.jpg",
+    "size": 586751,
+    "mtime": "2026-06-01T21:02:31.146Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4734-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4734-websize-1.jpg",
+    "size": 670615,
+    "mtime": "2026-06-01T21:02:31.658Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4744-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4744-websize-1.jpg",
+    "size": 944670,
+    "mtime": "2026-06-01T21:02:31.990Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4745-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4745-websize-1.jpg",
+    "size": 1225504,
+    "mtime": "2026-06-01T21:02:33.362Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4749-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4749-websize-1.jpg",
+    "size": 1135555,
+    "mtime": "2026-06-01T21:02:33.598Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4751-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4751-websize-1.jpg",
+    "size": 919659,
+    "mtime": "2026-06-01T21:02:33.786Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4753-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4753-websize-1.jpg",
+    "size": 748806,
+    "mtime": "2026-06-01T21:02:33.878Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4754-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4754-websize-1.jpg",
+    "size": 1050472,
+    "mtime": "2026-06-01T21:02:33.970Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4758-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4758-websize-1.jpg",
+    "size": 1056515,
+    "mtime": "2026-06-01T21:02:34.186Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4759-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4759-websize-1.jpg",
+    "size": 878542,
+    "mtime": "2026-06-01T21:02:34.322Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4762-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4762-websize-1.jpg",
+    "size": 1103278,
+    "mtime": "2026-06-01T21:02:34.430Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4764-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4764-websize-1.jpg",
+    "size": 981321,
+    "mtime": "2026-06-01T21:02:35.002Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4767-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4767-websize-1.jpg",
+    "size": 1124528,
+    "mtime": "2026-06-01T21:02:35.090Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2022/11/ASK4771-websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2022/11/ASK4771-websize-1.jpg",
+    "size": 918976,
+    "mtime": "2026-06-01T21:02:35.274Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-Details.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-Details.jpg",
+    "size": 170017,
+    "mtime": "2026-06-01T21:02:38.982Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-beige-1.jpg",
+    "size": 62709,
+    "mtime": "2026-06-01T21:02:35.330Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-beige-2.jpg",
+    "size": 113048,
+    "mtime": "2026-06-01T21:02:35.986Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-beige-3.jpg",
+    "size": 153701,
+    "mtime": "2026-06-01T21:02:36.074Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-beige-4.jpg",
+    "size": 211440,
+    "mtime": "2026-06-01T21:02:36.150Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-beige-5.jpg",
+    "size": 200425,
+    "mtime": "2026-06-01T21:02:36.666Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-black-1.jpg",
+    "size": 42101,
+    "mtime": "2026-06-01T21:02:36.998Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-black-2.jpg",
+    "size": 103928,
+    "mtime": "2026-06-01T21:02:38.602Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-black-3.jpg",
+    "size": 175440,
+    "mtime": "2026-06-01T21:02:38.798Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-black-4.jpg",
+    "size": 206322,
+    "mtime": "2026-06-01T21:02:38.842Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-black-5.jpg",
+    "size": 196488,
+    "mtime": "2026-06-01T21:02:38.890Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-petrol-1.jpg",
+    "size": 43267,
+    "mtime": "2026-06-01T21:02:39.306Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-petrol-2.jpg",
+    "size": 109838,
+    "mtime": "2026-06-01T21:02:39.426Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-petrol-3.jpg",
+    "size": 179466,
+    "mtime": "2026-06-01T21:02:39.998Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-petrol-4.jpg",
+    "size": 210671,
+    "mtime": "2026-06-01T21:02:40.218Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-1-petrol-5.jpg",
+    "size": 199177,
+    "mtime": "2026-06-01T21:02:40.270Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-1.jpg",
+    "size": 81567,
+    "mtime": "2026-06-01T21:02:40.314Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-2.jpg",
+    "size": 112901,
+    "mtime": "2026-06-01T21:02:40.506Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-3.jpg",
+    "size": 244396,
+    "mtime": "2026-06-01T21:02:40.546Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpeg",
+    "size": 285645,
+    "mtime": "2026-06-01T21:02:40.606Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpg",
+    "size": 259939,
+    "mtime": "2026-06-01T21:02:41.002Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-5.jpg",
+    "size": 206911,
+    "mtime": "2026-06-01T21:02:41.086Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-1.jpg",
+    "size": 66254,
+    "mtime": "2026-06-01T21:02:41.126Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-2.jpg",
+    "size": 112632,
+    "mtime": "2026-06-01T21:02:41.194Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-3.jpg",
+    "size": 234068,
+    "mtime": "2026-06-01T21:02:41.262Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-4.jpg",
+    "size": 248999,
+    "mtime": "2026-06-01T21:02:41.318Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-5.jpg",
+    "size": 195268,
+    "mtime": "2026-06-01T21:02:41.678Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-offwhite-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-offwhite-1.jpg",
+    "size": 75349,
+    "mtime": "2026-06-01T21:02:41.722Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-offwhite-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-offwhite-2.jpg",
+    "size": 115287,
+    "mtime": "2026-06-01T21:02:42.006Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-offwhite-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-offwhite-3.jpg",
+    "size": 248068,
+    "mtime": "2026-06-01T21:02:43.610Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-white-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-white-4.jpg",
+    "size": 260895,
+    "mtime": "2026-06-01T21:02:43.810Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-white-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/Roshina-2-white-5.jpg",
+    "size": 204781,
+    "mtime": "2026-06-01T21:02:43.862Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/01/roshina-package.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+    "size": 86070,
+    "mtime": "2026-06-01T21:02:43.910Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/02/coffee-tables-1-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/02/coffee-tables-1-2.jpg",
+    "size": 297612,
+    "mtime": "2026-06-01T21:02:43.942Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/02/coffee-tables-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/02/coffee-tables-1.jpg",
+    "size": 307314,
+    "mtime": "2026-06-01T21:02:43.998Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/05/Beauty-Night-Stand.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/05/Beauty-Night-Stand.jpeg",
+    "size": 507450,
+    "mtime": "2026-06-01T21:02:44.054Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/05/Hairstyle.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/05/Hairstyle.jpeg",
+    "size": 446307,
+    "mtime": "2026-06-01T21:02:44.338Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/05/Mirror.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/05/Mirror.jpeg",
+    "size": 200354,
+    "mtime": "2026-06-01T21:02:44.446Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/05/Wall-Painting-Blue.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/05/Wall-Painting-Blue.jpeg",
+    "size": 247583,
+    "mtime": "2026-06-01T21:02:45.018Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/05/Wall-Painting-pink.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/05/Wall-Painting-pink.jpeg",
+    "size": 303954,
+    "mtime": "2026-06-01T21:02:45.238Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-1.jpg",
+    "size": 106267,
+    "mtime": "2026-06-01T21:02:45.298Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-2.jpg",
+    "size": 116582,
+    "mtime": "2026-06-01T21:02:45.510Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-3.jpg",
+    "size": 54452,
+    "mtime": "2026-06-01T21:02:45.566Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-4.jpg",
+    "size": 208549,
+    "mtime": "2026-06-01T21:02:46.014Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Camel-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Camel-1.jpg",
+    "size": 280106,
+    "mtime": "2026-06-01T21:02:46.066Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Camel-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Camel-2.jpg",
+    "size": 322753,
+    "mtime": "2026-06-01T21:02:46.114Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Camel-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Camel-3.jpg",
+    "size": 313146,
+    "mtime": "2026-06-01T21:02:46.166Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Light-blue-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-1.jpg",
+    "size": 234759,
+    "mtime": "2026-06-01T21:02:46.794Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Light-blue-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-2.jpg",
+    "size": 285195,
+    "mtime": "2026-06-01T21:02:46.842Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Light-blue-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-3.jpg",
+    "size": 303475,
+    "mtime": "2026-06-01T21:02:47.018Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-1.jpg",
+    "size": 260367,
+    "mtime": "2026-06-01T21:02:48.866Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-2.jpg",
+    "size": 299979,
+    "mtime": "2026-06-01T21:02:48.922Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-3.jpg",
+    "size": 308296,
+    "mtime": "2026-06-01T21:02:49.006Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-4-1.jpg",
+    "size": 170435,
+    "mtime": "2026-06-01T21:02:49.066Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-4.jpg",
+    "size": 162585,
+    "mtime": "2026-06-01T21:02:49.338Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-5.jpg",
+    "size": 140027,
+    "mtime": "2026-06-01T21:02:49.450Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-camel-4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-camel-4-1.jpg",
+    "size": 165764,
+    "mtime": "2026-06-01T21:02:46.326Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-camel-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-camel-4.jpg",
+    "size": 164667,
+    "mtime": "2026-06-01T21:02:46.670Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-camel-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-camel-5.jpg",
+    "size": 144706,
+    "mtime": "2026-06-01T21:02:46.738Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-light-blue-4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-light-blue-4-1.jpg",
+    "size": 163441,
+    "mtime": "2026-06-01T21:02:48.242Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-light-blue-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-light-blue-4.jpg",
+    "size": 158551,
+    "mtime": "2026-06-01T21:02:48.618Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-light-blue-5.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/07/Roshina-3-light-blue-5.jpg",
+    "size": 138468,
+    "mtime": "2026-06-01T21:02:48.822Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/accessories-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/accessories-1.jpg",
+    "size": 246050,
+    "mtime": "2026-06-01T21:02:50.030Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/classic-157-225-4x4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/classic-157-225-4x4-1.jpg",
+    "size": 374380,
+    "mtime": "2026-06-01T21:02:50.246Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/country-112-4x4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/country-112-4x4-1.jpg",
+    "size": 408078,
+    "mtime": "2026-06-01T21:02:50.330Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/country-167-4x4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/country-167-4x4-1.jpg",
+    "size": 400123,
+    "mtime": "2026-06-01T21:02:51.030Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/country-62-4x4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/country-62-4x4-1.jpg",
+    "size": 473827,
+    "mtime": "2026-06-01T21:02:51.354Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/curve-4x4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/curve-4x4-1.jpg",
+    "size": 297221,
+    "mtime": "2026-06-01T21:02:51.534Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/de-cove-4x4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/de-cove-4x4-1.jpg",
+    "size": 313313,
+    "mtime": "2026-06-01T21:02:51.662Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/mini-cove-4x4-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/mini-cove-4x4-1.jpg",
+    "size": 297852,
+    "mtime": "2026-06-01T21:02:51.722Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/08/tray.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/08/tray.jpg",
+    "size": 2159472,
+    "mtime": "2026-06-01T21:02:51.826Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Circle-Off-White.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Circle-Off-White.jpg",
+    "size": 4213,
+    "mtime": "2026-06-01T21:02:51.906Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Roshina-boxes.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Roshina-boxes.jpg",
+    "size": 134109,
+    "mtime": "2026-06-01T21:02:51.950Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg",
+    "size": 65090,
+    "mtime": "2026-06-01T21:02:52.030Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Secret-Potion-–-N3.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Secret-Potion-–-N3.jpeg",
+    "size": 75768,
+    "mtime": "2026-06-01T21:02:53.254Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Shelf-Unit-Black.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Shelf-Unit-Black.jpg",
+    "size": 3542,
+    "mtime": "2026-06-01T21:02:53.630Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Shelf-Unit-Dark-Gray.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Shelf-Unit-Dark-Gray.jpg",
+    "size": 3615,
+    "mtime": "2026-06-01T21:02:53.834Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Trapezoid-Dark-Gray.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Trapezoid-Dark-Gray.jpg",
+    "size": 6892,
+    "mtime": "2026-06-01T21:02:54.346Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Trapezoid-Light-Beige.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Trapezoid-Light-Beige.jpg",
+    "size": 4660,
+    "mtime": "2026-06-01T21:02:54.458Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/Trapezoid-White-and-Gray.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/Trapezoid-White-and-Gray.jpg",
+    "size": 6059,
+    "mtime": "2026-06-01T21:02:55.038Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/slide-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/slide-1.jpg",
+    "size": 106636,
+    "mtime": "2026-06-01T21:02:53.942Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/slide-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/slide-3.jpg",
+    "size": 117921,
+    "mtime": "2026-06-01T21:02:54.014Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/10/slide-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/10/slide-4.jpg",
+    "size": 112229,
+    "mtime": "2026-06-01T21:02:54.078Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/11/God-Names.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/11/God-Names.jpeg",
+    "size": 359763,
+    "mtime": "2026-06-01T21:02:55.258Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/11/dark-paint.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/11/dark-paint.jpeg",
+    "size": 288501,
+    "mtime": "2026-06-01T19:18:18.704Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/11/light-paint.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/11/light-paint.jpeg",
+    "size": 253821,
+    "mtime": "2026-06-01T21:02:55.338Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/11/mirror.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2023/11/mirror.jpeg",
+    "size": 393272,
+    "mtime": "2026-06-01T21:02:56.046Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/11/paint-1.png",
+    "mediaUrl": "/media/wordpress-migration/2023/11/paint-1.png",
+    "size": 397409,
+    "mtime": "2026-06-01T21:02:56.366Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/11/paint-2.png",
+    "mediaUrl": "/media/wordpress-migration/2023/11/paint-2.png",
+    "size": 545466,
+    "mtime": "2026-06-01T21:02:56.554Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/DSF6832-Websize-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/DSF6832-Websize-1.jpg",
+    "size": 1747428,
+    "mtime": "2026-06-01T21:02:56.774Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR1-black-opened.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR1-black-opened.jpg",
+    "size": 185337,
+    "mtime": "2026-06-01T21:02:56.922Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR1-white-opened.jpg-new.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR1-white-opened.jpg-new.jpg",
+    "size": 190390,
+    "mtime": "2026-06-01T21:02:56.974Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR2-black-closed.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR2-black-closed.jpg",
+    "size": 198017,
+    "mtime": "2026-06-01T21:02:57.010Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR2-gray-closed.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg",
+    "size": 200859,
+    "mtime": "2026-06-01T21:02:57.054Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR2-white-closed.jpg-new.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR2-white-closed.jpg-new.jpg",
+    "size": 196474,
+    "mtime": "2026-06-01T21:02:57.110Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR3-black-closed.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR3-black-closed.jpg",
+    "size": 246553,
+    "mtime": "2026-06-01T21:02:57.162Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR3-black-opened.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR3-black-opened.jpg",
+    "size": 262335,
+    "mtime": "2026-06-01T21:02:57.202Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR3-gray-closed.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR3-gray-closed.jpg",
+    "size": 251358,
+    "mtime": "2026-06-01T21:02:57.254Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR3-gray-opened.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR3-gray-opened.jpg",
+    "size": 271876,
+    "mtime": "2026-06-01T21:02:58.262Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR3-white-closed.jpg-new.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR3-white-closed.jpg-new.jpg",
+    "size": 252558,
+    "mtime": "2026-06-01T21:02:58.642Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR3-white-opened.jpg-new.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR3-white-opened.jpg-new.jpg",
+    "size": 278177,
+    "mtime": "2026-06-01T21:02:58.850Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR4-gray.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR4-gray.jpg",
+    "size": 164739,
+    "mtime": "2026-06-01T21:02:58.950Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR5-black.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR5-black.jpg",
+    "size": 197859,
+    "mtime": "2026-06-01T21:02:58.982Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR5-gray.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR5-gray.jpg",
+    "size": 199185,
+    "mtime": "2026-06-01T21:02:59.038Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR5-white.jpg-new.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR5-white.jpg-new.jpg",
+    "size": 199687,
+    "mtime": "2026-06-01T21:02:59.094Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR6-black.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR6-black.jpg",
+    "size": 118143,
+    "mtime": "2026-06-01T21:02:59.134Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR6-gray.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR6-gray.jpg",
+    "size": 129970,
+    "mtime": "2026-06-01T21:02:59.354Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/MR6-white.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/MR6-white.jpg",
+    "size": 123323,
+    "mtime": "2026-06-01T21:02:59.470Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/Mini-Roshina-Mubkhar-black-set.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/Mini-Roshina-Mubkhar-black-set.jpg",
+    "size": 622524,
+    "mtime": "2026-06-01T21:02:56.878Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/accessories-1-en.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/accessories-1-en.jpg",
+    "size": 330334,
+    "mtime": "2026-06-01T21:02:56.630Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/accessories-1-en.webp",
+    "mediaUrl": "/media/wordpress-migration/2023/12/accessories-1-en.webp",
+    "size": 31310,
+    "mtime": "2026-06-01T21:02:56.702Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/oak-table-1.png",
+    "mediaUrl": "/media/wordpress-migration/2023/12/oak-table-1.png",
+    "size": 757455,
+    "mtime": "2026-06-01T21:03:00.062Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/roshina-Boxes.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/roshina-Boxes.jpg",
+    "size": 270501,
+    "mtime": "2026-06-01T21:03:00.158Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+    "size": 1578619,
+    "mtime": "2026-06-01T21:03:01.590Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/tissue-box-Bronze.webp",
+    "mediaUrl": "/media/wordpress-migration/2023/12/tissue-box-Bronze.webp",
+    "size": 143844,
+    "mtime": "2026-06-01T21:03:01.722Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/tissue-box-beige.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/tissue-box-beige.jpg",
+    "size": 1570662,
+    "mtime": "2026-06-01T21:03:00.302Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/tissue-box-beige.webp",
+    "mediaUrl": "/media/wordpress-migration/2023/12/tissue-box-beige.webp",
+    "size": 161160,
+    "mtime": "2026-06-01T21:03:00.414Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/tissue-box-black.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+    "size": 1471671,
+    "mtime": "2026-06-01T21:03:01.078Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/tissue-box-black.webp",
+    "mediaUrl": "/media/wordpress-migration/2023/12/tissue-box-black.webp",
+    "size": 126690,
+    "mtime": "2026-06-01T21:03:01.374Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2023/12/tissue-box-sizes.jpg",
+    "mediaUrl": "/media/wordpress-migration/2023/12/tissue-box-sizes.jpg",
+    "size": 161886,
+    "mtime": "2026-06-01T21:03:01.778Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-اسماء-الله-الحسنى-الرباعية-450.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-اسماء-الله-الحسنى-الرباعية-450.jpeg",
+    "size": 395021,
+    "mtime": "2026-06-01T21:03:01.894Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-الأبواب-130.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-الأبواب-130.jpeg",
+    "size": 173099,
+    "mtime": "2026-06-01T21:03:01.994Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-البسملة-60.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-البسملة-60.jpeg",
+    "size": 151714,
+    "mtime": "2026-06-01T21:03:02.126Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-البسملة-60.webp",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-البسملة-60.webp",
+    "size": 83360,
+    "mtime": "2026-06-01T21:03:13.111Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-الطاووس-150.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-الطاووس-150.jpeg",
+    "size": 103413,
+    "mtime": "2026-06-01T21:03:13.195Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-العفو-150.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-العفو-150.jpeg",
+    "size": 419945,
+    "mtime": "2026-06-01T21:03:13.247Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-الفلق-140.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-الفلق-140.jpeg",
+    "size": 824733,
+    "mtime": "2026-06-01T21:03:13.315Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-الكرسي-150.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-الكرسي-150.jpeg",
+    "size": 742820,
+    "mtime": "2026-06-01T21:03:13.419Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-تكرار-الله-130.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-تكرار-الله-130.jpeg",
+    "size": 25765,
+    "mtime": "2026-06-01T21:03:13.475Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-كن-جميلاً-60.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-كن-جميلاً-60.jpeg",
+    "size": 556527,
+    "mtime": "2026-06-01T21:03:13.531Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/01/لوحة-لا-اله-الا-الله-130.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/01/لوحة-لا-اله-الا-الله-130.jpeg",
+    "size": 683650,
+    "mtime": "2026-06-01T21:03:13.595Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/05/1.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/05/1.jpeg",
+    "size": 278247,
+    "mtime": "2026-06-01T21:03:13.659Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3203-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3203-websize.jpg",
+    "size": 770655,
+    "mtime": "2026-06-01T21:03:13.747Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3205-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3205-websize.jpg",
+    "size": 832619,
+    "mtime": "2026-06-01T21:03:13.843Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3206-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3206-websize.jpg",
+    "size": 705253,
+    "mtime": "2026-06-01T21:03:14.039Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3208-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3208-websize.jpg",
+    "size": 731831,
+    "mtime": "2026-06-01T21:03:15.047Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3223-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3223-websize.jpg",
+    "size": 846253,
+    "mtime": "2026-06-01T21:03:15.123Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3226-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3226-websize.jpg",
+    "size": 565844,
+    "mtime": "2026-06-01T21:03:16.059Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3228-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3228-websize.jpg",
+    "size": 818663,
+    "mtime": "2026-06-01T21:03:16.139Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3232-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3232-websize.jpg",
+    "size": 885916,
+    "mtime": "2026-06-01T21:03:16.215Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3235-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3235-websize.jpg",
+    "size": 791384,
+    "mtime": "2026-06-01T21:03:16.711Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3240-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3240-websize.jpg",
+    "size": 652147,
+    "mtime": "2026-06-01T21:03:17.099Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3249-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3249-websize.jpg",
+    "size": 728691,
+    "mtime": "2026-06-01T21:03:17.579Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3253-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3253-websize.jpg",
+    "size": 748984,
+    "mtime": "2026-06-01T21:03:18.231Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3254-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3254-websize.jpg",
+    "size": 747683,
+    "mtime": "2026-06-01T21:03:18.303Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3255-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3255-websize.jpg",
+    "size": 794318,
+    "mtime": "2026-06-01T21:03:18.375Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3256-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3256-websize.jpg",
+    "size": 726807,
+    "mtime": "2026-06-01T21:03:18.459Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3263-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3263-websize.jpg",
+    "size": 657649,
+    "mtime": "2026-06-01T21:03:18.539Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3268-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3268-websize.jpg",
+    "size": 750329,
+    "mtime": "2026-06-01T21:03:18.647Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3270-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3270-websize.jpg",
+    "size": 754796,
+    "mtime": "2026-06-01T21:03:18.747Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3271-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3271-websize.jpg",
+    "size": 700920,
+    "mtime": "2026-06-01T21:03:18.843Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3273-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3273-websize.jpg",
+    "size": 782637,
+    "mtime": "2026-06-01T21:03:18.923Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3277-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3277-websize.jpg",
+    "size": 768593,
+    "mtime": "2026-06-01T21:03:19.011Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3285-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3285-websize.jpg",
+    "size": 670422,
+    "mtime": "2026-06-01T21:03:19.115Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3299-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3299-websize.jpg",
+    "size": 857234,
+    "mtime": "2026-06-01T21:03:20.071Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3305-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3305-websize.jpg",
+    "size": 696633,
+    "mtime": "2026-06-01T21:03:21.071Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3306-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3306-websize.jpg",
+    "size": 727269,
+    "mtime": "2026-06-01T21:03:21.151Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3315-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3315-websize.jpg",
+    "size": 640454,
+    "mtime": "2026-06-01T21:03:21.223Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3317-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3317-websize.jpg",
+    "size": 584619,
+    "mtime": "2026-06-01T21:03:21.731Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3318-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3318-websize.jpg",
+    "size": 608854,
+    "mtime": "2026-06-01T21:03:22.095Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3327-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3327-websize.jpg",
+    "size": 888311,
+    "mtime": "2026-06-01T21:03:22.591Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3329-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3329-websize.jpg",
+    "size": 654500,
+    "mtime": "2026-06-01T21:03:23.247Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/06/DSF3350-websize.jpg",
+    "mediaUrl": "/media/wordpress-migration/2024/06/DSF3350-websize.jpg",
+    "size": 904304,
+    "mtime": "2026-06-01T21:03:23.339Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Big-lighter.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Big-lighter.jpeg",
+    "size": 368370,
+    "mtime": "2026-06-01T21:03:23.543Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Black-Mini-lighter.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Black-Mini-lighter.jpeg",
+    "size": 285970,
+    "mtime": "2026-06-01T21:03:23.675Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Black-lamp.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Black-lamp.jpeg",
+    "size": 265497,
+    "mtime": "2026-06-01T21:03:23.611Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Blue-lamp.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Blue-lamp.jpeg",
+    "size": 312125,
+    "mtime": "2026-06-01T21:03:23.779Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Gold-lamp.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Gold-lamp.jpeg",
+    "size": 353967,
+    "mtime": "2026-06-01T21:03:23.863Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Oil-Flora.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Oil-Flora.jpeg",
+    "size": 156068,
+    "mtime": "2026-06-01T21:03:23.935Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Oil-Hotel.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Oil-Hotel.jpeg",
+    "size": 149041,
+    "mtime": "2026-06-01T21:03:24.019Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Oil-Spa.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Oil-Spa.jpeg",
+    "size": 174817,
+    "mtime": "2026-06-01T21:03:24.115Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Oil-Vanilla.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Oil-Vanilla.jpeg",
+    "size": 230951,
+    "mtime": "2026-06-01T21:03:25.071Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Rose-Gold-lamp.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Rose-Gold-lamp.jpeg",
+    "size": 296311,
+    "mtime": "2026-06-01T21:03:26.083Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Rose-Mini-Lighter.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Rose-Mini-Lighter.jpeg",
+    "size": 151404,
+    "mtime": "2026-06-01T21:03:26.423Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/08/Wick-lamp.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/08/Wick-lamp.jpeg",
+    "size": 107388,
+    "mtime": "2026-06-01T21:03:26.471Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/10/long.png",
+    "mediaUrl": "/media/wordpress-migration/2024/10/long.png",
+    "size": 1506743,
+    "mtime": "2026-06-01T21:03:26.751Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/10/standard.png",
+    "mediaUrl": "/media/wordpress-migration/2024/10/standard.png",
+    "size": 771960,
+    "mtime": "2026-06-01T21:03:27.111Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/12/chair.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/12/chair.jpeg",
+    "size": 117502,
+    "mtime": "2026-06-01T21:03:28.255Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/12/sofa-2.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/12/sofa-2.jpeg",
+    "size": 117310,
+    "mtime": "2026-06-01T21:03:28.339Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2024/12/sofa.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2024/12/sofa.jpeg",
+    "size": 105425,
+    "mtime": "2026-06-01T21:03:28.551Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Beige-2.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Beige-2.jpg",
+    "size": 558261,
+    "mtime": "2026-06-01T21:03:28.611Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/GFX3679-Edit-websize.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/GFX3679-Edit-websize.png",
+    "size": 1882135,
+    "mtime": "2026-06-01T21:03:28.879Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/GFX3680-Edit-websize.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/GFX3680-Edit-websize.png",
+    "size": 2110902,
+    "mtime": "2026-06-01T21:03:28.983Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+    "size": 195807,
+    "mtime": "2026-06-01T21:03:29.099Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mini-Roshina-3.jpg",
+    "size": 246354,
+    "mtime": "2026-06-01T21:03:29.151Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mini-Roshina-4.jpg",
+    "size": 270327,
+    "mtime": "2026-06-01T21:03:29.203Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-8.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mini-Roshina-8.jpg",
+    "size": 198750,
+    "mtime": "2026-06-01T21:03:29.255Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-9.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mini-Roshina-9.jpg",
+    "size": 127193,
+    "mtime": "2026-06-01T21:03:29.875Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mini-roshina-Mubkhar-set.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mini-roshina-Mubkhar-set.jpg",
+    "size": 603520,
+    "mtime": "2026-06-01T21:03:31.103Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-R1-beige.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mubkhar-R1-beige.jpg",
+    "size": 2209909,
+    "mtime": "2026-06-01T21:03:33.307Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-R1-black.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mubkhar-R1-black.jpg",
+    "size": 2363372,
+    "mtime": "2026-06-01T21:03:33.451Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-R1-petrol.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mubkhar-R1-petrol.jpg",
+    "size": 2266042,
+    "mtime": "2026-06-01T21:03:36.304Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-beige.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mubkhar-beige.jpg",
+    "size": 1311516,
+    "mtime": "2026-06-01T21:03:31.503Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-black.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mubkhar-black.jpg",
+    "size": 1748523,
+    "mtime": "2026-06-01T21:03:31.779Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-petrol.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Mubkhar-petrol.jpg",
+    "size": 1592606,
+    "mtime": "2026-06-01T21:03:32.119Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Trash-Bin-Beige.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Trash-Bin-Beige.jpg",
+    "size": 3348897,
+    "mtime": "2026-06-01T21:03:42.168Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Trash-Bin-Bronze.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Trash-Bin-Bronze.jpg",
+    "size": 3237128,
+    "mtime": "2026-06-01T21:03:43.664Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Trash-Bin-black.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Trash-Bin-black.jpg",
+    "size": 3353138,
+    "mtime": "2026-06-01T21:03:42.768Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+    "size": 547458,
+    "mtime": "2026-06-01T21:03:41.600Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Trash-bin-black-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Trash-bin-black-1.jpg",
+    "size": 506709,
+    "mtime": "2026-06-01T21:03:42.388Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/Trash-bin-bronze-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/Trash-bin-bronze-1.jpg",
+    "size": 551873,
+    "mtime": "2026-06-01T21:03:43.292Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/beige-3.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/beige-3.jpg",
+    "size": 558983,
+    "mtime": "2026-06-01T21:03:28.699Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/beige-4.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/beige-4.jpg",
+    "size": 636603,
+    "mtime": "2026-06-01T21:03:28.759Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+    "size": 1176709,
+    "mtime": "2026-06-01T21:03:31.195Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/roshina1-mubkhar-beige-set.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/roshina1-mubkhar-beige-set.jpg",
+    "size": 571381,
+    "mtime": "2026-06-01T21:03:36.524Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/roshina1-mubkhar-black-set.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/roshina1-mubkhar-black-set.jpg",
+    "size": 617527,
+    "mtime": "2026-06-01T21:03:37.140Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/roshina1-mubkhar-petrol-set-1.jpg",
+    "mediaUrl": "/media/wordpress-migration/2025/02/roshina1-mubkhar-petrol-set-1.jpg",
+    "size": 584072,
+    "mtime": "2026-06-01T21:03:38.344Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+    "size": 1264212,
+    "mtime": "2026-06-01T21:03:41.536Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/trash-bin-beige-set.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+    "size": 1655919,
+    "mtime": "2026-06-01T21:03:41.664Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+    "size": 1344470,
+    "mtime": "2026-06-01T21:03:42.300Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/trash-bin-black-set.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/trash-bin-black-set.png",
+    "size": 1618885,
+    "mtime": "2026-06-01T21:03:42.496Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+    "size": 1180037,
+    "mtime": "2026-06-01T21:03:42.988Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/02/trash-bin-bronze-set.png",
+    "mediaUrl": "/media/wordpress-migration/2025/02/trash-bin-bronze-set.png",
+    "size": 1685847,
+    "mtime": "2026-06-01T21:03:43.380Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/05/Passage-Lamp-Red.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2025/05/Passage-Lamp-Red.jpeg",
+    "size": 240117,
+    "mtime": "2026-06-01T21:03:43.864Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/05/cachemire.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2025/05/cachemire.jpeg",
+    "size": 221680,
+    "mtime": "2026-06-01T21:03:43.760Z"
+  },
+  {
+    "relativePath": "wordpress-migration/2025/05/mini-lighter-silver.jpeg",
+    "mediaUrl": "/media/wordpress-migration/2025/05/mini-lighter-silver.jpeg",
+    "size": 159052,
+    "mtime": "2026-06-01T21:03:43.816Z"
+  }
+]

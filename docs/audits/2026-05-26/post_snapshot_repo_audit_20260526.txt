@@ -1,0 +1,79 @@
+# Repository preservation audit — 2026-05-26T13:21:49Z
+
+## Local directory
+/home/ubuntu/cove_work/cove-storefront
+
+## Git repository status
+Not a git repository
+
+## Branch and remotes
+
+## Recent commits
+
+## Changed file summaries
+
+## GitHub CLI auth/repo context
+[0;1;39mgithub.com[0m
+  [0;32m✓[0m Logged in to github.com account [0;1;39maftimos[0m (GH_TOKEN)
+  - Active account: [0;1;39mtrue[0m
+  - Git operations protocol: [0;1;39mhttps[0m
+  - Token: [0;1;39mghu_************************************[0m
+
+  [0;32m✓[0m Logged in to github.com account [0;1;39maftimos[0m (/home/ubuntu/.config/gh/hosts.yml)
+  - Active account: [0;1;39mfalse[0m
+  - Git operations protocol: [0;1;39mhttps[0m
+  - Token: [0;1;39mghu_************************************[0m
+
+# Workspace repository discovery — 2026-05-26T13:22:04Z
+## Git directories under /home/ubuntu/cove_work
+
+## Candidate package roots
+/home/ubuntu/cove_work/cove-storefront/package.json
+
+## Cove storefront root listing
+total 768
+drwxr-xr-x 12 ubuntu ubuntu   4096 May 26 13:06 .
+drwxr-xr-x 11 ubuntu ubuntu   4096 May 26 09:17 ..
+-rw-r--r--  1 ubuntu ubuntu   1369 Apr 26 17:15 .gitignore
+-rw-r--r--  1 ubuntu ubuntu      0 Apr 26 16:01 .gitkeep
+-rw-r--r--  1 ubuntu ubuntu     69 May  2 19:59 .npmrc
+-rw-r--r--  1 ubuntu ubuntu    310 Apr 26 17:15 .prettierignore
+-rw-r--r--  1 ubuntu ubuntu    310 Feb 26 05:24 .prettierrc
+drwxr-xr-x  3 ubuntu ubuntu   4096 Apr 26 16:15 .webdev
+-rw-r--r--  1 ubuntu ubuntu   5574 May  2 23:23 App.tsx
+-rw-r--r--  1 ubuntu ubuntu   1048 May  3 14:29 add_seo_cols.mjs
+-rw-r--r--  1 ubuntu ubuntu   1621 May  3 12:13 apply_columns.mjs
+-rw-r--r--  1 ubuntu ubuntu   4296 May  3 12:12 apply_phase2_migrations.mjs
+-rw-r--r--  1 ubuntu ubuntu   1775 May 25 06:33 apply_vendor_schema.mjs
+-rw-r--r--  1 ubuntu ubuntu   1582 May 25 06:33 apply_vendor_schema_v2.mjs
+-rw-r--r--  1 ubuntu ubuntu   2274 May 25 06:34 apply_vendor_schema_v3.mjs
+-rw-r--r--  1 ubuntu ubuntu   1828 May 25 06:34 apply_vendor_schema_v4.mjs
+-rw-r--r--  1 ubuntu ubuntu   1091 May  3 14:27 check2.mjs
+-rw-r--r--  1 ubuntu ubuntu   1019 May  3 14:26 check_products.mjs
+drwxr-xr-x  4 ubuntu ubuntu   4096 Feb 26 05:24 client
+-rw-r--r--  1 ubuntu ubuntu    388 Apr 26 16:00 components.json
+drwxr-xr-x  3 ubuntu ubuntu   4096 May 25 11:46 dist
+drwxr-xr-x  2 ubuntu ubuntu   4096 May  2 17:10 docs
+drwxr-xr-x  4 ubuntu ubuntu   4096 May 25 19:58 drizzle
+-rw-r--r--  1 ubuntu ubuntu    353 Feb 26 05:24 drizzle.config.ts
+-rw-r--r--  1 ubuntu ubuntu   1216 May  3 14:28 full_schema_check.mjs
+-rw-r--r--  1 ubuntu ubuntu    811 May  3 12:09 migrate_wrapper.mjs
+-rw-r--r--  1 ubuntu ubuntu    856 May  3 12:10 migrate_wrapper2.mjs
+drwxr-xr-x 14 ubuntu ubuntu   4096 May 26 12:36 node_modules
+-rw-r--r--  1 ubuntu ubuntu   4041 May  2 20:34 package.json
+drwxr-xr-x  2 ubuntu ubuntu   4096 Feb 26 05:24 patches
+-rw-r--r--  1 ubuntu ubuntu 333109 May  2 20:34 pnpm-lock.yaml
+-rw-r--r--  1 ubuntu ubuntu 160126 May  2 23:23 routers.ts
+-rw-r--r--  1 ubuntu ubuntu    776 May  2 20:02 run_migrations.mjs
+-rw-r--r--  1 ubuntu ubuntu  52759 May  2 23:23 schema.ts
+drwxr-xr-x  2 ubuntu ubuntu   4096 May 25 12:21 scripts
+-rw-r--r--  1 ubuntu ubuntu   3433 May  3 12:08 seed-admins.mjs
+-rw-r--r--  1 ubuntu ubuntu   1411 May  2 20:37 seed_admin.mjs
+drwxr-xr-x  4 ubuntu ubuntu   4096 May 25 13:18 server
+drwxr-xr-x  3 ubuntu ubuntu   4096 Apr 26 17:15 shared
+-rw-r--r--  1 ubuntu ubuntu  53936 May  2 16:19 todo.md
+-rw-r--r--  1 ubuntu ubuntu    657 Apr 26 16:00 tsconfig.json
+-rw-r--r--  1 ubuntu ubuntu    479 Apr 26 16:00 tsconfig.node.json
+-rw-r--r--  1 ubuntu ubuntu   1505 May 25 22:26 verify_live_category_filter_client.mjs
+-rw-r--r--  1 ubuntu ubuntu   5765 Apr 26 17:15 vite.config.ts
+-rw-r--r--  1 ubuntu ubuntu    499 Feb 26 05:24 vitest.config.ts

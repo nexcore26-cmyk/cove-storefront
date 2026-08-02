@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-06-02T04:53:44Z",
+  "inputCsv": "reports/media-phase4a-cleanup-inventory-2026-06-02T04-45-19-525Z/phase4a_approval_required_candidates.csv",
+  "outputCsv": "reports/media-phase4a-cleanup-inventory-2026-06-02T04-45-19-525Z/phase4a_cleanup_crosscheck/phase4a_approval_candidate_http_crosscheck.csv",
+  "candidateRowsChecked": 189,
+  "elapsedSeconds": 5.0,
+  "httpOkCounts": {
+    "true": 189
+  },
+  "httpStatusCounts": {
+    "200": 189
+  },
+  "classificationCounts": {
+    "cleanup_candidate_review_only": 176,
+    "filesystem_only_review_only": 13
+  },
+  "kindCounts": {
+    "media_asset": 176,
+    "filesystem_file": 13
+  },
+  "referenceCountTotalCounts": {
+    "0": 189
+  },
+  "activeReferenceRows": 0,
+  "historicalOrderReferenceRows": 0,
+  "fileSizeMismatchRows": 0,
+  "safeguards": [
+    "No database writes executed",
+    "No filesystem writes, deletes, or moves executed",
+    "HTTP checks are read-only HEAD requests",
+    "All cleanup rows remain approval-only until explicit row-level approval"
+  ]
+}

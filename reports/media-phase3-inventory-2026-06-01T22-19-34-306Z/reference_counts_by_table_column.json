@@ -1,0 +1,110 @@
+[
+  {
+    "table": "categories",
+    "column": "image",
+    "totalRows": 21,
+    "mediaRows": 11,
+    "wpRows": 0,
+    "migrationRows": 11,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "media_assets",
+    "column": "key",
+    "totalRows": 524,
+    "mediaRows": 0,
+    "wpRows": 0,
+    "migrationRows": 521,
+    "adminUploadRows": 3
+  },
+  {
+    "table": "media_assets",
+    "column": "url",
+    "totalRows": 524,
+    "mediaRows": 524,
+    "wpRows": 0,
+    "migrationRows": 521,
+    "adminUploadRows": 3
+  },
+  {
+    "table": "media_assets",
+    "column": "sourceUrl",
+    "totalRows": 524,
+    "mediaRows": 0,
+    "wpRows": 521,
+    "migrationRows": 0,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "media_assets",
+    "column": "sourceSystem",
+    "totalRows": 524,
+    "mediaRows": 0,
+    "wpRows": 0,
+    "migrationRows": 194,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "media_reference_migration_backups",
+    "column": "oldValue",
+    "totalRows": 22,
+    "mediaRows": 14,
+    "wpRows": 8,
+    "migrationRows": 14,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "media_reference_migration_backups",
+    "column": "newValue",
+    "totalRows": 22,
+    "mediaRows": 22,
+    "wpRows": 1,
+    "migrationRows": 22,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "order_items",
+    "column": "image",
+    "totalRows": 9899,
+    "mediaRows": 0,
+    "wpRows": 5662,
+    "migrationRows": 0,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "page_blocks",
+    "column": "config",
+    "totalRows": 20,
+    "mediaRows": 8,
+    "wpRows": 1,
+    "migrationRows": 8,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "product_variants",
+    "column": "image",
+    "totalRows": 2840,
+    "mediaRows": 2840,
+    "wpRows": 0,
+    "migrationRows": 2840,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "product_variants",
+    "column": "galleryImages",
+    "totalRows": 2840,
+    "mediaRows": 1507,
+    "wpRows": 0,
+    "migrationRows": 1507,
+    "adminUploadRows": 0
+  },
+  {
+    "table": "products",
+    "column": "images",
+    "totalRows": 191,
+    "mediaRows": 189,
+    "wpRows": 0,
+    "migrationRows": 188,
+    "adminUploadRows": 1
+  }
+]

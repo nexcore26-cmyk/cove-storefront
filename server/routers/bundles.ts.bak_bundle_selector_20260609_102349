@@ -1,0 +1,244 @@
+/**
+ * Bundles Router — Phase 21
+ *
+ * A "bundle" product variant is composed of one or more component variants from
+ * other products. The effective stock of a bundle variant is the minimum stock
+ * of all its component variants in the target warehouse.
+ *
+ * Procedures:
+ *   bundles.getItems(bundleVariantId)        — list component variants with product info
+ *   bundles.setItems(bundleVariantId, items) — admin: replace all bundle items
+ *   bundles.checkStock(bundleVariantId, warehouseId) — return min stock across components
+ *   bundles.searchVariants(query)            — admin typeahead: search variants by product/variant name
+ */
+
+import { z } from "zod";
+import { TRPCError } from "@trpc/server";
+import { publicProcedure, protectedProcedure, router } from "../_core/trpc";
+import { getDb } from "../db";
+
+const adminProcedure = protectedProcedure.use(({ ctx, next }) => {
+  if (ctx.user.role !== "admin")
+    throw new TRPCError({ code: "FORBIDDEN", message: "Admin access required" });
+  return next({ ctx });
+});
+
+export const bundlesRouter = router({
+  /**
+   * List all component variants for a given bundle variant.
+   * Returns each component with product name, variant name, attributes, image, and qty.
+   */
+  getItems: publicProcedure
+    .input(z.object({ bundleVariantId: z.number() }))
+    .query(async ({ input }) => {
+      const { bundleItems, productVariants, products } = await import("../../drizzle/schema");
+      const { eq } = await import("drizzle-orm");
+      const db = await getDb();
+      if (!db) return [];
+
+      const rows = await db
+        .select({
+          id: bundleItems.id,
+          bundleVariantId: bundleItems.bundleVariantId,
+          componentVariantId: bundleItems.componentVariantId,
+          componentProductId: bundleItems.componentProductId,
+          stockSourceType: bundleItems.stockSourceType,
+          qty: bundleItems.qty,
+          // Component variant fields
+          variantName: productVariants.name,
+          variantSku: productVariants.sku,
+          variantImage: productVariants.image,
+          variantAttributes: productVariants.attributes,
+          variantPrice: productVariants.price,
+          variantProductId: productVariants.productId,
+          // Component product fields
+          productName: products.name,
+          productSlug: products.slug,
+        })
+        .from(bundleItems)
+        .innerJoin(productVariants, eq(productVariants.id, bundleItems.componentVariantId))
+        .innerJoin(products, eq(products.id, productVariants.productId))
+        .where(eq(bundleItems.bundleVariantId, input.bundleVariantId))
+        .orderBy(bundleItems.id);
+
+      return rows;
+    }),
+
+  /**
+   * Admin: replace all bundle items for a variant.
+   * Deletes existing items then inserts new ones in a single transaction.
+   */
+  setItems: adminProcedure
+    .input(
+      z.object({
+        bundleVariantId: z.number(),
+        items: z.array(
+          z.object({
+            componentVariantId: z.number().nullable().optional(),
+            componentProductId: z.number().nullable().optional(),
+            stockSourceType: z.enum(["variant", "product"]).default("variant"),
+            qty: z.number().min(0.001).default(1),
+          })
+        ),
+      })
+    )
+    .mutation(async ({ input }) => {
+      const { bundleItems } = await import("../../drizzle/schema");
+      const { eq } = await import("drizzle-orm");
+      const db = await getDb();
+      if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+
+      // Delete all existing bundle items for this variant
+      await db.delete(bundleItems).where(eq(bundleItems.bundleVariantId, input.bundleVariantId));
+
+      // Insert new items (skip if empty)
+      if (input.items.length > 0) {
+        await db.insert(bundleItems).values(
+          input.items.map((item) => ({
+            bundleVariantId: input.bundleVariantId,
+            componentVariantId: item.componentVariantId,
+            qty: String(item.qty),
+          }))
+        );
+      }
+
+      return { success: true, count: input.items.length };
+    }),
+
+  /**
+   * Return the effective stock of a bundle variant in a given warehouse.
+   * Effective stock = min(component variant stock × (1/qty)) across all components.
+   * If no components are defined, returns null (no bundle items configured).
+   * If any component has 0 stock, returns 0 (bundle is out of stock).
+   */
+  checkStock: publicProcedure
+    .input(
+      z.object({
+        bundleVariantId: z.number(),
+        warehouseId: z.number(),
+      })
+    )
+    .query(async ({ input }) => {
+      const { bundleItems, warehouseStock } = await import("../../drizzle/schema");
+      const { eq, and, isNull } = await import("drizzle-orm");
+      const db = await getDb();
+      if (!db) return { effectiveStock: null, components: [] };
+
+      // Get all bundle items for this variant
+      const items = await db
+        .select()
+        .from(bundleItems)
+        .where(eq(bundleItems.bundleVariantId, input.bundleVariantId));
+
+      if (items.length === 0) return { effectiveStock: null, components: [] };
+
+      // For each component, get its stock in the target warehouse
+      const componentStocks: Array<{
+        componentVariantId: number;
+        qty: number;
+        stock: number;
+        availableUnits: number; // floor(stock / qty)
+      }> = [];
+
+      for (const item of items) {
+        const qty = parseFloat(String(item.qty));
+        // Try variant-level stock first, fall back to product-level stock
+        const stockRows = await db
+          .select()
+          .from(warehouseStock)
+          .where(
+            and(
+              eq(warehouseStock.warehouseId, input.warehouseId),
+              eq(warehouseStock.variantId, item.componentVariantId)
+            )
+          )
+          .limit(1);
+
+        let stock = 0;
+        if (stockRows.length > 0) {
+          stock = stockRows[0].quantity || 0;
+        }
+
+        const availableUnits = qty > 0 ? Math.floor(stock / qty) : 0;
+        componentStocks.push({
+          componentVariantId: item.componentVariantId,
+          qty,
+          stock,
+          availableUnits,
+        });
+      }
+
+      // Effective stock = min of all component available units
+      const effectiveStock = Math.min(...componentStocks.map((c) => c.availableUnits));
+
+      return { effectiveStock, components: componentStocks };
+    }),
+
+  /**
+   * Admin typeahead: search for variants by product name or variant name.
+   * Returns up to 20 results with product name, variant name, image, and SKU.
+   */
+  searchVariants: adminProcedure
+    .input(z.object({ query: z.string().min(1) }))
+    .query(async ({ input }) => {
+      const { productVariants, products } = await import("../../drizzle/schema");
+      const { like, or, eq } = await import("drizzle-orm");
+      const db = await getDb();
+      if (!db) return [];
+
+      const q = `%${input.query}%`;
+      const rows = await db
+        .select({
+          variantId: productVariants.id,
+          variantName: productVariants.name,
+          variantSku: productVariants.sku,
+          variantImage: productVariants.image,
+          variantAttributes: productVariants.attributes,
+          variantPrice: productVariants.price,
+          productId: products.id,
+          productName: products.name,
+          productSlug: products.slug,
+        })
+        .from(productVariants)
+        .innerJoin(products, eq(products.id, productVariants.productId))
+        .where(
+          or(
+            like(products.name, q),
+            like(productVariants.name, q),
+            like(productVariants.sku, q)
+          )
+        )
+        .limit(20);
+
+      return rows;
+    }),
+
+  /**
+   * Get all products of type='bundle' with their variants.
+   * Used by the AdminBundles page to list all bundle products.
+   */
+  listBundleProducts: adminProcedure.query(async () => {
+    const { products, productVariants } = await import("../../drizzle/schema");
+    const { eq } = await import("drizzle-orm");
+    const db = await getDb();
+    if (!db) return [];
+
+    const bundleProducts = await db
+      .select()
+      .from(products)
+      .where(eq(products.type, "bundle"));
+
+    // Fetch variants for each bundle product
+    const result = await Promise.all(
+      bundleProducts.map(async (product) => {
+        const variants = await db
+          .select()
+          .from(productVariants)
+          .where(eq(productVariants.productId, product.id));
+        return { ...product, variants };
+      })
+    );
+
+    return result;
+  }),
+});

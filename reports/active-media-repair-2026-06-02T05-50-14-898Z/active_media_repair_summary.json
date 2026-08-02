@@ -1,0 +1,52 @@
+{
+  "runId": "active-media-repair-2026-06-02T05-50-14-898Z",
+  "startedAt": "2026-06-02T05:50:14.948Z",
+  "mode": "apply",
+  "planCsv": "/home/manus/cove-storefront/scripts/active_media_repair_plan_file_restores_only.csv",
+  "stagedSourceRoot": "/home/manus/cove-storefront/scripts/active_media_repair_sources",
+  "expectedRows": 88,
+  "expectedRestores": 88,
+  "expectedDbFixes": 0,
+  "planRows": 88,
+  "counts": {
+    "byRepairStatus": {
+      "ready_for_restore": 88
+    },
+    "byRepairAction": {
+      "restore_file_from_wordpress_source": 88
+    }
+  },
+  "safeguards": [
+    "The repair plan must contain exactly 88 confirmed file restore rows; parser false positives are excluded from apply scope.",
+    "Every file restore must target /home/manus/cove-storefront/public/media/wordpress-migration/ only.",
+    "Every staged source file must exist before apply mode starts.",
+    "Destination files must be absent before restore; existing files are never overwritten.",
+    "Malformed database cleanup removes only exact URL values from specified rows and columns.",
+    "Affected database rows are backed up to JSON and SQL restore files before update.",
+    "Database updates are executed inside a transaction.",
+    "Post-apply verification checks filesystem, database references, and public media URL responses."
+  ],
+  "database": "cove_storefront",
+  "preflight": {
+    "blockers": 0,
+    "warnings": 0,
+    "restoreChecks": 88,
+    "dbFixChecks": 0,
+    "sourceFilesPresent": 88,
+    "destinationsAlreadyPresent": 0,
+    "dbFixReferencesRemovable": 0
+  },
+  "applied": true,
+  "repaired": {
+    "filesRestored": 88,
+    "fileRestoreFailures": 0,
+    "dbRowsUpdated": 0,
+    "dbUrlOccurrencesRemoved": 0,
+    "restoredFilesPresentAfter": 88,
+    "malformedRefsRemainingAfter": 0,
+    "postHttpOk": 88,
+    "postHttpNonOk": 0,
+    "postHttpImageOrMedia": 88
+  },
+  "finishedAt": "2026-06-02T05:50:18.513Z"
+}

@@ -1,0 +1,17 @@
+import "dotenv/config";
+import mysql from "mysql2/promise";
+const conn = await mysql.createConnection(process.env.DATABASE_URL);
+const [cols] = await conn.execute("show columns from product_variants");
+console.log(JSON.stringify({ columns: cols.map(c => c.Field) }, null, 2));
+const productField = cols.some(c => c.Field === "product_id") ? "product_id" : "productId";
+const onlineField = cols.some(c => c.Field === "online_qty") ? "online_qty" : (cols.some(c => c.Field === "onlineQty") ? "onlineQty" : null);
+const posField = cols.some(c => c.Field === "pos_qty") ? "pos_qty" : (cols.some(c => c.Field === "posQty") ? "posQty" : null);
+const fields = ["id", `${productField} as productId`, "sku", "attributes", "stock"];
+if (onlineField) fields.push(`${onlineField} as onlineQty`);
+if (posField) fields.push(`${posField} as posQty`);
+for (const f of ["regular_price", "regularPrice", "sale_price", "salePrice"]) if (cols.some(c => c.Field === f)) fields.push(`${f} as ${f.replace(/_([a-z])/g, (_, ch) => ch.toUpperCase())}`);
+const [products] = await conn.execute("select id, name, slug, status, type from products where id = ?", [390057]);
+console.log(JSON.stringify({ products }, null, 2));
+const [variants] = await conn.execute(`select ${fields.join(", ")} from product_variants where ${productField} = ? order by id limit 30`, [390057]);
+console.log(JSON.stringify({ variantCount: variants.length, variants }, null, 2));
+await conn.end();

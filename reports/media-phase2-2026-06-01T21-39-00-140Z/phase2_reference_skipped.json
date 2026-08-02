@@ -1,0 +1,77 @@
+[
+  {
+    "type": "product",
+    "id": "390137",
+    "reason": "existing_admin_upload_reference_not_overwritten"
+  },
+  {
+    "type": "category",
+    "id": "458",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "456",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "21",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "395",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "248",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "28",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "29",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "33",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "349",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "376",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "411",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "455",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "category",
+    "id": "453",
+    "reason": "no_node_category_match"
+  },
+  {
+    "type": "variation_assignments",
+    "count": 234,
+    "reason": "not_applied_in_phase2_because_all_rows_are_multiple_node_variant_matches"
+  }
+]

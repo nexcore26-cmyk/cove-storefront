@@ -1,0 +1,386 @@
+/**
+ * DESIGN SYSTEM: Obsidian Editorial
+ * Brand: Cove Interior — Luxury Furniture & Décor
+ *
+ * Core Principles:
+ * - Extreme contrast: obsidian (#111110) vs warm white (#FAFAF8)
+ * - Gold (#9D7D39) used sparingly — prices, CTAs, hover states only
+ * - Cormorant Garamond for display/hero text
+ * - Montserrat for all body, nav, labels
+ * - Photography bleeds to edges — no borders on images
+ * - Asymmetric editorial layouts
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Google Fonts ─────────────────────────────────────────────────────── */
+
+
+/* ─── Theme Tokens ─────────────────────────────────────────────────────── */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Cove Brand Tokens */
+  --color-obsidian: var(--obsidian);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-warm-white: var(--warm-white);
+  --color-warm-grey: var(--warm-grey);
+  --font-display: var(--font-display-family);
+  --font-body: var(--font-body-family);
+}
+
+:root {
+  /* ── Cove Brand Colors ── */
+  --obsidian: #111110;
+  --gold: #9D7D39;
+  --gold-light: #C4A96A;
+  --warm-white: #FAFAF8;
+  --warm-grey: #8A8A82;
+  --sand: #D4C9B8;
+  --charcoal: #242424;
+
+  /* ── Typography ── */
+  --font-display-family: 'Cormorant Garamond', Georgia, serif;
+  --font-body-family: 'Montserrat', system-ui, sans-serif;
+
+  /* ── Radius ── */
+  --radius: 0.25rem;
+
+  /* ── Semantic Colors (light mode = warm white body) ── */
+  --background: #FAFAF8;
+  --foreground: #242424;
+  --card: #ffffff;
+  --card-foreground: #242424;
+  --popover: #ffffff;
+  --popover-foreground: #242424;
+  --primary: #9D7D39;
+  --primary-foreground: #FAFAF8;
+  --secondary: #F0EDE8;
+  --secondary-foreground: #242424;
+  --muted: #F0EDE8;
+  --muted-foreground: #8A8A82;
+  --accent: #9D7D39;
+  --accent-foreground: #FAFAF8;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #FAFAF8;
+  --border: #E8E4DC;
+  --input: #E8E4DC;
+  --ring: #9D7D39;
+
+  /* ── Charts ── */
+  --chart-1: #9D7D39;
+  --chart-2: #C4A96A;
+  --chart-3: #D4C9B8;
+  --chart-4: #8A8A82;
+  --chart-5: #242424;
+
+  /* ── Sidebar (obsidian) ── */
+  --sidebar: #111110;
+  --sidebar-foreground: #FAFAF8;
+  --sidebar-primary: #9D7D39;
+  --sidebar-primary-foreground: #FAFAF8;
+  --sidebar-accent: #1E1E1C;
+  --sidebar-accent-foreground: #FAFAF8;
+  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar-ring: #9D7D39;
+}
+
+/* ─── Base Styles ──────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    @apply bg-background text-foreground;
+    font-family: var(--font-body-family);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Display headings use Cormorant Garamond */
+  h1, h2 {
+    font-family: var(--font-display-family);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-body-family);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* ─── Component Utilities ──────────────────────────────────────────────── */
+@layer components {
+  /* Container: max 1222px, centered */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      max-width: 1300px;
+    }
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  /* Gold rule line — signature element */
+  .gold-rule {
+    height: 1px;
+    background: var(--gold);
+    width: 100%;
+  }
+
+  /* Display heading — Cormorant Garamond */
+  .display-heading {
+    font-family: var(--font-display-family);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  /* Category label — Montserrat uppercase */
+  .category-label {
+    font-family: var(--font-body-family);
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Gold price — Cormorant Garamond italic */
+  .price-text {
+    font-family: var(--font-display-family);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold);
+  }
+
+  /* Obsidian button */
+  .btn-obsidian {
+    background: var(--obsidian);
+    color: var(--warm-white);
+    font-family: var(--font-body-family);
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    border: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-obsidian:hover {
+    background: var(--gold);
+    color: var(--warm-white);
+  }
+
+  /* Gold outline button */
+  .btn-gold-outline {
+    background: transparent;
+    color: var(--gold);
+    font-family: var(--font-body-family);
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    border: 1px solid var(--gold);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-gold-outline:hover {
+    background: var(--gold);
+    color: var(--warm-white);
+  }
+
+  /* Fade-up entrance animation */
+  .fade-up {
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Gold underline hover effect */
+  .gold-underline {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .gold-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+
+  .gold-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Product card image zoom on hover */
+  .product-image-wrap {
+    overflow: hidden;
+  }
+
+  .product-image-wrap img {
+    transition: transform 0.5s ease;
+  }
+
+  .product-image-wrap:hover img {
+    transform: scale(1.04);
+  }
+
+  /* RTL support */
+  [dir="rtl"] {
+    font-family: 'Noto Kufi Arabic', var(--font-body-family);
+  }
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2 {
+    font-family: var(--font-display-family);
+  }
+}
+
+/* Rich HTML content blocks from product descriptions and variation HTML/text fields.
+   Tailwind Preflight removes default list markers, so restore them only inside
+   rendered HTML content without touching variation buttons or image/color swatches. */
+.html-content ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.html-content ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+/* RTL list alignment: markers on the right side for Arabic content */
+[dir="rtl"] .html-content ul,
+[dir="rtl"] .html-content ol {
+  padding-left: 0;
+  padding-right: 1.25rem;
+  margin-right: 10px;
+}
+
+.html-content li {
+  display: list-item;
+  margin-bottom: 0.25rem;
+}
+
+.html-content ul ul,
+.html-content ol ul {
+  list-style-type: circle;
+}
+
+.html-content ol ol,
+.html-content ul ol {
+  list-style-type: lower-alpha;
+}
+
+/* Mobile menu slide-down animation */
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

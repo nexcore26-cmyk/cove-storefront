@@ -1,0 +1,99 @@
+{
+  "runId": "media-phase4a-cleanup-inventory-2026-06-02T04-45-19-525Z",
+  "generatedAt": "2026-06-02T04:45:20.021Z",
+  "mode": "read-only-non-destructive",
+  "database": "cove_storefront",
+  "targetsInspected": [
+    {
+      "table": "products",
+      "id": "id",
+      "columns": [
+        "images"
+      ],
+      "usageClass": "commerce_active"
+    },
+    {
+      "table": "categories",
+      "id": "id",
+      "columns": [
+        "image"
+      ],
+      "usageClass": "commerce_active"
+    },
+    {
+      "table": "product_variants",
+      "id": "id",
+      "columns": [
+        "image",
+        "galleryImages"
+      ],
+      "usageClass": "commerce_active"
+    },
+    {
+      "table": "pages",
+      "id": "id",
+      "columns": [
+        "puckData"
+      ],
+      "usageClass": "cms_active"
+    },
+    {
+      "table": "page_blocks",
+      "id": "id",
+      "columns": [
+        "config"
+      ],
+      "usageClass": "cms_active"
+    },
+    {
+      "table": "homepage_sections",
+      "id": "id",
+      "columns": [
+        "imageUrl"
+      ],
+      "usageClass": "cms_active"
+    },
+    {
+      "table": "order_items",
+      "id": "id",
+      "columns": [
+        "image"
+      ],
+      "usageClass": "historical_order_snapshot"
+    }
+  ],
+  "skippedTargets": [],
+  "totals": {
+    "mediaAssetRows": 524,
+    "filesystemFiles": 435,
+    "usageRows": 15526,
+    "nodeMediaUsageRows": 9864,
+    "wordpressMediaUsageRows": 5662,
+    "candidateRows": 7661,
+    "approvalRequiredRows": 189
+  },
+  "classificationCounts": {
+    "blocked_fix_required": 1462,
+    "blocked_missing_filesystem_file": 102,
+    "cleanup_candidate_review_only": 176,
+    "filesystem_only_review_only": 13,
+    "retain_active_reference": 245,
+    "retain_admin_upload": 1,
+    "retain_historical_order_wordpress_reference": 5662
+  },
+  "recommendationCounts": {
+    "do_not_cleanup_investigate_or_repair_broken_current_reference": 1462,
+    "do_not_delete_record_until_missing_file_or_reference_history_is_investigated": 102,
+    "candidate_for_media_library_record_and_filesystem_file_deletion_after_explicit_row_level_approval": 176,
+    "candidate_for_filesystem_deletion_after_explicit_row_level_approval_if_unreferenced": 13,
+    "retain_no_action": 245,
+    "retain_admin_upload_no_cleanup": 1,
+    "do_not_rewrite_order_history_without_separate_order_cleanup_approval": 5662
+  },
+  "safeguards": [
+    "No database writes executed",
+    "No filesystem writes, deletes, or moves executed",
+    "No Media Library records deleted",
+    "All cleanup rows remain approval-only until explicit row-level approval"
+  ]
+}

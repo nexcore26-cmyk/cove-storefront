@@ -1,0 +1,44 @@
+{
+  "runId": "active-media-repair-2026-06-02T05-48-48-740Z",
+  "startedAt": "2026-06-02T05:48:48.792Z",
+  "mode": "dry-run",
+  "planCsv": "/home/manus/cove-storefront/scripts/active_media_repair_plan.csv",
+  "stagedSourceRoot": "/home/manus/cove-storefront/scripts/active_media_repair_sources",
+  "expectedRows": 90,
+  "expectedRestores": 88,
+  "expectedDbFixes": 2,
+  "planRows": 90,
+  "counts": {
+    "byRepairStatus": {
+      "ready_for_restore": 88,
+      "requires_db_reference_fix": 2
+    },
+    "byRepairAction": {
+      "restore_file_from_wordpress_source": 88,
+      "remove_or_correct_malformed_reference_after_db_inspection": 2
+    }
+  },
+  "safeguards": [
+    "The repair plan must contain exactly 90 rows: 88 file restores and 2 malformed-reference database fixes.",
+    "Every file restore must target /home/manus/cove-storefront/public/media/wordpress-migration/ only.",
+    "Every staged source file must exist before apply mode starts.",
+    "Destination files must be absent before restore; existing files are never overwritten.",
+    "Malformed database cleanup removes only exact URL values from specified rows and columns.",
+    "Affected database rows are backed up to JSON and SQL restore files before update.",
+    "Database updates are executed inside a transaction.",
+    "Post-apply verification checks filesystem, database references, and public media URL responses."
+  ],
+  "database": "cove_storefront",
+  "preflight": {
+    "blockers": 14,
+    "warnings": 0,
+    "restoreChecks": 88,
+    "dbFixChecks": 14,
+    "sourceFilesPresent": 88,
+    "destinationsAlreadyPresent": 0,
+    "dbFixReferencesRemovable": 0
+  },
+  "error": "Refusing active-media repair because preflight found 14 blocker(s).",
+  "failed": true,
+  "finishedAt": "2026-06-02T05:48:48.902Z"
+}

@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-06-01T21:01:18.348Z",
+  "finishedAt": "2026-06-01T21:03:43.891Z",
+  "csvPath": "/home/manus/cove-storefront/scripts/approval_files_to_import.csv",
+  "publicMediaRoot": "/home/manus/cove-storefront/public/media",
+  "baseUrl": "https://app.coveinterior.com",
+  "tenantId": 1,
+  "dryRun": false,
+  "verifyOnly": false,
+  "approvedRowsInCsv": 433,
+  "processedRows": 433,
+  "importedFiles": 431,
+  "reusedExistingFiles": 1,
+  "createdMediaAssetRecords": 193,
+  "updatedMediaAssetRecords": 0,
+  "reusedMediaAssetRecords": 239,
+  "failedRows": 1,
+  "verifiedHttp200": 432,
+  "verifiedHttpFailed": 0
+}

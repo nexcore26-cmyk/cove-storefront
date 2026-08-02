@@ -1,0 +1,20 @@
+[
+  {
+    "id": 328,
+    "tenantId": 1,
+    "key": "admin-uploads/tenant-1/2026/05/cove_native_media_validation_upload_cad353d5.png",
+    "url": "/media/admin-uploads/tenant-1/2026/05/cove_native_media_validation_upload_cad353d5.png",
+    "sourceUrl": null,
+    "sourceSystem": "cove-admin",
+    "mimeType": "image/png",
+    "sizeBytes": 3403,
+    "sha256": "09c71cbf28b34a1db6e27cf8abb69e2d9b301d7b3ad05cdf340b4c6eb13668ae",
+    "originalFilename": "cove_native_media_validation_upload.png",
+    "altText": "Product Images",
+    "entityType": "product",
+    "entityId": null,
+    "isActive": 1,
+    "createdAt": "2026-05-26T11:10:04.000Z",
+    "updatedAt": "2026-05-26T11:10:04.000Z"
+  }
+]

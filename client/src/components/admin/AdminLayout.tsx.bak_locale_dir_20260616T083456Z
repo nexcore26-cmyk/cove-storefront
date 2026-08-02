@@ -1,0 +1,271 @@
+/**
+ * AdminLayout — Sidebar layout for the Cove Interior Admin Panel
+ * Design: Obsidian Editorial — dark sidebar, clean content area
+ * Auth: Requires login. Redirects to Manus OAuth with returnPath so user
+ *       lands back on the admin page they were trying to access.
+ *
+ * Role-based navigation:
+ *  - admin: full access to all nav items
+ *  - pos:   POS terminal + My Sales only
+ *  - orders: Orders only
+ *  - user:  access denied
+ */
+import { Link, useLocation } from 'wouter';
+import {
+  LayoutDashboard, Package, Package2, ShoppingCart, Warehouse,
+  Settings, LogOut, ChevronRight, Menu, X, Loader2, Lock, Monitor, Globe,
+  LayoutTemplate, BarChart2, Users, Layout, Building2, TrendingUp, Tag, Sliders, Truck, CreditCard, RotateCcw, UserCheck, Clock, Navigation, Images
+} from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { trpc } from '@/lib/trpc';
+import { useAuth } from '@/_core/hooks/useAuth';
+// getLoginUrl removed — staff use /staff-login instead of Manus OAuth
+import { toast } from 'sonner';
+
+const ADMIN_NAV_ITEMS: { href: string; label: string; icon: any; exact?: boolean }[] = [
+  { href: '/admin', label: 'Dashboard', icon: LayoutDashboard, exact: true },
+  { href: '/admin/pos', label: 'POS', icon: Monitor },
+  { href: '/admin/products', label: 'Products', icon: Package },
+  { href: '/admin/categories', label: 'Categories', icon: Tag },
+  { href: '/admin/attributes', label: 'Attributes', icon: Sliders },
+  { href: '/admin/media', label: 'Media Library', icon: Images },
+  { href: '/admin/orders', label: 'Orders', icon: ShoppingCart },
+  { href: '/admin/inventory', label: 'Inventory', icon: Warehouse },
+  { href: '/admin/translations', label: 'Translations', icon: Globe },
+  { href: '/admin/bundles', label: 'Bundles', icon: Package2 },
+  { href: '/admin/analytics', label: 'Analytics', icon: BarChart2 },
+  { href: '/admin/reports/sales', label: 'Sales Report', icon: TrendingUp },
+  { href: '/admin/reports/inventory', label: 'Inventory Report', icon: Warehouse },
+  { href: '/admin/reports/profit', label: 'Profit Report', icon: BarChart2 },
+  { href: '/admin/users', label: 'Users', icon: Users },
+  { href: '/admin/vendors', label: 'Vendors', icon: Building2 },
+  { href: '/admin/return-requests', label: 'Returns', icon: RotateCcw },
+  { href: '/admin/pre-orders', label: 'Pre-Orders', icon: Clock },
+  { href: '/admin/customers', label: 'Customers', icon: UserCheck },
+  { href: '/admin/page-builder', label: 'Page Builder', icon: Layout },
+  { href: '/admin/menu-builder', label: 'Menu Builder', icon: Navigation },
+  { href: '/admin/header-builder', label: 'Header Builder', icon: LayoutTemplate },
+  { href: '/admin/footer-builder', label: 'Footer Builder', icon: LayoutTemplate },
+  { href: '/admin/shipping', label: 'Shipping', icon: Truck },
+  { href: '/admin/payment-gateways', label: 'Payment Gateways', icon: CreditCard },
+  { href: '/admin/settings', label: 'Settings', icon: Settings },
+];
+
+const POS_NAV_ITEMS: { href: string; label: string; icon: any; exact?: boolean }[] = [
+  { href: '/admin/pos', label: 'POS Terminal', icon: Monitor },
+  { href: '/admin/pos-sales', label: 'My Sales', icon: TrendingUp },
+  { href: '/admin/return-requests', label: 'Returns', icon: RotateCcw },
+];
+
+const ORDERS_NAV_ITEMS: { href: string; label: string; icon: any; exact?: boolean }[] = [
+  { href: '/admin/orders', label: 'Orders', icon: ShoppingCart },
+];
+
+function getNavItems(role: string, posEnabled: boolean) {
+  if (role === 'pos') return POS_NAV_ITEMS;
+  if (role === 'orders') return ORDERS_NAV_ITEMS;
+  // admin
+  if (!posEnabled) return ADMIN_NAV_ITEMS.filter(i => i.href !== '/admin/pos');
+  return ADMIN_NAV_ITEMS;
+}
+
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { user, loading } = useAuth();
+
+  const { data: storeSettings } = trpc.settings.get.useQuery(undefined, { enabled: !!user && user.role === 'admin' });
+  const posEnabled = storeSettings?.posEnabled ?? true;
+
+  const logoutMutation = trpc.auth.logout.useMutation({
+    onSuccess: () => { window.location.href = '/staff-login'; },
+    onError: () => toast.error('Logout failed'),
+  });
+
+  // Redirect to login with returnPath so user lands back here after auth
+  useEffect(() => {
+    if (loading) return;
+    if (!user) {
+      // Redirect to staff login (username/password) instead of Manus OAuth
+      const returnParam = encodeURIComponent(location);
+      window.location.href = `/staff-login?return=${returnParam}`;
+      return;
+    }
+    // Redirect staff roles to their home page if they land on /admin
+    if (user.role === 'pos' && location === '/admin') {
+      window.location.href = '/admin/pos';
+    }
+    if (user.role === 'orders' && location === '/admin') {
+      window.location.href = '/admin/orders';
+    }
+  }, [user, loading, location]);
+
+  const isActive = (href: string, exact?: boolean) => {
+    if (exact) return location === href;
+    return location.startsWith(href);
+  };
+
+  // Show loading while checking auth
+  if (loading) {
+    return (
+      <div className="flex h-screen items-center justify-center" style={{ backgroundColor: '#111110' }}>
+        <div className="flex flex-col items-center gap-4">
+          <Loader2 className="animate-spin" size={32} style={{ color: '#9D7D39' }} />
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase" style={{ color: 'rgba(250,250,248,0.4)', fontFamily: 'Montserrat, sans-serif' }}>
+            Authenticating...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show access denied if logged in but not a staff/admin role
+  if (user && user.role !== 'admin' && user.role !== 'pos' && user.role !== 'orders') {
+    return (
+      <div className="flex h-screen items-center justify-center" style={{ backgroundColor: '#111110' }}>
+        <div className="flex flex-col items-center gap-4 text-center px-6">
+          <Lock size={32} style={{ color: '#9D7D39' }} />
+          <p className="text-2xl font-light" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#FAFAF8' }}>
+            Access Required
+          </p>
+          <p className="text-xs" style={{ color: 'rgba(250,250,248,0.4)', fontFamily: 'Montserrat, sans-serif' }}>
+            Your account ({user.email}) does not have staff privileges.
+          </p>
+          <Link href="/">
+            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#9D7D39', fontFamily: 'Montserrat, sans-serif' }}>
+              Return to Store
+            </span>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  // Not logged in — show blank while redirect happens
+  if (!user) {
+    return (
+      <div className="flex h-screen items-center justify-center" style={{ backgroundColor: '#111110' }}>
+        <Loader2 className="animate-spin" size={32} style={{ color: '#9D7D39' }} />
+      </div>
+    );
+  }
+
+  const navItems = getNavItems(user.role, posEnabled);
+
+  // Role label for sidebar
+  const roleLabel = user.role === 'pos' ? 'POS Staff' : user.role === 'orders' ? 'Orders Staff' : 'Admin Panel';
+
+  const SidebarContent = () => (
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#111110' }}>
+      {/* Logo */}
+      <div className="px-6 py-8 border-b" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+        <Link href="/">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase" style={{ color: '#9D7D39', fontFamily: 'Montserrat, sans-serif' }}>
+              COVE
+            </p>
+            <p className="text-[10px] tracking-widest uppercase mt-0.5" style={{ color: 'rgba(250,250,248,0.4)', fontFamily: 'Montserrat, sans-serif' }}>
+              {roleLabel}
+            </p>
+          </div>
+        </Link>
+      </div>
+
+      {/* Nav */}
+      <nav className="flex-1 px-3 py-6 overflow-y-auto">
+        {navItems.map((item) => {
+          const active = isActive(item.href, item.exact);
+          return (
+            <Link key={item.href} href={item.href}>
+              <div
+                className="flex items-center gap-3 px-3 py-2.5 mb-1 rounded transition-all duration-200 cursor-pointer"
+                style={{
+                  backgroundColor: active ? 'rgba(157,125,57,0.15)' : 'transparent',
+                  color: active ? '#9D7D39' : 'rgba(250,250,248,0.6)',
+                }}
+                onClick={() => setSidebarOpen(false)}
+              >
+                <item.icon size={16} />
+                <span className="text-xs font-semibold tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  {item.label}
+                </span>
+                {active && <ChevronRight size={12} className="ml-auto" />}
+              </div>
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* Bottom: user info + view store + logout */}
+      <div className="px-3 py-4 border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+        {/* User info */}
+        <div className="px-3 py-2 mb-2">
+          <p className="text-[10px] font-semibold tracking-wider uppercase truncate" style={{ color: 'rgba(250,250,248,0.3)', fontFamily: 'Montserrat, sans-serif' }}>
+            {user.name || user.email || 'Staff'}
+          </p>
+          <p className="text-[9px] tracking-wider uppercase mt-0.5" style={{ color: 'rgba(157,125,57,0.6)', fontFamily: 'Montserrat, sans-serif' }}>
+            {user.role}
+          </p>
+        </div>
+        <Link href="/">
+          <div className="flex items-center gap-3 px-3 py-2.5 mb-1 rounded transition-all duration-200 cursor-pointer hover:bg-white/5"
+            style={{ color: 'rgba(250,250,248,0.4)' }}>
+            <Package size={16} />
+            <span className="text-xs font-semibold tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>View Store</span>
+          </div>
+        </Link>
+        <button
+          onClick={() => logoutMutation.mutate()}
+          className="flex items-center gap-3 px-3 py-2.5 w-full rounded transition-all duration-200 hover:bg-white/5"
+          style={{ color: 'rgba(250,250,248,0.4)' }}
+        >
+          <LogOut size={16} />
+          <span className="text-xs font-semibold tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>Logout</span>
+        </button>
+      </div>
+    </div>
+  );
+
+  return (
+    <div dir="ltr" className="flex h-screen overflow-hidden" style={{ backgroundColor: '#F0EDE8' }}>
+      {/* Desktop sidebar */}
+      <div className="hidden md:flex w-56 flex-shrink-0 flex-col" style={{ backgroundColor: '#111110' }}>
+        <SidebarContent />
+      </div>
+
+      {/* Mobile sidebar overlay */}
+      {sidebarOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div className="absolute inset-0 bg-black/60" onClick={() => setSidebarOpen(false)} />
+          <div className="absolute left-0 top-0 bottom-0 w-56" style={{ backgroundColor: '#111110' }}>
+            <button
+              onClick={() => setSidebarOpen(false)}
+              className="absolute top-4 right-4 text-white/40 hover:text-white"
+            >
+              <X size={20} />
+            </button>
+            <SidebarContent />
+          </div>
+        </div>
+      )}
+
+      {/* Main content */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Top bar (mobile) */}
+        <div className="md:hidden flex items-center gap-4 px-4 py-3 border-b" style={{ backgroundColor: '#111110', borderColor: 'rgba(255,255,255,0.08)' }}>
+          <button onClick={() => setSidebarOpen(true)} style={{ color: '#FAFAF8' }}>
+            <Menu size={20} />
+          </button>
+          <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#9D7D39', fontFamily: 'Montserrat, sans-serif' }}>
+            Cove {roleLabel}
+          </span>
+        </div>
+
+        {/* Page content */}
+        <div className="flex-1 overflow-y-auto">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}

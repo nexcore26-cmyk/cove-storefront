@@ -1,0 +1,311 @@
+{
+  "dryRun": true,
+  "planSummary": {
+    "scope": "third-pass remaining visual active values after second-pass repair, all status=publish non-simple products",
+    "cloneAssignments": 15,
+    "globalUpdates": 0,
+    "skippedMissingRows": 0,
+    "notes": "All assignments are product-specific clones to avoid applying shared labels such as Basic set or Single globally across unrelated products."
+  },
+  "backupTables": null,
+  "plannedGlobalUpdates": [],
+  "plannedProductSpecificClones": [
+    {
+      "productId": 390207,
+      "productSlug": "mini-roshina-beige",
+      "productName": "Mini Roshina Beige",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 142,
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 419,
+      "newValueId": null,
+      "label": "Basic set (Only Box)",
+      "image": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+      "activeValueIdsBefore": [
+        419,
+        420,
+        428,
+        422
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390148,
+      "productSlug": "mini-roshina-gray",
+      "productName": "Mini Roshina Gray",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 102,
+      "attributeId": 33,
+      "attributeName": "Select Mini Roshina box set",
+      "sourceValueId": 419,
+      "newValueId": null,
+      "label": "Basic set (Only Box)",
+      "image": "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg",
+      "activeValueIdsBefore": [
+        419,
+        430
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390066,
+      "productSlug": "roshina-2-cement-green",
+      "productName": "Roshina 2 Cement green",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 38,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "newValueId": null,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-cementgreen-2-150x150.jpg",
+      "activeValueIdsBefore": [
+        363,
+        432
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390068,
+      "productSlug": "roshina-2-dark-green",
+      "productName": "Roshina 2 Dark Green",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 40,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "newValueId": null,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-drakgreen-2-430x430.jpg",
+      "activeValueIdsBefore": [
+        363,
+        434
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390071,
+      "productSlug": "roshina-2-off-white",
+      "productName": "Roshina 2 Off White",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 43,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "newValueId": null,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/01/Roshina-2-offwhite-2-150x150.jpg",
+      "activeValueIdsBefore": [
+        363,
+        436
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390119,
+      "productSlug": "roshina-2-wooden",
+      "productName": "Roshina 2 Wooden",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 85,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "newValueId": null,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-2-darkveneer-wood-2-150x150.jpg",
+      "activeValueIdsBefore": [
+        363,
+        438
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390114,
+      "productSlug": "roshina-3-camel-web",
+      "productName": "Roshina 3 Camel",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 80,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "newValueId": null,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Camel-1.jpg",
+      "activeValueIdsBefore": [
+        363,
+        440
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390115,
+      "productSlug": "roshina-3-light-blue",
+      "productName": "Roshina 3 Light Blue",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 81,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "newValueId": null,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Light-blue-1.jpg",
+      "activeValueIdsBefore": [
+        363,
+        442
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390117,
+      "productSlug": "roshina-3-maroon",
+      "productName": "Roshina 3 Maroon",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 83,
+      "attributeId": 24,
+      "attributeName": "Select box set",
+      "sourceValueId": 363,
+      "newValueId": null,
+      "label": "Basic set",
+      "image": "https://coveinterior.com/wp-content/uploads/2023/07/Roshina-3-Maroon-1.jpg",
+      "activeValueIdsBefore": [
+        363,
+        444
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390163,
+      "productSlug": "tissue-box-beige",
+      "productName": "Tissue box Beige",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 116,
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "newValueId": null,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2023/12/tissue-box-beige.jpg",
+      "activeValueIdsBefore": [
+        407,
+        446
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390165,
+      "productSlug": "tissue-box-black",
+      "productName": "Tissue box Black",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 118,
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "newValueId": null,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+      "activeValueIdsBefore": [
+        407,
+        448
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390164,
+      "productSlug": "tissue-box-bronze",
+      "productName": "Tissue box Bronze",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 117,
+      "attributeId": 31,
+      "attributeName": "Select tissue box",
+      "sourceValueId": 407,
+      "newValueId": null,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+      "activeValueIdsBefore": [
+        407,
+        450
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390203,
+      "productSlug": "beige-trash-bin",
+      "productName": "Beige Trash Bin",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 138,
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "newValueId": null,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+      "activeValueIdsBefore": [
+        393,
+        452
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390201,
+      "productSlug": "black-trash-bin",
+      "productName": "Black Trash Bin",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 136,
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "newValueId": null,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+      "activeValueIdsBefore": [
+        393,
+        454
+      ],
+      "activeValueIdsAfter": null
+    },
+    {
+      "productId": 390202,
+      "productSlug": "bronze-trash-bin",
+      "productName": "Bronze Trash Bin",
+      "productStatus": "active",
+      "productType": "variable",
+      "productAttributeId": 137,
+      "attributeId": 29,
+      "attributeName": "Trash bin",
+      "sourceValueId": 393,
+      "newValueId": null,
+      "label": "Single",
+      "image": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+      "activeValueIdsBefore": [
+        393,
+        456
+      ],
+      "activeValueIdsAfter": null
+    }
+  ],
+  "attributeDisplayTypeUpdates": [],
+  "missing": [],
+  "applied": {
+    "globalValueUpdates": 0,
+    "clonedValues": 0,
+    "productAttributeRewrites": 0,
+    "attributeDisplayTypeUpdates": 0,
+    "copiedStockRows": 0,
+    "copiedBundleRows": 0
+  }
+}

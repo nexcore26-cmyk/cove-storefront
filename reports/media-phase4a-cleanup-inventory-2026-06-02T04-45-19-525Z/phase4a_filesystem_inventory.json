@@ -1,0 +1,3047 @@
+[
+  {
+    "url": "/media/admin-uploads/tenant-1/2026/06/dark-paint-1.jpeg",
+    "relativePath": "admin-uploads/tenant-1/2026/06/dark-paint-1.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/admin-uploads/tenant-1/2026/06/dark-paint-1.jpeg",
+    "sizeBytes": 288501,
+    "mtime": "2026-06-01T19:17:34.767Z"
+  },
+  {
+    "url": "/media/admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg",
+    "relativePath": "admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/admin-uploads/tenant-1/2026/06/dark-paint_f1a2ed87.jpeg",
+    "sizeBytes": 288501,
+    "mtime": "2026-06-01T18:26:14.772Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2017/06/5.jpg",
+    "relativePath": "wordpress-migration/2017/06/5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2017/06/5.jpg",
+    "sizeBytes": 470462,
+    "mtime": "2026-06-01T21:01:18.591Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2017/06/6.jpg",
+    "relativePath": "wordpress-migration/2017/06/6.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2017/06/6.jpg",
+    "sizeBytes": 1929229,
+    "mtime": "2026-06-01T21:01:18.743Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2017/06/7.jpg",
+    "relativePath": "wordpress-migration/2017/06/7.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2017/06/7.jpg",
+    "sizeBytes": 1919632,
+    "mtime": "2026-06-01T21:01:18.927Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2017/06/8.jpg",
+    "relativePath": "wordpress-migration/2017/06/8.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2017/06/8.jpg",
+    "sizeBytes": 1339870,
+    "mtime": "2026-06-01T21:01:19.043Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2017/06/9.jpg",
+    "relativePath": "wordpress-migration/2017/06/9.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2017/06/9.jpg",
+    "sizeBytes": 1339594,
+    "mtime": "2026-06-01T21:01:19.183Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/big-capsule-bl.webp",
+    "relativePath": "wordpress-migration/2021/07/big-capsule-bl.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/big-capsule-bl.webp",
+    "sizeBytes": 52122,
+    "mtime": "2026-06-01T21:01:19.815Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/big-capsules-1.webp",
+    "relativePath": "wordpress-migration/2021/07/big-capsules-1.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/big-capsules-1.webp",
+    "sizeBytes": 47198,
+    "mtime": "2026-06-01T21:01:20.279Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+    "relativePath": "wordpress-migration/2021/07/classic-157-gold.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/classic-157-gold.jpg",
+    "sizeBytes": 95600,
+    "mtime": "2026-06-01T21:01:20.595Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/classic-157-gray-gold.jpg",
+    "relativePath": "wordpress-migration/2021/07/classic-157-gray-gold.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/classic-157-gray-gold.jpg",
+    "sizeBytes": 45877,
+    "mtime": "2026-06-01T21:01:20.815Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/classic-157-marble-gold.jpg",
+    "relativePath": "wordpress-migration/2021/07/classic-157-marble-gold.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/classic-157-marble-gold.jpg",
+    "sizeBytes": 47466,
+    "mtime": "2026-06-01T21:01:20.867Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/classic-157-marble-silver.jpg",
+    "relativePath": "wordpress-migration/2021/07/classic-157-marble-silver.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/classic-157-marble-silver.jpg",
+    "sizeBytes": 46213,
+    "mtime": "2026-06-01T21:01:21.827Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/small-capsule-bl.webp",
+    "relativePath": "wordpress-migration/2021/07/small-capsule-bl.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/small-capsule-bl.webp",
+    "sizeBytes": 53974,
+    "mtime": "2026-06-01T21:01:21.883Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2021/07/small-capsules-1.webp",
+    "relativePath": "wordpress-migration/2021/07/small-capsules-1.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2021/07/small-capsules-1.webp",
+    "sizeBytes": 35980,
+    "mtime": "2026-06-01T21:01:21.939Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/06/arch-plan-8.png",
+    "relativePath": "wordpress-migration/2022/06/arch-plan-8.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/06/arch-plan-8.png",
+    "sizeBytes": 5509,
+    "mtime": "2026-06-01T21:01:22.855Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/06/instagram.png",
+    "relativePath": "wordpress-migration/2022/06/instagram.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/06/instagram.png",
+    "sizeBytes": 788,
+    "mtime": "2026-06-01T21:01:22.895Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/1-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1-1.jpg",
+    "sizeBytes": 2382628,
+    "mtime": "2026-06-01T21:01:23.027Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/1-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1-2.jpg",
+    "sizeBytes": 388572,
+    "mtime": "2026-06-01T21:01:23.167Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1-3.jpg",
+    "relativePath": "wordpress-migration/2022/07/1-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1-3.jpg",
+    "sizeBytes": 1458532,
+    "mtime": "2026-06-01T21:01:23.247Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1-4.jpg",
+    "relativePath": "wordpress-migration/2022/07/1-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1-4.jpg",
+    "sizeBytes": 67570,
+    "mtime": "2026-06-01T21:01:23.327Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1-6.jpg",
+    "relativePath": "wordpress-migration/2022/07/1-6.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1-6.jpg",
+    "sizeBytes": 192704,
+    "mtime": "2026-06-01T21:01:23.383Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1-int.jpg",
+    "relativePath": "wordpress-migration/2022/07/1-int.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1-int.jpg",
+    "sizeBytes": 133143,
+    "mtime": "2026-06-01T21:01:23.587Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/1.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1.JPG.jpeg",
+    "sizeBytes": 347544,
+    "mtime": "2026-06-01T21:01:23.727Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/1.png",
+    "relativePath": "wordpress-migration/2022/07/1.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/1.png",
+    "sizeBytes": 671347,
+    "mtime": "2026-06-01T21:01:23.907Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/10-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/10-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/10-2.jpg",
+    "sizeBytes": 377368,
+    "mtime": "2026-06-01T21:01:24.047Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/10.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/10.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/10.JPG.jpeg",
+    "sizeBytes": 2378580,
+    "mtime": "2026-06-01T21:01:24.867Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/10.jpg",
+    "relativePath": "wordpress-migration/2022/07/10.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/10.jpg",
+    "sizeBytes": 1900773,
+    "mtime": "2026-06-01T21:01:24.219Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/11.jpg",
+    "relativePath": "wordpress-migration/2022/07/11.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/11.jpg",
+    "sizeBytes": 817304,
+    "mtime": "2026-06-01T21:01:25.303Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/12.jpg",
+    "relativePath": "wordpress-migration/2022/07/12.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/12.jpg",
+    "sizeBytes": 422731,
+    "mtime": "2026-06-01T21:01:25.615Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/13.jpg",
+    "relativePath": "wordpress-migration/2022/07/13.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/13.jpg",
+    "sizeBytes": 854893,
+    "mtime": "2026-06-01T21:01:25.843Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/18-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/18-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/18-1.jpg",
+    "sizeBytes": 1499940,
+    "mtime": "2026-06-01T21:01:26.003Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/18.jpg",
+    "relativePath": "wordpress-migration/2022/07/18.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/18.jpg",
+    "sizeBytes": 1394615,
+    "mtime": "2026-06-01T21:01:26.923Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/2-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/2-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/2-1.jpg",
+    "sizeBytes": 2014849,
+    "mtime": "2026-06-01T21:01:27.043Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/2-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/2-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/2-2.jpg",
+    "sizeBytes": 371348,
+    "mtime": "2026-06-01T21:01:27.876Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/2-3.jpg",
+    "relativePath": "wordpress-migration/2022/07/2-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/2-3.jpg",
+    "sizeBytes": 97131,
+    "mtime": "2026-06-01T21:01:28.008Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/2-5.jpg",
+    "relativePath": "wordpress-migration/2022/07/2-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/2-5.jpg",
+    "sizeBytes": 493629,
+    "mtime": "2026-06-01T21:01:28.180Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/2.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/2.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/2.JPG.jpeg",
+    "sizeBytes": 398309,
+    "mtime": "2026-06-01T21:01:28.252Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/20.jpg",
+    "relativePath": "wordpress-migration/2022/07/20.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/20.jpg",
+    "sizeBytes": 180878,
+    "mtime": "2026-06-01T21:01:28.344Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/21.jpg",
+    "relativePath": "wordpress-migration/2022/07/21.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/21.jpg",
+    "sizeBytes": 279656,
+    "mtime": "2026-06-01T21:01:28.404Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/22.jpg",
+    "relativePath": "wordpress-migration/2022/07/22.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/22.jpg",
+    "sizeBytes": 238323,
+    "mtime": "2026-06-01T21:01:28.600Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/23.jpg",
+    "relativePath": "wordpress-migration/2022/07/23.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/23.jpg",
+    "sizeBytes": 203069,
+    "mtime": "2026-06-01T21:01:28.744Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/24.jpg",
+    "relativePath": "wordpress-migration/2022/07/24.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/24.jpg",
+    "sizeBytes": 71386,
+    "mtime": "2026-06-01T21:01:28.912Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/3-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/3-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/3-1.jpg",
+    "sizeBytes": 351785,
+    "mtime": "2026-06-01T21:01:29.060Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/3-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/3-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/3-2.jpg",
+    "sizeBytes": 2262640,
+    "mtime": "2026-06-01T21:01:29.256Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/3-3.jpg",
+    "relativePath": "wordpress-migration/2022/07/3-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/3-3.jpg",
+    "sizeBytes": 318661,
+    "mtime": "2026-06-01T21:01:29.880Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/3-4.jpg",
+    "relativePath": "wordpress-migration/2022/07/3-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/3-4.jpg",
+    "sizeBytes": 149596,
+    "mtime": "2026-06-01T21:01:30.316Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/3-6.jpg",
+    "relativePath": "wordpress-migration/2022/07/3-6.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/3-6.jpg",
+    "sizeBytes": 415064,
+    "mtime": "2026-06-01T21:01:30.856Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/3.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/3.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/3.JPG.jpeg",
+    "sizeBytes": 2098630,
+    "mtime": "2026-06-01T21:01:31.024Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/31.jpg",
+    "relativePath": "wordpress-migration/2022/07/31.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/31.jpg",
+    "sizeBytes": 40392,
+    "mtime": "2026-06-01T21:01:31.912Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/4-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/4-1.jpg",
+    "sizeBytes": 384688,
+    "mtime": "2026-06-01T21:01:32.036Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/4-1.png",
+    "relativePath": "wordpress-migration/2022/07/4-1.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/4-1.png",
+    "sizeBytes": 4340381,
+    "mtime": "2026-06-01T21:01:32.192Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/4.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/4.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/4.JPG.jpeg",
+    "sizeBytes": 1930478,
+    "mtime": "2026-06-01T21:01:33.048Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/4.png",
+    "relativePath": "wordpress-migration/2022/07/4.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/4.png",
+    "sizeBytes": 4009561,
+    "mtime": "2026-06-01T21:01:33.256Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/42.jpg",
+    "relativePath": "wordpress-migration/2022/07/42.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/42.jpg",
+    "sizeBytes": 243905,
+    "mtime": "2026-06-01T21:01:33.380Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/43.jpg",
+    "relativePath": "wordpress-migration/2022/07/43.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/43.jpg",
+    "sizeBytes": 54749,
+    "mtime": "2026-06-01T21:01:33.440Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/44.jpg",
+    "relativePath": "wordpress-migration/2022/07/44.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/44.jpg",
+    "sizeBytes": 57212,
+    "mtime": "2026-06-01T21:01:33.488Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/45.jpg",
+    "relativePath": "wordpress-migration/2022/07/45.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/45.jpg",
+    "sizeBytes": 241032,
+    "mtime": "2026-06-01T21:01:33.612Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/46.jpg",
+    "relativePath": "wordpress-migration/2022/07/46.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/46.jpg",
+    "sizeBytes": 232507,
+    "mtime": "2026-06-01T21:01:33.748Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/47.jpg",
+    "relativePath": "wordpress-migration/2022/07/47.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/47.jpg",
+    "sizeBytes": 224046,
+    "mtime": "2026-06-01T21:01:33.816Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/5-1.png",
+    "relativePath": "wordpress-migration/2022/07/5-1.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/5-1.png",
+    "sizeBytes": 4247481,
+    "mtime": "2026-06-01T21:01:33.988Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/5-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/5-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/5-2.jpg",
+    "sizeBytes": 256659,
+    "mtime": "2026-06-01T21:01:34.116Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/5.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/5.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/5.JPG.jpeg",
+    "sizeBytes": 305614,
+    "mtime": "2026-06-01T21:01:34.876Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/5.jpg",
+    "relativePath": "wordpress-migration/2022/07/5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/5.jpg",
+    "sizeBytes": 1295989,
+    "mtime": "2026-06-01T21:01:34.260Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/5.png",
+    "relativePath": "wordpress-migration/2022/07/5.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/5.png",
+    "sizeBytes": 4140342,
+    "mtime": "2026-06-01T21:01:34.968Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/6-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/6-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/6-1.jpg",
+    "sizeBytes": 2232250,
+    "mtime": "2026-06-01T21:01:35.912Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/6-3.jpg",
+    "relativePath": "wordpress-migration/2022/07/6-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/6-3.jpg",
+    "sizeBytes": 375284,
+    "mtime": "2026-06-01T21:01:36.016Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/6.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/6.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/6.JPG.jpeg",
+    "sizeBytes": 2413248,
+    "mtime": "2026-06-01T21:01:37.204Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/6.jpg",
+    "relativePath": "wordpress-migration/2022/07/6.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/6.jpg",
+    "sizeBytes": 203211,
+    "mtime": "2026-06-01T21:01:36.224Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/61.jpg",
+    "relativePath": "wordpress-migration/2022/07/61.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/61.jpg",
+    "sizeBytes": 141149,
+    "mtime": "2026-06-01T21:01:38.220Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/610.jpg",
+    "relativePath": "wordpress-migration/2022/07/610.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/610.jpg",
+    "sizeBytes": 1039519,
+    "mtime": "2026-06-01T21:01:38.408Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/611.jpg",
+    "relativePath": "wordpress-migration/2022/07/611.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/611.jpg",
+    "sizeBytes": 845645,
+    "mtime": "2026-06-01T21:01:38.496Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/612.jpg",
+    "relativePath": "wordpress-migration/2022/07/612.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/612.jpg",
+    "sizeBytes": 201625,
+    "mtime": "2026-06-01T21:01:38.564Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/62.jpg",
+    "relativePath": "wordpress-migration/2022/07/62.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/62.jpg",
+    "sizeBytes": 466394,
+    "mtime": "2026-06-01T21:01:38.644Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/63.jpg",
+    "relativePath": "wordpress-migration/2022/07/63.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/63.jpg",
+    "sizeBytes": 819824,
+    "mtime": "2026-06-01T21:01:38.780Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/64.jpg",
+    "relativePath": "wordpress-migration/2022/07/64.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/64.jpg",
+    "sizeBytes": 170637,
+    "mtime": "2026-06-01T21:01:38.848Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/65.jpg",
+    "relativePath": "wordpress-migration/2022/07/65.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/65.jpg",
+    "sizeBytes": 644263,
+    "mtime": "2026-06-01T21:01:38.956Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/66.jpg",
+    "relativePath": "wordpress-migration/2022/07/66.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/66.jpg",
+    "sizeBytes": 134722,
+    "mtime": "2026-06-01T21:01:39.120Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/67.jpg",
+    "relativePath": "wordpress-migration/2022/07/67.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/67.jpg",
+    "sizeBytes": 749402,
+    "mtime": "2026-06-01T21:01:39.272Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/68.jpg",
+    "relativePath": "wordpress-migration/2022/07/68.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/68.jpg",
+    "sizeBytes": 1092060,
+    "mtime": "2026-06-01T21:01:39.340Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/69.jpg",
+    "relativePath": "wordpress-migration/2022/07/69.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/69.jpg",
+    "sizeBytes": 1128307,
+    "mtime": "2026-06-01T21:01:39.980Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/7-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/7-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/7-1.jpg",
+    "sizeBytes": 2473017,
+    "mtime": "2026-06-01T21:01:40.776Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/7-3.jpg",
+    "relativePath": "wordpress-migration/2022/07/7-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/7-3.jpg",
+    "sizeBytes": 263294,
+    "mtime": "2026-06-01T21:01:40.924Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/7.jpg",
+    "relativePath": "wordpress-migration/2022/07/7.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/7.jpg",
+    "sizeBytes": 1288210,
+    "mtime": "2026-06-01T21:01:41.044Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/7.png",
+    "relativePath": "wordpress-migration/2022/07/7.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/7.png",
+    "sizeBytes": 4056600,
+    "mtime": "2026-06-01T21:01:41.300Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/8-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/8-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/8-1.jpg",
+    "sizeBytes": 397467,
+    "mtime": "2026-06-01T21:01:43.236Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/8.png",
+    "relativePath": "wordpress-migration/2022/07/8.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/8.png",
+    "sizeBytes": 1415035,
+    "mtime": "2026-06-01T21:01:43.596Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/9-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/9-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/9-2.jpg",
+    "sizeBytes": 349897,
+    "mtime": "2026-06-01T21:01:43.692Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/9.JPG.jpeg",
+    "relativePath": "wordpress-migration/2022/07/9.JPG.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/9.JPG.jpeg",
+    "sizeBytes": 2235594,
+    "mtime": "2026-06-01T21:01:43.868Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/9.jpg",
+    "relativePath": "wordpress-migration/2022/07/9.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/9.jpg",
+    "sizeBytes": 1062826,
+    "mtime": "2026-06-01T21:01:43.764Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/9.png",
+    "relativePath": "wordpress-migration/2022/07/9.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/9.png",
+    "sizeBytes": 3815248,
+    "mtime": "2026-06-01T21:01:44.020Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/Alawatan-TV-Interview-1-2.jpg",
+    "sizeBytes": 226309,
+    "mtime": "2026-06-01T21:01:44.284Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BEECH-WOOD.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BEECH-WOOD.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-BEECH-WOOD.jpg",
+    "sizeBytes": 78186,
+    "mtime": "2026-06-01T21:01:48.768Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BEIGE-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BEIGE-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-BEIGE-1.jpg",
+    "sizeBytes": 143943,
+    "mtime": "2026-06-01T21:01:48.864Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BLACK.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BLACK.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-BLACK.jpg",
+    "sizeBytes": 132060,
+    "mtime": "2026-06-01T21:01:49.016Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-BLUE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-BLUE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-BLUE.jpg",
+    "sizeBytes": 134647,
+    "mtime": "2026-06-01T21:01:49.192Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-GREEN.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-GREEN.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-GREEN.jpg",
+    "sizeBytes": 133964,
+    "mtime": "2026-06-01T21:01:49.300Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-GREY.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-GREY.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-GREY.jpg",
+    "sizeBytes": 140979,
+    "mtime": "2026-06-01T21:01:49.360Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-PINK.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-PINK.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-PINK.jpg",
+    "sizeBytes": 149850,
+    "mtime": "2026-06-01T21:01:49.412Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-RED.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-RED.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-RED.jpg",
+    "sizeBytes": 136679,
+    "mtime": "2026-06-01T21:01:49.464Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-112-WHITE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-112-WHITE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-112-WHITE.jpg",
+    "sizeBytes": 138896,
+    "mtime": "2026-06-01T21:01:49.992Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-BEECH-2.jpg",
+    "sizeBytes": 65390,
+    "mtime": "2026-06-01T21:01:50.616Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE-DETAILS.jpg",
+    "sizeBytes": 81644,
+    "mtime": "2026-06-01T21:01:50.952Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BEIGE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-BEIGE.jpg",
+    "sizeBytes": 66970,
+    "mtime": "2026-06-01T21:01:51.236Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BLACK-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BLACK-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-BLACK-1.jpg",
+    "sizeBytes": 54507,
+    "mtime": "2026-06-01T21:01:51.300Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-BLUE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-BLUE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-BLUE.jpg",
+    "sizeBytes": 59709,
+    "mtime": "2026-06-01T21:01:51.660Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-GRAY.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-GRAY.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-GRAY.jpg",
+    "sizeBytes": 64790,
+    "mtime": "2026-06-01T21:01:53.452Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-GREEN.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-GREEN.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-GREEN.jpg",
+    "sizeBytes": 60235,
+    "mtime": "2026-06-01T21:01:53.880Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-PINK.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-PINK.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-PINK.jpg",
+    "sizeBytes": 69569,
+    "mtime": "2026-06-01T21:01:54.028Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-RED.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-RED.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-RED.jpg",
+    "sizeBytes": 59631,
+    "mtime": "2026-06-01T21:01:54.200Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-167-WHITE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-167-WHITE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-167-WHITE.jpg",
+    "sizeBytes": 62440,
+    "mtime": "2026-06-01T21:01:54.240Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-BEECH.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BEECH.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-BEECH.jpg",
+    "sizeBytes": 47719,
+    "mtime": "2026-06-01T21:01:54.316Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-BEIGE-DETAILS.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BEIGE-DETAILS.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-BEIGE-DETAILS.jpg",
+    "sizeBytes": 64303,
+    "mtime": "2026-06-01T21:01:54.368Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-BEIGE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BEIGE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-BEIGE.jpg",
+    "sizeBytes": 50357,
+    "mtime": "2026-06-01T21:01:54.424Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-BLACK.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BLACK.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-BLACK.jpg",
+    "sizeBytes": 45929,
+    "mtime": "2026-06-01T21:01:54.476Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-BLUE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-BLUE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-BLUE.jpg",
+    "sizeBytes": 47611,
+    "mtime": "2026-06-01T21:01:55.004Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-GREEN.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-GREEN.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-GREEN.jpg",
+    "sizeBytes": 45118,
+    "mtime": "2026-06-01T21:01:55.964Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-PINK.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-PINK.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-PINK.jpg",
+    "sizeBytes": 54716,
+    "mtime": "2026-06-01T21:01:56.248Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-RED.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-RED.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-RED.jpg",
+    "sizeBytes": 48142,
+    "mtime": "2026-06-01T21:01:56.312Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/COUNTRY-62-WHITE.jpg",
+    "relativePath": "wordpress-migration/2022/07/COUNTRY-62-WHITE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/COUNTRY-62-WHITE.jpg",
+    "sizeBytes": 53026,
+    "mtime": "2026-06-01T21:01:58.464Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-180-Brown.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Brown.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-180-Brown.jpg",
+    "sizeBytes": 55950,
+    "mtime": "2026-06-01T21:01:59.453Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-180-Dark-red.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Dark-red.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-180-Dark-red.jpg",
+    "sizeBytes": 54465,
+    "mtime": "2026-06-01T21:01:59.501Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-180-Light-blue.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Light-blue.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-180-Light-blue.jpg",
+    "sizeBytes": 60337,
+    "mtime": "2026-06-01T21:02:00.017Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-180-Navy-blue.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Navy-blue.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-180-Navy-blue.jpg",
+    "sizeBytes": 54891,
+    "mtime": "2026-06-01T21:02:00.977Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-180-Royal-green.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-180-Royal-green.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-180-Royal-green.jpg",
+    "sizeBytes": 57816,
+    "mtime": "2026-06-01T21:02:01.321Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-2-NEUTRAL-GREEN.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-2-NEUTRAL-GREEN.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-2-NEUTRAL-GREEN.jpg",
+    "sizeBytes": 197184,
+    "mtime": "2026-06-01T21:02:02.757Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-BROWN.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-BROWN.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-BROWN.jpg",
+    "sizeBytes": 65348,
+    "mtime": "2026-06-01T21:02:04.265Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-DARK-RED.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-DARK-RED.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-DARK-RED.jpg",
+    "sizeBytes": 64385,
+    "mtime": "2026-06-01T21:02:04.417Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-LIGHT-BLUE-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-LIGHT-BLUE-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-LIGHT-BLUE-1.jpg",
+    "sizeBytes": 71750,
+    "mtime": "2026-06-01T21:02:04.465Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-LIGHT-BLUE.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-LIGHT-BLUE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-LIGHT-BLUE.jpg",
+    "sizeBytes": 71750,
+    "mtime": "2026-06-01T21:02:04.529Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-NAVY-BLUE.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-NAVY-BLUE.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-NAVY-BLUE.jpg",
+    "sizeBytes": 63252,
+    "mtime": "2026-06-01T21:02:04.873Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/CURVE-ROYAL-GREEN.jpg",
+    "relativePath": "wordpress-migration/2022/07/CURVE-ROYAL-GREEN.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/CURVE-ROYAL-GREEN.jpg",
+    "sizeBytes": 67810,
+    "mtime": "2026-06-01T21:02:05.037Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg",
+    "relativePath": "wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/Conference-in-Kuwait-2.jpg",
+    "sizeBytes": 129897,
+    "mtime": "2026-06-01T21:01:48.436Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg",
+    "relativePath": "wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/Engineers-Without-Borders-Forum-.jpg",
+    "sizeBytes": 612222,
+    "mtime": "2026-06-01T21:02:05.093Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0245.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0245.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0245.jpg",
+    "sizeBytes": 302411,
+    "mtime": "2026-06-01T21:02:05.989Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0247.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0247.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0247.jpg",
+    "sizeBytes": 356942,
+    "mtime": "2026-06-01T21:02:06.345Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0249.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0249.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0249.jpg",
+    "sizeBytes": 243924,
+    "mtime": "2026-06-01T21:02:07.773Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0253.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0253.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0253.jpg",
+    "sizeBytes": 219985,
+    "mtime": "2026-06-01T21:02:08.373Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0255.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0255.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0255.jpg",
+    "sizeBytes": 210084,
+    "mtime": "2026-06-01T21:02:08.745Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0259.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0259.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0259.jpg",
+    "sizeBytes": 331731,
+    "mtime": "2026-06-01T21:02:08.821Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0274.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0274.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0274.jpg",
+    "sizeBytes": 297772,
+    "mtime": "2026-06-01T21:02:09.437Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0283.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0283.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0283.jpg",
+    "sizeBytes": 206359,
+    "mtime": "2026-06-01T21:02:10.113Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0285.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0285.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0285.jpg",
+    "sizeBytes": 183034,
+    "mtime": "2026-06-01T21:02:10.921Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0298.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0298.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0298.jpg",
+    "sizeBytes": 196909,
+    "mtime": "2026-06-01T21:02:10.985Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0304.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0304.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0304.jpg",
+    "sizeBytes": 217473,
+    "mtime": "2026-06-01T21:02:11.049Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0307.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0307.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0307.jpg",
+    "sizeBytes": 229837,
+    "mtime": "2026-06-01T21:02:11.109Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0311.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0311.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0311.jpg",
+    "sizeBytes": 264632,
+    "mtime": "2026-06-01T21:02:11.357Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0312.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0312.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0312.jpg",
+    "sizeBytes": 201034,
+    "mtime": "2026-06-01T21:02:13.105Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0314.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0314.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0314.jpg",
+    "sizeBytes": 217530,
+    "mtime": "2026-06-01T21:02:13.833Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0316.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0316.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0316.jpg",
+    "sizeBytes": 329307,
+    "mtime": "2026-06-01T21:02:14.349Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0319.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0319.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0319.jpg",
+    "sizeBytes": 252990,
+    "mtime": "2026-06-01T21:02:14.405Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0322.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0322.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0322.jpg",
+    "sizeBytes": 201019,
+    "mtime": "2026-06-01T21:02:14.465Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0339.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0339.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0339.jpg",
+    "sizeBytes": 230248,
+    "mtime": "2026-06-01T21:02:14.549Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0341.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0341.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0341.jpg",
+    "sizeBytes": 180123,
+    "mtime": "2026-06-01T21:02:14.621Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0345.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0345.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0345.jpg",
+    "sizeBytes": 338550,
+    "mtime": "2026-06-01T21:02:14.953Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0346.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0346.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0346.jpg",
+    "sizeBytes": 198616,
+    "mtime": "2026-06-01T21:02:15.121Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0353.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0353.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0353.jpg",
+    "sizeBytes": 136791,
+    "mtime": "2026-06-01T21:02:15.177Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0354.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0354.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0354.jpg",
+    "sizeBytes": 176348,
+    "mtime": "2026-06-01T21:02:15.229Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0355.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0355.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0355.jpg",
+    "sizeBytes": 180741,
+    "mtime": "2026-06-01T21:02:15.937Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0357.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0357.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0357.jpg",
+    "sizeBytes": 131336,
+    "mtime": "2026-06-01T21:02:16.021Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0366.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0366.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0366.jpg",
+    "sizeBytes": 191174,
+    "mtime": "2026-06-01T21:02:16.085Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0368.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0368.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0368.jpg",
+    "sizeBytes": 154910,
+    "mtime": "2026-06-01T21:02:16.381Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0369.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0369.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0369.jpg",
+    "sizeBytes": 172539,
+    "mtime": "2026-06-01T21:02:16.773Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0379.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0379.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0379.jpg",
+    "sizeBytes": 199844,
+    "mtime": "2026-06-01T21:02:17.801Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0380.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0380.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0380.jpg",
+    "sizeBytes": 177903,
+    "mtime": "2026-06-01T21:02:18.849Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0383.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0383.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0383.jpg",
+    "sizeBytes": 171651,
+    "mtime": "2026-06-01T21:02:19.361Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0387.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0387.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0387.jpg",
+    "sizeBytes": 181399,
+    "mtime": "2026-06-01T21:02:19.445Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/IMG_0399.jpg",
+    "relativePath": "wordpress-migration/2022/07/IMG_0399.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/IMG_0399.jpg",
+    "sizeBytes": 148478,
+    "mtime": "2026-06-01T21:02:19.505Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/Italy-Meeting.jpg",
+    "relativePath": "wordpress-migration/2022/07/Italy-Meeting.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/Italy-Meeting.jpg",
+    "sizeBytes": 388709,
+    "mtime": "2026-06-01T21:02:19.569Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+    "relativePath": "wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/Special-Invitation-From-Hasan-Abul-Company-.jpg",
+    "sizeBytes": 413431,
+    "mtime": "2026-06-01T21:02:20.189Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/Visitors-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/Visitors-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/Visitors-1.jpg",
+    "sizeBytes": 135453,
+    "mtime": "2026-06-01T21:02:20.241Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/about-cove-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/about-cove-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/about-cove-1.jpg",
+    "sizeBytes": 12421,
+    "mtime": "2026-06-01T21:01:44.176Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/classic-157-gray-gold.jpg",
+    "relativePath": "wordpress-migration/2022/07/classic-157-gray-gold.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/classic-157-gray-gold.jpg",
+    "sizeBytes": 45877,
+    "mtime": "2026-06-01T21:01:44.340Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+    "relativePath": "wordpress-migration/2022/07/classic-225-gold.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/classic-225-gold.jpg",
+    "sizeBytes": 73163,
+    "mtime": "2026-06-01T21:01:44.388Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/classic-225-gray-gold-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/classic-225-gray-gold-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/classic-225-gray-gold-1.jpg",
+    "sizeBytes": 41672,
+    "mtime": "2026-06-01T21:01:44.448Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/classic-225-marble-gold.jpg",
+    "relativePath": "wordpress-migration/2022/07/classic-225-marble-gold.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/classic-225-marble-gold.jpg",
+    "sizeBytes": 43844,
+    "mtime": "2026-06-01T21:01:44.976Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/clients-services.jpg",
+    "relativePath": "wordpress-migration/2022/07/clients-services.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/clients-services.jpg",
+    "sizeBytes": 14484,
+    "mtime": "2026-06-01T21:01:45.928Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/communicate-with-cove.jpg",
+    "relativePath": "wordpress-migration/2022/07/communicate-with-cove.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/communicate-with-cove.jpg",
+    "sizeBytes": 14242,
+    "mtime": "2026-06-01T21:01:46.264Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/company-profile.jpg",
+    "relativePath": "wordpress-migration/2022/07/company-profile.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/company-profile.jpg",
+    "sizeBytes": 14102,
+    "mtime": "2026-06-01T21:01:47.240Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/cove-events.jpg",
+    "relativePath": "wordpress-migration/2022/07/cove-events.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/cove-events.jpg",
+    "sizeBytes": 14667,
+    "mtime": "2026-06-01T21:01:59.329Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/cove-furniture.jpg",
+    "relativePath": "wordpress-migration/2022/07/cove-furniture.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/cove-furniture.jpg",
+    "sizeBytes": 14139,
+    "mtime": "2026-06-01T21:01:59.401Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/main-1-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/main-1-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/main-1-1.jpg",
+    "sizeBytes": 204823,
+    "mtime": "2026-06-01T21:02:19.637Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/main-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/main-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/main-1.jpg",
+    "sizeBytes": 210760,
+    "mtime": "2026-06-01T21:02:19.965Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/07/main-2-1.jpg",
+    "relativePath": "wordpress-migration/2022/07/main-2-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/07/main-2-1.jpg",
+    "sizeBytes": 153426,
+    "mtime": "2026-06-01T21:02:20.133Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/08/1.jpg",
+    "relativePath": "wordpress-migration/2022/08/1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/1.jpg",
+    "sizeBytes": 67570,
+    "mtime": "2026-06-01T21:02:20.337Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/08/3.jpg",
+    "relativePath": "wordpress-migration/2022/08/3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/3.jpg",
+    "sizeBytes": 149596,
+    "mtime": "2026-06-01T21:02:20.861Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/08/BG-1024x576-1.png",
+    "relativePath": "wordpress-migration/2022/08/BG-1024x576-1.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/BG-1024x576-1.png",
+    "sizeBytes": 59356,
+    "mtime": "2026-06-01T21:04:29.285Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/08/address_icon_2.png",
+    "relativePath": "wordpress-migration/2022/08/address_icon_2.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/address_icon_2.png",
+    "sizeBytes": 3523,
+    "mtime": "2026-06-01T21:02:20.893Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/08/coffee-counter.jpg",
+    "relativePath": "wordpress-migration/2022/08/coffee-counter.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/coffee-counter.jpg",
+    "sizeBytes": 169108,
+    "mtime": "2026-06-01T21:02:28.333Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/08/email-icon-g.png",
+    "relativePath": "wordpress-migration/2022/08/email-icon-g.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/email-icon-g.png",
+    "sizeBytes": 3111,
+    "mtime": "2026-06-01T21:02:28.401Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/08/phone-icon-g.png",
+    "relativePath": "wordpress-migration/2022/08/phone-icon-g.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/08/phone-icon-g.png",
+    "sizeBytes": 3711,
+    "mtime": "2026-06-01T21:02:28.433Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/10/1.jpeg",
+    "relativePath": "wordpress-migration/2022/10/1.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/10/1.jpeg",
+    "sizeBytes": 370009,
+    "mtime": "2026-06-01T21:02:28.489Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/10/3.jpeg",
+    "relativePath": "wordpress-migration/2022/10/3.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/10/3.jpeg",
+    "sizeBytes": 372128,
+    "mtime": "2026-06-01T21:02:28.565Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/10/4.jpeg",
+    "relativePath": "wordpress-migration/2022/10/4.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/10/4.jpeg",
+    "sizeBytes": 519362,
+    "mtime": "2026-06-01T21:02:28.625Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/10/5.jpeg",
+    "relativePath": "wordpress-migration/2022/10/5.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/10/5.jpeg",
+    "sizeBytes": 490859,
+    "mtime": "2026-06-01T21:02:28.693Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/10/Decaf.jpeg",
+    "relativePath": "wordpress-migration/2022/10/Decaf.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/10/Decaf.jpeg",
+    "sizeBytes": 447994,
+    "mtime": "2026-06-01T21:02:28.753Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4690-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4690-websize-1.jpg",
+    "sizeBytes": 598873,
+    "mtime": "2026-06-01T21:02:28.841Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4692-websize.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4692-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4692-websize.jpg",
+    "sizeBytes": 650204,
+    "mtime": "2026-06-01T21:02:28.937Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4697-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4697-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4697-websize-1.jpg",
+    "sizeBytes": 534319,
+    "mtime": "2026-06-01T21:02:29.153Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4705-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4705-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4705-websize-1.jpg",
+    "sizeBytes": 656128,
+    "mtime": "2026-06-01T21:02:29.229Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4708-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4708-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4708-websize-1.jpg",
+    "sizeBytes": 594864,
+    "mtime": "2026-06-01T21:02:29.297Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4713-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4713-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4713-websize-1.jpg",
+    "sizeBytes": 541545,
+    "mtime": "2026-06-01T21:02:29.973Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4716-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4716-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4716-websize-1.jpg",
+    "sizeBytes": 602972,
+    "mtime": "2026-06-01T21:02:30.241Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4717-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4717-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4717-websize-1.jpg",
+    "sizeBytes": 590465,
+    "mtime": "2026-06-01T21:02:30.978Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4723-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4723-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4723-websize-1.jpg",
+    "sizeBytes": 564419,
+    "mtime": "2026-06-01T21:02:31.066Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4726-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4726-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4726-websize-1.jpg",
+    "sizeBytes": 586751,
+    "mtime": "2026-06-01T21:02:31.146Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4734-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4734-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4734-websize-1.jpg",
+    "sizeBytes": 670615,
+    "mtime": "2026-06-01T21:02:31.658Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4744-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4744-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4744-websize-1.jpg",
+    "sizeBytes": 944670,
+    "mtime": "2026-06-01T21:02:31.990Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4745-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4745-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4745-websize-1.jpg",
+    "sizeBytes": 1225504,
+    "mtime": "2026-06-01T21:02:33.362Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4749-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4749-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4749-websize-1.jpg",
+    "sizeBytes": 1135555,
+    "mtime": "2026-06-01T21:02:33.598Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4751-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4751-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4751-websize-1.jpg",
+    "sizeBytes": 919659,
+    "mtime": "2026-06-01T21:02:33.786Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4753-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4753-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4753-websize-1.jpg",
+    "sizeBytes": 748806,
+    "mtime": "2026-06-01T21:02:33.878Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4754-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4754-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4754-websize-1.jpg",
+    "sizeBytes": 1050472,
+    "mtime": "2026-06-01T21:02:33.970Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4758-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4758-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4758-websize-1.jpg",
+    "sizeBytes": 1056515,
+    "mtime": "2026-06-01T21:02:34.186Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4759-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4759-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4759-websize-1.jpg",
+    "sizeBytes": 878542,
+    "mtime": "2026-06-01T21:02:34.322Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4762-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4762-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4762-websize-1.jpg",
+    "sizeBytes": 1103278,
+    "mtime": "2026-06-01T21:02:34.430Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4764-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4764-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4764-websize-1.jpg",
+    "sizeBytes": 981321,
+    "mtime": "2026-06-01T21:02:35.002Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4767-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4767-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4767-websize-1.jpg",
+    "sizeBytes": 1124528,
+    "mtime": "2026-06-01T21:02:35.090Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2022/11/ASK4771-websize-1.jpg",
+    "relativePath": "wordpress-migration/2022/11/ASK4771-websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2022/11/ASK4771-websize-1.jpg",
+    "sizeBytes": 918976,
+    "mtime": "2026-06-01T21:02:35.274Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-Details.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-Details.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-Details.jpg",
+    "sizeBytes": 170017,
+    "mtime": "2026-06-01T21:02:38.982Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-beige-1.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-beige-1.jpg",
+    "sizeBytes": 62709,
+    "mtime": "2026-06-01T21:02:35.330Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-beige-2.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-beige-2.jpg",
+    "sizeBytes": 113048,
+    "mtime": "2026-06-01T21:02:35.986Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-beige-3.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-beige-3.jpg",
+    "sizeBytes": 153701,
+    "mtime": "2026-06-01T21:02:36.074Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-beige-4.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-beige-4.jpg",
+    "sizeBytes": 211440,
+    "mtime": "2026-06-01T21:02:36.150Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-beige-5.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-beige-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-beige-5.jpg",
+    "sizeBytes": 200425,
+    "mtime": "2026-06-01T21:02:36.666Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-black-1.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-black-1.jpg",
+    "sizeBytes": 42101,
+    "mtime": "2026-06-01T21:02:36.998Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-black-2.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-black-2.jpg",
+    "sizeBytes": 103928,
+    "mtime": "2026-06-01T21:02:38.602Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-black-3.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-black-3.jpg",
+    "sizeBytes": 175440,
+    "mtime": "2026-06-01T21:02:38.798Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-black-4.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-black-4.jpg",
+    "sizeBytes": 206322,
+    "mtime": "2026-06-01T21:02:38.842Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-black-5.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-black-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-black-5.jpg",
+    "sizeBytes": 196488,
+    "mtime": "2026-06-01T21:02:38.890Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-petrol-1.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-petrol-1.jpg",
+    "sizeBytes": 43267,
+    "mtime": "2026-06-01T21:02:39.306Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-petrol-2.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-petrol-2.jpg",
+    "sizeBytes": 109838,
+    "mtime": "2026-06-01T21:02:39.426Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-petrol-3.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-petrol-3.jpg",
+    "sizeBytes": 179466,
+    "mtime": "2026-06-01T21:02:39.998Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-petrol-4.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-petrol-4.jpg",
+    "sizeBytes": 210671,
+    "mtime": "2026-06-01T21:02:40.218Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-1-petrol-5.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-1-petrol-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-1-petrol-5.jpg",
+    "sizeBytes": 199177,
+    "mtime": "2026-06-01T21:02:40.270Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-1.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-cementgreen-1.jpg",
+    "sizeBytes": 81567,
+    "mtime": "2026-06-01T21:02:40.314Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-2.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-cementgreen-2.jpg",
+    "sizeBytes": 112901,
+    "mtime": "2026-06-01T21:02:40.506Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-3.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-cementgreen-3.jpg",
+    "sizeBytes": 244396,
+    "mtime": "2026-06-01T21:02:40.546Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpeg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpeg",
+    "sizeBytes": 285645,
+    "mtime": "2026-06-01T21:02:40.606Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-cementgreen-4.jpg",
+    "sizeBytes": 259939,
+    "mtime": "2026-06-01T21:02:41.002Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-cementgreen-5.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-cementgreen-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-cementgreen-5.jpg",
+    "sizeBytes": 206911,
+    "mtime": "2026-06-01T21:02:41.086Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-1.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-drakgreen-1.jpg",
+    "sizeBytes": 66254,
+    "mtime": "2026-06-01T21:02:41.126Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-2.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-drakgreen-2.jpg",
+    "sizeBytes": 112632,
+    "mtime": "2026-06-01T21:02:41.194Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-3.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-drakgreen-3.jpg",
+    "sizeBytes": 234068,
+    "mtime": "2026-06-01T21:02:41.262Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-4.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-drakgreen-4.jpg",
+    "sizeBytes": 248999,
+    "mtime": "2026-06-01T21:02:41.318Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-drakgreen-5.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-drakgreen-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-drakgreen-5.jpg",
+    "sizeBytes": 195268,
+    "mtime": "2026-06-01T21:02:41.678Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-offwhite-1.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-offwhite-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-offwhite-1.jpg",
+    "sizeBytes": 75349,
+    "mtime": "2026-06-01T21:02:41.722Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-offwhite-2.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-offwhite-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-offwhite-2.jpg",
+    "sizeBytes": 115287,
+    "mtime": "2026-06-01T21:02:42.006Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-offwhite-3.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-offwhite-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-offwhite-3.jpg",
+    "sizeBytes": 248068,
+    "mtime": "2026-06-01T21:02:43.610Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-white-4.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-white-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-white-4.jpg",
+    "sizeBytes": 260895,
+    "mtime": "2026-06-01T21:02:43.810Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/Roshina-2-white-5.jpg",
+    "relativePath": "wordpress-migration/2023/01/Roshina-2-white-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/Roshina-2-white-5.jpg",
+    "sizeBytes": 204781,
+    "mtime": "2026-06-01T21:02:43.862Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/01/roshina-package.jpeg",
+    "relativePath": "wordpress-migration/2023/01/roshina-package.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/01/roshina-package.jpeg",
+    "sizeBytes": 86070,
+    "mtime": "2026-06-01T21:02:43.910Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/02/coffee-tables-1-2.jpg",
+    "relativePath": "wordpress-migration/2023/02/coffee-tables-1-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/02/coffee-tables-1-2.jpg",
+    "sizeBytes": 297612,
+    "mtime": "2026-06-01T21:02:43.942Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/02/coffee-tables-1.jpg",
+    "relativePath": "wordpress-migration/2023/02/coffee-tables-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/02/coffee-tables-1.jpg",
+    "sizeBytes": 307314,
+    "mtime": "2026-06-01T21:02:43.998Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/05/Beauty-Night-Stand.jpeg",
+    "relativePath": "wordpress-migration/2023/05/Beauty-Night-Stand.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/05/Beauty-Night-Stand.jpeg",
+    "sizeBytes": 507450,
+    "mtime": "2026-06-01T21:02:44.054Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/05/Hairstyle.jpeg",
+    "relativePath": "wordpress-migration/2023/05/Hairstyle.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/05/Hairstyle.jpeg",
+    "sizeBytes": 446307,
+    "mtime": "2026-06-01T21:02:44.338Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/05/Mirror.jpeg",
+    "relativePath": "wordpress-migration/2023/05/Mirror.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/05/Mirror.jpeg",
+    "sizeBytes": 200354,
+    "mtime": "2026-06-01T21:02:44.446Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/05/Wall-Painting-Blue.jpeg",
+    "relativePath": "wordpress-migration/2023/05/Wall-Painting-Blue.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/05/Wall-Painting-Blue.jpeg",
+    "sizeBytes": 247583,
+    "mtime": "2026-06-01T21:02:45.018Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/05/Wall-Painting-pink.jpeg",
+    "relativePath": "wordpress-migration/2023/05/Wall-Painting-pink.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/05/Wall-Painting-pink.jpeg",
+    "sizeBytes": 303954,
+    "mtime": "2026-06-01T21:02:45.238Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-1.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-1.jpg",
+    "sizeBytes": 106267,
+    "mtime": "2026-06-01T21:02:45.298Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-2.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-2.jpg",
+    "sizeBytes": 116582,
+    "mtime": "2026-06-01T21:02:45.510Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-3.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-3.jpg",
+    "sizeBytes": 54452,
+    "mtime": "2026-06-01T21:02:45.566Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-4.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-2-darkveneer-wood-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-2-darkveneer-wood-4.jpg",
+    "sizeBytes": 208549,
+    "mtime": "2026-06-01T21:02:46.014Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Camel-1.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Camel-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Camel-1.jpg",
+    "sizeBytes": 280106,
+    "mtime": "2026-06-01T21:02:46.066Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Camel-2.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Camel-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Camel-2.jpg",
+    "sizeBytes": 322753,
+    "mtime": "2026-06-01T21:02:46.114Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Camel-3.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Camel-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Camel-3.jpg",
+    "sizeBytes": 313146,
+    "mtime": "2026-06-01T21:02:46.166Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-1.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Light-blue-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Light-blue-1.jpg",
+    "sizeBytes": 234759,
+    "mtime": "2026-06-01T21:02:46.794Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-2.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Light-blue-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Light-blue-2.jpg",
+    "sizeBytes": 285195,
+    "mtime": "2026-06-01T21:02:46.842Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Light-blue-3.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Light-blue-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Light-blue-3.jpg",
+    "sizeBytes": 303475,
+    "mtime": "2026-06-01T21:02:47.018Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-1.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Maroon-1.jpg",
+    "sizeBytes": 260367,
+    "mtime": "2026-06-01T21:02:48.866Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-2.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Maroon-2.jpg",
+    "sizeBytes": 299979,
+    "mtime": "2026-06-01T21:02:48.922Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-3.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Maroon-3.jpg",
+    "sizeBytes": 308296,
+    "mtime": "2026-06-01T21:02:49.006Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-4-1.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Maroon-4-1.jpg",
+    "sizeBytes": 170435,
+    "mtime": "2026-06-01T21:02:49.066Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-4.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Maroon-4.jpg",
+    "sizeBytes": 162585,
+    "mtime": "2026-06-01T21:02:49.338Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-Maroon-5.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-Maroon-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-Maroon-5.jpg",
+    "sizeBytes": 140027,
+    "mtime": "2026-06-01T21:02:49.450Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-camel-4-1.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-camel-4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-camel-4-1.jpg",
+    "sizeBytes": 165764,
+    "mtime": "2026-06-01T21:02:46.326Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-camel-4.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-camel-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-camel-4.jpg",
+    "sizeBytes": 164667,
+    "mtime": "2026-06-01T21:02:46.670Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-camel-5.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-camel-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-camel-5.jpg",
+    "sizeBytes": 144706,
+    "mtime": "2026-06-01T21:02:46.738Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-light-blue-4-1.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-light-blue-4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-light-blue-4-1.jpg",
+    "sizeBytes": 163441,
+    "mtime": "2026-06-01T21:02:48.242Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-light-blue-4.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-light-blue-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-light-blue-4.jpg",
+    "sizeBytes": 158551,
+    "mtime": "2026-06-01T21:02:48.618Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/07/Roshina-3-light-blue-5.jpg",
+    "relativePath": "wordpress-migration/2023/07/Roshina-3-light-blue-5.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/07/Roshina-3-light-blue-5.jpg",
+    "sizeBytes": 138468,
+    "mtime": "2026-06-01T21:02:48.822Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/accessories-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/accessories-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/accessories-1.jpg",
+    "sizeBytes": 246050,
+    "mtime": "2026-06-01T21:02:50.030Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/classic-157-225-4x4-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/classic-157-225-4x4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/classic-157-225-4x4-1.jpg",
+    "sizeBytes": 374380,
+    "mtime": "2026-06-01T21:02:50.246Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/country-112-4x4-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/country-112-4x4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/country-112-4x4-1.jpg",
+    "sizeBytes": 408078,
+    "mtime": "2026-06-01T21:02:50.330Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/country-167-4x4-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/country-167-4x4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/country-167-4x4-1.jpg",
+    "sizeBytes": 400123,
+    "mtime": "2026-06-01T21:02:51.030Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/country-62-4x4-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/country-62-4x4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/country-62-4x4-1.jpg",
+    "sizeBytes": 473827,
+    "mtime": "2026-06-01T21:02:51.354Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/curve-4x4-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/curve-4x4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/curve-4x4-1.jpg",
+    "sizeBytes": 297221,
+    "mtime": "2026-06-01T21:02:51.534Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/de-cove-4x4-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/de-cove-4x4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/de-cove-4x4-1.jpg",
+    "sizeBytes": 313313,
+    "mtime": "2026-06-01T21:02:51.662Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/mini-cove-4x4-1.jpg",
+    "relativePath": "wordpress-migration/2023/08/mini-cove-4x4-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/mini-cove-4x4-1.jpg",
+    "sizeBytes": 297852,
+    "mtime": "2026-06-01T21:02:51.722Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/08/tray.jpg",
+    "relativePath": "wordpress-migration/2023/08/tray.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/08/tray.jpg",
+    "sizeBytes": 2159472,
+    "mtime": "2026-06-01T21:02:51.826Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Circle-Off-White.jpg",
+    "relativePath": "wordpress-migration/2023/10/Circle-Off-White.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Circle-Off-White.jpg",
+    "sizeBytes": 4213,
+    "mtime": "2026-06-01T21:02:51.906Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Roshina-boxes.jpg",
+    "relativePath": "wordpress-migration/2023/10/Roshina-boxes.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Roshina-boxes.jpg",
+    "sizeBytes": 134109,
+    "mtime": "2026-06-01T21:02:51.950Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg",
+    "relativePath": "wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Secret-Potion-–-N1.jpeg",
+    "sizeBytes": 65090,
+    "mtime": "2026-06-01T21:02:52.030Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Secret-Potion-–-N3.jpeg",
+    "relativePath": "wordpress-migration/2023/10/Secret-Potion-–-N3.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Secret-Potion-–-N3.jpeg",
+    "sizeBytes": 75768,
+    "mtime": "2026-06-01T21:02:53.254Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Shelf-Unit-Black.jpg",
+    "relativePath": "wordpress-migration/2023/10/Shelf-Unit-Black.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Shelf-Unit-Black.jpg",
+    "sizeBytes": 3542,
+    "mtime": "2026-06-01T21:02:53.630Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Shelf-Unit-Dark-Gray.jpg",
+    "relativePath": "wordpress-migration/2023/10/Shelf-Unit-Dark-Gray.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Shelf-Unit-Dark-Gray.jpg",
+    "sizeBytes": 3615,
+    "mtime": "2026-06-01T21:02:53.834Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Trapezoid-Dark-Gray.jpg",
+    "relativePath": "wordpress-migration/2023/10/Trapezoid-Dark-Gray.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Trapezoid-Dark-Gray.jpg",
+    "sizeBytes": 6892,
+    "mtime": "2026-06-01T21:02:54.346Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Trapezoid-Light-Beige.jpg",
+    "relativePath": "wordpress-migration/2023/10/Trapezoid-Light-Beige.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Trapezoid-Light-Beige.jpg",
+    "sizeBytes": 4660,
+    "mtime": "2026-06-01T21:02:54.458Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/Trapezoid-White-and-Gray.jpg",
+    "relativePath": "wordpress-migration/2023/10/Trapezoid-White-and-Gray.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/Trapezoid-White-and-Gray.jpg",
+    "sizeBytes": 6059,
+    "mtime": "2026-06-01T21:02:55.038Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/slide-1.jpg",
+    "relativePath": "wordpress-migration/2023/10/slide-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/slide-1.jpg",
+    "sizeBytes": 106636,
+    "mtime": "2026-06-01T21:02:53.942Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/slide-3.jpg",
+    "relativePath": "wordpress-migration/2023/10/slide-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/slide-3.jpg",
+    "sizeBytes": 117921,
+    "mtime": "2026-06-01T21:02:54.014Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/10/slide-4.jpg",
+    "relativePath": "wordpress-migration/2023/10/slide-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/10/slide-4.jpg",
+    "sizeBytes": 112229,
+    "mtime": "2026-06-01T21:02:54.078Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/11/God-Names.jpeg",
+    "relativePath": "wordpress-migration/2023/11/God-Names.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/11/God-Names.jpeg",
+    "sizeBytes": 359763,
+    "mtime": "2026-06-01T21:02:55.258Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/11/dark-paint.jpeg",
+    "relativePath": "wordpress-migration/2023/11/dark-paint.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/11/dark-paint.jpeg",
+    "sizeBytes": 288501,
+    "mtime": "2026-06-01T19:18:18.704Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/11/light-paint.jpeg",
+    "relativePath": "wordpress-migration/2023/11/light-paint.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/11/light-paint.jpeg",
+    "sizeBytes": 253821,
+    "mtime": "2026-06-01T21:02:55.338Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/11/mirror.jpeg",
+    "relativePath": "wordpress-migration/2023/11/mirror.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/11/mirror.jpeg",
+    "sizeBytes": 393272,
+    "mtime": "2026-06-01T21:02:56.046Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/11/paint-1.png",
+    "relativePath": "wordpress-migration/2023/11/paint-1.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/11/paint-1.png",
+    "sizeBytes": 397409,
+    "mtime": "2026-06-01T21:02:56.366Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/11/paint-2.png",
+    "relativePath": "wordpress-migration/2023/11/paint-2.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/11/paint-2.png",
+    "sizeBytes": 545466,
+    "mtime": "2026-06-01T21:02:56.554Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/DSF6832-Websize-1.jpg",
+    "relativePath": "wordpress-migration/2023/12/DSF6832-Websize-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/DSF6832-Websize-1.jpg",
+    "sizeBytes": 1747428,
+    "mtime": "2026-06-01T21:02:56.774Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR1-black-opened.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR1-black-opened.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR1-black-opened.jpg",
+    "sizeBytes": 185337,
+    "mtime": "2026-06-01T21:02:56.922Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR1-white-opened.jpg-new.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR1-white-opened.jpg-new.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR1-white-opened.jpg-new.jpg",
+    "sizeBytes": 190390,
+    "mtime": "2026-06-01T21:02:56.974Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR2-black-closed.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR2-black-closed.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR2-black-closed.jpg",
+    "sizeBytes": 198017,
+    "mtime": "2026-06-01T21:02:57.010Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR2-gray-closed.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR2-gray-closed.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR2-gray-closed.jpg",
+    "sizeBytes": 200859,
+    "mtime": "2026-06-01T21:02:57.054Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR2-white-closed.jpg-new.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR2-white-closed.jpg-new.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR2-white-closed.jpg-new.jpg",
+    "sizeBytes": 196474,
+    "mtime": "2026-06-01T21:02:57.110Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-black-closed.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR3-black-closed.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR3-black-closed.jpg",
+    "sizeBytes": 246553,
+    "mtime": "2026-06-01T21:02:57.162Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-black-opened.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR3-black-opened.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR3-black-opened.jpg",
+    "sizeBytes": 262335,
+    "mtime": "2026-06-01T21:02:57.202Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-gray-closed.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR3-gray-closed.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR3-gray-closed.jpg",
+    "sizeBytes": 251358,
+    "mtime": "2026-06-01T21:02:57.254Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-gray-opened.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR3-gray-opened.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR3-gray-opened.jpg",
+    "sizeBytes": 271876,
+    "mtime": "2026-06-01T21:02:58.262Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-white-closed.jpg-new.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR3-white-closed.jpg-new.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR3-white-closed.jpg-new.jpg",
+    "sizeBytes": 252558,
+    "mtime": "2026-06-01T21:02:58.642Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR3-white-opened.jpg-new.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR3-white-opened.jpg-new.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR3-white-opened.jpg-new.jpg",
+    "sizeBytes": 278177,
+    "mtime": "2026-06-01T21:02:58.850Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR4-gray.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR4-gray.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR4-gray.jpg",
+    "sizeBytes": 164739,
+    "mtime": "2026-06-01T21:02:58.950Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR5-black.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR5-black.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR5-black.jpg",
+    "sizeBytes": 197859,
+    "mtime": "2026-06-01T21:02:58.982Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR5-gray.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR5-gray.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR5-gray.jpg",
+    "sizeBytes": 199185,
+    "mtime": "2026-06-01T21:02:59.038Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR5-white.jpg-new.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR5-white.jpg-new.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR5-white.jpg-new.jpg",
+    "sizeBytes": 199687,
+    "mtime": "2026-06-01T21:02:59.094Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR6-black.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR6-black.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR6-black.jpg",
+    "sizeBytes": 118143,
+    "mtime": "2026-06-01T21:02:59.134Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR6-gray.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR6-gray.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR6-gray.jpg",
+    "sizeBytes": 129970,
+    "mtime": "2026-06-01T21:02:59.354Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/MR6-white.jpg",
+    "relativePath": "wordpress-migration/2023/12/MR6-white.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/MR6-white.jpg",
+    "sizeBytes": 123323,
+    "mtime": "2026-06-01T21:02:59.470Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/Mini-Roshina-Mubkhar-black-set.jpg",
+    "relativePath": "wordpress-migration/2023/12/Mini-Roshina-Mubkhar-black-set.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/Mini-Roshina-Mubkhar-black-set.jpg",
+    "sizeBytes": 622524,
+    "mtime": "2026-06-01T21:02:56.878Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/accessories-1-en.jpg",
+    "relativePath": "wordpress-migration/2023/12/accessories-1-en.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/accessories-1-en.jpg",
+    "sizeBytes": 330334,
+    "mtime": "2026-06-01T21:02:56.630Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/accessories-1-en.webp",
+    "relativePath": "wordpress-migration/2023/12/accessories-1-en.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/accessories-1-en.webp",
+    "sizeBytes": 31310,
+    "mtime": "2026-06-01T21:02:56.702Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/oak-table-1.png",
+    "relativePath": "wordpress-migration/2023/12/oak-table-1.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/oak-table-1.png",
+    "sizeBytes": 757455,
+    "mtime": "2026-06-01T21:03:00.062Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/roshina-Boxes.jpg",
+    "relativePath": "wordpress-migration/2023/12/roshina-Boxes.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/roshina-Boxes.jpg",
+    "sizeBytes": 270501,
+    "mtime": "2026-06-01T21:03:00.158Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+    "relativePath": "wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/tissue-box-Bronze.jpg",
+    "sizeBytes": 1578619,
+    "mtime": "2026-06-01T21:03:01.590Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/tissue-box-Bronze.webp",
+    "relativePath": "wordpress-migration/2023/12/tissue-box-Bronze.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/tissue-box-Bronze.webp",
+    "sizeBytes": 143844,
+    "mtime": "2026-06-01T21:03:01.722Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/tissue-box-beige.jpg",
+    "relativePath": "wordpress-migration/2023/12/tissue-box-beige.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/tissue-box-beige.jpg",
+    "sizeBytes": 1570662,
+    "mtime": "2026-06-01T21:03:00.302Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/tissue-box-beige.webp",
+    "relativePath": "wordpress-migration/2023/12/tissue-box-beige.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/tissue-box-beige.webp",
+    "sizeBytes": 161160,
+    "mtime": "2026-06-01T21:03:00.414Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+    "relativePath": "wordpress-migration/2023/12/tissue-box-black.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/tissue-box-black.jpg",
+    "sizeBytes": 1471671,
+    "mtime": "2026-06-01T21:03:01.078Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/tissue-box-black.webp",
+    "relativePath": "wordpress-migration/2023/12/tissue-box-black.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/tissue-box-black.webp",
+    "sizeBytes": 126690,
+    "mtime": "2026-06-01T21:03:01.374Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2023/12/tissue-box-sizes.jpg",
+    "relativePath": "wordpress-migration/2023/12/tissue-box-sizes.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2023/12/tissue-box-sizes.jpg",
+    "sizeBytes": 161886,
+    "mtime": "2026-06-01T21:03:01.778Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-اسماء-الله-الحسنى-الرباعية-450.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-اسماء-الله-الحسنى-الرباعية-450.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-اسماء-الله-الحسنى-الرباعية-450.jpeg",
+    "sizeBytes": 395021,
+    "mtime": "2026-06-01T21:03:01.894Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-الأبواب-130.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-الأبواب-130.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-الأبواب-130.jpeg",
+    "sizeBytes": 173099,
+    "mtime": "2026-06-01T21:03:01.994Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-البسملة-60.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-البسملة-60.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-البسملة-60.jpeg",
+    "sizeBytes": 151714,
+    "mtime": "2026-06-01T21:03:02.126Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-البسملة-60.webp",
+    "relativePath": "wordpress-migration/2024/01/لوحة-البسملة-60.webp",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-البسملة-60.webp",
+    "sizeBytes": 83360,
+    "mtime": "2026-06-01T21:03:13.111Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-الطاووس-150.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-الطاووس-150.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-الطاووس-150.jpeg",
+    "sizeBytes": 103413,
+    "mtime": "2026-06-01T21:03:13.195Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-العفو-150.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-العفو-150.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-العفو-150.jpeg",
+    "sizeBytes": 419945,
+    "mtime": "2026-06-01T21:03:13.247Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-الفلق-140.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-الفلق-140.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-الفلق-140.jpeg",
+    "sizeBytes": 824733,
+    "mtime": "2026-06-01T21:03:13.315Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-الكرسي-150.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-الكرسي-150.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-الكرسي-150.jpeg",
+    "sizeBytes": 742820,
+    "mtime": "2026-06-01T21:03:13.419Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-تكرار-الله-130.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-تكرار-الله-130.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-تكرار-الله-130.jpeg",
+    "sizeBytes": 25765,
+    "mtime": "2026-06-01T21:03:13.475Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-كن-جميلاً-60.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-كن-جميلاً-60.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-كن-جميلاً-60.jpeg",
+    "sizeBytes": 556527,
+    "mtime": "2026-06-01T21:03:13.531Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/01/لوحة-لا-اله-الا-الله-130.jpeg",
+    "relativePath": "wordpress-migration/2024/01/لوحة-لا-اله-الا-الله-130.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/01/لوحة-لا-اله-الا-الله-130.jpeg",
+    "sizeBytes": 683650,
+    "mtime": "2026-06-01T21:03:13.595Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/05/1.jpeg",
+    "relativePath": "wordpress-migration/2024/05/1.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/05/1.jpeg",
+    "sizeBytes": 278247,
+    "mtime": "2026-06-01T21:03:13.659Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3203-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3203-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3203-websize.jpg",
+    "sizeBytes": 770655,
+    "mtime": "2026-06-01T21:03:13.747Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3205-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3205-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3205-websize.jpg",
+    "sizeBytes": 832619,
+    "mtime": "2026-06-01T21:03:13.843Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3206-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3206-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3206-websize.jpg",
+    "sizeBytes": 705253,
+    "mtime": "2026-06-01T21:03:14.039Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3208-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3208-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3208-websize.jpg",
+    "sizeBytes": 731831,
+    "mtime": "2026-06-01T21:03:15.047Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3223-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3223-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3223-websize.jpg",
+    "sizeBytes": 846253,
+    "mtime": "2026-06-01T21:03:15.123Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3226-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3226-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3226-websize.jpg",
+    "sizeBytes": 565844,
+    "mtime": "2026-06-01T21:03:16.059Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3228-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3228-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3228-websize.jpg",
+    "sizeBytes": 818663,
+    "mtime": "2026-06-01T21:03:16.139Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3232-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3232-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3232-websize.jpg",
+    "sizeBytes": 885916,
+    "mtime": "2026-06-01T21:03:16.215Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3235-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3235-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3235-websize.jpg",
+    "sizeBytes": 791384,
+    "mtime": "2026-06-01T21:03:16.711Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3240-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3240-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3240-websize.jpg",
+    "sizeBytes": 652147,
+    "mtime": "2026-06-01T21:03:17.099Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3249-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3249-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3249-websize.jpg",
+    "sizeBytes": 728691,
+    "mtime": "2026-06-01T21:03:17.579Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3253-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3253-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3253-websize.jpg",
+    "sizeBytes": 748984,
+    "mtime": "2026-06-01T21:03:18.231Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3254-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3254-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3254-websize.jpg",
+    "sizeBytes": 747683,
+    "mtime": "2026-06-01T21:03:18.303Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3255-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3255-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3255-websize.jpg",
+    "sizeBytes": 794318,
+    "mtime": "2026-06-01T21:03:18.375Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3256-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3256-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3256-websize.jpg",
+    "sizeBytes": 726807,
+    "mtime": "2026-06-01T21:03:18.459Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3263-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3263-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3263-websize.jpg",
+    "sizeBytes": 657649,
+    "mtime": "2026-06-01T21:03:18.539Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3268-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3268-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3268-websize.jpg",
+    "sizeBytes": 750329,
+    "mtime": "2026-06-01T21:03:18.647Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3270-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3270-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3270-websize.jpg",
+    "sizeBytes": 754796,
+    "mtime": "2026-06-01T21:03:18.747Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3271-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3271-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3271-websize.jpg",
+    "sizeBytes": 700920,
+    "mtime": "2026-06-01T21:03:18.843Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3273-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3273-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3273-websize.jpg",
+    "sizeBytes": 782637,
+    "mtime": "2026-06-01T21:03:18.923Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3277-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3277-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3277-websize.jpg",
+    "sizeBytes": 768593,
+    "mtime": "2026-06-01T21:03:19.011Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3285-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3285-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3285-websize.jpg",
+    "sizeBytes": 670422,
+    "mtime": "2026-06-01T21:03:19.115Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3299-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3299-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3299-websize.jpg",
+    "sizeBytes": 857234,
+    "mtime": "2026-06-01T21:03:20.071Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3305-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3305-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3305-websize.jpg",
+    "sizeBytes": 696633,
+    "mtime": "2026-06-01T21:03:21.071Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3306-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3306-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3306-websize.jpg",
+    "sizeBytes": 727269,
+    "mtime": "2026-06-01T21:03:21.151Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3315-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3315-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3315-websize.jpg",
+    "sizeBytes": 640454,
+    "mtime": "2026-06-01T21:03:21.223Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3317-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3317-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3317-websize.jpg",
+    "sizeBytes": 584619,
+    "mtime": "2026-06-01T21:03:21.731Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3318-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3318-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3318-websize.jpg",
+    "sizeBytes": 608854,
+    "mtime": "2026-06-01T21:03:22.095Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3327-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3327-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3327-websize.jpg",
+    "sizeBytes": 888311,
+    "mtime": "2026-06-01T21:03:22.591Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3329-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3329-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3329-websize.jpg",
+    "sizeBytes": 654500,
+    "mtime": "2026-06-01T21:03:23.247Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/06/DSF3350-websize.jpg",
+    "relativePath": "wordpress-migration/2024/06/DSF3350-websize.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/06/DSF3350-websize.jpg",
+    "sizeBytes": 904304,
+    "mtime": "2026-06-01T21:03:23.339Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Big-lighter.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Big-lighter.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Big-lighter.jpeg",
+    "sizeBytes": 368370,
+    "mtime": "2026-06-01T21:03:23.543Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Black-Mini-lighter.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Black-Mini-lighter.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Black-Mini-lighter.jpeg",
+    "sizeBytes": 285970,
+    "mtime": "2026-06-01T21:03:23.675Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Black-lamp.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Black-lamp.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Black-lamp.jpeg",
+    "sizeBytes": 265497,
+    "mtime": "2026-06-01T21:03:23.611Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Blue-lamp.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Blue-lamp.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Blue-lamp.jpeg",
+    "sizeBytes": 312125,
+    "mtime": "2026-06-01T21:03:23.779Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Gold-lamp.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Gold-lamp.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Gold-lamp.jpeg",
+    "sizeBytes": 353967,
+    "mtime": "2026-06-01T21:03:23.863Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Oil-Flora.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Oil-Flora.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Oil-Flora.jpeg",
+    "sizeBytes": 156068,
+    "mtime": "2026-06-01T21:03:23.935Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Oil-Hotel.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Oil-Hotel.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Oil-Hotel.jpeg",
+    "sizeBytes": 149041,
+    "mtime": "2026-06-01T21:03:24.019Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Oil-Spa.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Oil-Spa.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Oil-Spa.jpeg",
+    "sizeBytes": 174817,
+    "mtime": "2026-06-01T21:03:24.115Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Oil-Vanilla.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Oil-Vanilla.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Oil-Vanilla.jpeg",
+    "sizeBytes": 230951,
+    "mtime": "2026-06-01T21:03:25.071Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Rose-Gold-lamp.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Rose-Gold-lamp.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Rose-Gold-lamp.jpeg",
+    "sizeBytes": 296311,
+    "mtime": "2026-06-01T21:03:26.083Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Rose-Mini-Lighter.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Rose-Mini-Lighter.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Rose-Mini-Lighter.jpeg",
+    "sizeBytes": 151404,
+    "mtime": "2026-06-01T21:03:26.423Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/08/Wick-lamp.jpeg",
+    "relativePath": "wordpress-migration/2024/08/Wick-lamp.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/08/Wick-lamp.jpeg",
+    "sizeBytes": 107388,
+    "mtime": "2026-06-01T21:03:26.471Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/10/long.png",
+    "relativePath": "wordpress-migration/2024/10/long.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/10/long.png",
+    "sizeBytes": 1506743,
+    "mtime": "2026-06-01T21:03:26.751Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/10/standard.png",
+    "relativePath": "wordpress-migration/2024/10/standard.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/10/standard.png",
+    "sizeBytes": 771960,
+    "mtime": "2026-06-01T21:03:27.111Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/12/chair.jpeg",
+    "relativePath": "wordpress-migration/2024/12/chair.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/12/chair.jpeg",
+    "sizeBytes": 117502,
+    "mtime": "2026-06-01T21:03:28.255Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/12/sofa-2.jpeg",
+    "relativePath": "wordpress-migration/2024/12/sofa-2.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/12/sofa-2.jpeg",
+    "sizeBytes": 117310,
+    "mtime": "2026-06-01T21:03:28.339Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2024/12/sofa.jpeg",
+    "relativePath": "wordpress-migration/2024/12/sofa.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2024/12/sofa.jpeg",
+    "sizeBytes": 105425,
+    "mtime": "2026-06-01T21:03:28.551Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Beige-2.jpg",
+    "relativePath": "wordpress-migration/2025/02/Beige-2.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Beige-2.jpg",
+    "sizeBytes": 558261,
+    "mtime": "2026-06-01T21:03:28.611Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/GFX3679-Edit-websize.png",
+    "relativePath": "wordpress-migration/2025/02/GFX3679-Edit-websize.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/GFX3679-Edit-websize.png",
+    "sizeBytes": 1882135,
+    "mtime": "2026-06-01T21:03:28.879Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/GFX3680-Edit-websize.png",
+    "relativePath": "wordpress-migration/2025/02/GFX3680-Edit-websize.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/GFX3680-Edit-websize.png",
+    "sizeBytes": 2110902,
+    "mtime": "2026-06-01T21:03:28.983Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mini-Roshina-1.jpg",
+    "sizeBytes": 195807,
+    "mtime": "2026-06-01T21:03:29.099Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mini-Roshina-3.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mini-Roshina-3.jpg",
+    "sizeBytes": 246354,
+    "mtime": "2026-06-01T21:03:29.151Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mini-Roshina-4.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mini-Roshina-4.jpg",
+    "sizeBytes": 270327,
+    "mtime": "2026-06-01T21:03:29.203Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mini-Roshina-8.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-8.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mini-Roshina-8.jpg",
+    "sizeBytes": 198750,
+    "mtime": "2026-06-01T21:03:29.255Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mini-Roshina-9.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mini-Roshina-9.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mini-Roshina-9.jpg",
+    "sizeBytes": 127193,
+    "mtime": "2026-06-01T21:03:29.875Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mini-roshina-Mubkhar-set.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mini-roshina-Mubkhar-set.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mini-roshina-Mubkhar-set.jpg",
+    "sizeBytes": 603520,
+    "mtime": "2026-06-01T21:03:31.103Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mubkhar-R1-beige.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-R1-beige.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mubkhar-R1-beige.jpg",
+    "sizeBytes": 2209909,
+    "mtime": "2026-06-01T21:03:33.307Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mubkhar-R1-black.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-R1-black.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mubkhar-R1-black.jpg",
+    "sizeBytes": 2363372,
+    "mtime": "2026-06-01T21:03:33.451Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mubkhar-R1-petrol.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-R1-petrol.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mubkhar-R1-petrol.jpg",
+    "sizeBytes": 2266042,
+    "mtime": "2026-06-01T21:03:36.304Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mubkhar-beige.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-beige.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mubkhar-beige.jpg",
+    "sizeBytes": 1311516,
+    "mtime": "2026-06-01T21:03:31.503Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mubkhar-black.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-black.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mubkhar-black.jpg",
+    "sizeBytes": 1748523,
+    "mtime": "2026-06-01T21:03:31.779Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Mubkhar-petrol.jpg",
+    "relativePath": "wordpress-migration/2025/02/Mubkhar-petrol.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Mubkhar-petrol.jpg",
+    "sizeBytes": 1592606,
+    "mtime": "2026-06-01T21:03:32.119Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Trash-Bin-Beige.jpg",
+    "relativePath": "wordpress-migration/2025/02/Trash-Bin-Beige.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Trash-Bin-Beige.jpg",
+    "sizeBytes": 3348897,
+    "mtime": "2026-06-01T21:03:42.168Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Trash-Bin-Bronze.jpg",
+    "relativePath": "wordpress-migration/2025/02/Trash-Bin-Bronze.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Trash-Bin-Bronze.jpg",
+    "sizeBytes": 3237128,
+    "mtime": "2026-06-01T21:03:43.664Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Trash-Bin-black.jpg",
+    "relativePath": "wordpress-migration/2025/02/Trash-Bin-black.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Trash-Bin-black.jpg",
+    "sizeBytes": 3353138,
+    "mtime": "2026-06-01T21:03:42.768Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+    "relativePath": "wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Trash-bin-beige-1.jpg",
+    "sizeBytes": 547458,
+    "mtime": "2026-06-01T21:03:41.600Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Trash-bin-black-1.jpg",
+    "relativePath": "wordpress-migration/2025/02/Trash-bin-black-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Trash-bin-black-1.jpg",
+    "sizeBytes": 506709,
+    "mtime": "2026-06-01T21:03:42.388Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/Trash-bin-bronze-1.jpg",
+    "relativePath": "wordpress-migration/2025/02/Trash-bin-bronze-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/Trash-bin-bronze-1.jpg",
+    "sizeBytes": 551873,
+    "mtime": "2026-06-01T21:03:43.292Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/beige-3.jpg",
+    "relativePath": "wordpress-migration/2025/02/beige-3.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/beige-3.jpg",
+    "sizeBytes": 558983,
+    "mtime": "2026-06-01T21:03:28.699Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/beige-4.jpg",
+    "relativePath": "wordpress-migration/2025/02/beige-4.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/beige-4.jpg",
+    "sizeBytes": 636603,
+    "mtime": "2026-06-01T21:03:28.759Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+    "relativePath": "wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/miniroshina-mubkhar-beige-set.png",
+    "sizeBytes": 1176709,
+    "mtime": "2026-06-01T21:03:31.195Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/roshina1-mubkhar-beige-set.jpg",
+    "relativePath": "wordpress-migration/2025/02/roshina1-mubkhar-beige-set.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/roshina1-mubkhar-beige-set.jpg",
+    "sizeBytes": 571381,
+    "mtime": "2026-06-01T21:03:36.524Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/roshina1-mubkhar-black-set.jpg",
+    "relativePath": "wordpress-migration/2025/02/roshina1-mubkhar-black-set.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/roshina1-mubkhar-black-set.jpg",
+    "sizeBytes": 617527,
+    "mtime": "2026-06-01T21:03:37.140Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/roshina1-mubkhar-petrol-set-1.jpg",
+    "relativePath": "wordpress-migration/2025/02/roshina1-mubkhar-petrol-set-1.jpg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/roshina1-mubkhar-petrol-set-1.jpg",
+    "sizeBytes": 584072,
+    "mtime": "2026-06-01T21:03:38.344Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+    "relativePath": "wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/trash-bin-beige-1-zoom.png",
+    "sizeBytes": 1264212,
+    "mtime": "2026-06-01T21:03:41.536Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+    "relativePath": "wordpress-migration/2025/02/trash-bin-beige-set.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/trash-bin-beige-set.png",
+    "sizeBytes": 1655919,
+    "mtime": "2026-06-01T21:03:41.664Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+    "relativePath": "wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/trash-bin-black-1-zoom.png",
+    "sizeBytes": 1344470,
+    "mtime": "2026-06-01T21:03:42.300Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/trash-bin-black-set.png",
+    "relativePath": "wordpress-migration/2025/02/trash-bin-black-set.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/trash-bin-black-set.png",
+    "sizeBytes": 1618885,
+    "mtime": "2026-06-01T21:03:42.496Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+    "relativePath": "wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/trash-bin-bronze-1-zoom.png",
+    "sizeBytes": 1180037,
+    "mtime": "2026-06-01T21:03:42.988Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/02/trash-bin-bronze-set.png",
+    "relativePath": "wordpress-migration/2025/02/trash-bin-bronze-set.png",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/02/trash-bin-bronze-set.png",
+    "sizeBytes": 1685847,
+    "mtime": "2026-06-01T21:03:43.380Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/05/Passage-Lamp-Red.jpeg",
+    "relativePath": "wordpress-migration/2025/05/Passage-Lamp-Red.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/05/Passage-Lamp-Red.jpeg",
+    "sizeBytes": 240117,
+    "mtime": "2026-06-01T21:03:43.864Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/05/cachemire.jpeg",
+    "relativePath": "wordpress-migration/2025/05/cachemire.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/05/cachemire.jpeg",
+    "sizeBytes": 221680,
+    "mtime": "2026-06-01T21:03:43.760Z"
+  },
+  {
+    "url": "/media/wordpress-migration/2025/05/mini-lighter-silver.jpeg",
+    "relativePath": "wordpress-migration/2025/05/mini-lighter-silver.jpeg",
+    "absolutePath": "/home/manus/cove-storefront/public/media/wordpress-migration/2025/05/mini-lighter-silver.jpeg",
+    "sizeBytes": 159052,
+    "mtime": "2026-06-01T21:03:43.816Z"
+  }
+]
