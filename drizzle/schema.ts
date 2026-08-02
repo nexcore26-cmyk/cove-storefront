@@ -244,6 +244,26 @@ export const warehouseStock = mysqlTable("warehouse_stock", {
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
+// BRANCHES  (POS branch locations, each tied to exactly one dedicated warehouse)
+// ─────────────────────────────────────────────────────────────────────────────
+export const branches = mysqlTable("branches", {
+  id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
+  name: varchar("name", { length: 128 }).notNull(),
+  code: varchar("code", { length: 32 }).notNull(),
+  warehouseId: int("warehouseId").notNull().references(() => warehouses.id),
+  isActive: boolean("isActive").default(true).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, (t) => [
+  uniqueIndex("branches_warehouse_unique").on(t.warehouseId),
+  uniqueIndex("branches_tenant_code_unique").on(t.tenantId, t.code),
+  index("branches_tenant_idx").on(t.tenantId),
+]);
+export type Branch = typeof branches.$inferSelect;
+export type InsertBranch = typeof branches.$inferInsert;
+
+// ─────────────────────────────────────────────────────────────────────────────
 // STORE SETTINGS
 // ─────────────────────────────────────────────────────────────────────────────
 export const storeSettings = mysqlTable("store_settings", {
