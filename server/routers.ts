@@ -880,6 +880,94 @@ const inventoryRouter = router({
       await db.update(warehouses).set(updates).where(eq(warehouses.id, id));
       return { success: true };
     }),
+  // Branches: physical POS locations, each tied to exactly one dedicated warehouse (strict 1:1)
+  branches: adminProcedure.query(async () => {
+    const { getDb } = await import('./db');
+    const { branches, warehouses: warehousesTable } = await import('../drizzle/schema');
+    const { eq } = await import('drizzle-orm');
+    const db = await getDb();
+    if (!db) return [];
+    return db.select({
+      id: branches.id,
+      name: branches.name,
+      code: branches.code,
+      warehouseId: branches.warehouseId,
+      warehouseName: warehousesTable.name,
+      isActive: branches.isActive,
+      createdAt: branches.createdAt,
+      updatedAt: branches.updatedAt,
+    })
+      .from(branches)
+      .innerJoin(warehousesTable, eq(warehousesTable.id, branches.warehouseId))
+      .orderBy(branches.name);
+  }),
+  addBranch: adminProcedure
+    .input(z.object({
+      name: z.string().min(1).max(128),
+      code: z.string().min(1).max(32),
+      warehouseId: z.number(),
+    }))
+    .mutation(async ({ input }) => {
+      const { getDb } = await import('./db');
+      const { branches, warehouses: warehousesTable } = await import('../drizzle/schema');
+      const { eq, and } = await import('drizzle-orm');
+      const db = await getDb();
+      if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+
+      const [warehouse] = await db.select({ id: warehousesTable.id })
+        .from(warehousesTable)
+        .where(and(eq(warehousesTable.id, input.warehouseId), eq(warehousesTable.isActive, true)))
+        .limit(1);
+      if (!warehouse) {
+        throw new TRPCError({ code: 'BAD_REQUEST', message: 'Warehouse not found or inactive' });
+      }
+
+      const [existingBranch] = await db.select({ id: branches.id })
+        .from(branches)
+        .where(eq(branches.warehouseId, input.warehouseId))
+        .limit(1);
+      if (existingBranch) {
+        throw new TRPCError({ code: 'BAD_REQUEST', message: 'That warehouse is already assigned to another branch. Each branch needs its own dedicated warehouse — create a new one first.' });
+      }
+
+      const [result] = await db.insert(branches).values({
+        name: input.name,
+        code: input.code.toUpperCase(),
+        warehouseId: input.warehouseId,
+        isActive: true,
+      });
+      return { id: (result as any).insertId, ...input };
+    }),
+  updateBranch: adminProcedure
+    .input(z.object({
+      id: z.number(),
+      name: z.string().min(1).max(128).optional(),
+      code: z.string().min(1).max(32).optional(),
+      warehouseId: z.number().optional(),
+      isActive: z.boolean().optional(),
+    }))
+    .mutation(async ({ input }) => {
+      const { getDb } = await import('./db');
+      const { branches } = await import('../drizzle/schema');
+      const { eq, and, ne } = await import('drizzle-orm');
+      const db = await getDb();
+      if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+      const { id, ...updates } = input;
+
+      if (updates.warehouseId) {
+        const [conflict] = await db.select({ id: branches.id })
+          .from(branches)
+          .where(and(eq(branches.warehouseId, updates.warehouseId), ne(branches.id, id)))
+          .limit(1);
+        if (conflict) {
+          throw new TRPCError({ code: 'BAD_REQUEST', message: 'That warehouse is already assigned to another branch.' });
+        }
+      }
+      if (updates.code) updates.code = updates.code.toUpperCase();
+
+      await db.update(branches).set(updates).where(eq(branches.id, id));
+      return { success: true };
+    }),
   // Returns per-warehouse stock summary: total units, SKU count, low-stock count, out-of-stock count
   warehouseSummary: adminProcedure.query(async () => {
     const { getDb } = await import('./db');
