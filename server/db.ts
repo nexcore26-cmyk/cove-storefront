@@ -3,7 +3,7 @@ import { drizzle } from "drizzle-orm/mysql2";
 import mysql from "mysql2/promise";
 import {
   users, categories, products, productVariants,
-  warehouses, warehouseStock, stockTransfers,
+  warehouses, warehouseStock, stockTransfers, branches,
   customers, orders, orderItems, coupons, shippingZones,
   wishlists, storeSettings,
   type InsertUser,
@@ -424,6 +424,29 @@ export async function resolveWarehouseIdForChannel(channel: SalesChannelWarehous
   return fallback?.id ?? null;
 }
 
+/**
+ * Resolve the dedicated warehouse for a POS branch (strict 1:1).
+ * Used instead of resolveWarehouseIdForChannel('pos') now that each branch
+ * has its own stock pool. Falls back to null if the branch is missing/inactive,
+ * so callers can decide how to handle "no active branch selected".
+ */
+export async function resolveWarehouseIdForBranch(branchId: number): Promise<number | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const [branch] = await db.select({ warehouseId: branches.warehouseId })
+    .from(branches)
+    .where(and(eq(branches.id, branchId), eq(branches.isActive, true)))
+    .limit(1);
+  if (!branch?.warehouseId) return null;
+
+  const [warehouse] = await db.select({ id: warehouses.id })
+    .from(warehouses)
+    .where(and(eq(warehouses.id, branch.warehouseId), eq(warehouses.isActive, true)))
+    .limit(1);
+  return warehouse?.id ?? null;
+}
+
 
 export async function getStockTransfers(productId?: number, limit = 50) {
   const db = await getDb();
@@ -558,12 +581,17 @@ export async function deductStockForOrder(orderId: number): Promise<void> {
     warehouseStock, bundleItems, productVariants: pvTable, orders: ordersTable, attributeValueBundleItems } = await import('../drizzle/schema');
   const { eq } = await import('drizzle-orm');
 
-  const [order] = await db.select({ channel: ordersTable.channel }).from(ordersTable).where(eq(ordersTable.id, orderId)).limit(1);
+  const [order] = await db.select({ channel: ordersTable.channel, branchId: ordersTable.branchId }).from(ordersTable).where(eq(ordersTable.id, orderId)).limit(1);
   const orderChannel = order?.channel === 'pos' ? 'pos' : 'online';
   const items = await db.select().from(orderItemsTable).where(eq(orderItemsTable.orderId, orderId));
   if (!items.length) return;
 
-  const warehouseId = await resolveWarehouseIdForChannel(orderChannel);
+  // POS orders deduct from their own branch's warehouse. Older POS orders created
+  // before branches existed have no branchId — fall back to the old global POS
+  // warehouse lookup so they still resolve correctly.
+  const warehouseId = orderChannel === 'pos' && order?.branchId
+    ? await resolveWarehouseIdForBranch(order.branchId)
+    : await resolveWarehouseIdForChannel(orderChannel);
   if (!warehouseId) throw new Error(`${orderChannel === 'pos' ? 'POS' : 'Online'} warehouse not configured or not found`);
 
   await db.transaction(async (tx) => {

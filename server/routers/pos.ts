@@ -6,7 +6,9 @@
  *  pos.products        — list products for a category (with stock)
  *  pos.variants        — get variants for a variable product
  *  pos.searchCustomers — search customers
- *  pos.createOrder     — create a POS order (channel=pos, deducts from POS warehouse)
+ *  pos.branches        — list active branches this staff member can operate at
+ *  pos.setActiveBranch — select which branch this POS session is operating at
+ *  pos.createOrder     — create a POS order (channel=pos, deducts from the active branch's warehouse)
  *  pos.myStats         — cashier's today/month/total stats (B1 Board)
  *  pos.hourlySales     — hourly sales chart data for today (B1 Board)
  *  pos.myOrders        — cashier's own orders list (B3)
@@ -24,18 +26,27 @@ import { z } from "zod";
 import { router } from "../_core/trpc";
 import { posProcedure } from "./procedures";
 import { TRPCError } from "@trpc/server";
-import { getDb, resolveWarehouseIdForChannel } from "../db";
+import { getDb, resolveWarehouseIdForChannel, resolveWarehouseIdForBranch } from "../db";
 import {
   categories, products, productVariants,
   warehouses, warehouseStock, orders, orderItems,
-  customers, storeSettings, users,
+  customers, storeSettings, users, branches,
 } from "../../drizzle/schema";
 import { eq, and, or, like, inArray, isNull, sql, desc, gte, lte, between } from "drizzle-orm";
+import type { TrpcContext } from "../_core/context";
 
 // ─── helpers ─────────────────────────────────────────────────────────────────
 
-async function getPosWarehouseId(): Promise<number | null> {
-  return resolveWarehouseIdForChannel('pos');
+/**
+ * Resolve the warehouse for the current POS session's active branch.
+ * Each branch has its own dedicated warehouse (strict 1:1) — replaces the old
+ * single global POS warehouse now that Cove has more than one physical branch.
+ * Returns null if the staff member hasn't selected a branch yet.
+ */
+async function getBranchWarehouseId(ctx: Pick<TrpcContext, "user">): Promise<number | null> {
+  const branchId = ctx.user?.activeBranchId;
+  if (!branchId) return null;
+  return resolveWarehouseIdForBranch(branchId);
 }
 
 // ─── router ──────────────────────────────────────────────────────────────────
@@ -66,11 +77,11 @@ export const posRouter = router({
       limit: z.number().min(1).max(200).default(100),
       offset: z.number().default(0),
     }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) return { items: [], total: 0 };
 
-      const posWarehouseId = await getPosWarehouseId();
+      const posWarehouseId = await getBranchWarehouseId(ctx);
       const conditions: any[] = [eq(products.status, "active")];
 
       if (input.categoryId) {
@@ -159,10 +170,10 @@ export const posRouter = router({
   /** Get variants for a variable product */
   variants: posProcedure
     .input(z.object({ productId: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) return [];
-      const posWarehouseId = await getPosWarehouseId();
+      const posWarehouseId = await getBranchWarehouseId(ctx);
 
       const variants = await db.select().from(productVariants)
         .where(
@@ -215,7 +226,40 @@ export const posRouter = router({
         .limit(20);
     }),
 
-  /** Create a POS order — deducts from POS warehouse */
+  /** List active branches this staff member can select for their POS session */
+  branches: posProcedure.query(async () => {
+    const db = await getDb();
+    if (!db) return [];
+    return db.select({
+      id: branches.id,
+      name: branches.name,
+      code: branches.code,
+    })
+      .from(branches)
+      .where(eq(branches.isActive, true))
+      .orderBy(branches.name);
+  }),
+
+  /** Select which branch this POS session is operating at (persists on the user) */
+  setActiveBranch: posProcedure
+    .input(z.object({ branchId: z.number() }))
+    .mutation(async ({ input, ctx }) => {
+      const db = await getDb();
+      if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Database not available" });
+
+      const [branch] = await db.select({ id: branches.id, name: branches.name })
+        .from(branches)
+        .where(and(eq(branches.id, input.branchId), eq(branches.isActive, true)))
+        .limit(1);
+      if (!branch) {
+        throw new TRPCError({ code: "BAD_REQUEST", message: "Branch not found or inactive" });
+      }
+
+      await db.update(users).set({ activeBranchId: branch.id }).where(eq(users.id, ctx.user.id));
+      return { success: true, branchId: branch.id, branchName: branch.name };
+    }),
+
+  /** Create a POS order — deducts from the active branch's warehouse */
   createOrder: posProcedure
     .input(z.object({
       customerId: z.number().optional(),
@@ -242,8 +286,12 @@ export const posRouter = router({
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Database not available" });
 
-      const posWarehouseId = await getPosWarehouseId();
-      if (!posWarehouseId) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "POS warehouse not found" });
+      const activeBranchId = ctx.user.activeBranchId;
+      if (!activeBranchId) {
+        throw new TRPCError({ code: "BAD_REQUEST", message: "No active branch selected for this POS session. Please select a branch and try again." });
+      }
+      const posWarehouseId = await getBranchWarehouseId(ctx);
+      if (!posWarehouseId) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Branch warehouse not found or inactive" });
 
       const subtotal = input.items.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
       const total = Math.max(0, subtotal + input.shippingCost - input.discountAmount);
@@ -280,6 +328,7 @@ export const posRouter = router({
         customerName: input.customerName ?? null,
         customerPhone: input.customerPhone ?? null,
         channel: "pos",
+        branchId: activeBranchId,
         status: "completed",
         paymentStatus: "paid",
         paymentMethod: input.paymentMethod,
@@ -744,6 +793,7 @@ export const posRouter = router({
           orderNumber,
           customerName: input.customerName ?? null,
           channel: "pos",
+          branchId: ctx.user.activeBranchId ?? null,
           status: "pending",
           paymentStatus: "pending",
           currency: "KWD",

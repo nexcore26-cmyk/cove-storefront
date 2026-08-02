@@ -79,6 +79,8 @@ export const users = mysqlTable("users", {
   resetTokenExpires: timestamp("resetTokenExpires"),
   customRoleId: int("customRoleId"),
   vendorId: int("vendorId"),
+  // Active POS branch for this staff session (selected at POS login). Null for non-POS roles.
+  activeBranchId: int("activeBranchId"),
 }, (t) => [
   index("users_tenantId_idx").on(t.tenantId),
 ]);
@@ -401,6 +403,7 @@ export const orders = mysqlTable("orders", {
   trackingNumber: varchar("trackingNumber", { length: 256 }),
   invoiceKey: varchar("invoiceKey", { length: 512 }),
   channel: mysqlEnum("channel", ["online", "pos"]).default("online").notNull(),
+  branchId: int("branchId"), // POS branch this order was made at (null for online orders)
   createdByUserId: int("createdByUserId"),
   exchangedFromOrderId: int("exchangedFromOrderId"),  // P6: self-reference for exchange workflow
   internalNotes: text("internalNotes"),  // E1: admin-only internal notes
