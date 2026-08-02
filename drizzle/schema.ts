@@ -90,6 +90,7 @@ export const users = mysqlTable("users", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const categories = mysqlTable("categories", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   wcId: int("wcId"),
   wcSource: mysqlEnum("wcSource", ["main", "brass"]),
   name: varchar("name", { length: 255 }).notNull(),
@@ -105,6 +106,7 @@ export const categories = mysqlTable("categories", {
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 }, (t) => [
   index("categories_slug_idx").on(t.slug),
+  index("categories_tenantId_idx").on(t.tenantId),
   uniqueIndex("categories_wcId_source_unique").on(t.wcId, t.wcSource),
 ]);
 
@@ -113,11 +115,14 @@ export const categories = mysqlTable("categories", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const products = mysqlTable("products", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   wcId: int("wcId"),
   wcSource: mysqlEnum("wcSource", ["main", "brass"]),
   name: varchar("name", { length: 500 }).notNull(),
   nameAr: varchar("nameAr", { length: 500 }),
-  slug: varchar("slug", { length: 500 }).notNull().unique(),
+  // NOTE: slug uniqueness is now per-tenant (see products_tenant_slug_unique below),
+  // not globally unique — two tenants may each have their own "office-chair" slug.
+  slug: varchar("slug", { length: 500 }).notNull(),
   sku: varchar("sku", { length: 128 }),
   description: text("description"),
   descriptionAr: text("descriptionAr"),
@@ -155,6 +160,8 @@ export const products = mysqlTable("products", {
   index("products_wcId_idx").on(t.wcId),
   index("products_sku_idx").on(t.sku),
   index("products_categoryId_idx").on(t.categoryId),
+  index("products_tenantId_idx").on(t.tenantId),
+  uniqueIndex("products_tenant_slug_unique").on(t.tenantId, t.slug),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -162,6 +169,7 @@ export const products = mysqlTable("products", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const productVariants = mysqlTable("product_variants", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   productId: int("productId").notNull(),
   wcVariantId: int("wcVariantId"),
   sku: varchar("sku", { length: 128 }),
@@ -188,6 +196,7 @@ export const productVariants = mysqlTable("product_variants", {
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 }, (t) => [
   index("variants_productId_idx").on(t.productId),
+  index("variants_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -667,6 +676,7 @@ export const bundleItems = mysqlTable("bundle_items", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const attributes = mysqlTable("attributes", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   name: varchar("name", { length: 255 }).notNull(),          // EN system name
   nameAr: varchar("nameAr", { length: 255 }),                 // AR storefront display name
   displayType: mysqlEnum("displayType", ["button", "color", "image", "radio", "default"]).default("button").notNull(),
@@ -677,13 +687,16 @@ export const attributes = mysqlTable("attributes", {
   sortOrder: int("sortOrder").default(0).notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-});
+}, (t) => [
+  index("attributes_tenantId_idx").on(t.tenantId),
+]);
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ATTRIBUTE VALUES  (options within an attribute)
 // ─────────────────────────────────────────────────────────────────────────────
 export const attributeValues = mysqlTable("attribute_values", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   attributeId: int("attributeId").notNull(),
   labelEn: varchar("labelEn", { length: 255 }).notNull(),
   labelAr: varchar("labelAr", { length: 255 }),
@@ -713,6 +726,7 @@ export const attributeValues = mysqlTable("attribute_values", {
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 }, (t) => [
   index("attr_values_attributeId_idx").on(t.attributeId),
+  index("attr_values_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
