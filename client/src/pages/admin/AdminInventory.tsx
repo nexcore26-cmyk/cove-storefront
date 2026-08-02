@@ -41,6 +41,13 @@ export default function AdminInventory() {
   const [whType, setWhType] = useState<'main' | 'online' | 'pos'>('main');
   const [whDesc, setWhDesc] = useState('');
 
+  // Branch management state
+  const [showAddBranch, setShowAddBranch] = useState(false);
+  const [editingBranch, setEditingBranch] = useState<any | null>(null);
+  const [brName, setBrName] = useState('');
+  const [brCode, setBrCode] = useState('');
+  const [brWarehouseId, setBrWarehouseId] = useState('');
+
   // Quick transfer state (Warehouses tab)
   const [quickTransferProductSearch, setQuickTransferProductSearch] = useState('');
   const [quickTransferProductId, setQuickTransferProductId] = useState<number | null>(null);
@@ -181,6 +188,51 @@ export default function AdminInventory() {
     },
     onError: (err) => toast.error(err.message),
   });
+
+  const { data: branches } = trpc.inventory.branches.useQuery(undefined, { enabled: tab === 'warehouses' });
+
+  const addBranchMutation = trpc.inventory.addBranch.useMutation({
+    onSuccess: () => {
+      utils.inventory.branches.invalidate();
+      setShowAddBranch(false);
+      setBrName(''); setBrCode(''); setBrWarehouseId('');
+      toast.success('Branch added');
+    },
+    onError: (err) => toast.error(err.message),
+  });
+
+  const updateBranchMutation = trpc.inventory.updateBranch.useMutation({
+    onSuccess: () => {
+      utils.inventory.branches.invalidate();
+      setEditingBranch(null);
+      setShowAddBranch(false);
+      toast.success('Branch updated');
+    },
+    onError: (err) => toast.error(err.message),
+  });
+
+  const handleSaveBranch = () => {
+    if (!brName.trim() || !brCode.trim() || !brWarehouseId) { toast.error('Name, code, and warehouse are required'); return; }
+    if (editingBranch) {
+      updateBranchMutation.mutate({ id: editingBranch.id, name: brName, code: brCode, warehouseId: Number(brWarehouseId) });
+    } else {
+      addBranchMutation.mutate({ name: brName, code: brCode, warehouseId: Number(brWarehouseId) });
+    }
+  };
+
+  const openEditBranch = (b: any) => {
+    setEditingBranch(b);
+    setBrName(b.name);
+    setBrCode(b.code);
+    setBrWarehouseId(String(b.warehouseId));
+    setShowAddBranch(true);
+  };
+
+  // Warehouses not yet claimed by a branch — the pool available for a new branch,
+  // plus the currently-edited branch's own warehouse so it stays selectable.
+  const availableWarehousesForBranch = (warehouses || []).filter((w: any) =>
+    !(branches || []).some((b: any) => b.warehouseId === w.id && b.id !== editingBranch?.id)
+  );
 
   const handleSaveWarehouse = () => {
     if (!whName.trim() || !whCode.trim()) { toast.error('Name and code are required'); return; }
@@ -703,6 +755,101 @@ export default function AdminInventory() {
                 style={{ backgroundColor: '#111110', color: '#FAFAF8', fontFamily: 'Montserrat, sans-serif' }}>
                 {quickTransferMutation.isPending ? 'Transferring...' : 'Transfer Stock'}
               </button>
+            </div>
+
+            {/* ── BRANCHES ── */}
+            <div className="mt-6">
+              <div className="flex items-center justify-between mb-2">
+                <div>
+                  <h3 className="text-lg font-light" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#242424' }}>Branches</h3>
+                  <p className="text-xs" style={mutedStyle}>Each POS branch has its own dedicated warehouse — a sale at one branch never touches another branch's stock.</p>
+                </div>
+                <button
+                  onClick={() => { setEditingBranch(null); setBrName(''); setBrCode(''); setBrWarehouseId(''); setShowAddBranch(true); }}
+                  className="flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors"
+                  style={{ backgroundColor: '#111110', color: '#FAFAF8', fontFamily: 'Montserrat, sans-serif' }}>
+                  <Plus size={12} /> Add Branch
+                </button>
+              </div>
+
+              {/* Add/Edit branch form */}
+              {showAddBranch && (
+                <div className="bg-white rounded-lg border shadow-sm p-6 mb-4" style={{ borderColor }}>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-light" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#242424' }}>
+                      {editingBranch ? 'Edit Branch' : 'New Branch'}
+                    </h3>
+                    <button onClick={() => { setShowAddBranch(false); setEditingBranch(null); }} style={{ color: '#8A8A82' }}><X size={16} /></button>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={labelStyle}>Name *</label>
+                      <input type="text" value={brName} onChange={e => setBrName(e.target.value)} placeholder="e.g. Brass Store - Homz Mall"
+                        className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39]"
+                        style={{ borderColor, fontFamily: 'Montserrat, sans-serif', color: '#242424' }} />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={labelStyle}>Code *</label>
+                      <input type="text" value={brCode} onChange={e => setBrCode(e.target.value.toUpperCase())} placeholder="e.g. BRASS-HOMZ"
+                        className="w-full px-4 py-3 text-sm border bg-transparent outline-none focus:border-[#9D7D39]"
+                        style={{ borderColor, fontFamily: 'Montserrat, sans-serif', color: '#242424' }} />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className="block text-xs font-semibold tracking-wider uppercase mb-2" style={labelStyle}>Warehouse *</label>
+                      <select value={brWarehouseId} onChange={e => setBrWarehouseId(e.target.value)}
+                        className="w-full px-4 py-3 text-sm border outline-none focus:border-[#9D7D39]"
+                        style={{ borderColor, fontFamily: 'Montserrat, sans-serif', color: '#242424', backgroundColor: 'white' }}>
+                        <option value="">Select a dedicated warehouse for this branch...</option>
+                        {availableWarehousesForBranch.map((w: any) => <option key={w.id} value={w.id}>{w.name} ({w.code})</option>)}
+                      </select>
+                      <p className="text-[10px] mt-1" style={mutedStyle}>Only warehouses not already assigned to another branch are shown. Create a new warehouse first if you need one.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 mt-4">
+                    <button onClick={handleSaveBranch}
+                      disabled={addBranchMutation.isPending || updateBranchMutation.isPending}
+                      className="flex items-center gap-2 px-6 py-3 text-xs font-semibold tracking-wider uppercase transition-opacity disabled:opacity-60"
+                      style={{ backgroundColor: '#9D7D39', color: '#FAFAF8', fontFamily: 'Montserrat, sans-serif' }}>
+                      {(addBranchMutation.isPending || updateBranchMutation.isPending) && <Loader2 size={12} className="animate-spin" />}
+                      {editingBranch ? 'Save Changes' : 'Create Branch'}
+                    </button>
+                    <button onClick={() => { setShowAddBranch(false); setEditingBranch(null); }}
+                      className="px-6 py-3 text-xs font-semibold tracking-wider uppercase border transition-colors hover:border-[#9D7D39]"
+                      style={{ borderColor, color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}>Cancel</button>
+                  </div>
+                </div>
+              )}
+
+              {/* Branch list */}
+              {(branches || []).length === 0 ? (
+                <p className="text-xs py-6 text-center" style={mutedStyle}>No branches yet — add one above to get started.</p>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {(branches || []).map((b: any) => (
+                    <div key={b.id} className="bg-white rounded-lg border shadow-sm p-5" style={{ borderColor }}>
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                          <Warehouse size={16} style={goldStyle} />
+                          <span className="text-sm font-semibold" style={labelStyle}>{b.name}</span>
+                        </div>
+                        <button onClick={() => openEditBranch(b)} className="p-1 rounded hover:bg-gray-100" style={{ color: '#8A8A82' }}>
+                          <Pencil size={12} />
+                        </button>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded" style={{ backgroundColor: '#F0EDE8', color: '#9D7D39' }}>{b.code}</span>
+                        </div>
+                        <p className="text-xs mt-2" style={mutedStyle}>Warehouse: {b.warehouseName}</p>
+                        <div className="flex items-center gap-1 mt-2">
+                          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: b.isActive ? '#10B981' : '#EF4444' }} />
+                          <span className="text-[10px]" style={mutedStyle}>{b.isActive ? 'Active' : 'Inactive'}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}

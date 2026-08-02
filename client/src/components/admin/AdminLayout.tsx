@@ -22,6 +22,7 @@ import { useAuth } from '@/_core/hooks/useAuth';
 import { useLanguage } from '@/contexts/LanguageContext';
 // getLoginUrl removed — staff use /staff-login instead of Manus OAuth
 import { toast } from 'sonner';
+import BranchSwitcher from './BranchSwitcher';
 
 const ADMIN_NAV_ITEMS: { href: string; label: string; icon: any; exact?: boolean }[] = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard, exact: true },
@@ -214,8 +215,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         })}
       </nav>
 
-      {/* Bottom: user info + view store + logout */}
+      {/* Bottom: branch switcher + user info + view store + logout */}
       <div className="px-3 py-4 border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+        {(user.role === 'pos' || user.role === 'admin') && (
+          <BranchSwitcher activeBranchId={(user as any).activeBranchId} />
+        )}
         {/* User info */}
         <div className="px-3 py-2 mb-2">
           <p className="text-[10px] font-semibold tracking-wider uppercase truncate" style={{ color: 'rgba(250,250,248,0.3)', fontFamily: 'Montserrat, sans-serif' }}>
