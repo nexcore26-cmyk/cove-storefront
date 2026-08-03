@@ -37,11 +37,20 @@ machine (home/office PC) is driving — this file is the shared source of truth.
 - [x] Confirm homepage, product pages, admin login, POS all work against the imported DB
 
 ## Phase 5: DNS cutover (low-risk, whenever ready)
-- [ ] Update Cloudflare DNS for the three subdomains to point to `200.141.8.75`
-- [ ] Run `certbot` once DNS has propagated
-- [ ] Confirm HTTPS works end-to-end; compare a few pages against the old droplet for parity
-- [ ] Leave the old droplet's copy stopped-but-present as a fallback (don't delete yet)
+- [x] Update Cloudflare DNS for the three subdomains to point to `200.141.8.75`
+- [x] Run `certbot` once DNS has propagated
+- [x] Confirm HTTPS works end-to-end; compare a few pages against the old droplet for parity
+- [x] Leave the old droplet's copy stopped-but-present as a fallback (don't delete yet)
 
 ## Phase 6: Next milestone (separate from this plan)
 - [ ] Begin actual tenant-scoping logic (query filtering by tenantId, tenant resolution, per-tenant theming) on 200.141.8.75
 - [ ] (Much later) Plan the real `coveinterior.com` WordPress → multi-tenant cutover
+
+## Migration complete (2026-08-04)
+App is live on 200.141.8.75 at https://app.coveinterior.com, https://admin.coveinterior.com,
+https://pos.coveinterior.com — real Let's Encrypt cert, DNS-only (no Cloudflare proxy,
+matching prior setup), old droplet's copy stopped but left in place as fallback.
+Note: DNS records were briefly Cloudflare-proxied (orange cloud) during cutover, which
+caused intermittent 404s (requests landing on nginx's default block instead of ours) —
+switched to DNS-only to match the established pattern for these subdomains and resolved it.
+Next up: Phase 6, tenant-scoping logic, on this droplet.
