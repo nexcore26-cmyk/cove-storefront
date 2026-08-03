@@ -206,6 +206,7 @@ export const productVariants = mysqlTable("product_variants", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const productVariantLocalizations = mysqlTable("product_variant_localizations", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   variantId: int("variantId").notNull(),
   productId: int("productId").notNull(),
   locale: mysqlEnum("locale", ["en", "ar"]).notNull(),
@@ -218,6 +219,7 @@ export const productVariantLocalizations = mysqlTable("product_variant_localizat
 }, (t) => [
   uniqueIndex("variant_localizations_variant_locale_unique").on(t.variantId, t.locale),
   index("variant_localizations_productId_idx").on(t.productId),
+  index("variant_localizations_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -571,6 +573,7 @@ export const wishlists = mysqlTable("wishlists", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const productTranslations = mysqlTable("product_translations", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   productId: int("productId").notNull(),
   locale: mysqlEnum("locale", ["en", "ar"]).notNull(),
   name: varchar("name", { length: 500 }).notNull(),
@@ -581,6 +584,7 @@ export const productTranslations = mysqlTable("product_translations", {
 }, (t) => [
   uniqueIndex("product_translations_product_locale_unique").on(t.productId, t.locale),
   index("product_translations_productId_idx").on(t.productId),
+  index("product_translations_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -588,6 +592,7 @@ export const productTranslations = mysqlTable("product_translations", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const categoryTranslations = mysqlTable("category_translations", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   categoryId: int("categoryId").notNull(),
   locale: mysqlEnum("locale", ["en", "ar"]).notNull(),
   name: varchar("name", { length: 255 }).notNull(),
@@ -596,6 +601,7 @@ export const categoryTranslations = mysqlTable("category_translations", {
 }, (t) => [
   uniqueIndex("category_translations_cat_locale_unique").on(t.categoryId, t.locale),
   index("category_translations_categoryId_idx").on(t.categoryId),
+  index("category_translations_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -603,6 +609,7 @@ export const categoryTranslations = mysqlTable("category_translations", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const attributeTranslations = mysqlTable("attribute_translations", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   attributeId: int("attributeId").notNull(),
   locale: mysqlEnum("locale", ["en", "ar"]).notNull(),
   name: varchar("name", { length: 255 }).notNull(),
@@ -612,6 +619,7 @@ export const attributeTranslations = mysqlTable("attribute_translations", {
 }, (t) => [
   uniqueIndex("attribute_translations_attr_locale_unique").on(t.attributeId, t.locale),
   index("attribute_translations_attributeId_idx").on(t.attributeId),
+  index("attribute_translations_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -619,6 +627,7 @@ export const attributeTranslations = mysqlTable("attribute_translations", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const variantNameTranslations = mysqlTable("variant_name_translations", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   variantId: int("variantId").notNull(),
   productId: int("productId").notNull(),
   locale: mysqlEnum("locale", ["en", "ar"]).notNull(),
@@ -628,6 +637,7 @@ export const variantNameTranslations = mysqlTable("variant_name_translations", {
 }, (t) => [
   uniqueIndex("variant_name_translations_variant_locale_unique").on(t.variantId, t.locale),
   index("variant_name_translations_productId_idx").on(t.productId),
+  index("variant_name_translations_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -752,12 +762,14 @@ export const attributeValueBundleItems = mysqlTable("attribute_value_bundle_item
 // ─────────────────────────────────────────────────────────────────────────────
 export const attributeValueStock = mysqlTable("attribute_value_stock", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   attributeValueId: int("attributeValueId").notNull(),
   warehouseId: int("warehouseId").notNull(),
   quantity: int("quantity").default(0).notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 }, (t) => [
   uniqueIndex("av_stock_value_warehouse_unique").on(t.attributeValueId, t.warehouseId),
+  index("av_stock_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -765,6 +777,7 @@ export const attributeValueStock = mysqlTable("attribute_value_stock", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const productAttributes = mysqlTable("product_attributes", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   productId: int("productId").notNull(),
   attributeId: int("attributeId").notNull(),
   // Which value IDs are active for this product (subset of all attribute values)
@@ -782,6 +795,7 @@ export const productAttributes = mysqlTable("product_attributes", {
 }, (t) => [
   uniqueIndex("product_attributes_product_attr_unique").on(t.productId, t.attributeId),
   index("product_attributes_productId_idx").on(t.productId),
+  index("product_attributes_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
