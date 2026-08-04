@@ -569,6 +569,7 @@ export const shippingZones = mysqlTable("shipping_zones", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const wishlists = mysqlTable("wishlists", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   userId: int("userId"),
   sessionId: varchar("sessionId", { length: 128 }),
   productId: int("productId").notNull(),
@@ -577,6 +578,7 @@ export const wishlists = mysqlTable("wishlists", {
 }, (t) => [
   index("wishlists_userId_idx").on(t.userId),
   index("wishlists_sessionId_idx").on(t.sessionId),
+  index("wishlists_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
