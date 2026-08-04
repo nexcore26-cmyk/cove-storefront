@@ -76,7 +76,7 @@ export async function getUserById(id: number) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-export async function getCategories(opts?: { channel?: 'online' | 'pos' | 'both' | 'none'; warehouseId?: number }) {
+export async function getCategories(tenantId: number, opts?: { channel?: 'online' | 'pos' | 'both' | 'none'; warehouseId?: number }) {
   const db = await getDb();
   if (!db) return [];
   const channel = opts?.channel;
@@ -89,6 +89,7 @@ export async function getCategories(opts?: { channel?: 'online' | 'pos' | 'both'
     // Use EXISTS subquery to avoid duplicate category rows from the join
     const rows = await db.select().from(categories)
       .where(and(
+        eq(categories.tenantId, tenantId),
         eq(categories.isActive, true),
         channel ? eq(categories.channel, channel) : undefined,
         sql`EXISTS (
@@ -109,19 +110,19 @@ export async function getCategories(opts?: { channel?: 'online' | 'pos' | 'both'
 
   return db.select().from(categories).where(
     channel
-      ? and(eq(categories.isActive, true), eq(categories.channel, channel))
-      : eq(categories.isActive, true)
+      ? and(eq(categories.tenantId, tenantId), eq(categories.isActive, true), eq(categories.channel, channel))
+      : and(eq(categories.tenantId, tenantId), eq(categories.isActive, true))
   ).orderBy(categories.displayOrder, categories.name);
 }
 
-export async function getCategoryBySlug(slug: string) {
+export async function getCategoryBySlug(tenantId: number, slug: string) {
   const db = await getDb();
   if (!db) return null;
-  const result = await db.select().from(categories).where(eq(categories.slug, slug)).limit(1);
+  const result = await db.select().from(categories).where(and(eq(categories.tenantId, tenantId), eq(categories.slug, slug))).limit(1);
   return result[0] || null;
 }
 
-export async function getProducts(opts: {
+export async function getProducts(tenantId: number, opts: {
   categoryId?: number;
   /**
    * warehouseId: when set, only return products that have stock > 0 in this warehouse.
@@ -136,7 +137,7 @@ export async function getProducts(opts: {
 } = {}) {
   const db = await getDb();
   if (!db) return { items: [], total: 0 };
-  const conditions: any[] = [eq(products.status, opts.status || 'active')];
+  const conditions: any[] = [eq(products.tenantId, tenantId), eq(products.status, opts.status || 'active')];
   if (opts.categoryId) {
     const categoryIds = [opts.categoryId];
     let frontier = [opts.categoryId];
@@ -144,7 +145,7 @@ export async function getProducts(opts: {
     // sellable products live in child categories. Include descendants so
     // /category/:slug and ?category=:slug behave like collection pages.
     for (let depth = 0; depth < 5 && frontier.length > 0; depth += 1) {
-      const childRows = await db.select({ id: categories.id }).from(categories).where(inArray(categories.parentId, frontier));
+      const childRows = await db.select({ id: categories.id }).from(categories).where(and(eq(categories.tenantId, tenantId), inArray(categories.parentId, frontier)));
       const childIds = childRows.map((row) => row.id).filter((id) => !categoryIds.includes(id));
       if (childIds.length === 0) break;
       categoryIds.push(...childIds);
@@ -212,25 +213,25 @@ export async function getProducts(opts: {
   return { items, total: countResult?.count || 0 };
 }
 
-export async function getProductBySlug(slug: string) {
+export async function getProductBySlug(tenantId: number, slug: string) {
   const db = await getDb();
   if (!db) return null;
-  const result = await db.select().from(products).where(eq(products.slug, slug)).limit(1);
+  const result = await db.select().from(products).where(and(eq(products.tenantId, tenantId), eq(products.slug, slug))).limit(1);
   return result[0] || null;
 }
 
-export async function getProductById(id: number) {
+export async function getProductById(tenantId: number, id: number) {
   const db = await getDb();
   if (!db) return null;
-  const result = await db.select().from(products).where(eq(products.id, id)).limit(1);
+  const result = await db.select().from(products).where(and(eq(products.tenantId, tenantId), eq(products.id, id))).limit(1);
   return result[0] || null;
 }
 
-export async function getProductVariants(productId: number) {
+export async function getProductVariants(tenantId: number, productId: number) {
   const db = await getDb();
   if (!db) return [];
   return db.select().from(productVariants)
-    .where(and(eq(productVariants.productId, productId), eq(productVariants.isActive, true)));
+    .where(and(eq(productVariants.tenantId, tenantId), eq(productVariants.productId, productId), eq(productVariants.isActive, true)));
 }
 
 export async function getProductStock(productId: number, variantId?: number | null) {

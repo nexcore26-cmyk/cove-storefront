@@ -56,8 +56,8 @@ const categoriesRouter = router({
       channel: z.enum(['online', 'pos', 'both', 'none']).optional(),
       locale: localeSchema.optional(),
     }).optional())
-    .query(async ({ input }) => {
-      const cats = await getCategories(input?.channel ? { channel: input.channel } : {});
+    .query(async ({ input, ctx }) => {
+      const cats = await getCategories(ctx.tenantId, input?.channel ? { channel: input.channel } : {});
       if (!input?.locale || input.locale === 'en') return cats;
       // Overlay Arabic translations
       const { getDb } = await import('./db');
@@ -76,8 +76,8 @@ const categoriesRouter = router({
     }),
   bySlug: publicProcedure
     .input(z.object({ slug: z.string(), locale: localeSchema.optional() }))
-    .query(async ({ input }) => {
-      const cat = await getCategoryBySlug(input.slug);
+    .query(async ({ input, ctx }) => {
+      const cat = await getCategoryBySlug(ctx.tenantId, input.slug);
       if (!cat || !input.locale || input.locale === 'en') return cat;
       const { getDb } = await import('./db');
       const { categoryTranslations } = await import('../drizzle/schema');
@@ -313,8 +313,8 @@ const productsRouter = router({
       status: z.enum(['active', 'draft', 'archived']).optional(),
       locale: localeSchema.optional(),
     }).optional())
-    .query(async ({ input }) => {
-      const result = await getProducts({ ...(input || {}) });
+    .query(async ({ input, ctx }) => {
+      const result = await getProducts(ctx.tenantId, { ...(input || {}) });
       if (!input?.locale || input.locale === 'en') return result;
       const { getDb } = await import('./db');
       const { productTranslations } = await import('../drizzle/schema');
@@ -335,10 +335,10 @@ const productsRouter = router({
     }),
   bySlug: publicProcedure
     .input(z.object({ slug: z.string(), locale: localeSchema.optional() }))
-    .query(async ({ input }) => {
-      const product = await getProductBySlug(input.slug);
+    .query(async ({ input, ctx }) => {
+      const product = await getProductBySlug(ctx.tenantId, input.slug);
       if (!product) throw new TRPCError({ code: 'NOT_FOUND', message: 'Product not found' });
-      const variants = await getProductVariants(product.id);
+      const variants = await getProductVariants(ctx.tenantId, product.id);
 
       // For bundle products, compute effective stock per variant (min of component stocks)
       let variantsWithBundleStock = variants;
@@ -443,7 +443,7 @@ const productsRouter = router({
     }),
   variants: publicProcedure
     .input(z.object({ productId: z.number() }))
-    .query(({ input }) => getProductVariants(input.productId)),
+    .query(({ input, ctx }) => getProductVariants(ctx.tenantId, input.productId)),
   stock: publicProcedure
     .input(z.object({ productId: z.number(), variantId: z.number().optional() }))
     .query(({ input }) => getProductStock(input.productId, input.variantId)),
