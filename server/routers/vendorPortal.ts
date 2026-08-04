@@ -152,7 +152,7 @@ export const vendorPortalRouter = router({
       })
       .from(productVendors)
       .innerJoin(products, eq(products.id, productVendors.productId))
-      .where(eq(productVendors.vendorId, vendor.id));
+      .where(and(eq(productVendors.vendorId, vendor.id), eq(products.tenantId, vendor.tenantId)));
   }),
 
   getOrders: publicProcedure
@@ -177,7 +177,7 @@ export const vendorPortalRouter = router({
         .from(orders)
         .innerJoin(orderItems, eq(orders.id, orderItems.orderId))
         .innerJoin(productVendors, eq(orderItems.productId, productVendors.productId))
-        .where(eq(productVendors.vendorId, vendor.id))
+        .where(and(eq(productVendors.vendorId, vendor.id), eq(orders.tenantId, vendor.tenantId)))
         .limit(input.limit)
         .offset(offset);
     }),
@@ -197,7 +197,7 @@ export const vendorPortalRouter = router({
       .from(orders)
       .innerJoin(orderItems, eq(orders.id, orderItems.orderId))
       .innerJoin(productVendors, eq(orderItems.productId, productVendors.productId))
-      .where(eq(productVendors.vendorId, vendor.id));
+      .where(and(eq(productVendors.vendorId, vendor.id), eq(orders.tenantId, vendor.tenantId)));
 
     let totalEarned = 0;
     let totalPending = 0;
@@ -235,7 +235,7 @@ export const vendorPortalRouter = router({
         .from(orders)
         .innerJoin(orderItems, eq(orders.id, orderItems.orderId))
         .innerJoin(productVendors, eq(orderItems.productId, productVendors.productId))
-        .where(and(eq(orders.id, input.orderId), eq(productVendors.vendorId, vendor.id)));
+        .where(and(eq(orders.id, input.orderId), eq(productVendors.vendorId, vendor.id), eq(orders.tenantId, vendor.tenantId)));
       if (rows.length === 0) {
         throw new TRPCError({ code: "NOT_FOUND", message: "Order not found for this vendor" });
       }

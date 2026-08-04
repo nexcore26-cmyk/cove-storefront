@@ -24,12 +24,12 @@ export const returnRequestsRouter = router({
     .mutation(async ({ ctx, input }) => {
       const { getDb } = await import("../db");
       const { returnRequests, orders } = await import("../../drizzle/schema");
-      const { eq } = await import("drizzle-orm");
+      const { eq, and } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
 
-      // Verify the order exists
-      const [order] = await db.select().from(orders).where(eq(orders.id, input.orderId)).limit(1);
+      // Verify the order exists and belongs to this tenant
+      const [order] = await db.select().from(orders).where(and(eq(orders.id, input.orderId), eq(orders.tenantId, ctx.tenantId))).limit(1);
       if (!order) throw new TRPCError({ code: "NOT_FOUND", message: "Order not found" });
 
       // Only allow returns on completed/delivered orders
@@ -59,7 +59,7 @@ export const returnRequestsRouter = router({
       limit: z.number().int().min(1).max(200).optional(),
       offset: z.number().int().min(0).optional(),
     }).optional())
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import("../db");
       const { returnRequests, orders } = await import("../../drizzle/schema");
       const { eq, and, desc } = await import("drizzle-orm");
@@ -69,7 +69,9 @@ export const returnRequestsRouter = router({
       const limit = input?.limit ?? 50;
       const offset = input?.offset ?? 0;
 
-      const conditions = [];
+      // return_requests has no tenantId column of its own - scoped via the
+      // joined orders row (an inner join, so unowned rows drop out entirely).
+      const conditions = [eq(orders.tenantId, ctx.tenantId)];
       if (input?.status && input.status !== "all") {
         conditions.push(eq(returnRequests.status, input.status as "pending" | "approved" | "rejected" | "executed"));
       }
@@ -95,7 +97,7 @@ export const returnRequestsRouter = router({
           customerEmail: orders.customerEmail,
         })
         .from(returnRequests)
-        .leftJoin(orders, eq(returnRequests.orderId, orders.id))
+        .innerJoin(orders, eq(returnRequests.orderId, orders.id))
         .where(conditions.length > 0 ? and(...conditions) : undefined)
         .orderBy(desc(returnRequests.createdAt))
         .limit(limit)
@@ -112,12 +114,17 @@ export const returnRequestsRouter = router({
     }))
     .mutation(async ({ ctx, input }) => {
       const { getDb } = await import("../db");
-      const { returnRequests } = await import("../../drizzle/schema");
-      const { eq } = await import("drizzle-orm");
+      const { returnRequests, orders } = await import("../../drizzle/schema");
+      const { eq, and } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
 
-      const [rr] = await db.select().from(returnRequests).where(eq(returnRequests.id, input.id)).limit(1);
+      // return_requests has no tenantId column - verify via the parent order
+      const [rr] = await db.select({ id: returnRequests.id, status: returnRequests.status })
+        .from(returnRequests)
+        .innerJoin(orders, eq(returnRequests.orderId, orders.id))
+        .where(and(eq(returnRequests.id, input.id), eq(orders.tenantId, ctx.tenantId)))
+        .limit(1);
       if (!rr) throw new TRPCError({ code: "NOT_FOUND", message: "Return request not found" });
       if (rr.status !== "pending") {
         throw new TRPCError({ code: "BAD_REQUEST", message: "Return request is already resolved" });
@@ -143,12 +150,17 @@ export const returnRequestsRouter = router({
     .mutation(async ({ ctx, input }) => {
       const { getDb } = await import("../db");
       const { returnRequests, orders } = await import("../../drizzle/schema");
-      const { eq } = await import("drizzle-orm");
+      const { eq, and } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
 
-      // Fetch the return request
-      const [rr] = await db.select().from(returnRequests).where(eq(returnRequests.id, input.id)).limit(1);
+      // Fetch the return request - return_requests has no tenantId column,
+      // verify via the parent order in the same query.
+      const [rr] = await db.select({ id: returnRequests.id, status: returnRequests.status, orderId: returnRequests.orderId, notes: returnRequests.notes })
+        .from(returnRequests)
+        .innerJoin(orders, eq(returnRequests.orderId, orders.id))
+        .where(and(eq(returnRequests.id, input.id), eq(orders.tenantId, ctx.tenantId)))
+        .limit(1);
       if (!rr) throw new TRPCError({ code: "NOT_FOUND", message: "Return request not found" });
       if (rr.status !== "approved") {
         throw new TRPCError({
@@ -158,7 +170,7 @@ export const returnRequestsRouter = router({
       }
 
       // Fetch the order to get the MyFatoorah invoice ID
-      const [order] = await db.select().from(orders).where(eq(orders.id, rr.orderId)).limit(1);
+      const [order] = await db.select().from(orders).where(and(eq(orders.id, rr.orderId), eq(orders.tenantId, ctx.tenantId))).limit(1);
       if (!order) throw new TRPCError({ code: "NOT_FOUND", message: "Associated order not found" });
 
       // Call MyFatoorah refund API
@@ -221,12 +233,16 @@ export const returnRequestsRouter = router({
     }))
     .mutation(async ({ ctx, input }) => {
       const { getDb } = await import("../db");
-      const { returnRequests } = await import("../../drizzle/schema");
-      const { eq } = await import("drizzle-orm");
+      const { returnRequests, orders } = await import("../../drizzle/schema");
+      const { eq, and } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
 
-      const [rr] = await db.select().from(returnRequests).where(eq(returnRequests.id, input.id)).limit(1);
+      const [rr] = await db.select({ id: returnRequests.id, status: returnRequests.status })
+        .from(returnRequests)
+        .innerJoin(orders, eq(returnRequests.orderId, orders.id))
+        .where(and(eq(returnRequests.id, input.id), eq(orders.tenantId, ctx.tenantId)))
+        .limit(1);
       if (!rr) throw new TRPCError({ code: "NOT_FOUND", message: "Return request not found" });
       if (rr.status !== "pending") {
         throw new TRPCError({ code: "BAD_REQUEST", message: "Return request is already resolved" });
