@@ -1122,24 +1122,24 @@ const ordersRouter = router({
       limit: z.number().optional(),
       offset: z.number().optional(),
     }).optional())
-    .query(({ input }) => getOrders(input || {})),
+    .query(({ input, ctx }) => getOrders(ctx.tenantId, input || {})),
   myOrders: protectedProcedure
     .input(z.object({ limit: z.number().optional(), offset: z.number().optional() }).optional())
     .query(async ({ ctx, input }) => {
       const { getDb } = await import('./db');
       const { customers } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return { items: [], total: 0 };
-      const custRows = await db.select().from(customers).where(eq(customers.email, ctx.user.email || '')).limit(1);
+      const custRows = await db.select().from(customers).where(and(eq(customers.email, ctx.user.email || ''), eq(customers.tenantId, ctx.tenantId))).limit(1);
       const customerId = custRows[0]?.id;
       if (!customerId) return { items: [], total: 0 };
-      return getOrders({ customerId, ...input });
+      return getOrders(ctx.tenantId, { customerId, ...input });
     }),
   byId: protectedProcedure
     .input(z.object({ id: z.number() }))
-    .query(async ({ input }) => {
-      const order = await getOrderById(input.id);
+    .query(async ({ input, ctx }) => {
+      const order = await getOrderById(ctx.tenantId, input.id);
       if (!order) throw new TRPCError({ code: 'NOT_FOUND' });
       const items = await getOrderItems(input.id);
       return { order, items };
@@ -1379,7 +1379,7 @@ const ordersRouter = router({
       orderNumber: z.string(),
       email: z.string().email(),
     }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable, orderItems: orderItemsTable } = await import('../drizzle/schema');
       const { eq, and } = await import('drizzle-orm');
@@ -1389,6 +1389,7 @@ const ordersRouter = router({
         .where(and(
           eq(ordersTable.orderNumber, input.orderNumber),
           eq(ordersTable.customerEmail, input.email),
+          eq(ordersTable.tenantId, ctx.tenantId),
         )).limit(1);
       if (!order) throw new TRPCError({ code: 'NOT_FOUND', message: 'Order not found. Please check your order number and email address.' });
       const items = await db.select().from(orderItemsTable).where(eq(orderItemsTable.orderId, order.id));
@@ -1416,10 +1417,10 @@ const ordersRouter = router({
     .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      const [order] = await db.select().from(ordersTable).where(eq(ordersTable.id, input.orderId)).limit(1);
+      const [order] = await db.select().from(ordersTable).where(and(eq(ordersTable.id, input.orderId), eq(ordersTable.tenantId, ctx.tenantId))).limit(1);
       if (!order) throw new TRPCError({ code: 'NOT_FOUND', message: 'Order not found' });
       // Allow admin or the order owner
       const isAdmin = ctx.user.role === 'admin';
@@ -1433,13 +1434,13 @@ const ordersRouter = router({
 
   resendEmail: ordersProcedure
     .input(z.object({ orderId: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable, orderItems: orderItemsTable } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      const [order] = await db.select().from(ordersTable).where(eq(ordersTable.id, input.orderId)).limit(1);
+      const [order] = await db.select().from(ordersTable).where(and(eq(ordersTable.id, input.orderId), eq(ordersTable.tenantId, ctx.tenantId))).limit(1);
       if (!order) throw new TRPCError({ code: 'NOT_FOUND', message: 'Order not found' });
       const items = await db.select().from(orderItemsTable).where(eq(orderItemsTable.orderId, input.orderId));
       const email = (order as any).customerEmail || (order as any).guestEmail;
@@ -1483,22 +1484,22 @@ const ordersRouter = router({
       status: z.enum(['pending', 'processing', 'on_hold', 'completed', 'cancelled', 'refunded', 'failed', 'shipped', 'delivered', 'exchanged']),
       trackingNumber: z.string().optional(),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders, orderItems, products: prodTable, productVariants: pvTable } = await import('../drizzle/schema');
-      const { eq, inArray } = await import('drizzle-orm');
+      const { eq, and, inArray } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
       const updateData: any = { status: input.status };
       if (input.trackingNumber) updateData.trackingNumber = input.trackingNumber;
       if (input.status === 'shipped') updateData.shippedAt = new Date();
       if (input.status === 'delivered') updateData.deliveredAt = new Date();
-      await db.update(orders).set(updateData).where(eq(orders.id, input.id));
+      await db.update(orders).set(updateData).where(and(eq(orders.id, input.id), eq(orders.tenantId, ctx.tenantId)));
       // Send status change email (fire-and-forget, non-blocking)
       // Only send for customer-facing statuses
       const notifyStatuses = ['processing', 'shipped', 'delivered', 'completed', 'cancelled', 'refunded', 'on_hold'];
       if (notifyStatuses.includes(input.status)) {
-        const [order] = await db.select().from(orders).where(eq(orders.id, input.id)).limit(1);
+        const [order] = await db.select().from(orders).where(and(eq(orders.id, input.id), eq(orders.tenantId, ctx.tenantId))).limit(1);
         if (order?.customerEmail) {
           const items = await db.select().from(orderItems).where(eq(orderItems.orderId, input.id));
           const productIds = Array.from(new Set(items.map((i: any) => i.productId).filter(Boolean)));
@@ -1537,21 +1538,24 @@ const ordersRouter = router({
       qty: z.number().min(1).default(1),
       giftNote: z.string().optional(),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { orderItems, products: prodTable, productVariants: pvTable, warehouseStock, warehouses } = await import('../drizzle/schema');
+      const { orders: ordersTable, orderItems, products: prodTable, productVariants: pvTable, warehouseStock, warehouses } = await import('../drizzle/schema');
       const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+      // Verify the order belongs to this tenant before touching it
+      const [ownedOrder] = await db.select({ id: ordersTable.id }).from(ordersTable).where(and(eq(ordersTable.id, input.orderId), eq(ordersTable.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedOrder) throw new TRPCError({ code: 'NOT_FOUND', message: 'Order not found' });
       // Get product info
-      const [prod] = await db.select().from(prodTable).where(eq(prodTable.id, input.productId)).limit(1);
+      const [prod] = await db.select().from(prodTable).where(and(eq(prodTable.id, input.productId), eq(prodTable.tenantId, ctx.tenantId))).limit(1);
       if (!prod) throw new TRPCError({ code: 'NOT_FOUND', message: 'Product not found' });
       let variantName: string | null = null;
       let cog: string | null = null;
       let image: string | null = null;
       try { image = prod.images ? ((JSON.parse(prod.images as unknown as string) as string[])?.[0] || null) : null; } catch { image = null; }
       if (input.variantId) {
-        const [variant] = await db.select().from(pvTable).where(eq(pvTable.id, input.variantId)).limit(1);
+        const [variant] = await db.select().from(pvTable).where(and(eq(pvTable.id, input.variantId), eq(pvTable.tenantId, ctx.tenantId))).limit(1);
         if (variant) {
           variantName = variant.name;
           cog = variant.cog || null;
@@ -1559,7 +1563,7 @@ const ordersRouter = router({
         }
       }
       // Deduct stock from main warehouse
-      const [mainWh] = await db.select().from(warehouses).where(eq(warehouses.code, 'MAIN')).limit(1);
+      const [mainWh] = await db.select().from(warehouses).where(and(eq(warehouses.code, 'MAIN'), eq(warehouses.tenantId, ctx.tenantId))).limit(1);
       if (mainWh) {
         const stockWhere = input.variantId
           ? and(eq(warehouseStock.warehouseId, mainWh.id), eq(warehouseStock.variantId, input.variantId))
@@ -1589,14 +1593,19 @@ const ordersRouter = router({
     }),
   removeOrderItem: ordersProcedure
     .input(z.object({ id: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { orderItems } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { orderItems, orders: ordersTable } = await import('../drizzle/schema');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      // Only allow removing gift lines
-      const [item] = await db.select().from(orderItems).where(eq(orderItems.id, input.id)).limit(1);
+      // Only allow removing gift lines - order_items has no tenantId column of
+      // its own, so ownership is verified via a join with its parent order.
+      const [item] = await db.select({ id: orderItems.id, isGift: orderItems.isGift })
+        .from(orderItems)
+        .innerJoin(ordersTable, eq(orderItems.orderId, ordersTable.id))
+        .where(and(eq(orderItems.id, input.id), eq(ordersTable.tenantId, ctx.tenantId)))
+        .limit(1);
       if (!item) throw new TRPCError({ code: 'NOT_FOUND' });
       if (!item.isGift) throw new TRPCError({ code: 'FORBIDDEN', message: 'Can only remove gift lines' });
       await db.delete(orderItems).where(eq(orderItems.id, input.id));
@@ -1616,17 +1625,17 @@ const ordersRouter = router({
       amount: z.number().positive(),
       note: z.string().optional(),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders, orderItems: orderItemsTable, warehouseStock, warehouses: warehousesTable } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const { mfMakeRefund } = await import('./payment');
       const { notifyOwner } = await import('./_core/notification');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 
       // 1. Load order
-      const [order] = await db.select().from(orders).where(eq(orders.id, input.orderId)).limit(1);
+      const [order] = await db.select().from(orders).where(and(eq(orders.id, input.orderId), eq(orders.tenantId, ctx.tenantId))).limit(1);
       if (!order) throw new TRPCError({ code: 'NOT_FOUND', message: 'Order not found' });
       if (order.paymentStatus === 'refunded') throw new TRPCError({ code: 'BAD_REQUEST', message: 'Order already refunded' });
       if (order.paymentStatus !== 'paid') throw new TRPCError({ code: 'BAD_REQUEST', message: 'Order has not been paid' });
@@ -1666,7 +1675,7 @@ const ordersRouter = router({
       if (order.channel === 'online') {
         try {
           const items = await db.select().from(orderItemsTable).where(eq(orderItemsTable.orderId, input.orderId));
-          const [onlineWarehouse] = await db.select().from(warehousesTable).where(eq(warehousesTable.type, 'online')).limit(1);
+          const [onlineWarehouse] = await db.select().from(warehousesTable).where(and(eq(warehousesTable.type, 'online'), eq(warehousesTable.tenantId, ctx.tenantId))).limit(1);
           if (onlineWarehouse && items.length > 0) {
             for (const item of items) {
               if (!item.productId) continue;
@@ -1808,13 +1817,13 @@ const ordersRouter = router({
       orderId: z.number(),
       internalNotes: z.string(),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      await db.update(ordersTable).set({ internalNotes: input.internalNotes }).where(eq(ordersTable.id, input.orderId));
+      await db.update(ordersTable).set({ internalNotes: input.internalNotes }).where(and(eq(ordersTable.id, input.orderId), eq(ordersTable.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
@@ -1825,13 +1834,13 @@ const ordersRouter = router({
       discountAmount: z.number().min(0),
       reason: z.string().min(1, 'Reason is required'),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      const [order] = await db.select().from(ordersTable).where(eq(ordersTable.id, input.orderId)).limit(1);
+      const [order] = await db.select().from(ordersTable).where(and(eq(ordersTable.id, input.orderId), eq(ordersTable.tenantId, ctx.tenantId))).limit(1);
       if (!order) throw new TRPCError({ code: 'NOT_FOUND', message: 'Order not found' });
       const subtotal = parseFloat(String(order.subtotal));
       const shippingCost = parseFloat(String(order.shippingCost ?? 0));
@@ -1841,7 +1850,7 @@ const ordersRouter = router({
         discountAmount: String(newDiscount.toFixed(3)),
         total: String(newTotal.toFixed(3)),
         internalNotes: `${order.internalNotes ?? ''}\n[DISCOUNT] ${input.reason}: -${newDiscount.toFixed(3)} KWD`.trim(),
-      }).where(eq(ordersTable.id, input.orderId));
+      }).where(and(eq(ordersTable.id, input.orderId), eq(ordersTable.tenantId, ctx.tenantId)));
       return { success: true, newTotal };
     }),
 
@@ -1853,19 +1862,19 @@ const ordersRouter = router({
       dateTo: z.string().optional(),
       channel: z.enum(['online', 'pos']).optional(),
     }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable } = await import('../drizzle/schema');
       const { eq, and, gte, lte } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return { csv: '' };
-      const conditions: ReturnType<typeof eq>[] = [];
+      const conditions: ReturnType<typeof eq>[] = [eq(ordersTable.tenantId, ctx.tenantId)];
       if (input.status) conditions.push(eq(ordersTable.status, input.status as any));
       if (input.channel) conditions.push(eq(ordersTable.channel, input.channel));
       if (input.dateFrom) conditions.push(gte(ordersTable.createdAt, new Date(input.dateFrom)));
       if (input.dateTo) conditions.push(lte(ordersTable.createdAt, new Date(input.dateTo + 'T23:59:59')));
       const rows = await db.select().from(ordersTable)
-        .where(conditions.length > 0 ? and(...conditions) : undefined)
+        .where(and(...conditions))
         .orderBy(ordersTable.createdAt);
       const header = 'Order#,Date,Customer,Email,Phone,Status,Payment,Total,Currency,Channel,Shipping Method,Tracking';
       const lines = rows.map((r: any) =>

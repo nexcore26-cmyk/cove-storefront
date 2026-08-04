@@ -299,17 +299,17 @@ export async function transferStock(opts: {
   return { success: true };
 }
 
-export async function getOrders(opts: { customerId?: number; status?: string; channel?: 'online' | 'pos'; limit?: number; offset?: number; } = {}) {
+export async function getOrders(tenantId: number, opts: { customerId?: number; status?: string; channel?: 'online' | 'pos'; limit?: number; offset?: number; } = {}) {
   const db = await getDb();
   if (!db) return { items: [], total: 0 };
-  const conditions: any[] = [];
+  const conditions: any[] = [eq(orders.tenantId, tenantId)];
   if (opts.customerId) conditions.push(eq(orders.customerId, opts.customerId));
   if (opts.status) conditions.push(eq(orders.status, opts.status as any));
   if (opts.channel) conditions.push(eq(orders.channel, opts.channel));
   const limit = opts.limit || 20;
   const offset = opts.offset || 0;
   const rows = await db.select().from(orders)
-    .where(conditions.length ? and(...conditions) : undefined)
+    .where(and(...conditions))
     .orderBy(desc(orders.createdAt)).limit(limit).offset(offset);
   // Attach itemCount via a single batch query
   const orderIds = rows.map(r => r.id);
@@ -323,14 +323,14 @@ export async function getOrders(opts: { customerId?: number; status?: string; ch
   }
   const items = rows.map(r => ({ ...r, itemCount: itemCounts[r.id] ?? 0 }));
   const [countResult] = await db.select({ count: sql<number>`count(*)` }).from(orders)
-    .where(conditions.length ? and(...conditions) : undefined);
+    .where(and(...conditions));
   return { items, total: countResult?.count || 0 };
 }
 
-export async function getOrderById(id: number) {
+export async function getOrderById(tenantId: number, id: number) {
   const db = await getDb();
   if (!db) return null;
-  const result = await db.select().from(orders).where(eq(orders.id, id)).limit(1);
+  const result = await db.select().from(orders).where(and(eq(orders.id, id), eq(orders.tenantId, tenantId))).limit(1);
   return result[0] || null;
 }
 
