@@ -45,5 +45,10 @@ tenant 1 without needing three separate domain rows).
 ## Phase E: Per-tenant theming/UI (not started)
 The original ask that started this whole project — shared core components + per-tenant theme config + pluggable product-type modules (per-item/weight/meter variations). Comes after C/D, once data isolation is actually real.
 
+**Confirmed domain/login model (2026-08-04):** each tenant's apex domain is the public storefront; `app.<tenant-domain>` is that tenant's staff/admin dashboard login (e.g. `app.almazyadfabrics.com` for a future tenant). This already works for *tenant identification* today (any subdomain of `rootDomain` resolves to the right tenant — confirmed in Phase B). **Gap**: visiting `admin.coveinterior.com/` currently shows the storefront homepage, not a login screen — the client SPA (`client/src/App.tsx`) has one flat route table with no hostname-based branching, so subdomain doesn't yet change *what's shown at `/`*. Needs: detect the `app.`/`admin.` subdomain client- or server-side and route `/` straight to the login/dashboard for that case. Small, but not yet built — do this as part of Phase E (or earlier, since it directly affects the login UX for every new tenant).
+
+## Not-yet-decided design points
+- `warehouses.code` and a few other columns are still globally unique (not per-tenant) — same class of issue `products.slug` had before Phase 1a fixed it. Will need the same per-tenant-unique-index treatment before a second tenant can actually create their own warehouses/codes.
+
 ## Far-future milestone (not planned yet)
 `coveinterior.com` (WordPress) → this multi-tenant system, once it's built out and validated. Not `app.coveinterior.com` — that's the staging domain for this app, not the live business.
