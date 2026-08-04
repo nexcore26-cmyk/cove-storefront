@@ -9,8 +9,8 @@
  * same pattern as skuUniqueness.test.ts.
  */
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
-import { getDb, getProducts, getProductById, getProductBySlug, getCategories, generateSku, checkSkuUnique } from './db';
-import { tenants, products, categories } from '../drizzle/schema';
+import { getDb, getProducts, getProductById, getProductBySlug, getCategories, generateSku, checkSkuUnique, getOrders, getOrderById, getWishlist, addToWishlist, removeFromWishlist } from './db';
+import { tenants, products, categories, orders } from '../drizzle/schema';
 import { eq } from 'drizzle-orm';
 
 const TENANT_1 = 1; // Cove Interior - real tenant, must not be mutated
@@ -19,6 +19,8 @@ let tenant1ProductId: number | null = null;
 let tenant2ProductId: number | null = null;
 let tenant1CategoryId: number | null = null;
 let tenant2CategoryId: number | null = null;
+let tenant1OrderId: number | null = null;
+let tenant2OrderId: number | null = null;
 const uniqueSuffix = Date.now();
 
 beforeAll(async () => {
@@ -67,6 +69,28 @@ beforeAll(async () => {
     type: 'simple',
   });
   tenant2ProductId = (p2 as any).insertId;
+
+  const [o1] = await db.insert(orders).values({
+    tenantId: TENANT_1,
+    orderNumber: `__TEST-ISO-T1-${uniqueSuffix}__`,
+    status: 'pending',
+    currency: 'KWD',
+    subtotal: '10.000',
+    total: '10.000',
+    channel: 'online',
+  });
+  tenant1OrderId = (o1 as any).insertId;
+
+  const [o2] = await db.insert(orders).values({
+    tenantId: testTenantId!,
+    orderNumber: `__TEST-ISO-T2-${uniqueSuffix}__`,
+    status: 'pending',
+    currency: 'KWD',
+    subtotal: '20.000',
+    total: '20.000',
+    channel: 'online',
+  });
+  tenant2OrderId = (o2 as any).insertId;
 });
 
 afterAll(async () => {
@@ -76,6 +100,10 @@ afterAll(async () => {
   if (tenant2ProductId) await db.delete(products).where(eq(products.id, tenant2ProductId));
   if (tenant1CategoryId) await db.delete(categories).where(eq(categories.id, tenant1CategoryId));
   if (tenant2CategoryId) await db.delete(categories).where(eq(categories.id, tenant2CategoryId));
+  if (tenant1OrderId) await db.delete(orders).where(eq(orders.id, tenant1OrderId));
+  if (tenant2OrderId) await db.delete(orders).where(eq(orders.id, tenant2OrderId));
+  const { wishlists } = await import('../drizzle/schema');
+  await db.delete(wishlists).where(eq(wishlists.sessionId, `__test-isolation-wishlist-${uniqueSuffix}__`));
   if (testTenantId) await db.delete(tenants).where(eq(tenants.id, testTenantId));
 });
 
@@ -136,5 +164,48 @@ describe('Cross-tenant isolation (Phase C)', () => {
     const skuT2 = await generateSku(testTenantId, base, ['red']);
     expect(skuT1).toBe(`${base}-red`);
     expect(skuT2).toBe(`${base}-red`);
+  });
+});
+
+describe('Cross-tenant isolation (Phase D - orders/wishlists)', () => {
+  it('getOrders scopes by tenant - tenant 1 does not see tenant 2 orders and vice versa', async () => {
+    if (!testTenantId) return;
+    const t1Results = await getOrders(TENANT_1, {});
+    const t2Results = await getOrders(testTenantId, {});
+    expect(t1Results.items.some(o => o.id === tenant1OrderId)).toBe(true);
+    expect(t1Results.items.some(o => o.id === tenant2OrderId)).toBe(false);
+    expect(t2Results.items.some(o => o.id === tenant2OrderId)).toBe(true);
+    expect(t2Results.items.some(o => o.id === tenant1OrderId)).toBe(false);
+  });
+
+  it('getOrderById returns null when the id belongs to a different tenant', async () => {
+    if (!testTenantId || !tenant1OrderId || !tenant2OrderId) return;
+    expect(await getOrderById(TENANT_1, tenant1OrderId)).not.toBeNull();
+    expect(await getOrderById(testTenantId, tenant1OrderId)).toBeNull();
+    expect(await getOrderById(TENANT_1, tenant2OrderId)).toBeNull();
+    expect(await getOrderById(testTenantId, tenant2OrderId)).not.toBeNull();
+  });
+
+  it('wishlist functions scope by tenant - same sessionId does not leak across tenants', async () => {
+    if (!testTenantId || !tenant1ProductId) return;
+    const sessionId = `__test-isolation-wishlist-${uniqueSuffix}__`;
+
+    await addToWishlist(TENANT_1, tenant1ProductId, undefined, sessionId);
+
+    const t1Wishlist = await getWishlist(TENANT_1, undefined, sessionId);
+    const t2Wishlist = await getWishlist(testTenantId, undefined, sessionId);
+    expect(t1Wishlist.some(w => w.productId === tenant1ProductId)).toBe(true);
+    // Same sessionId, different tenant - must not see tenant 1's wishlist item
+    expect(t2Wishlist.length).toBe(0);
+
+    // Removing under the wrong tenant must not affect tenant 1's item
+    await removeFromWishlist(testTenantId, tenant1ProductId, undefined, sessionId);
+    const t1WishlistAfter = await getWishlist(TENANT_1, undefined, sessionId);
+    expect(t1WishlistAfter.some(w => w.productId === tenant1ProductId)).toBe(true);
+
+    // Removing under the correct tenant does remove it
+    await removeFromWishlist(TENANT_1, tenant1ProductId, undefined, sessionId);
+    const t1WishlistFinal = await getWishlist(TENANT_1, undefined, sessionId);
+    expect(t1WishlistFinal.some(w => w.productId === tenant1ProductId)).toBe(false);
   });
 });
