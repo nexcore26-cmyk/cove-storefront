@@ -18,8 +18,12 @@ export const TENANT_MODULE_KEYS = [
 
 export type TenantModuleKey = (typeof TENANT_MODULE_KEYS)[number];
 
-export function getTenantId(ctx: Pick<TrpcContext, "user">): number {
-  const tenantId = ctx.user?.tenantId;
+export function getTenantId(ctx: Pick<TrpcContext, "user" | "tenantId">): number {
+  // ctx.tenantId is resolved once per request in createContext() (from the
+  // Host header, works for both anonymous and authenticated requests) and
+  // should always be present. ctx.user?.tenantId is kept as a fallback only
+  // for any caller passing a partial/older-shaped context.
+  const tenantId = ctx.tenantId ?? ctx.user?.tenantId;
   if (!tenantId) {
     throw new TRPCError({
       code: "FORBIDDEN",
@@ -30,7 +34,7 @@ export function getTenantId(ctx: Pick<TrpcContext, "user">): number {
 }
 
 export async function requireTenantModule(
-  ctx: Pick<TrpcContext, "user">,
+  ctx: Pick<TrpcContext, "user" | "tenantId">,
   moduleKey: TenantModuleKey,
 ): Promise<void> {
   const tenantId = getTenantId(ctx);
