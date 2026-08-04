@@ -26,11 +26,11 @@ export const customersRouter = router({
       limit: z.number().int().min(1).max(100).default(50),
       offset: z.number().int().min(0).default(0),
     }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 
-      const conditions: any[] = [];
+      const conditions: any[] = [eq(customers.tenantId, ctx.tenantId)];
 
       if (input.search?.trim()) {
         const q = `%${input.search.trim()}%`;
@@ -70,13 +70,13 @@ export const customersRouter = router({
           notes: customers.notes,
         })
           .from(customers)
-          .where(conditions.length > 0 ? and(...conditions) : undefined)
+          .where(and(...conditions))
           .orderBy(orderByFn(orderByCol))
           .limit(input.limit)
           .offset(input.offset),
         db.select({ total: count() })
           .from(customers)
-          .where(conditions.length > 0 ? and(...conditions) : undefined),
+          .where(and(...conditions)),
       ]);
 
       return { rows, total };
@@ -85,11 +85,11 @@ export const customersRouter = router({
   /** Customer detail with order history */
   byId: adminProcedure
     .input(z.object({ id: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 
-      const [customer] = await db.select().from(customers).where(eq(customers.id, input.id)).limit(1);
+      const [customer] = await db.select().from(customers).where(and(eq(customers.id, input.id), eq(customers.tenantId, ctx.tenantId))).limit(1);
       if (!customer) throw new TRPCError({ code: 'NOT_FOUND', message: 'Customer not found' });
 
       const orderHistory = await db.select({
@@ -103,7 +103,7 @@ export const customersRouter = router({
         paymentStatus: orders.paymentStatus,
       })
         .from(orders)
-        .where(eq(orders.customerId, input.id))
+        .where(and(eq(orders.customerId, input.id), eq(orders.tenantId, ctx.tenantId)))
         .orderBy(desc(orders.createdAt))
         .limit(50);
 
@@ -116,19 +116,22 @@ export const customersRouter = router({
       id: z.number(),
       notes: z.string().max(4000),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      await db.update(customers).set({ notes: input.notes }).where(eq(customers.id, input.id));
+      await db.update(customers).set({ notes: input.notes }).where(and(eq(customers.id, input.id), eq(customers.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
   /** Recalculate totalOrders and totalSpent from the orders table for a specific customer */
   recalcTotals: adminProcedure
     .input(z.object({ id: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+
+      const [ownedCustomer] = await db.select({ id: customers.id }).from(customers).where(and(eq(customers.id, input.id), eq(customers.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedCustomer) throw new TRPCError({ code: 'NOT_FOUND', message: 'Customer not found' });
 
       const [result] = await db.select({
         totalOrders: count(orders.id),
@@ -137,6 +140,7 @@ export const customersRouter = router({
         .from(orders)
         .where(and(
           eq(orders.customerId, input.id),
+          eq(orders.tenantId, ctx.tenantId),
           // Only count paid/completed orders
           or(
             eq(orders.paymentStatus, 'paid'),
@@ -149,14 +153,14 @@ export const customersRouter = router({
       await db.update(customers).set({
         totalOrders: result.totalOrders,
         totalSpent: result.totalSpent,
-      }).where(eq(customers.id, input.id));
+      }).where(and(eq(customers.id, input.id), eq(customers.tenantId, ctx.tenantId)));
 
       return { totalOrders: result.totalOrders, totalSpent: result.totalSpent };
     }),
 
   /** P68: Export all customers as a CSV string — admin only */
   exportCsv: adminProcedure
-    .query(async () => {
+    .query(async ({ ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 
@@ -174,6 +178,7 @@ export const customersRouter = router({
         notes: customers.notes,
       })
         .from(customers)
+        .where(eq(customers.tenantId, ctx.tenantId))
         .orderBy(desc(customers.createdAt));
 
       // Build CSV
