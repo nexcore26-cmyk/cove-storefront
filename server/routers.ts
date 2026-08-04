@@ -2931,7 +2931,7 @@ const analyticsRouter = router({
     .input(z.object({
       days: z.number().min(1).max(365).optional(), // undefined = all time
     }).optional())
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable, orderItems: orderItemsTable, orderExpenses } = await import('../drizzle/schema');
       const { sql, gte, and, eq } = await import('drizzle-orm');
@@ -2942,26 +2942,27 @@ const analyticsRouter = router({
         ? new Date(Date.now() - input.days * 24 * 60 * 60 * 1000)
         : null;
       const dateFilter = since ? gte(ordersTable.createdAt, since) : undefined;
+      const tenantFilter = eq(ordersTable.tenantId, ctx.tenantId);
 
       // Total revenue and order count
       const [totals] = await db.select({
         totalRevenue: sql<number>`COALESCE(SUM(CAST(total AS DECIMAL(12,3))), 0)`,
         orderCount: sql<number>`COUNT(*)`,
-      }).from(ordersTable).where(dateFilter);
+      }).from(ordersTable).where(and(tenantFilter, dateFilter));
 
       // Revenue by status
       const byStatus = await db.select({
         status: ordersTable.status,
         count: sql<number>`COUNT(*)`,
         revenue: sql<number>`COALESCE(SUM(CAST(total AS DECIMAL(12,3))), 0)`,
-      }).from(ordersTable).where(dateFilter).groupBy(ordersTable.status);
+      }).from(ordersTable).where(and(tenantFilter, dateFilter)).groupBy(ordersTable.status);
 
       // Revenue by channel
       const byChannel = await db.select({
         channel: ordersTable.channel,
         count: sql<number>`COUNT(*)`,
         revenue: sql<number>`COALESCE(SUM(CAST(total AS DECIMAL(12,3))), 0)`,
-      }).from(ordersTable).where(dateFilter).groupBy(ordersTable.channel);
+      }).from(ordersTable).where(and(tenantFilter, dateFilter)).groupBy(ordersTable.channel);
 
       // Top 10 products by revenue
       const topProducts = await db.select({
@@ -2971,7 +2972,7 @@ const analyticsRouter = router({
         totalRevenue: sql<number>`COALESCE(SUM(CAST(${orderItemsTable.totalPrice} AS DECIMAL(12,3))), 0)`,
       }).from(orderItemsTable)
         .innerJoin(ordersTable, sql`${ordersTable.id} = ${orderItemsTable.orderId}`)
-        .where(dateFilter ? gte(ordersTable.createdAt, since!) : undefined)
+        .where(and(tenantFilter, dateFilter))
         .groupBy(orderItemsTable.productId, orderItemsTable.name)
         .orderBy(sql`SUM(CAST(${orderItemsTable.totalPrice} AS DECIMAL(12,3))) DESC`)
         .limit(10);
@@ -2981,14 +2982,14 @@ const analyticsRouter = router({
         totalCogs: sql<number>`COALESCE(SUM(CAST(${orderItemsTable.cog} AS DECIMAL(12,3)) * ${orderItemsTable.quantity}), 0)`,
       }).from(orderItemsTable)
         .innerJoin(ordersTable, sql`${ordersTable.id} = ${orderItemsTable.orderId}`)
-        .where(dateFilter ? gte(ordersTable.createdAt, since!) : undefined);
+        .where(and(tenantFilter, dateFilter));
 
       // Total order expenses
       const [expensesRow] = await db.select({
         totalExpenses: sql<number>`COALESCE(SUM(CAST(${orderExpenses.amount} AS DECIMAL(10,3))), 0)`,
       }).from(orderExpenses)
         .innerJoin(ordersTable, sql`${ordersTable.id} = ${orderExpenses.orderId}`)
-        .where(dateFilter ? gte(ordersTable.createdAt, since!) : undefined);
+        .where(and(tenantFilter, dateFilter));
 
       const totalRevenue = Number(totals.totalRevenue) || 0;
       const orderCount = Number(totals.orderCount) || 0;
@@ -3022,10 +3023,10 @@ const analyticsRouter = router({
    */
   revenueByDay: adminProcedure
     .input(z.object({ days: z.number().min(7).max(90).default(30) }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable } = await import('../drizzle/schema');
-      const { sql, gte } = await import('drizzle-orm');
+      const { sql, gte, and, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return [];
       const since = new Date(Date.now() - input.days * 24 * 60 * 60 * 1000);
@@ -3034,7 +3035,7 @@ const analyticsRouter = router({
         revenue: sql<number>`COALESCE(SUM(CAST(total AS DECIMAL(12,3))), 0)`,
         count: sql<number>`COUNT(*)`,
       }).from(ordersTable)
-        .where(gte(ordersTable.createdAt, since))
+        .where(and(eq(ordersTable.tenantId, ctx.tenantId), gte(ordersTable.createdAt, since)))
         .groupBy(sql`DATE(${ordersTable.createdAt})`)
         .orderBy(sql`DATE(${ordersTable.createdAt}) ASC`);
        return rows.map(r => ({ day: r.day, revenue: Number(r.revenue), count: Number(r.count) }));
@@ -3048,10 +3049,10 @@ const analyticsRouter = router({
     .input(z.object({
       days: z.number().min(1).max(365).optional(),
     }).optional())
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable, orderItems: orderItemsTable, productVendors, vendors: vendorsTable } = await import('../drizzle/schema');
-      const { sql, gte, inArray, eq } = await import('drizzle-orm');
+      const { sql, gte, inArray, eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return [];
       const since = input?.days
@@ -3062,14 +3063,16 @@ const analyticsRouter = router({
       const orderFilter = since
         ? sql`${ordersTable.status} IN ('completed', 'delivered', 'shipped') AND ${ordersTable.createdAt} >= ${since}`
         : sql`${ordersTable.status} IN ('completed', 'delivered', 'shipped')`;
-      const completedOrders = await db.select({ id: ordersTable.id }).from(ordersTable).where(orderFilter);
+      const completedOrders = await db.select({ id: ordersTable.id }).from(ordersTable).where(and(eq(ordersTable.tenantId, ctx.tenantId), orderFilter));
       if (completedOrders.length === 0) return [];
       const orderIds = completedOrders.map((o: any) => o.id);
       // Get all order items for those orders
       const items = await db.select().from(orderItemsTable).where(inArray(orderItemsTable.orderId, orderIds));
       // Get all product-vendor assignments with commission
       const pvRows = await db.select().from(productVendors);
-      const allVendors = await db.select().from(vendorsTable);
+      // Only this tenant's vendors - productVendors entries pointing to a
+      // vendor outside vendorMap are naturally skipped below (vendor lookup miss)
+      const allVendors = await db.select().from(vendorsTable).where(eq(vendorsTable.tenantId, ctx.tenantId));
       const vendorMap = new Map(allVendors.map((v: any) => [v.id, v]));
       // Build vendor payable totals
       const payables = new Map<number, { vendorId: number; vendorName: string; email: string | null; totalSales: number; commissionOwed: number; itemCount: number }>();
@@ -3098,7 +3101,7 @@ const analyticsRouter = router({
       from: z.string().optional(),
       to: z.string().optional(),
     }).optional())
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable, orderItems: orderItemsTable, categories: categoriesTable, products: productsTable } = await import('../drizzle/schema');
       const { sql, and, gte, lte, eq, inArray } = await import('drizzle-orm');
@@ -3106,7 +3109,7 @@ const analyticsRouter = router({
       if (!db) return { byDate: [], byCategory: [], byProduct: [], totals: { revenue: 0, orders: 0, items: 0 } };
       const fromDate = input?.from ? new Date(input.from) : new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
       const toDate = input?.to ? new Date(input.to + 'T23:59:59') : new Date();
-      const dateFilter = and(gte(ordersTable.createdAt, fromDate), lte(ordersTable.createdAt, toDate));
+      const dateFilter = and(eq(ordersTable.tenantId, ctx.tenantId), gte(ordersTable.createdAt, fromDate), lte(ordersTable.createdAt, toDate));
       const byDate = await db.select({
         date: sql<string>`DATE(${ordersTable.createdAt})`,
         revenue: sql<number>`SUM(${ordersTable.total})`,
@@ -3142,7 +3145,7 @@ const analyticsRouter = router({
       const [totals] = await db.select({
         revenue: sql<number>`SUM(${ordersTable.total})`,
         orders: sql<number>`COUNT(DISTINCT ${ordersTable.id})`,
-        items: sql<number>`(SELECT COUNT(*) FROM order_items oi WHERE oi.orderId IN (SELECT id FROM orders WHERE paymentStatus='paid'))`,
+        items: sql<number>`(SELECT COUNT(*) FROM order_items oi WHERE oi.orderId IN (SELECT id FROM orders WHERE paymentStatus='paid' AND tenantId = ${ctx.tenantId}))`,
       }).from(ordersTable).where(and(dateFilter, eq(ordersTable.paymentStatus, 'paid')));
       return {
         byDate: byDate.map(r => ({ date: r.date, revenue: Number(r.revenue || 0), orders: Number(r.orders || 0) })),
@@ -3154,13 +3157,13 @@ const analyticsRouter = router({
 
   // ─── D2: Inventory Report ─────────────────────────────────────────────────
   inventoryReport: adminProcedure
-    .query(async () => {
+    .query(async ({ ctx }) => {
       const { getDb } = await import('./db');
       const { products: productsTable, warehouseStock, warehouses } = await import('../drizzle/schema');
       const { sql, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return { rows: [], warehouses: [] };
-      const whs = await db.select().from(warehouses);
+      const whs = await db.select().from(warehouses).where(eq(warehouses.tenantId, ctx.tenantId));
       const rows = await db.select({
         productId: productsTable.id,
         productName: productsTable.name,
@@ -3171,6 +3174,7 @@ const analyticsRouter = router({
         thresholdEnabled: warehouseStock.outOfStockThresholdEnabled,
       }).from(productsTable)
         .leftJoin(warehouseStock, eq(warehouseStock.productId, productsTable.id))
+        .where(eq(productsTable.tenantId, ctx.tenantId))
         .orderBy(productsTable.name);
       const productMap = new Map<number, { id: number; name: string; sku: string | null; stock: Record<number, { qty: number; threshold: number; thresholdEnabled: boolean; isLow: boolean }> }>();
       for (const row of rows) {
@@ -3196,7 +3200,7 @@ const analyticsRouter = router({
       from: z.string().optional(),
       to: z.string().optional(),
     }).optional())
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders: ordersTable, orderItems: orderItemsTable, orderExpenses } = await import('../drizzle/schema');
       const { sql, and, gte, lte, eq } = await import('drizzle-orm');
@@ -3204,7 +3208,7 @@ const analyticsRouter = router({
       if (!db) return { byDate: [], totals: { revenue: 0, cog: 0, expenses: 0, grossProfit: 0, netProfit: 0, grossMarginPct: 0 } };
       const fromDate = input?.from ? new Date(input.from) : new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
       const toDate = input?.to ? new Date(input.to + 'T23:59:59') : new Date();
-      const dateFilter = and(gte(ordersTable.createdAt, fromDate), lte(ordersTable.createdAt, toDate));
+      const dateFilter = and(eq(ordersTable.tenantId, ctx.tenantId), gte(ordersTable.createdAt, fromDate), lte(ordersTable.createdAt, toDate));
       const byDate = await db.select({
         date: sql<string>`DATE(${ordersTable.createdAt})`,
         revenue: sql<number>`SUM(${ordersTable.total})`,
