@@ -2364,7 +2364,7 @@ const wishlistRouter = router({
     .query(async ({ ctx, input }) => {
       const userId = ctx.user?.id;
       const sessionId = input?.sessionId;
-      const wishlistItems = await getWishlist(userId, sessionId);
+      const wishlistItems = await getWishlist(ctx.tenantId, userId, sessionId);
       if (!wishlistItems.length) return [];
       const productIds = wishlistItems.map(w => w.productId);
       const { getDb } = await import('./db');
@@ -2378,13 +2378,13 @@ const wishlistRouter = router({
   add: publicProcedure
     .input(z.object({ productId: z.number(), sessionId: z.string().optional() }))
     .mutation(async ({ ctx, input }) => {
-      await addToWishlist(input.productId, ctx.user?.id, input.sessionId);
+      await addToWishlist(ctx.tenantId, input.productId, ctx.user?.id, input.sessionId);
       return { success: true };
     }),
   remove: publicProcedure
     .input(z.object({ productId: z.number(), sessionId: z.string().optional() }))
     .mutation(async ({ ctx, input }) => {
-      await removeFromWishlist(input.productId, ctx.user?.id, input.sessionId);
+      await removeFromWishlist(ctx.tenantId, input.productId, ctx.user?.id, input.sessionId);
       return { success: true };
     }),
 });

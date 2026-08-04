@@ -361,26 +361,26 @@ export async function getShippingZones() {
   });
 }
 
-export async function getWishlist(userId?: number, sessionId?: string) {
+export async function getWishlist(tenantId: number, userId?: number, sessionId?: string) {
   const db = await getDb();
   if (!db) return [];
-  if (userId) return db.select().from(wishlists).where(eq(wishlists.userId, userId));
-  if (sessionId) return db.select().from(wishlists).where(eq(wishlists.sessionId, sessionId));
+  if (userId) return db.select().from(wishlists).where(and(eq(wishlists.userId, userId), eq(wishlists.tenantId, tenantId)));
+  if (sessionId) return db.select().from(wishlists).where(and(eq(wishlists.sessionId, sessionId), eq(wishlists.tenantId, tenantId)));
   return [];
 }
 
-export async function addToWishlist(productId: number, userId?: number, sessionId?: string) {
+export async function addToWishlist(tenantId: number, productId: number, userId?: number, sessionId?: string) {
   const db = await getDb();
   if (!db) throw new Error('Database not available');
-  await db.insert(wishlists).values({ productId, userId: userId || null, sessionId: sessionId || null })
+  await db.insert(wishlists).values({ productId, tenantId, userId: userId || null, sessionId: sessionId || null })
     .onDuplicateKeyUpdate({ set: { productId } });
 }
 
-export async function removeFromWishlist(productId: number, userId?: number, sessionId?: string) {
+export async function removeFromWishlist(tenantId: number, productId: number, userId?: number, sessionId?: string) {
   const db = await getDb();
   if (!db) throw new Error('Database not available');
-  if (userId) await db.delete(wishlists).where(and(eq(wishlists.productId, productId), eq(wishlists.userId, userId)));
-  else if (sessionId) await db.delete(wishlists).where(and(eq(wishlists.productId, productId), eq(wishlists.sessionId, sessionId)));
+  if (userId) await db.delete(wishlists).where(and(eq(wishlists.productId, productId), eq(wishlists.userId, userId), eq(wishlists.tenantId, tenantId)));
+  else if (sessionId) await db.delete(wishlists).where(and(eq(wishlists.productId, productId), eq(wishlists.sessionId, sessionId), eq(wishlists.tenantId, tenantId)));
 }
 
 
