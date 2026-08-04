@@ -2358,10 +2358,10 @@ const wishlistRouter = router({
       const productIds = wishlistItems.map(w => w.productId);
       const { getDb } = await import('./db');
       const { products } = await import('../drizzle/schema');
-      const { inArray } = await import('drizzle-orm');
+      const { inArray, and, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return wishlistItems;
-      const prods = await db.select().from(products).where(inArray(products.id, productIds));
+      const prods = await db.select().from(products).where(and(inArray(products.id, productIds), eq(products.tenantId, ctx.tenantId)));
       return wishlistItems.map(w => ({ ...w, product: prods.find(p => p.id === w.productId) || null }));
     }),
   add: publicProcedure
@@ -2466,14 +2466,14 @@ const settingsRouter = router({
 const translationsRouter = router({
   getProduct: adminProcedure
     .input(z.object({ productId: z.number(), locale: z.enum(['en', 'ar']) }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { productTranslations } = await import('../drizzle/schema');
       const { and, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return null;
       const [row] = await db.select().from(productTranslations)
-        .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, input.locale)));
+        .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, input.locale), eq(productTranslations.tenantId, ctx.tenantId)));
       return row ?? null;
     }),
   upsertProduct: adminProcedure
@@ -2484,21 +2484,24 @@ const translationsRouter = router({
       description: z.string().optional(),
       shortDescription: z.string().optional(),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { productTranslations } = await import('../drizzle/schema');
+      const { products, productTranslations } = await import('../drizzle/schema');
       const { and, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+      const [ownedProduct] = await db.select({ id: products.id }).from(products).where(and(eq(products.id, input.productId), eq(products.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedProduct) throw new TRPCError({ code: 'NOT_FOUND', message: 'Product not found' });
       const existing = await db.select().from(productTranslations)
-        .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, input.locale)));
+        .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, input.locale), eq(productTranslations.tenantId, ctx.tenantId)));
       if (existing.length > 0) {
         await db.update(productTranslations)
           .set({ name: input.name, description: input.description, shortDescription: input.shortDescription })
-          .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, input.locale)));
+          .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, input.locale), eq(productTranslations.tenantId, ctx.tenantId)));
       } else {
         await db.insert(productTranslations).values({
           productId: input.productId,
+          tenantId: ctx.tenantId,
           locale: input.locale,
           name: input.name,
           description: input.description,
@@ -2509,14 +2512,14 @@ const translationsRouter = router({
     }),
   getCategory: adminProcedure
     .input(z.object({ categoryId: z.number(), locale: z.enum(['en', 'ar']) }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { categoryTranslations } = await import('../drizzle/schema');
       const { and, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return null;
       const [row] = await db.select().from(categoryTranslations)
-        .where(and(eq(categoryTranslations.categoryId, input.categoryId), eq(categoryTranslations.locale, input.locale)));
+        .where(and(eq(categoryTranslations.categoryId, input.categoryId), eq(categoryTranslations.locale, input.locale), eq(categoryTranslations.tenantId, ctx.tenantId)));
       return row ?? null;
     }),
   upsertCategory: adminProcedure
@@ -2525,21 +2528,24 @@ const translationsRouter = router({
       locale: z.enum(['en', 'ar']),
       name: z.string().min(1),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { categoryTranslations } = await import('../drizzle/schema');
+      const { categories, categoryTranslations } = await import('../drizzle/schema');
       const { and, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+      const [ownedCategory] = await db.select({ id: categories.id }).from(categories).where(and(eq(categories.id, input.categoryId), eq(categories.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedCategory) throw new TRPCError({ code: 'NOT_FOUND', message: 'Category not found' });
       const existing = await db.select().from(categoryTranslations)
-        .where(and(eq(categoryTranslations.categoryId, input.categoryId), eq(categoryTranslations.locale, input.locale)));
+        .where(and(eq(categoryTranslations.categoryId, input.categoryId), eq(categoryTranslations.locale, input.locale), eq(categoryTranslations.tenantId, ctx.tenantId)));
       if (existing.length > 0) {
         await db.update(categoryTranslations)
           .set({ name: input.name })
-          .where(and(eq(categoryTranslations.categoryId, input.categoryId), eq(categoryTranslations.locale, input.locale)));
+          .where(and(eq(categoryTranslations.categoryId, input.categoryId), eq(categoryTranslations.locale, input.locale), eq(categoryTranslations.tenantId, ctx.tenantId)));
       } else {
         await db.insert(categoryTranslations).values({
           categoryId: input.categoryId,
+          tenantId: ctx.tenantId,
           locale: input.locale,
           name: input.name,
         });
@@ -2547,26 +2553,26 @@ const translationsRouter = router({
       return { success: true };
     }),
   listProductTranslationStatus: adminProcedure
-    .query(async () => {
+    .query(async ({ ctx }) => {
       const { getDb } = await import('./db');
       const { productTranslations } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return [];
       return db.select({ productId: productTranslations.productId })
         .from(productTranslations)
-        .where(eq(productTranslations.locale, 'ar'));
+        .where(and(eq(productTranslations.locale, 'ar'), eq(productTranslations.tenantId, ctx.tenantId)));
     }),
   autoTranslateProduct: adminProcedure
     .input(z.object({ productId: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { products, productTranslations } = await import('../drizzle/schema');
       const { eq, and } = await import('drizzle-orm');
       const { invokeLLM } = await import('./_core/llm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      const [product] = await db.select().from(products).where(eq(products.id, input.productId));
+      const [product] = await db.select().from(products).where(and(eq(products.id, input.productId), eq(products.tenantId, ctx.tenantId)));
       if (!product) throw new TRPCError({ code: 'NOT_FOUND', message: 'Product not found' });
       const response = await invokeLLM({
         messages: [
@@ -2595,14 +2601,15 @@ const translationsRouter = router({
       if (!content) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'LLM returned empty response' });
       const translated = typeof content === 'string' ? JSON.parse(content) : content;
       const existing = await db.select().from(productTranslations)
-        .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, 'ar')));
+        .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, 'ar'), eq(productTranslations.tenantId, ctx.tenantId)));
       if (existing.length > 0) {
         await db.update(productTranslations)
           .set({ name: translated.name, description: translated.description, shortDescription: translated.shortDescription })
-          .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, 'ar')));
+          .where(and(eq(productTranslations.productId, input.productId), eq(productTranslations.locale, 'ar'), eq(productTranslations.tenantId, ctx.tenantId)));
       } else {
         await db.insert(productTranslations).values({
           productId: input.productId,
+          tenantId: ctx.tenantId,
           locale: 'ar',
           name: translated.name,
           description: translated.description,
@@ -2613,7 +2620,7 @@ const translationsRouter = router({
     }),
   bulkAutoTranslate: adminProcedure
     .input(z.object({ limit: z.number().min(1).max(50).default(20) }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { products, productTranslations } = await import('../drizzle/schema');
       const { eq, notExists, and } = await import('drizzle-orm');
@@ -2622,9 +2629,12 @@ const translationsRouter = router({
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
       const untranslated = await db.select({ id: products.id, name: products.name, description: products.description, shortDescription: products.shortDescription })
         .from(products)
-        .where(notExists(
-          db.select().from(productTranslations)
-            .where(and(eq(productTranslations.productId, products.id), eq(productTranslations.locale, 'ar')))
+        .where(and(
+          eq(products.tenantId, ctx.tenantId),
+          notExists(
+            db.select().from(productTranslations)
+              .where(and(eq(productTranslations.productId, products.id), eq(productTranslations.locale, 'ar')))
+          )
         ))
         .limit(input.limit);
       let translated = 0;
@@ -2655,6 +2665,7 @@ const translationsRouter = router({
           const result = typeof content === 'string' ? JSON.parse(content) : content;
           await db.insert(productTranslations).values({
             productId: product.id,
+            tenantId: ctx.tenantId,
             locale: 'ar',
             name: result.name,
             description: result.description,
