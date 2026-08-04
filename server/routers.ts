@@ -1179,11 +1179,12 @@ const ordersRouter = router({
       const db = await getDb();
       let customerId: number | undefined;
       if (ctx.user && db) {
-        const custRows = await db.select().from(customers).where(eq(customers.email, ctx.user.email || ""  )).limit(1);
+        const custRows = await db.select().from(customers).where(and(eq(customers.email, ctx.user.email || ""), eq(customers.tenantId, ctx.tenantId))).limit(1);
         customerId = custRows[0]?.id;
       }
       const result = await createOrder({
         ...input,
+        tenantId: ctx.tenantId,
         customerId,
         channel: "online",
         status: "pending",
@@ -1196,7 +1197,7 @@ const ordersRouter = router({
       // for bundle products we ALSO deduct from each component variant, and we UNDO the
       // parent-product deduction (bundle products themselves don't hold stock — components do).
       if (db) {
-        const [onlineWarehouse] = await db.select().from(warehousesTable).where(eq(warehousesTable.type, 'online')).limit(1);
+        const [onlineWarehouse] = await db.select().from(warehousesTable).where(and(eq(warehousesTable.type, 'online'), eq(warehousesTable.tenantId, ctx.tenantId))).limit(1);
         if (onlineWarehouse) {
           for (const item of input.items) {
             if (!item.variantId) continue;
@@ -1707,15 +1708,15 @@ const ordersRouter = router({
         price: z.number().nonnegative(),
       })).min(1),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { orders, orderItems: orderItemsTable, warehouseStock, warehouses: warehousesTable } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 
       // 1. Load original order
-      const [originalOrder] = await db.select().from(orders).where(eq(orders.id, input.originalOrderId)).limit(1);
+      const [originalOrder] = await db.select().from(orders).where(and(eq(orders.id, input.originalOrderId), eq(orders.tenantId, ctx.tenantId))).limit(1);
       if (!originalOrder) throw new TRPCError({ code: 'NOT_FOUND', message: 'Original order not found' });
       if (originalOrder.status === 'exchanged') throw new TRPCError({ code: 'BAD_REQUEST', message: 'Order has already been exchanged' });
       if (!['completed', 'processing', 'delivered', 'shipped'].includes(originalOrder.status)) {
@@ -1727,7 +1728,7 @@ const ordersRouter = router({
 
       // 3. Determine warehouse to restore stock to (channel-appropriate)
       const warehouseType = originalOrder.channel === 'pos' ? 'pos' : 'online';
-      const [warehouse] = await db.select().from(warehousesTable).where(eq(warehousesTable.type, warehouseType)).limit(1);
+      const [warehouse] = await db.select().from(warehousesTable).where(and(eq(warehousesTable.type, warehouseType), eq(warehousesTable.tenantId, ctx.tenantId))).limit(1);
 
       // 4. Generate new order number
       const newOrderNumber = `EXC-${Date.now()}`;
@@ -1760,6 +1761,7 @@ const ordersRouter = router({
         // c) Create new linked order
         const [newOrderResult] = await tx.insert(orders).values({
           orderNumber: newOrderNumber,
+          tenantId: originalOrder.tenantId,
           customerId: originalOrder.customerId,
           customerName: originalOrder.customerName,
           customerEmail: originalOrder.customerEmail,

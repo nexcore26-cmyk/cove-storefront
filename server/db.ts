@@ -460,6 +460,7 @@ export async function getStockTransfers(productId?: number, limit = 50) {
 }
 
 export async function createOrder(opts: {
+  tenantId: number;
   customerId?: number;
   guestEmail?: string;
   guestName?: string;
@@ -499,6 +500,7 @@ export async function createOrder(opts: {
 
   const insertResult = await db.insert(orders).values({
     orderNumber,
+    tenantId: opts.tenantId,
     customerId: opts.customerId || null,
     customerEmail: opts.guestEmail || null,
     customerName: opts.guestName || null,
@@ -535,7 +537,7 @@ export async function createOrder(opts: {
   let orderId = insertIdCandidates.find((value) => typeof value === 'number' && value > 0) as number | undefined;
 
   if (!orderId) {
-    const [createdOrder] = await db.select({ id: orders.id }).from(orders).where(eq(orders.orderNumber, orderNumber)).limit(1);
+    const [createdOrder] = await db.select({ id: orders.id }).from(orders).where(and(eq(orders.orderNumber, orderNumber), eq(orders.tenantId, opts.tenantId))).limit(1);
     orderId = createdOrder?.id;
   }
 
@@ -570,7 +572,7 @@ export async function createOrder(opts: {
   if (opts.customerId) {
     const { customers } = await import('../drizzle/schema');
     await db.execute(
-      sql`UPDATE customers SET totalOrders = totalOrders + 1, totalSpent = totalSpent + ${opts.total} WHERE id = ${opts.customerId}`
+      sql`UPDATE customers SET totalOrders = totalOrders + 1, totalSpent = totalSpent + ${opts.total} WHERE id = ${opts.customerId} AND tenantId = ${opts.tenantId}`
     );
   }
 

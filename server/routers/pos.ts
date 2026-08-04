@@ -295,6 +295,11 @@ export const posRouter = router({
       const posWarehouseId = await getBranchWarehouseId(ctx);
       if (!posWarehouseId) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Branch warehouse not found or inactive" });
 
+      if (input.customerId) {
+        const [ownedCustomer] = await db.select({ id: customers.id }).from(customers).where(and(eq(customers.id, input.customerId), eq(customers.tenantId, ctx.tenantId))).limit(1);
+        if (!ownedCustomer) throw new TRPCError({ code: "BAD_REQUEST", message: "Customer not found" });
+      }
+
       const subtotal = input.items.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
       const total = Math.max(0, subtotal + input.shippingCost - input.discountAmount);
 
@@ -326,6 +331,7 @@ export const posRouter = router({
       const orderNumber = `POS-${Date.now().toString(36).toUpperCase()}`;
       const [inserted] = await db.insert(orders).values({
         orderNumber,
+        tenantId: ctx.tenantId,
         customerId: input.customerId ?? null,
         customerName: input.customerName ?? null,
         customerPhone: input.customerPhone ?? null,
@@ -766,7 +772,9 @@ export const posRouter = router({
       const total = Math.max(0, subtotal - input.discountAmount);
 
       if (input.cartId) {
-        // Update existing draft
+        // Update existing draft — verify it belongs to this tenant first
+        const [ownedDraft] = await db.select({ id: orders.id }).from(orders).where(and(eq(orders.id, input.cartId), eq(orders.tenantId, ctx.tenantId))).limit(1);
+        if (!ownedDraft) throw new TRPCError({ code: "NOT_FOUND", message: "Saved cart not found" });
         await db.update(orders).set({
           customerName: input.customerName ?? null,
           subtotal: String(subtotal.toFixed(3)),
@@ -793,6 +801,7 @@ export const posRouter = router({
         const orderNumber = `DRAFT-${Date.now().toString(36).toUpperCase()}`;
         const [inserted] = await db.insert(orders).values({
           orderNumber,
+          tenantId: ctx.tenantId,
           customerName: input.customerName ?? null,
           channel: "pos",
           branchId: ctx.user.activeBranchId ?? null,

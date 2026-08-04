@@ -42,16 +42,16 @@ export const cartRouter = router({
       // Find existing cart
       let cart = null;
       if (userId) {
-        const [c] = await db.select().from(carts).where(eq(carts.userId, userId)).limit(1);
+        const [c] = await db.select().from(carts).where(and(eq(carts.userId, userId), eq(carts.tenantId, ctx.tenantId))).limit(1);
         cart = c;
       } else if (sessionId) {
-        const [c] = await db.select().from(carts).where(eq(carts.sessionId, sessionId)).limit(1);
+        const [c] = await db.select().from(carts).where(and(eq(carts.sessionId, sessionId), eq(carts.tenantId, ctx.tenantId))).limit(1);
         cart = c;
       }
 
       if (!cart) return { cartId: null, items: [] };
 
-      const items = await db.select().from(cartItems).where(eq(cartItems.cartId, cart.id));
+      const items = await db.select().from(cartItems).where(and(eq(cartItems.cartId, cart.id), eq(cartItems.tenantId, ctx.tenantId)));
       if (!items.length) return { cartId: cart.id, items: [] };
 
       // Enrich with product/variant data
@@ -117,20 +117,20 @@ export const cartRouter = router({
       // Get or create cart
       let cartId: number;
       if (userId) {
-        const [existing] = await db.select().from(carts).where(eq(carts.userId, userId)).limit(1);
+        const [existing] = await db.select().from(carts).where(and(eq(carts.userId, userId), eq(carts.tenantId, ctx.tenantId))).limit(1);
         if (existing) {
           cartId = existing.id;
         } else {
-          const [ins] = await db.insert(carts).values({ userId });
+          const [ins] = await db.insert(carts).values({ userId, tenantId: ctx.tenantId });
           cartId = (ins as any).insertId;
         }
       } else {
-        const [existing] = await db.select().from(carts).where(eq(carts.sessionId, sessionId!)).limit(1);
+        const [existing] = await db.select().from(carts).where(and(eq(carts.sessionId, sessionId!), eq(carts.tenantId, ctx.tenantId))).limit(1);
         if (existing) {
           cartId = existing.id;
         } else {
           const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
-          const [ins] = await db.insert(carts).values({ sessionId, expiresAt: expires });
+          const [ins] = await db.insert(carts).values({ sessionId, expiresAt: expires, tenantId: ctx.tenantId });
           cartId = (ins as any).insertId;
         }
       }
@@ -149,7 +149,8 @@ export const cartRouter = router({
       const existingCartItemsForProduct = await db.select().from(cartItems).where(
         and(
           eq(cartItems.cartId, cartId),
-          eq(cartItems.productId, input.productId)
+          eq(cartItems.productId, input.productId),
+          eq(cartItems.tenantId, ctx.tenantId)
         )
       );
       const currentCartQuantityForProduct = existingCartItemsForProduct.reduce((sum, item) => sum + item.quantity, 0);
@@ -164,8 +165,8 @@ export const cartRouter = router({
       }
       // --- Inventory Validation End ---
       const conditions = input.variantId
-        ? and(eq(cartItems.cartId, cartId), eq(cartItems.productId, input.productId), eq(cartItems.variantId, input.variantId))
-        : and(eq(cartItems.cartId, cartId), eq(cartItems.productId, input.productId), isNull(cartItems.variantId));
+        ? and(eq(cartItems.cartId, cartId), eq(cartItems.productId, input.productId), eq(cartItems.variantId, input.variantId), eq(cartItems.tenantId, ctx.tenantId))
+        : and(eq(cartItems.cartId, cartId), eq(cartItems.productId, input.productId), isNull(cartItems.variantId), eq(cartItems.tenantId, ctx.tenantId));
 
       const candidates = await db.select().from(cartItems).where(conditions);
             const existingItemWithSameAttributes = candidates.find((candidate: any) => stableJson(candidate.variantAttributes) === stableJson(incomingVariantAttributes));
@@ -182,6 +183,7 @@ export const cartRouter = router({
       } else {
         await db.insert(cartItems).values({
           cartId,
+          tenantId: ctx.tenantId,
           productId: input.productId,
           variantId: input.variantId ?? null,
           quantity: input.quantity,
@@ -216,7 +218,7 @@ export const cartRouter = router({
 
       // --- Inventory Validation for updateItem Start ---
       const onlineStoreWarehouseId = 2; // ID for 'Online Store' warehouse
-      const existingCartItem = await db.select().from(cartItems).where(eq(cartItems.id, input.cartItemId)).limit(1);
+      const existingCartItem = await db.select().from(cartItems).where(and(eq(cartItems.id, input.cartItemId), eq(cartItems.tenantId, ctx.tenantId))).limit(1);
 
       if (existingCartItem.length === 0) {
         throw new TRPCError({ code: 'NOT_FOUND', message: 'Cart item not found.' });
@@ -230,7 +232,8 @@ export const cartRouter = router({
       const existingCartItemsForProduct = await db.select().from(cartItems).where(
         and(
           eq(cartItems.cartId, item.cartId),
-          eq(cartItems.productId, item.productId)
+          eq(cartItems.productId, item.productId),
+          eq(cartItems.tenantId, ctx.tenantId)
         )
       );
 
@@ -250,7 +253,7 @@ export const cartRouter = router({
       }
       // --- Inventory Validation for updateItem End ---
 
-      await db.update(cartItems).set(updates).where(eq(cartItems.id, input.cartItemId));
+      await db.update(cartItems).set(updates).where(and(eq(cartItems.id, input.cartItemId), eq(cartItems.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
@@ -266,7 +269,7 @@ export const cartRouter = router({
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 
-      await db.delete(cartItems).where(eq(cartItems.id, input.cartItemId));
+      await db.delete(cartItems).where(and(eq(cartItems.id, input.cartItemId), eq(cartItems.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
@@ -287,10 +290,10 @@ export const cartRouter = router({
 
       let cart = null;
       if (userId) {
-        const [c] = await db.select().from(carts).where(eq(carts.userId, userId)).limit(1);
+        const [c] = await db.select().from(carts).where(and(eq(carts.userId, userId), eq(carts.tenantId, ctx.tenantId))).limit(1);
         cart = c;
       } else if (sessionId) {
-        const [c] = await db.select().from(carts).where(eq(carts.sessionId, sessionId)).limit(1);
+        const [c] = await db.select().from(carts).where(and(eq(carts.sessionId, sessionId), eq(carts.tenantId, ctx.tenantId))).limit(1);
         cart = c;
       }
 
@@ -316,8 +319,9 @@ export const cartRouter = router({
       const db = await getDb();
       if (!db) return { merged: 0 };
 
-      // Find guest cart
-      const [guestCart] = await db.select().from(carts).where(eq(carts.sessionId, input.sessionId)).limit(1);
+      // Find guest cart - must belong to this tenant, not just match the sessionId
+      // (sessionId alone has weak entropy and is not itself a trust boundary)
+      const [guestCart] = await db.select().from(carts).where(and(eq(carts.sessionId, input.sessionId), eq(carts.tenantId, ctx.tenantId))).limit(1);
       if (!guestCart) return { merged: 0 };
 
       const guestItems = await db.select().from(cartItems).where(eq(cartItems.cartId, guestCart.id));
@@ -328,11 +332,11 @@ export const cartRouter = router({
 
       // Get or create user cart
       let userCartId: number;
-      const [userCart] = await db.select().from(carts).where(eq(carts.userId, ctx.user.id)).limit(1);
+      const [userCart] = await db.select().from(carts).where(and(eq(carts.userId, ctx.user.id), eq(carts.tenantId, ctx.tenantId))).limit(1);
       if (userCart) {
         userCartId = userCart.id;
       } else {
-        const [ins] = await db.insert(carts).values({ userId: ctx.user.id });
+        const [ins] = await db.insert(carts).values({ userId: ctx.user.id, tenantId: ctx.tenantId });
         userCartId = (ins as any).insertId;
       }
 
@@ -352,7 +356,7 @@ export const cartRouter = router({
             qtyValue: String(parseFloat(String(existing.qtyValue ?? 1)) + parseFloat(String(guestItem.qtyValue ?? 1))),
           }).where(eq(cartItems.id, existing.id));
         } else {
-          await db.insert(cartItems).values({ ...guestItem, id: undefined as any, cartId: userCartId });
+          await db.insert(cartItems).values({ ...guestItem, id: undefined as any, cartId: userCartId, tenantId: ctx.tenantId });
         }
         merged++;
       }
@@ -385,10 +389,10 @@ export const cartRouter = router({
 
       let cart = null;
       if (userId) {
-        const [c] = await db.select().from(carts).where(eq(carts.userId, userId)).limit(1);
+        const [c] = await db.select().from(carts).where(and(eq(carts.userId, userId), eq(carts.tenantId, ctx.tenantId))).limit(1);
         cart = c;
       } else if (sessionId) {
-        const [c] = await db.select().from(carts).where(eq(carts.sessionId, sessionId)).limit(1);
+        const [c] = await db.select().from(carts).where(and(eq(carts.sessionId, sessionId), eq(carts.tenantId, ctx.tenantId))).limit(1);
         cart = c;
       }
 
