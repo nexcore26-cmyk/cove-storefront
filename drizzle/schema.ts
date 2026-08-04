@@ -39,6 +39,10 @@ export const tenants = mysqlTable("tenants", {
   id: int("id").autoincrement().primaryKey(),
   slug: varchar("slug", { length: 64 }).notNull().unique(),
   name: varchar("name", { length: 255 }).notNull(),
+  // Root domain used to resolve which tenant an incoming request belongs to
+  // (exact match, or any subdomain of it — e.g. "coveinterior.com" also
+  // matches app./admin./pos.coveinterior.com). See server/_core/context.ts.
+  rootDomain: varchar("rootDomain", { length: 255 }).unique(),
   status: mysqlEnum("status", ["active", "suspended"]).default("active").notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
@@ -227,13 +231,16 @@ export const productVariantLocalizations = mysqlTable("product_variant_localizat
 // ─────────────────────────────────────────────────────────────────────────────
 export const warehouses = mysqlTable("warehouses", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   name: varchar("name", { length: 128 }).notNull(),
   code: varchar("code", { length: 32 }).notNull().unique(),
   type: mysqlEnum("type", ["main", "online", "pos"]).notNull(),
   description: text("description"),
   isActive: boolean("isActive").default(true).notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
-});
+}, (t) => [
+  index("warehouses_tenantId_idx").on(t.tenantId),
+]);
 
 // ─────────────────────────────────────────────────────────────────────────────
 // WAREHOUSE STOCK
@@ -343,6 +350,7 @@ export const stockTransfers = mysqlTable("stock_transfers", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const customers = mysqlTable("customers", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   userId: int("userId"),
   wcCustomerId: int("wcCustomerId"),
   wcSource: mysqlEnum("wcSource", ["main", "brass"]),
@@ -365,6 +373,7 @@ export const customers = mysqlTable("customers", {
 }, (t) => [
   index("customers_email_idx").on(t.email),
   index("customers_wcId_idx").on(t.wcCustomerId),
+  index("customers_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -372,6 +381,7 @@ export const customers = mysqlTable("customers", {
 // ─────────────────────────────────────────────────────────────────────────────
 export const orders = mysqlTable("orders", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   orderNumber: varchar("orderNumber", { length: 64 }).notNull().unique(),
   wcOrderId: int("wcOrderId"),
   wcSource: mysqlEnum("wcSource", ["main", "brass"]),
@@ -428,6 +438,7 @@ export const orders = mysqlTable("orders", {
   index("orders_customerId_idx").on(t.customerId),
   index("orders_status_idx").on(t.status),
   index("orders_createdAt_idx").on(t.createdAt),
+  index("orders_tenantId_idx").on(t.tenantId),
 ]);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1003,6 +1014,7 @@ export type InsertProductVendor = typeof productVendors.$inferInsert;
 // On login, the guest cart is merged into the user cart.
 export const carts = mysqlTable("carts", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   userId: int("userId").references(() => users.id, { onDelete: "cascade" }),
   sessionId: varchar("sessionId", { length: 128 }), // for guest carts
   couponCode: varchar("couponCode", { length: 64 }),
@@ -1014,12 +1026,14 @@ export const carts = mysqlTable("carts", {
 }, (t) => [
   index("carts_userId_idx").on(t.userId),
   index("carts_sessionId_idx").on(t.sessionId),
+  index("carts_tenantId_idx").on(t.tenantId),
 ]);
 export type Cart = typeof carts.$inferSelect;
 export type InsertCart = typeof carts.$inferInsert;
 
 export const cartItems = mysqlTable("cart_items", {
   id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().default(1).references(() => tenants.id),
   cartId: int("cartId").notNull().references(() => carts.id, { onDelete: "cascade" }),
   productId: int("productId").notNull().references(() => products.id, { onDelete: "cascade" }),
   variantId: int("variantId").references(() => productVariants.id, { onDelete: "cascade" }),
@@ -1031,6 +1045,7 @@ export const cartItems = mysqlTable("cart_items", {
 }, (t) => [
   index("cart_items_cartId_idx").on(t.cartId),
   index("cart_items_productId_idx").on(t.productId),
+  index("cart_items_tenantId_idx").on(t.tenantId),
 ]);
 export type CartItem = typeof cartItems.$inferSelect;
 export type InsertCartItem = typeof cartItems.$inferInsert;
