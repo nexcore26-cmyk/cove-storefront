@@ -53,7 +53,7 @@ async function getBranchWarehouseId(ctx: Pick<TrpcContext, "user">): Promise<num
 
 export const posRouter = router({
   /** List all POS categories (brass + main with channel pos/both) */
-  categories: posProcedure.query(async () => {
+  categories: posProcedure.query(async ({ ctx }) => {
     const db = await getDb();
     if (!db) return [];
     const posCats = await db.select({
@@ -64,7 +64,7 @@ export const posRouter = router({
       wcSource: categories.wcSource,
     })
       .from(categories)
-      .where(inArray(categories.channel, ["pos", "both"]))
+      .where(and(eq(categories.tenantId, ctx.tenantId), inArray(categories.channel, ["pos", "both"])))
       .orderBy(categories.name);
     return posCats;
   }),
@@ -82,15 +82,16 @@ export const posRouter = router({
       if (!db) return { items: [], total: 0 };
 
       const posWarehouseId = await getBranchWarehouseId(ctx);
-      const conditions: any[] = [eq(products.status, "active")];
+      const conditions: any[] = [eq(products.status, "active"), eq(products.tenantId, ctx.tenantId)];
 
       if (input.categoryId) {
         const [cat] = await db.select({ name: categories.name })
-          .from(categories).where(eq(categories.id, input.categoryId)).limit(1);
+          .from(categories).where(and(eq(categories.id, input.categoryId), eq(categories.tenantId, ctx.tenantId))).limit(1);
         if (cat) {
           const sameName = await db.select({ id: categories.id })
             .from(categories)
             .where(and(
+              eq(categories.tenantId, ctx.tenantId),
               like(categories.name, cat.name),
               inArray(categories.channel, ["pos", "both"])
             ));
@@ -106,7 +107,7 @@ export const posRouter = router({
       } else {
         const posCats = await db.select({ id: categories.id })
           .from(categories)
-          .where(inArray(categories.channel, ["pos", "both"]));
+          .where(and(eq(categories.tenantId, ctx.tenantId), inArray(categories.channel, ["pos", "both"])));
         if (posCats.length > 0) {
           conditions.push(inArray(products.categoryId, posCats.map(c => c.id)));
         }
@@ -179,6 +180,7 @@ export const posRouter = router({
         .where(
           and(
             eq(productVariants.productId, input.productId),
+            eq(productVariants.tenantId, ctx.tenantId),
             eq(productVariants.isActive, true)
           )
         );
@@ -227,7 +229,7 @@ export const posRouter = router({
     }),
 
   /** List active branches this staff member can select for their POS session */
-  branches: posProcedure.query(async () => {
+  branches: posProcedure.query(async ({ ctx }) => {
     const db = await getDb();
     if (!db) return [];
     return db.select({
@@ -236,7 +238,7 @@ export const posRouter = router({
       code: branches.code,
     })
       .from(branches)
-      .where(eq(branches.isActive, true))
+      .where(and(eq(branches.isActive, true), eq(branches.tenantId, ctx.tenantId)))
       .orderBy(branches.name);
   }),
 
@@ -249,7 +251,7 @@ export const posRouter = router({
 
       const [branch] = await db.select({ id: branches.id, name: branches.name })
         .from(branches)
-        .where(and(eq(branches.id, input.branchId), eq(branches.isActive, true)))
+        .where(and(eq(branches.id, input.branchId), eq(branches.isActive, true), eq(branches.tenantId, ctx.tenantId)))
         .limit(1);
       if (!branch) {
         throw new TRPCError({ code: "BAD_REQUEST", message: "Branch not found or inactive" });
