@@ -30,12 +30,14 @@ export const bundlesRouter = router({
    */
   getItems: publicProcedure
     .input(z.object({ bundleVariantId: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { bundleItems, productVariants, products } = await import("../../drizzle/schema");
-      const { eq } = await import("drizzle-orm");
+      const { eq, and } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) return [];
 
+      // bundle_items has no tenantId column of its own - scoped via the
+      // component variant's tenantId (already joined for display fields).
       const rows = await db
         .select({
           id: bundleItems.id,
@@ -58,7 +60,7 @@ export const bundlesRouter = router({
         .from(bundleItems)
         .innerJoin(productVariants, eq(productVariants.id, bundleItems.componentVariantId))
         .innerJoin(products, eq(products.id, productVariants.productId))
-        .where(eq(bundleItems.bundleVariantId, input.bundleVariantId))
+        .where(and(eq(bundleItems.bundleVariantId, input.bundleVariantId), eq(productVariants.tenantId, ctx.tenantId)))
         .orderBy(bundleItems.id);
 
       return rows;
@@ -82,11 +84,22 @@ export const bundlesRouter = router({
         ),
       })
     )
-    .mutation(async ({ input }) => {
-      const { bundleItems } = await import("../../drizzle/schema");
-      const { eq } = await import("drizzle-orm");
+    .mutation(async ({ input, ctx }) => {
+      const { bundleItems, productVariants } = await import("../../drizzle/schema");
+      const { eq, and, inArray } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+
+      const [ownedBundle] = await db.select({ id: productVariants.id }).from(productVariants).where(and(eq(productVariants.id, input.bundleVariantId), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedBundle) throw new TRPCError({ code: "NOT_FOUND", message: "Bundle variant not found" });
+
+      const componentVariantIds = input.items.map((item) => item.componentVariantId).filter((id): id is number => id != null);
+      if (componentVariantIds.length > 0) {
+        const ownedComponents = await db.select({ id: productVariants.id }).from(productVariants).where(and(inArray(productVariants.id, componentVariantIds), eq(productVariants.tenantId, ctx.tenantId)));
+        if (ownedComponents.length !== new Set(componentVariantIds).size) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "One or more component variants were not found" });
+        }
+      }
 
       // Delete all existing bundle items for this variant
       await db.delete(bundleItems).where(eq(bundleItems.bundleVariantId, input.bundleVariantId));
@@ -118,11 +131,14 @@ export const bundlesRouter = router({
         warehouseId: z.number(),
       })
     )
-    .query(async ({ input }) => {
-      const { bundleItems, warehouseStock } = await import("../../drizzle/schema");
+    .query(async ({ input, ctx }) => {
+      const { bundleItems, warehouseStock, productVariants } = await import("../../drizzle/schema");
       const { eq, and, isNull } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) return { effectiveStock: null, components: [] };
+
+      const [ownedBundle] = await db.select({ id: productVariants.id }).from(productVariants).where(and(eq(productVariants.id, input.bundleVariantId), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedBundle) return { effectiveStock: null, components: [] };
 
       // Get all bundle items for this variant
       const items = await db
@@ -180,7 +196,7 @@ export const bundlesRouter = router({
    */
   searchVariants: adminProcedure
     .input(z.object({ query: z.string().min(1) }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { sql } = await import("drizzle-orm");
       const db = await getDb();
       if (!db) return [];
@@ -189,6 +205,7 @@ export const bundlesRouter = router({
       const q = `%${raw}%`;
       const numericId = Number(raw);
       const hasNumericId = Number.isFinite(numericId) && raw !== '';
+      const tenantId = ctx.tenantId;
 
       const [productRowsRaw] = await db.execute(sql`
         SELECT
@@ -218,7 +235,8 @@ export const bundlesRouter = router({
           ), 0) AS posStock
         FROM products p
         WHERE
-          p.status <> 'archived'
+          p.tenantId = ${tenantId}
+          AND p.status <> 'archived'
           AND (p.name LIKE ${q} OR p.sku LIKE ${q} OR (${hasNumericId} AND p.id = ${hasNumericId ? numericId : 0}))
           AND EXISTS (
             SELECT 1 FROM warehouse_stock ws
@@ -257,7 +275,8 @@ export const bundlesRouter = router({
         FROM product_variants pv
         INNER JOIN products p ON p.id = pv.productId
         WHERE
-          p.status <> 'archived'
+          pv.tenantId = ${tenantId}
+          AND p.status <> 'archived'
           AND (p.name LIKE ${q} OR p.sku LIKE ${q} OR pv.name LIKE ${q} OR pv.sku LIKE ${q} OR (${hasNumericId} AND (p.id = ${hasNumericId ? numericId : 0} OR pv.id = ${hasNumericId ? numericId : 0})))
           AND pv.manageStock = 1
         ORDER BY p.name ASC, pv.name ASC
@@ -280,16 +299,16 @@ export const bundlesRouter = router({
    * Get all products of type='bundle' with their variants.
    * Used by the AdminBundles page to list all bundle products.
    */
-  listBundleProducts: adminProcedure.query(async () => {
+  listBundleProducts: adminProcedure.query(async ({ ctx }) => {
     const { products, productVariants } = await import("../../drizzle/schema");
-    const { eq } = await import("drizzle-orm");
+    const { eq, and } = await import("drizzle-orm");
     const db = await getDb();
     if (!db) return [];
 
     const bundleProducts = await db
       .select()
       .from(products)
-      .where(eq(products.type, "bundle"));
+      .where(and(eq(products.type, "bundle"), eq(products.tenantId, ctx.tenantId)));
 
     // Fetch variants for each bundle product
     const result = await Promise.all(
