@@ -290,7 +290,7 @@ async function syncProductVariantsFromAttributes(
       continue;
     }
 
-    const sku = await generateSku(String((product as any).slug || productId), optionLabels);
+    const sku = await generateSku(tenantId, String((product as any).slug || productId), optionLabels);
     await db.insert(productVariants).values({
       productId,
       tenantId,

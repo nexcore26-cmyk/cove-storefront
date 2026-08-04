@@ -55,19 +55,19 @@ afterAll(async () => {
 
 describe('P11 — SKU Uniqueness', () => {
   it('generateSku produces correct format: {productSlug}-{value1}-{value2}', async () => {
-    const sku = await generateSku('my-product', ['Red', 'Large']);
+    const sku = await generateSku(1, 'my-product', ['Red', 'Large']);
     // Should be: my-product-red-large (or with suffix if collision)
     expect(sku).toMatch(/^my-product-red-large/);
   });
 
   it('generateSku handles special characters in attribute values', async () => {
-    const sku = await generateSku('test-product', ['Blue & White', '100% Cotton']);
+    const sku = await generateSku(1, 'test-product', ['Blue & White', '100% Cotton']);
     expect(sku).toMatch(/^test-product-blue-white-100-cotton/);
   });
 
   it('generateSku appends -2 on collision with existing SKU', async () => {
     // testSku1 = {testSlug}-red is already used by testVariantId1
-    const sku = await generateSku(testSlug, ['red']);
+    const sku = await generateSku(1, testSlug, ['red']);
     // Should get -2 suffix because base SKU is taken
     expect(sku).toBe(`${testSku1}-2`);
   });
@@ -75,26 +75,26 @@ describe('P11 — SKU Uniqueness', () => {
   it('generateSku excludes current variant ID from collision check (for updates)', async () => {
     if (!testVariantId1) return;
     // When updating testVariantId1, the same SKU should be allowed
-    const sku = await generateSku(testSlug, ['red'], testVariantId1);
+    const sku = await generateSku(1, testSlug, ['red'], testVariantId1);
     // Should return the base SKU (not -2) because we excluded testVariantId1
     expect(sku).toBe(testSku1);
   });
 
   it('checkSkuUnique returns null for unused SKU', async () => {
-    const result = await checkSkuUnique('__definitely-unused-sku-p11__');
+    const result = await checkSkuUnique(1, '__definitely-unused-sku-p11__');
     expect(result).toBeNull();
   });
 
   it('checkSkuUnique returns conflicting variant ID for duplicate SKU', async () => {
     if (!testVariantId1) return;
-    const result = await checkSkuUnique(testSku1);
+    const result = await checkSkuUnique(1, testSku1);
     expect(result).toBe(testVariantId1);
   });
 
   it('checkSkuUnique excludes current variant ID (for updates)', async () => {
     if (!testVariantId1) return;
     // When updating testVariantId1, the same SKU should be allowed
-    const result = await checkSkuUnique(testSku1, testVariantId1);
+    const result = await checkSkuUnique(1, testSku1, testVariantId1);
     expect(result).toBeNull();
   });
 
@@ -106,7 +106,7 @@ describe('P11 — SKU Uniqueness', () => {
     const skus: string[] = [];
     const variantIds: number[] = [];
     for (let i = 0; i < 5; i++) {
-      const sku = await generateSku('collision-test', ['blue']);
+      const sku = await generateSku(1, 'collision-test', ['blue']);
       // Insert to make it "taken"
       const [result] = await db.insert(productVariants).values({
         productId: testProductId,

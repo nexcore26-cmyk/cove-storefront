@@ -142,7 +142,7 @@ export const cartRouter = router({
 
       // --- Inventory Validation Start ---
       const onlineStoreWarehouseId = 2; // ID for 'Online Store' warehouse
-      const stockRows = await getProductStock(input.productId, null);
+      const stockRows = await getProductStock(ctx.tenantId, input.productId, null);
       const onlineStockRow = stockRows.find((r: any) => r.warehouseId === onlineStoreWarehouseId);
       const availableStock = onlineStockRow ? Number(onlineStockRow.quantity) : 0;
 
@@ -223,7 +223,7 @@ export const cartRouter = router({
       }
 
       const item = existingCartItem[0];
-      const stockRows = await getProductStock(item.productId, null);
+      const stockRows = await getProductStock(ctx.tenantId, item.productId, null);
       const onlineStockRow = stockRows.find((r: any) => r.warehouseId === onlineStoreWarehouseId);
       const availableStock = onlineStockRow ? Number(onlineStockRow.quantity) : 0;
 

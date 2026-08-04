@@ -446,7 +446,7 @@ const productsRouter = router({
     .query(({ input, ctx }) => getProductVariants(ctx.tenantId, input.productId)),
   stock: publicProcedure
     .input(z.object({ productId: z.number(), variantId: z.number().optional() }))
-    .query(({ input }) => getProductStock(input.productId, input.variantId)),
+    .query(({ input, ctx }) => getProductStock(ctx.tenantId, input.productId, input.variantId)),
   // Pricing engine: returns unitPrice × qtyValue for measurement-based products
   calculatePrice: publicProcedure
     .input(z.object({
@@ -454,20 +454,20 @@ const productsRouter = router({
       variantId: z.number().optional(),
       qtyValue: z.number().min(0.001),
     }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { products, productVariants } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
       let unitPrice = 0;
       let measurementType: string = 'unit';
       if (input.variantId) {
-        const [variant] = await db.select().from(productVariants).where(eq(productVariants.id, input.variantId)).limit(1);
+        const [variant] = await db.select().from(productVariants).where(and(eq(productVariants.id, input.variantId), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
         if (variant) unitPrice = parseFloat(String(variant.salePrice || variant.price));
       }
       if (!unitPrice) {
-        const [product] = await db.select().from(products).where(eq(products.id, input.productId)).limit(1);
+        const [product] = await db.select().from(products).where(and(eq(products.id, input.productId), eq(products.tenantId, ctx.tenantId))).limit(1);
         if (product) {
           unitPrice = parseFloat(String(product.salePrice || product.price));
           measurementType = product.measurementType || 'unit';
@@ -502,14 +502,14 @@ const productsRouter = router({
       shippingClassId: z.number().nullable().optional(),
       kuwaitOnly: z.boolean().optional(),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { products } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
       const { id, ...data } = input;
-      await db.update(products).set(data as any).where(eq(products.id, id));
+      await db.update(products).set(data as any).where(and(eq(products.id, id), eq(products.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
@@ -538,30 +538,30 @@ const productsRouter = router({
       shippingClassId: z.number().nullable().optional(),
       kuwaitOnly: z.boolean().default(false),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { products } = await import('../drizzle/schema');
-      const { like } = await import('drizzle-orm');
+      const { like, and, eq } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
       const baseSlug = input.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/, '');
-      const existing = await db.select({ slug: products.slug }).from(products).where(like(products.slug, `${baseSlug}%`));
+      const existing = await db.select({ slug: products.slug }).from(products).where(and(eq(products.tenantId, ctx.tenantId), like(products.slug, `${baseSlug}%`)));
       const slug = existing.length === 0 ? baseSlug : `${baseSlug}-${Date.now()}`;
-      const [result] = await db.insert(products).values({ ...input, slug } as any);
+      const [result] = await db.insert(products).values({ ...input, slug, tenantId: ctx.tenantId } as any);
       return { id: (result as any).insertId, slug };
     }),
 
   byId: adminProcedure
     .input(z.object({ id: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { products, productVariants } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      const [product] = await db.select().from(products).where(eq(products.id, input.id)).limit(1);
+      const [product] = await db.select().from(products).where(and(eq(products.id, input.id), eq(products.tenantId, ctx.tenantId))).limit(1);
       if (!product) throw new TRPCError({ code: 'NOT_FOUND', message: 'Product not found' });
-      const variants = await db.select().from(productVariants).where(eq(productVariants.productId, input.id));
+      const variants = await db.select().from(productVariants).where(and(eq(productVariants.productId, input.id), eq(productVariants.tenantId, ctx.tenantId)));
       return { product, variants };
     }),
 
@@ -571,7 +571,14 @@ const productsRouter = router({
       imageDataUrl: z.string(),
       filename: z.string().optional(),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
+      const { getDb } = await import('./db');
+      const { products } = await import('../drizzle/schema');
+      const { eq, and } = await import('drizzle-orm');
+      const db = await getDb();
+      if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+      const [owned] = await db.select({ id: products.id }).from(products).where(and(eq(products.id, input.productId), eq(products.tenantId, ctx.tenantId))).limit(1);
+      if (!owned) throw new TRPCError({ code: 'NOT_FOUND', message: 'Product not found' });
       const { storagePut } = await import('./storage');
       const matches = input.imageDataUrl.match(/^data:([^;]+);base64,(.+)$/);
       if (!matches) throw new TRPCError({ code: 'BAD_REQUEST', message: 'Invalid image data' });
@@ -606,56 +613,61 @@ const productsRouter = router({
       preOrderEnabled: z.boolean().default(false),
       preOrderLimit: z.number().int().min(0).default(0),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb, generateSku, checkSkuUnique } = await import('./db');
       const { productVariants, products } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
       const { id, ...data } = input;
+      const [ownedProduct] = await db.select({ slug: products.slug }).from(products).where(and(eq(products.id, data.productId), eq(products.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedProduct) throw new TRPCError({ code: 'NOT_FOUND', message: 'Product not found' });
+      if (id) {
+        const [ownedVariant] = await db.select({ id: productVariants.id }).from(productVariants).where(and(eq(productVariants.id, id), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
+        if (!ownedVariant) throw new TRPCError({ code: 'NOT_FOUND', message: 'Variant not found' });
+      }
       // P11: Auto-generate SKU if not provided
       let sku = data.sku?.trim() || '';
       if (!sku) {
-        const [prod] = await db.select({ slug: products.slug }).from(products).where(eq(products.id, data.productId)).limit(1);
         const attrValues = Object.values(data.attributes || {});
-        sku = await generateSku(prod?.slug || String(data.productId), attrValues, id);
+        sku = await generateSku(ctx.tenantId, ownedProduct.slug || String(data.productId), attrValues, id);
       }
       // P11: Check SKU uniqueness (skip check for WC-synced variants where duplicates are expected)
-      const conflictId = await checkSkuUnique(sku, id);
+      const conflictId = await checkSkuUnique(ctx.tenantId, sku, id);
       if (conflictId) {
         throw new TRPCError({ code: 'CONFLICT', message: `SKU "${sku}" is already used by variant ID ${conflictId}. Please use a different SKU.` });
       }
       const payload = { ...data, sku };
       if (id) {
-        await db.update(productVariants).set(payload as any).where(eq(productVariants.id, id));
+        await db.update(productVariants).set(payload as any).where(and(eq(productVariants.id, id), eq(productVariants.tenantId, ctx.tenantId)));
         return { id, sku };
       } else {
-        const [result] = await db.insert(productVariants).values(payload as any);
+        const [result] = await db.insert(productVariants).values({ ...payload, tenantId: ctx.tenantId } as any);
         return { id: (result as any).insertId, sku };
       }
     }),
 
   deleteVariant: adminProcedure
     .input(z.object({ id: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { productVariants } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      await db.delete(productVariants).where(eq(productVariants.id, input.id));
+      await db.delete(productVariants).where(and(eq(productVariants.id, input.id), eq(productVariants.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
   deleteAllVariantsForProduct: adminProcedure
     .input(z.object({ productId: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { productVariants } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      await db.delete(productVariants).where(eq(productVariants.productId, input.productId));
+      await db.delete(productVariants).where(and(eq(productVariants.productId, input.productId), eq(productVariants.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
@@ -666,13 +678,19 @@ const productsRouter = router({
       componentVariantId: z.number(),
       qty: z.string().default('1.000'),
     }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { bundleItems } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { bundleItems, productVariants } = await import('../drizzle/schema');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
       const { id, ...data } = input;
+      // bundle_items has no tenantId column of its own - verify ownership
+      // through the bundle/component variants instead.
+      const [ownedBundle] = await db.select({ id: productVariants.id }).from(productVariants).where(and(eq(productVariants.id, data.bundleVariantId), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedBundle) throw new TRPCError({ code: 'NOT_FOUND', message: 'Bundle variant not found' });
+      const [ownedComponent] = await db.select({ id: productVariants.id }).from(productVariants).where(and(eq(productVariants.id, data.componentVariantId), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedComponent) throw new TRPCError({ code: 'NOT_FOUND', message: 'Component variant not found' });
       if (id) {
         await db.update(bundleItems).set(data as any).where(eq(bundleItems.id, id));
         return { id };
@@ -684,24 +702,33 @@ const productsRouter = router({
 
   deleteBundleItem: adminProcedure
     .input(z.object({ id: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { bundleItems } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { bundleItems, productVariants } = await import('../drizzle/schema');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+      const [owned] = await db
+        .select({ id: bundleItems.id })
+        .from(bundleItems)
+        .innerJoin(productVariants, eq(bundleItems.bundleVariantId, productVariants.id))
+        .where(and(eq(bundleItems.id, input.id), eq(productVariants.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!owned) throw new TRPCError({ code: 'NOT_FOUND' });
       await db.delete(bundleItems).where(eq(bundleItems.id, input.id));
       return { success: true };
     }),
 
   getBundleItems: adminProcedure
     .input(z.object({ bundleVariantId: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { bundleItems, productVariants, products } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) return [];
+      const [ownedBundle] = await db.select({ id: productVariants.id }).from(productVariants).where(and(eq(productVariants.id, input.bundleVariantId), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
+      if (!ownedBundle) return [];
       const items = await db
         .select({
           id: bundleItems.id,
@@ -721,7 +748,7 @@ const productsRouter = router({
 
   /** P67: List all variants with pre-orders active — admin only */
   preOrderSummary: adminProcedure
-    .query(async () => {
+    .query(async ({ ctx }) => {
       const { getDb } = await import('./db');
       const { productVariants, products } = await import('../drizzle/schema');
       const { eq, gt, and } = await import('drizzle-orm');
@@ -742,6 +769,7 @@ const productsRouter = router({
         .from(productVariants)
         .leftJoin(products, eq(productVariants.productId, products.id))
         .where(and(
+          eq(productVariants.tenantId, ctx.tenantId),
           eq(productVariants.preOrderEnabled, true),
           gt(productVariants.preOrderUsed, 0),
         ));
@@ -751,14 +779,14 @@ const productsRouter = router({
   /** P67: Fulfil a pre-order variant — disable pre-order, reset counter — admin only */
   fulfilPreOrder: adminProcedure
     .input(z.object({ variantId: z.number().int().positive() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
       const { productVariants } = await import('../drizzle/schema');
-      const { eq } = await import('drizzle-orm');
+      const { eq, and } = await import('drizzle-orm');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 
-      const [variant] = await db.select().from(productVariants).where(eq(productVariants.id, input.variantId)).limit(1);
+      const [variant] = await db.select().from(productVariants).where(and(eq(productVariants.id, input.variantId), eq(productVariants.tenantId, ctx.tenantId))).limit(1);
       if (!variant) throw new TRPCError({ code: 'NOT_FOUND', message: 'Variant not found' });
       if (!variant.preOrderEnabled || variant.preOrderUsed === 0) {
         throw new TRPCError({ code: 'BAD_REQUEST', message: 'Variant has no active pre-orders to fulfil' });
@@ -771,6 +799,9 @@ const productsRouter = router({
       }).where(eq(productVariants.id, input.variantId));
 
       // Move any pending pre-orders that contain this variant to 'processing' status
+      // (variant ownership already verified above, and orders.tenantId scoping
+      // is Phase D territory - this raw query stays as-is for now since the
+      // variantId itself is already tenant-verified)
       await db.execute(
         `UPDATE orders o
          INNER JOIN order_items oi ON oi.orderId = o.id
@@ -787,7 +818,7 @@ const inventoryRouter = router({
   warehouses: publicProcedure.query(() => getAllWarehouses()),
   stock: adminProcedure
     .input(z.object({ productId: z.number(), variantId: z.number().optional() }))
-    .query(({ input }) => getProductStock(input.productId, input.variantId)),
+    .query(({ input, ctx }) => getProductStock(ctx.tenantId, input.productId, input.variantId)),
   // Returns stock for multiple products across all warehouses in one query
   stockByProducts: adminProcedure
     .input(z.object({ productIds: z.array(z.number()) }))

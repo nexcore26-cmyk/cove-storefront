@@ -234,10 +234,12 @@ export async function getProductVariants(tenantId: number, productId: number) {
     .where(and(eq(productVariants.tenantId, tenantId), eq(productVariants.productId, productId), eq(productVariants.isActive, true)));
 }
 
-export async function getProductStock(productId: number, variantId?: number | null) {
+export async function getProductStock(tenantId: number, productId: number, variantId?: number | null) {
   const db = await getDb();
   if (!db) return [];
-  const conditions: any[] = [eq(warehouseStock.productId, productId)];
+  // warehouse_stock has no tenantId column of its own - scoped via the
+  // warehouses join instead (warehouses.tenantId, added in Phase A).
+  const conditions: any[] = [eq(warehouseStock.productId, productId), eq(warehouses.tenantId, tenantId)];
   if (variantId !== undefined) {
     if (variantId) conditions.push(eq(warehouseStock.variantId, variantId));
     else conditions.push(isNull(warehouseStock.variantId));
@@ -790,6 +792,7 @@ export async function deductStockForOrder(orderId: number): Promise<void> {
  * Excludes the current variant ID from the uniqueness check (for updates).
  */
 export async function generateSku(
+  tenantId: number,
   productSlug: string,
   attributeValues: string[],
   excludeVariantId?: number
@@ -808,8 +811,9 @@ export async function generateSku(
   const { productVariants } = await import('../drizzle/schema');
   const { like, ne } = await import('drizzle-orm');
 
-  // Find existing SKUs that start with the base
-  const conditions: any[] = [like(productVariants.sku, `${base}%`)];
+  // Find existing SKUs that start with the base (scoped to this tenant -
+  // SKUs are per-tenant, not globally unique)
+  const conditions: any[] = [like(productVariants.sku, `${base}%`), eq(productVariants.tenantId, tenantId)];
   if (excludeVariantId) conditions.push(ne(productVariants.id, excludeVariantId));
   const existing = await db.select({ sku: productVariants.sku })
     .from(productVariants)
@@ -828,13 +832,14 @@ export async function generateSku(
  * Returns the conflicting variant ID if found, null otherwise.
  */
 export async function checkSkuUnique(
+  tenantId: number,
   sku: string,
   excludeVariantId?: number
 ): Promise<number | null> {
   const db = await getDb();
   if (!db) return null;
   const { productVariants } = await import('../drizzle/schema');
-  const conditions: any[] = [eq(productVariants.sku, sku)];
+  const conditions: any[] = [eq(productVariants.sku, sku), eq(productVariants.tenantId, tenantId)];
   if (excludeVariantId) {
     const { ne } = await import('drizzle-orm');
     conditions.push(ne(productVariants.id, excludeVariantId));
