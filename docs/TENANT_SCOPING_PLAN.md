@@ -29,7 +29,7 @@ tenant 1 without needing three separate domain rows).
 ## Phase C: Scope existing catalog tables (not started)
 ~96 call sites across `server/routers.ts`, `server/routers/attributes.ts` (~25 sites), `server/routers/pos.ts`, `server/routers/bundles.ts`, `server/routers/cart.ts` need `eq(table.tenantId, ctx.tenantId)` added — for `products`, `categories`, `productVariants`, `attributes`, `attributeValues`, `product_translations`, `category_translations`, `attribute_value_stock`, `product_attributes`. The storefront browse path already goes through centralized helpers in `server/db.ts` (`getProducts`, `getCategories`, etc.) using a `conditions[]` array — inject tenant scoping there first (fewer places, highest traffic), then work through the raw inline call sites file by file.
 - [x] Scope `server/db.ts` helpers (storefront browse path) — commit 7d0265f
-- [ ] Scope `server/routers/attributes.ts` (heaviest file)
+- [x] Scope `server/routers/attributes.ts` (heaviest file) — commit 25e866e, includes insert/update/delete ownership fixes beyond just read-filtering
 - [ ] Scope remaining `server/routers.ts` call sites (admin CRUD, translations)
 - [ ] Scope `server/routers/pos.ts`, `bundles.ts`, `cart.ts`
 - [ ] Add a cross-tenant isolation test (tenant 1 query never sees tenant 2 data)
