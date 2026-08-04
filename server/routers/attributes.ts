@@ -144,6 +144,7 @@ function firstDefinedArray(...values: Array<unknown>): string[] {
 
 async function syncProductVariantsFromAttributes(
   db: NonNullable<Awaited<ReturnType<typeof getDb>>>,
+  tenantId: number,
   productId: number,
   assignments: Array<{ attributeId: number; activeValueIds: number[]; sortOrder: number; galleryControlling?: boolean; isImageMaster?: boolean; stockControlling?: boolean }>
 ) {
@@ -169,21 +170,21 @@ async function syncProductVariantsFromAttributes(
   const [product] = await db
     .select()
     .from(productsTable)
-    .where(eq(productsTable.id, productId))
+    .where(and(eq(productsTable.id, productId), eq(productsTable.tenantId, tenantId)))
     .limit(1);
   if (!product) throw new TRPCError({ code: "NOT_FOUND", message: "Product not found" });
 
   const attrs = await db
     .select()
     .from(attributes)
-    .where(inArray(attributes.id, attributeIds))
+    .where(and(inArray(attributes.id, attributeIds), eq(attributes.tenantId, tenantId)))
     .orderBy(asc(attributes.sortOrder), asc(attributes.id));
   const attrMap = new Map(attrs.map((attr) => [attr.id, attr]));
 
   const vals = await db
     .select()
     .from(attributeValues)
-    .where(inArray(attributeValues.id, valueIds))
+    .where(and(inArray(attributeValues.id, valueIds), eq(attributeValues.tenantId, tenantId)))
     .orderBy(asc(attributeValues.sortOrder), asc(attributeValues.id));
   const valueMap = new Map(vals.map((value) => [value.id, value]));
 
@@ -217,7 +218,7 @@ async function syncProductVariantsFromAttributes(
   const existingVariants = await db
     .select()
     .from(productVariants)
-    .where(eq(productVariants.productId, productId));
+    .where(and(eq(productVariants.productId, productId), eq(productVariants.tenantId, tenantId)));
 
   const bySignature = new Map<string, (typeof existingVariants)[number]>();
   const duplicateVariantIds: number[] = [];
@@ -292,6 +293,7 @@ async function syncProductVariantsFromAttributes(
     const sku = await generateSku(String((product as any).slug || productId), optionLabels);
     await db.insert(productVariants).values({
       productId,
+      tenantId,
       sku,
       name,
       attributes: attributesPayload,
@@ -321,19 +323,20 @@ async function syncProductVariantsFromAttributes(
 
 export const attributesRouter = router({
   // ── List all attributes (with their values) ──────────────────────────────
-  list: publicProcedure.query(async () => {
+  list: publicProcedure.query(async ({ ctx }) => {
     const db = await getDb();
     if (!db) return [];
     const attrs = await db
       .select()
       .from(attributes)
+      .where(eq(attributes.tenantId, ctx.tenantId))
       .orderBy(asc(attributes.sortOrder), asc(attributes.id));
     const attrIds = attrs.map((a) => a.id);
     if (attrIds.length === 0) return attrs.map((a) => ({ ...a, values: [] }));
     const vals = await db
       .select()
       .from(attributeValues)
-      .where(inArray(attributeValues.attributeId, attrIds))
+      .where(and(eq(attributeValues.tenantId, ctx.tenantId), inArray(attributeValues.attributeId, attrIds)))
       .orderBy(asc(attributeValues.sortOrder), asc(attributeValues.id));
     const valMap = new Map<number, typeof vals>();
     for (const v of vals) {
@@ -346,18 +349,18 @@ export const attributesRouter = router({
   // ── Get single attribute with values ─────────────────────────────────────
   byId: publicProcedure
     .input(z.object({ id: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "NOT_FOUND" });
       const [attr] = await db
         .select()
         .from(attributes)
-        .where(eq(attributes.id, input.id));
+        .where(and(eq(attributes.id, input.id), eq(attributes.tenantId, ctx.tenantId)));
       if (!attr) throw new TRPCError({ code: "NOT_FOUND" });
       const vals = await db
         .select()
         .from(attributeValues)
-        .where(eq(attributeValues.attributeId, input.id))
+        .where(and(eq(attributeValues.attributeId, input.id), eq(attributeValues.tenantId, ctx.tenantId)))
         .orderBy(asc(attributeValues.sortOrder), asc(attributeValues.id));
       // Attach bundle items to each value
       const valueIds = vals.map((v) => v.id);
@@ -397,10 +400,10 @@ export const attributesRouter = router({
         sortOrder: z.number().default(0),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
-      const [result] = await db.insert(attributes).values(input);
+      const [result] = await db.insert(attributes).values({ ...input, tenantId: ctx.tenantId });
       return { id: (result as any).insertId };
     }),
 
@@ -419,7 +422,7 @@ export const attributesRouter = router({
         sortOrder: z.number().optional(),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
       const { id, ...data } = input;
@@ -428,16 +431,23 @@ export const attributesRouter = router({
       if ("descriptionEn" in updateData) updateData.descriptionEn = updateData.descriptionEn || null;
       if ("descriptionAr" in updateData) updateData.descriptionAr = updateData.descriptionAr || null;
       if ("nameAr" in updateData) updateData.nameAr = updateData.nameAr || null;
-      await db.update(attributes).set(updateData).where(eq(attributes.id, id));
+      await db.update(attributes).set(updateData).where(and(eq(attributes.id, id), eq(attributes.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
   // ── Delete attribute (cascades values) ─────────────────────────────────────────────────────
   delete: adminProcedure
     .input(z.object({ id: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+      // Verify this attribute belongs to the requesting tenant before touching anything.
+      const [owned] = await db
+        .select({ id: attributes.id })
+        .from(attributes)
+        .where(and(eq(attributes.id, input.id), eq(attributes.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!owned) throw new TRPCError({ code: "NOT_FOUND" });
       // Delete bundle items for all values of this attribute
       const vals = await db
         .select({ id: attributeValues.id })
@@ -484,10 +494,17 @@ export const attributesRouter = router({
         sortOrder: z.number().default(0),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
-      const [result] = await db.insert(attributeValues).values(input);
+      // Verify the parent attribute belongs to this tenant before attaching a value to it.
+      const [parentAttr] = await db
+        .select({ id: attributes.id })
+        .from(attributes)
+        .where(and(eq(attributes.id, input.attributeId), eq(attributes.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!parentAttr) throw new TRPCError({ code: "NOT_FOUND", message: "Attribute not found" });
+      const [result] = await db.insert(attributeValues).values({ ...input, tenantId: ctx.tenantId });
       return { id: (result as any).insertId };
     }),
 
@@ -516,20 +533,26 @@ export const attributesRouter = router({
         sortOrder: z.number().optional(),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
       const { id, ...data } = input;
-      await db.update(attributeValues).set(data).where(eq(attributeValues.id, id));
+      await db.update(attributeValues).set(data).where(and(eq(attributeValues.id, id), eq(attributeValues.tenantId, ctx.tenantId)));
       return { success: true };
     }),
 
   // ── Delete attribute value ────────────────────────────────────────────────
   deleteValue: adminProcedure
     .input(z.object({ id: z.number() }))
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+      const [owned] = await db
+        .select({ id: attributeValues.id })
+        .from(attributeValues)
+        .where(and(eq(attributeValues.id, input.id), eq(attributeValues.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!owned) throw new TRPCError({ code: "NOT_FOUND" });
       await db
         .delete(attributeValueBundleItems)
         .where(eq(attributeValueBundleItems.attributeValueId, input.id));
@@ -553,9 +576,27 @@ export const attributesRouter = router({
         ),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+      // attribute_value_bundle_items has no tenantId column of its own -
+      // verify ownership through the parent attribute value instead.
+      const [ownedValue] = await db
+        .select({ id: attributeValues.id })
+        .from(attributeValues)
+        .where(and(eq(attributeValues.id, input.attributeValueId), eq(attributeValues.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!ownedValue) throw new TRPCError({ code: "NOT_FOUND" });
+      if (input.items.length > 0) {
+        const productIds = input.items.map((item) => item.productId);
+        const ownedProducts = await db
+          .select({ id: productsTable.id })
+          .from(productsTable)
+          .where(and(inArray(productsTable.id, productIds), eq(productsTable.tenantId, ctx.tenantId)));
+        if (ownedProducts.length !== new Set(productIds).size) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "One or more bundle products were not found" });
+        }
+      }
       await db
         .delete(attributeValueBundleItems)
         .where(
@@ -576,9 +617,18 @@ export const attributesRouter = router({
   // ── Get bundle items for a value ──────────────────────────────────────────
   getBundleItems: publicProcedure
     .input(z.object({ attributeValueId: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) return [];
+      // Verify the parent attribute value belongs to this tenant before
+      // returning anything (attribute_value_bundle_items has no tenantId
+      // column of its own).
+      const [ownedValue] = await db
+        .select({ id: attributeValues.id })
+        .from(attributeValues)
+        .where(and(eq(attributeValues.id, input.attributeValueId), eq(attributeValues.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!ownedValue) return [];
       const items = await db
         .select({
           id: attributeValueBundleItems.id,
@@ -604,13 +654,13 @@ export const attributesRouter = router({
   // ── Get product attributes (for product edit page) ────────────────────────
   getProductAttributes: publicProcedure
     .input(z.object({ productId: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) return [];
       const pas = await db
         .select()
         .from(productAttributes)
-        .where(eq(productAttributes.productId, input.productId))
+        .where(and(eq(productAttributes.productId, input.productId), eq(productAttributes.tenantId, ctx.tenantId)))
         .orderBy(asc(productAttributes.sortOrder));
       if (pas.length === 0) return [];
       const attrIds = pas.map((pa) => pa.attributeId);
@@ -675,9 +725,16 @@ export const attributesRouter = router({
         syncVariants: z.boolean().default(true),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+
+      const [ownedProduct] = await db
+        .select({ id: productsTable.id })
+        .from(productsTable)
+        .where(and(eq(productsTable.id, input.productId), eq(productsTable.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!ownedProduct) throw new TRPCError({ code: "NOT_FOUND", message: "Product not found" });
 
       const normalizedAssignments = input.assignments.map((a, index) => ({
         attributeId: a.attributeId,
@@ -694,7 +751,7 @@ export const attributesRouter = router({
         const selectedValues = await db
           .select({ id: attributeValues.id, attributeId: attributeValues.attributeId, isEnabled: attributeValues.isEnabled })
           .from(attributeValues)
-          .where(inArray(attributeValues.id, selectedValueIds));
+          .where(and(inArray(attributeValues.id, selectedValueIds), eq(attributeValues.tenantId, ctx.tenantId)));
         const selectedById = new Map(selectedValues.map((v) => [v.id, v]));
         for (const assignment of normalizedAssignments) {
           for (const valueId of assignment.activeValueIds) {
@@ -721,11 +778,12 @@ export const attributesRouter = router({
       // Replace assignment rows for this product.
       await db
         .delete(productAttributes)
-        .where(eq(productAttributes.productId, input.productId));
+        .where(and(eq(productAttributes.productId, input.productId), eq(productAttributes.tenantId, ctx.tenantId)));
       if (normalizedAssignments.length > 0) {
         await db.insert(productAttributes).values(
           normalizedAssignments.map((a) => ({
             productId: input.productId,
+            tenantId: ctx.tenantId,
             attributeId: a.attributeId,
             activeValueIds: a.activeValueIds,
             galleryControlling: a.galleryControlling,
@@ -737,7 +795,7 @@ export const attributesRouter = router({
       }
 
       const variantSync = input.syncVariants
-        ? await syncProductVariantsFromAttributes(db, input.productId, normalizedAssignments)
+        ? await syncProductVariantsFromAttributes(db, ctx.tenantId, input.productId, normalizedAssignments)
         : null;
       return { success: true, variantSync };
     }),
@@ -746,21 +804,22 @@ export const attributesRouter = router({
   // Returns stock info per value: { valueId, onlineQty, posQty, isBundle }
   getValueStock: publicProcedure
     .input(z.object({ valueIds: z.array(z.number()) }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       if (input.valueIds.length === 0) return [];
       const db = await getDb();
       if (!db) return [];
 
-      // Get all warehouses
-      const allWarehouses = await db.select().from(warehousesTable);
+      // Get all warehouses belonging to this tenant
+      const allWarehouses = await db.select().from(warehousesTable).where(eq(warehousesTable.tenantId, ctx.tenantId));
       const onlineWh = allWarehouses.find((w) => String(w.type).toLowerCase() === "online");
       const shopWarehouses = allWarehouses.filter((w) => ["pos", "shop", "store"].includes(String(w.type).toLowerCase()));
 
-      // Get the values to know which are bundles
+      // Get the values to know which are bundles (only this tenant's values -
+      // any requested id belonging to another tenant is silently dropped)
       const vals = await db
         .select()
         .from(attributeValues)
-        .where(inArray(attributeValues.id, input.valueIds));
+        .where(and(inArray(attributeValues.id, input.valueIds), eq(attributeValues.tenantId, ctx.tenantId)));
 
       const result: Array<{
         valueId: number;
@@ -775,7 +834,7 @@ export const attributesRouter = router({
         const stocks = await db
           .select()
           .from(attributeValueStock)
-          .where(eq(attributeValueStock.attributeValueId, val.id));
+          .where(and(eq(attributeValueStock.attributeValueId, val.id), eq(attributeValueStock.tenantId, ctx.tenantId)));
         const stockRows = stocks.map((s) => ({ warehouseId: s.warehouseId, quantity: s.quantity }));
 
         if (val.isBundle) {
@@ -819,9 +878,21 @@ export const attributesRouter = router({
         quantity: z.number().min(0),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+      const [ownedValue] = await db
+        .select({ id: attributeValues.id })
+        .from(attributeValues)
+        .where(and(eq(attributeValues.id, input.attributeValueId), eq(attributeValues.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!ownedValue) throw new TRPCError({ code: "NOT_FOUND" });
+      const [ownedWarehouse] = await db
+        .select({ id: warehousesTable.id })
+        .from(warehousesTable)
+        .where(and(eq(warehousesTable.id, input.warehouseId), eq(warehousesTable.tenantId, ctx.tenantId)))
+        .limit(1);
+      if (!ownedWarehouse) throw new TRPCError({ code: "NOT_FOUND", message: "Warehouse not found" });
       await db
         .update(attributeValues)
         .set({ manageStock: true })
@@ -853,6 +924,7 @@ export const attributesRouter = router({
       } else {
         await db.insert(attributeValueStock).values({
           attributeValueId: input.attributeValueId,
+          tenantId: ctx.tenantId,
           warehouseId: input.warehouseId,
           quantity: input.quantity,
         });
