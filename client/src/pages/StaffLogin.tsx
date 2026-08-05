@@ -7,17 +7,9 @@ import { useState, useEffect } from 'react';
 import { trpc } from '@/lib/trpc';
 import { useAuth } from '@/_core/hooks/useAuth';
 import { useTenantConfig } from '@/contexts/TenantContext';
+import { getTenantSurface } from '@/lib/tenantSurface';
 import { toast } from 'sonner';
 import { Loader2, Eye, EyeOff } from 'lucide-react';
-
-function getSubdomain(): 'admin' | 'pos' | 'store' | null {
-  if (typeof window === 'undefined') return null;
-  const hostname = window.location.hostname;
-  if (hostname.startsWith('admin.')) return 'admin';
-  if (hostname.startsWith('pos.')) return 'pos';
-  if (hostname.startsWith('store.')) return 'store';
-  return null;
-}
 
 export default function StaffLogin() {
   const { user, loading } = useAuth();
@@ -26,7 +18,7 @@ export default function StaffLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const subdomain = getSubdomain();
+  const subdomain = getTenantSurface();
 
   // Get return path from URL query params
   const returnPath = (() => {

@@ -57,12 +57,26 @@ import Events from "./pages/Events";
 import PortfolioDetail from "./pages/PortfolioDetail";
 import DynamicPage from "./pages/DynamicPage";
 import StaffLogin from "./pages/StaffLogin";
+import { getTenantSurface } from "./lib/tenantSurface";
+
+// admin.<tenant-domain>/ and pos.<tenant-domain>/ should show the staff
+// login screen (which itself redirects already-authenticated staff to the
+// right panel), not the storefront homepage - the two subdomains only ever
+// serve the admin/POS surfaces. Every other path is unaffected; a bookmarked
+// admin.<tenant-domain>/admin/products link still works exactly as before.
+function RootRoute() {
+  const surface = getTenantSurface();
+  if (surface === "admin" || surface === "pos") {
+    return <StaffLogin />;
+  }
+  return <Home />;
+}
 
 function Router() {
   return (
     <Switch>
       {/* Storefront */}
-      <Route path="/" component={Home} />
+      <Route path="/" component={RootRoute} />
       <Route path="/vendor/login" component={VendorLogin} />
       <Route path="/vendor/dashboard" component={VendorDashboard} />
       <Route path="/shop" component={Shop} />
