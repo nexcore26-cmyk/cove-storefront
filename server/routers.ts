@@ -2255,7 +2255,7 @@ const shippingRouter = router({
       kuwaitCityId: z.number().optional(),
       items: z.array(z.object({
         productId: z.number(),
-        qty: z.number().min(1),
+        qty: z.number().min(0.001),
         shippingClassId: z.number().optional().nullable(),
         kuwaitOnly: z.boolean().optional(),
       })),

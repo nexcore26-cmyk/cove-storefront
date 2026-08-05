@@ -1107,15 +1107,17 @@ export default function Checkout() {
 
               {/* Items */}
               <div className="space-y-4 mb-6">
-                {items.map((item) => (
+                {items.map((item) => {
+                  const isUnit = !item.measurementType || item.measurementType === 'unit';
+                  return (
                   <div key={`${item.productId}-${item.variantId}`} className="flex gap-3">
                     <div className="relative w-14 h-14 flex-shrink-0">
                       <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                       <span
-                        className="absolute -top-1 -right-1 w-5 h-5 text-[10px] font-bold flex items-center justify-center rounded-full"
+                        className="absolute -top-1 -right-1 min-w-5 h-5 px-1 text-[10px] font-bold flex items-center justify-center rounded-full"
                         style={{ backgroundColor: '#9D7D39', color: '#FAFAF8' }}
                       >
-                        {item.quantity}
+                        {isUnit ? item.quantity : `${item.qtyValue}${item.measurementType?.[0] ?? ''}`}
                       </span>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -1129,17 +1131,18 @@ export default function Checkout() {
                         className="text-xs mt-0.5"
                         style={{ color: '#8A8A82', fontFamily: 'Montserrat, sans-serif' }}
                       >
-                        {item.variantName}
+                        {isUnit ? item.variantName : `${item.qtyValue} ${item.measurementType}${item.variantName ? ` · ${item.variantName}` : ''}`}
                       </p>
                     </div>
                     <span
                       className="text-sm font-medium italic flex-shrink-0"
                       style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#9D7D39' }}
                     >
-                      {(item.price * item.quantity).toFixed(3)}
+                      {(item.price * item.qtyValue).toFixed(3)}
                     </span>
                   </div>
-                ))}
+                  );
+                })}
               </div>
 
               <div className="gold-rule mb-4" />

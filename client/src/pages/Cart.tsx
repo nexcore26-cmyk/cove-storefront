@@ -12,7 +12,7 @@ import { trpc } from '@/lib/trpc';
 import { toast } from 'sonner';
 
 export default function Cart() {
-  const { items, removeItem, updateQuantity, subtotal, clearCart } = useCart();
+  const { items, removeItem, updateQuantity, updateQtyValue, subtotal, clearCart } = useCart();
 
   // Coupon state
   const [couponInput, setCouponInput] = useState('');
@@ -110,7 +110,10 @@ export default function Cart() {
               </div>
 
               <div className="divide-y" style={{ borderColor: '#E8E4DC' }}>
-                {items.map((item) => (
+                {items.map((item) => {
+                  const isUnit = !item.measurementType || item.measurementType === 'unit';
+                  const lineTotal = (item.price * item.qtyValue).toFixed(3);
+                  return (
                   <div key={`${item.productId}-${item.variantId}`} className="flex gap-6 py-6">
                     {/* Image */}
                     <div className="w-24 h-28 flex-shrink-0 overflow-hidden" style={{ backgroundColor: '#F0EDE8' }}>
@@ -148,40 +151,66 @@ export default function Cart() {
 
                       <div className="flex items-center justify-between mt-auto">
                         {/* Quantity */}
-                        <div className="flex items-center border" style={{ borderColor: '#E8E4DC' }}>
-                          <button
-                            onClick={() => updateQuantity(item.productId, item.variantId, item.quantity - 1)}
-                            className="w-9 h-9 flex items-center justify-center transition-colors hover:bg-gray-50"
-                            style={{ color: '#242424' }}
-                          >
-                            <Minus size={12} />
-                          </button>
-                          <span
-                            className="w-10 text-center text-sm"
-                            style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
-                          >
-                            {item.quantity}
-                          </span>
-                          <button
-                            onClick={() => updateQuantity(item.productId, item.variantId, item.quantity + 1)}
-                            className="w-9 h-9 flex items-center justify-center transition-colors hover:bg-gray-50"
-                            style={{ color: '#242424' }}
-                          >
-                            <Plus size={12} />
-                          </button>
-                        </div>
+                        {isUnit ? (
+                          <div className="flex items-center border" style={{ borderColor: '#E8E4DC' }}>
+                            <button
+                              onClick={() => updateQuantity(item.productId, item.variantId, item.quantity - 1)}
+                              className="w-9 h-9 flex items-center justify-center transition-colors hover:bg-gray-50"
+                              style={{ color: '#242424' }}
+                            >
+                              <Minus size={12} />
+                            </button>
+                            <span
+                              className="w-10 text-center text-sm"
+                              style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                            >
+                              {item.quantity}
+                            </span>
+                            <button
+                              onClick={() => updateQuantity(item.productId, item.variantId, item.quantity + 1)}
+                              className="w-9 h-9 flex items-center justify-center transition-colors hover:bg-gray-50"
+                              style={{ color: '#242424' }}
+                            >
+                              <Plus size={12} />
+                            </button>
+                          </div>
+                        ) : (
+                          <div className="flex items-center border" style={{ borderColor: '#E8E4DC' }}>
+                            <input
+                              type="number"
+                              min="0.001"
+                              step="0.5"
+                              value={item.qtyValue}
+                              onChange={e => {
+                                const v = parseFloat(e.target.value);
+                                if (v > 0) updateQtyValue(item.productId, item.variantId, v);
+                              }}
+                              className="w-16 h-9 text-center text-sm outline-none bg-transparent"
+                              style={{ fontFamily: 'Montserrat, sans-serif', color: '#242424' }}
+                            />
+                            <span className="pr-3 text-xs" style={{ color: '#8A8A82' }}>
+                              {item.measurementType}
+                            </span>
+                          </div>
+                        )}
 
                         {/* Price */}
                         <span
                           className="text-xl font-medium italic"
                           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: '#9D7D39' }}
                         >
-                          {(item.price * item.quantity).toFixed(3)} KWD
+                          {lineTotal} KWD
+                          {!isUnit && (
+                            <span className="text-xs ml-1" style={{ color: '#8A8A82' }}>
+                              ({item.price.toFixed(3)} / {item.measurementType})
+                            </span>
+                          )}
                         </span>
                       </div>
                     </div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
 
               {/* Continue shopping */}
