@@ -63,12 +63,16 @@ import POSSettings from "./pos/POSSettings";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
+type MeasurementType = "unit" | "meter" | "kg" | "roll" | "box";
+
 interface CartItem {
   productId: number;
   variantId?: number;
   name: string;
   sku?: string;
   quantity: number;
+  qtyValue: number;
+  measurementType: MeasurementType;
   unitPrice: number;
   variantAttributes?: Record<string, string>;
   variantLabel?: string;
@@ -84,6 +88,7 @@ interface PosProduct {
   images: string[];
   posStock: number | null;
   categoryId: number | null;
+  measurementType: MeasurementType;
 }
 
 type Screen = "board" | "sell" | "savedCarts" | "orders" | "transactions" | "report" | "settings";
@@ -246,6 +251,8 @@ function VariationModal({
       name: cleanName(product.name),
       sku: matchedVariant?.sku || product.sku || undefined,
       quantity: qty,
+      qtyValue: qty,
+      measurementType: "unit",
       unitPrice: effectivePrice,
       variantAttributes: allSelected ? selectedAttrs : undefined,
       variantLabel,
@@ -596,10 +603,11 @@ function OrderConfirmation({
   const handlePrint = () => {
     const win = window.open("", "_blank", "width=400,height=600");
     if (!win) { toast.error("Popup blocked — allow popups to print"); return; }
-    const subtotal = items.reduce((s, i) => s + i.unitPrice * i.quantity, 0);
-    const itemRows = items.map(i =>
-      `<tr><td>${i.name}${i.variantLabel ? ` (${i.variantLabel})` : ""}</td><td style="text-align:right">${i.quantity}</td><td style="text-align:right">${(i.unitPrice * i.quantity).toFixed(3)}</td></tr>`
-    ).join("");
+    const subtotal = items.reduce((s, i) => s + i.unitPrice * i.qtyValue, 0);
+    const itemRows = items.map(i => {
+      const qtyLabel = i.measurementType === "unit" ? String(i.quantity) : `${i.qtyValue} ${i.measurementType}`;
+      return `<tr><td>${i.name}${i.variantLabel ? ` (${i.variantLabel})` : ""}</td><td style="text-align:right">${qtyLabel}</td><td style="text-align:right">${(i.unitPrice * i.qtyValue).toFixed(3)}</td></tr>`;
+    }).join("");
     win.document.write(`
       <html><head><title>Receipt ${orderNumber}</title>
       <style>
@@ -714,9 +722,9 @@ function SellScreen({
     },
   });
 
-  const subtotal = cart.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
+  const subtotal = cart.reduce((sum, item) => sum + item.unitPrice * item.qtyValue, 0);
   const cartTotal = Math.max(0, subtotal + shippingCost - discountAmount);
-  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const cartCount = cart.reduce((sum, item) => sum + (item.measurementType === "unit" ? item.quantity : 1), 0);
 
   const addToCart = useCallback((item: CartItem) => {
     setCart(prev => {
@@ -725,7 +733,9 @@ function SellScreen({
       if (existing) {
         return prev.map(i =>
           `${i.productId}-${i.variantId ?? ""}` === key
-            ? { ...i, quantity: i.quantity + item.quantity }
+            ? (i.measurementType === "unit"
+                ? { ...i, quantity: i.quantity + item.quantity, qtyValue: i.qtyValue + item.qtyValue }
+                : { ...i, qtyValue: parseFloat((i.qtyValue + item.qtyValue).toFixed(3)) })
             : i
         );
       }
@@ -737,11 +747,14 @@ function SellScreen({
     if (product.type === "variable") {
       setVariationProduct(product);
     } else {
+      const measurementType = product.measurementType || "unit";
       addToCart({
         productId: product.id,
         name: cleanName(product.name),
         sku: product.sku ?? undefined,
         quantity: 1,
+        qtyValue: 1,
+        measurementType,
         unitPrice: parseFloat(String(product.salePrice || product.price)),
       });
     }
@@ -754,7 +767,19 @@ function SellScreen({
       if (newQty <= 0) {
         updated.splice(index, 1);
       } else {
-        updated[index] = { ...updated[index], quantity: newQty };
+        updated[index] = { ...updated[index], quantity: newQty, qtyValue: newQty };
+      }
+      return updated;
+    });
+  };
+
+  const updateQtyValue = (index: number, qtyValue: number) => {
+    setCart(prev => {
+      const updated = [...prev];
+      if (qtyValue <= 0) {
+        updated.splice(index, 1);
+      } else {
+        updated[index] = { ...updated[index], qtyValue: Math.max(0.001, qtyValue) };
       }
       return updated;
     });
@@ -803,6 +828,8 @@ function SellScreen({
         name: cleanName(item.name),
         sku: item.sku,
         quantity: item.quantity,
+        qtyValue: item.qtyValue,
+        measurementType: item.measurementType,
         unitPrice: item.unitPrice,
         variantAttributes: item.variantAttributes,
       })),
@@ -1028,23 +1055,40 @@ function SellScreen({
                     </button>
                   </div>
                   <div className="flex items-center justify-between mt-2">
-                    <div className="flex items-center gap-1">
-                      <button
-                        onClick={() => updateQty(index, -1)}
-                        className="w-6 h-6 rounded-full border flex items-center justify-center hover:bg-muted"
-                      >
-                        <Minus className="w-3 h-3" />
-                      </button>
-                      <span className="text-sm font-semibold w-6 text-center">{item.quantity}</span>
-                      <button
-                        onClick={() => updateQty(index, 1)}
-                        className="w-6 h-6 rounded-full border flex items-center justify-center hover:bg-muted"
-                      >
-                        <Plus className="w-3 h-3" />
-                      </button>
-                    </div>
+                    {item.measurementType === "unit" ? (
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => updateQty(index, -1)}
+                          className="w-6 h-6 rounded-full border flex items-center justify-center hover:bg-muted"
+                        >
+                          <Minus className="w-3 h-3" />
+                        </button>
+                        <span className="text-sm font-semibold w-6 text-center">{item.quantity}</span>
+                        <button
+                          onClick={() => updateQty(index, 1)}
+                          className="w-6 h-6 rounded-full border flex items-center justify-center hover:bg-muted"
+                        >
+                          <Plus className="w-3 h-3" />
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-1.5">
+                        <input
+                          type="number"
+                          min="0.001"
+                          step="0.5"
+                          value={item.qtyValue}
+                          onChange={(e) => {
+                            const v = parseFloat(e.target.value);
+                            if (v > 0) updateQtyValue(index, v);
+                          }}
+                          className="w-16 h-6 text-sm text-center border rounded outline-none"
+                        />
+                        <span className="text-xs text-muted-foreground">{item.measurementType}</span>
+                      </div>
+                    )}
                     <p className="text-sm font-bold text-green-700">
-                      {(item.unitPrice * item.quantity).toFixed(3)} KWD
+                      {(item.unitPrice * item.qtyValue).toFixed(3)} KWD
                     </p>
                   </div>
                 </div>
@@ -1207,6 +1251,8 @@ export default function POS() {
         name: i.name,
         sku: i.sku,
         quantity: i.quantity,
+        qtyValue: i.qtyValue,
+        measurementType: i.measurementType,
         unitPrice: i.unitPrice,
       })),
     });

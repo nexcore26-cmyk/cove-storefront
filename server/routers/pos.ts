@@ -133,6 +133,7 @@ export const posRouter = router({
         images: products.images,
         wcSource: products.wcSource,
         categoryId: products.categoryId,
+        measurementType: products.measurementType,
       })
         .from(products)
         .where(and(...conditions))
@@ -279,6 +280,12 @@ export const posRouter = router({
         name: z.string(),
         sku: z.string().optional(),
         quantity: z.number().min(1),
+        // Measurement-based quantity: for non-unit products, quantity stays
+        // 1 (one sale/line event, matches the online-store convention used
+        // by ordersRouter.place) while qtyValue carries the actual amount
+        // (e.g. 2.5 meters) used for pricing and the receipt.
+        qtyValue: z.number().min(0.001).optional(),
+        measurementType: z.enum(['unit', 'meter', 'kg', 'roll', 'box']).default('unit').optional(),
         unitPrice: z.number(),
         discountAmount: z.number().optional(),
         variantAttributes: z.record(z.string(), z.string()).optional(),
@@ -300,7 +307,7 @@ export const posRouter = router({
         if (!ownedCustomer) throw new TRPCError({ code: "BAD_REQUEST", message: "Customer not found" });
       }
 
-      const subtotal = input.items.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
+      const subtotal = input.items.reduce((sum, item) => sum + item.unitPrice * (item.qtyValue ?? item.quantity), 0);
       const total = Math.max(0, subtotal + input.shippingCost - input.discountAmount);
 
       // Pre-flight stock check
@@ -362,8 +369,10 @@ export const posRouter = router({
             name: item.name,
             sku: item.sku ?? null,
             quantity: item.quantity,
+            qtyValue: String((item.qtyValue ?? item.quantity).toFixed(3)),
+            measurementType: item.measurementType || 'unit',
             unitPrice: String(item.unitPrice.toFixed(3)),
-            totalPrice: String((item.unitPrice * item.quantity).toFixed(3)),
+            totalPrice: String((item.unitPrice * (item.qtyValue ?? item.quantity)).toFixed(3)),
             variantAttributes: (item.variantAttributes ?? null) as Record<string, string> | null,
           }))
         );
@@ -761,6 +770,8 @@ export const posRouter = router({
         name: z.string(),
         sku: z.string().optional(),
         quantity: z.number().min(1),
+        qtyValue: z.number().min(0.001).optional(),
+        measurementType: z.enum(['unit', 'meter', 'kg', 'roll', 'box']).default('unit').optional(),
         unitPrice: z.number(),
       })),
     }))
@@ -768,7 +779,7 @@ export const posRouter = router({
       const db = await getDb();
       if (!db) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "DB unavailable" });
 
-      const subtotal = input.items.reduce((s, i) => s + i.unitPrice * i.quantity, 0);
+      const subtotal = input.items.reduce((s, i) => s + i.unitPrice * (i.qtyValue ?? i.quantity), 0);
       const total = Math.max(0, subtotal - input.discountAmount);
 
       if (input.cartId) {
@@ -791,8 +802,10 @@ export const posRouter = router({
             name: item.name,
             sku: item.sku ?? null,
             quantity: item.quantity,
+            qtyValue: String((item.qtyValue ?? item.quantity).toFixed(3)),
+            measurementType: item.measurementType || 'unit',
             unitPrice: String(item.unitPrice.toFixed(3)),
-            totalPrice: String((item.unitPrice * item.quantity).toFixed(3)),
+            totalPrice: String((item.unitPrice * (item.qtyValue ?? item.quantity)).toFixed(3)),
           })));
         }
         return { cartId: input.cartId };
@@ -822,8 +835,10 @@ export const posRouter = router({
             name: item.name,
             sku: item.sku ?? null,
             quantity: item.quantity,
+            qtyValue: String((item.qtyValue ?? item.quantity).toFixed(3)),
+            measurementType: item.measurementType || 'unit',
             unitPrice: String(item.unitPrice.toFixed(3)),
-            totalPrice: String((item.unitPrice * item.quantity).toFixed(3)),
+            totalPrice: String((item.unitPrice * (item.qtyValue ?? item.quantity)).toFixed(3)),
           })));
         }
         return { cartId };

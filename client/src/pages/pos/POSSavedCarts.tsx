@@ -8,12 +8,16 @@ import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Trash2, Clock, User } from "lucide-react";
 import { toast } from "sonner";
 
+type MeasurementType = "unit" | "meter" | "kg" | "roll" | "box";
+
 interface CartItem {
   productId: number;
   variantId?: number;
   name: string;
   sku?: string;
   quantity: number;
+  qtyValue: number;
+  measurementType: MeasurementType;
   unitPrice: number;
   variantAttributes?: Record<string, string>;
   variantLabel?: string;
@@ -42,6 +46,8 @@ export default function POSSavedCarts({ onResumeCart, onNavigate }: POSSavedCart
       name: item.name,
       sku: item.sku ?? undefined,
       quantity: item.quantity,
+      qtyValue: item.qtyValue != null ? parseFloat(String(item.qtyValue)) : item.quantity,
+      measurementType: item.measurementType || "unit",
       unitPrice: parseFloat(String(item.unitPrice)),
     }));
     onResumeCart(items, cart.id);
