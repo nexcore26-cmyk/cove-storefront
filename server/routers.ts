@@ -3627,6 +3627,36 @@ const footerSettingsRouter = router({
     }),
 });
 
+// Public tenant branding config, consumed by the client's TenantProvider
+// (Phase E6) and reused as the single source of truth by the server-side
+// index.html templating middleware (Phase E5). Returns a client-safe subset
+// only - no internal ids.
+const tenantBrandingRouter = router({
+  getPublic: publicProcedure.query(async ({ ctx }) => {
+    const { getTenantBranding } = await import('./tenantBranding');
+    const branding = await getTenantBranding(ctx.tenantId);
+    if (!branding) return null;
+    return {
+      businessName: branding.businessName,
+      tagline: branding.tagline,
+      logoUrl: branding.logoUrl,
+      logoAltText: branding.logoAltText,
+      faviconUrl: branding.faviconUrl,
+      ogImageUrl: branding.ogImageUrl,
+      metaTitle: branding.metaTitle,
+      metaDescription: branding.metaDescription,
+      themeColors: branding.themeColors,
+      headingFontFamily: branding.headingFontFamily,
+      bodyFontFamily: branding.bodyFontFamily,
+      contactPhone: branding.contactPhone,
+      contactEmail: branding.contactEmail,
+      contactAddress: branding.contactAddress,
+      socialLinks: branding.socialLinks,
+      copyrightText: branding.copyrightText,
+    };
+  }),
+});
+
 // ─── Vendors Router ────────────────────────────────────────────────────────
 const vendorStatusSchema = z.enum(['active', 'inactive', 'pending', 'archived']);
 
@@ -4482,6 +4512,7 @@ export const appRouter = router({
   pageBuilder: pageBuilderRouter,
   headerSettings: headerSettingsRouter,
   footerSettings: footerSettingsRouter,
+  tenantBranding: tenantBrandingRouter,
   menuBuilder: menuBuilderRouter,
   vendors: vendorsRouter,
   expenses: expensesRouter,
