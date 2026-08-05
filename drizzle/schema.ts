@@ -50,6 +50,44 @@ export const tenants = mysqlTable("tenants", {
 export type Tenant = typeof tenants.$inferSelect;
 export type InsertTenant = typeof tenants.$inferInsert;
 
+// Per-tenant branding/theming config (Phase E). One row per tenant. Separate
+// from storeSettings, which stays a global singleton for operational concerns
+// (POS/warehouse/payment gateway) not yet tenant-scoped.
+export const tenantBranding = mysqlTable("tenant_branding", {
+  id: int("id").autoincrement().primaryKey(),
+  tenantId: int("tenantId").notNull().unique().references(() => tenants.id),
+  businessName: varchar("businessName", { length: 255 }).notNull(),
+  tagline: varchar("tagline", { length: 255 }),
+  logoUrl: varchar("logoUrl", { length: 500 }),
+  logoAltText: varchar("logoAltText", { length: 255 }),
+  faviconUrl: varchar("faviconUrl", { length: 500 }),
+  ogImageUrl: varchar("ogImageUrl", { length: 500 }),
+  metaTitle: varchar("metaTitle", { length: 255 }),
+  metaDescription: varchar("metaDescription", { length: 500 }),
+  themeColors: json("themeColors").$type<{
+    primary?: string;
+    secondary?: string;
+    accent?: string;
+    background?: string;
+    foreground?: string;
+  } | null>(),
+  headingFontFamily: varchar("headingFontFamily", { length: 150 }),
+  bodyFontFamily: varchar("bodyFontFamily", { length: 150 }),
+  contactPhone: varchar("contactPhone", { length: 50 }),
+  contactEmail: varchar("contactEmail", { length: 255 }),
+  contactAddress: varchar("contactAddress", { length: 500 }),
+  socialLinks: json("socialLinks").$type<Record<string, string> | null>(),
+  copyrightText: varchar("copyrightText", { length: 255 }),
+  // Migrated from store_settings in Phase E3 (duplicated here in the
+  // interim; dropped from store_settings once the cutover is verified).
+  headerSettings: json("headerSettings").$type<Record<string, any> | null>(),
+  footerSettings: json("footerSettings").$type<Record<string, any> | null>(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+export type TenantBranding = typeof tenantBranding.$inferSelect;
+export type InsertTenantBranding = typeof tenantBranding.$inferInsert;
+
 export const tenantModules = mysqlTable("tenant_modules", {
   id: int("id").autoincrement().primaryKey(),
   tenantId: int("tenantId").notNull().references(() => tenants.id, { onDelete: "cascade" }),
