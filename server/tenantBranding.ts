@@ -51,3 +51,51 @@ export async function getTenantBrandingForHost(host: string | undefined): Promis
 export function invalidateTenantBrandingCache(tenantId: number): void {
   cache.delete(tenantId);
 }
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+// Builds the Google Fonts <link> tag for a tenant's heading/body fonts, plus
+// Noto Kufi Arabic (always included - the site's Arabic UI depends on it
+// regardless of tenant). Falls back to Cove's current fonts so tenant 1
+// renders identically before/after templating is introduced.
+function buildFontLinks(headingFont: string | null | undefined, bodyFont: string | null | undefined): string {
+  const heading = (headingFont || "Cormorant Garamond").trim().replace(/\s+/g, "+");
+  const body = (bodyFont || "Montserrat").trim().replace(/\s+/g, "+");
+  const families = [
+    `family=${heading}:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700`,
+    `family=${body}:wght@300;400;500;600;700`,
+    "family=Noto+Kufi+Arabic:wght@300;400;500;600;700",
+  ];
+  const href = `https://fonts.googleapis.com/css2?${families.join("&")}&display=swap`;
+  return `<link href="${href}" rel="stylesheet" />`;
+}
+
+// Substitutes the %%TENANT_*%% placeholders in client/index.html with the
+// resolved tenant's branding, so the initial HTML response (SEO meta tags,
+// favicon, OG/Twitter cards, fonts) is correct per-tenant before any client
+// JS runs - important for crawlers and social-share link previews. Shared by
+// both the production static-serving path and the Vite dev-mode path.
+export async function renderTenantIndexHtml(template: string, host: string | undefined): Promise<string> {
+  const branding = await getTenantBrandingForHost(host);
+  const businessName = branding?.businessName || "Store";
+  const title = branding?.metaTitle || businessName;
+  const description = branding?.metaDescription || "";
+  const favicon = branding?.faviconUrl || "/favicon.ico";
+  const ogImage = branding?.ogImageUrl || "";
+  const fontLinks = buildFontLinks(branding?.headingFontFamily, branding?.bodyFontFamily);
+
+  return template
+    .replaceAll("%%TENANT_TITLE%%", escapeHtml(title))
+    .replaceAll("%%TENANT_META_DESCRIPTION%%", escapeHtml(description))
+    .replaceAll("%%TENANT_FAVICON%%", escapeHtml(favicon))
+    .replaceAll("%%TENANT_OG_IMAGE%%", escapeHtml(ogImage))
+    .replaceAll("%%TENANT_BUSINESS_NAME%%", escapeHtml(businessName))
+    .replace("%%TENANT_FONT_LINKS%%", fontLinks);
+}
