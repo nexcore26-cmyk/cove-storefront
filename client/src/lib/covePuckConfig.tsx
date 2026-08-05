@@ -95,7 +95,7 @@ const sectionClass = 'mx-auto w-full max-w-7xl px-6 lg:px-10';
 
 export const emptyPuckData: Data = {
   content: [],
-  root: { props: { title: 'Cove Page' } },
+  root: { props: { title: 'New Page' } },
 };
 
 export function normalizePuckData(data: unknown): Data {
@@ -134,9 +134,9 @@ export const covePuckConfig: Config<CovePuckComponents> = {
         },
       },
       defaultProps: {
-        eyebrow: 'Cove Interior',
+        eyebrow: 'Your Business Name',
         title: 'Curated pieces for refined interiors',
-        subtitle: 'Build a storefront landing page with reusable, tenant-managed Cove sections.',
+        subtitle: 'Build a storefront landing page with reusable, tenant-managed sections.',
         imageUrl: '',
         ctaText: 'Shop now',
         ctaHref: '/shop',

@@ -51,7 +51,7 @@ type BlockType = typeof BLOCK_TYPES[number]['value'];
 function defaultConfig(type: BlockType): Record<string, any> {
   switch (type) {
     case 'hero_slider': return {
-      slides: [{ image: '', title: 'Welcome to Cove Interior', subtitle: 'Luxury Furniture & Design', ctaText: 'Shop Now', ctaLink: '/shop' }],
+      slides: [{ image: '', title: 'Welcome to Your Store', subtitle: 'Your tagline here', ctaText: 'Shop Now', ctaLink: '/shop' }],
       autoplay: true,
       interval: 5000,
     };
@@ -65,18 +65,18 @@ function defaultConfig(type: BlockType): Record<string, any> {
     case 'image_gallery': return { images: [], columns: 3 };
     case 'intro_text': return {
       label: 'TIMELESS DESIGN, DISTINCTIVE LIVING.',
-      heading: 'Discover the World of Cove',
-      body1: 'Step into a world of refined interiors, distinctive craftsmanship and thoughtfully curated design. From signature brass furniture to complete interior solutions, every detail is created to bring elegance, character and individuality to your space.',
-      body2: 'Timeless design, carefully considered and uniquely Cove.',
+      heading: 'Discover What We Offer',
+      body1: 'Step into a world of refined products, distinctive craftsmanship and thoughtfully curated design. Every detail is created to bring elegance, character and individuality to your space.',
+      body2: 'Timeless design, carefully considered for you.',
     };
     case 'nav_cards': return {
       cards: [
-        { title: 'Signature Brass Furniture', description: 'Distinctive brass pieces designed to bring warmth, character and timeless elegance.', cta: 'Explore Collection', link: '#', image: '/media/admin-uploads/tenant-1/2026/07/signaturebrassfurniture.png' },
-        { title: 'Company Portfolio', description: 'Explore residential, commercial and bespoke interiors.', cta: 'View Portfolio', link: '#', image: '/media/admin-uploads/tenant-1/2026/07/companyportfolio.png' },
-        { title: 'Client Services', description: 'Concept, design and execution tailored to your space.', cta: 'Explore Services', link: '#', image: '/media/admin-uploads/tenant-1/2026/07/clientservices.png' },
-        { title: 'About Cove', description: 'The story, the craft and the people behind Cove Interior.', cta: 'Discover Cove', link: '#', image: '/media/admin-uploads/tenant-1/2026/07/aboutcove.png' },
-        { title: 'Cove Events', description: 'Curated gatherings and exclusive Cove experiences.', cta: 'View Events', link: '#', image: '/media/admin-uploads/tenant-1/2026/07/coveevents.png' },
-        { title: 'Visit & Contact Cove', description: 'Find us, reach out and begin your journey with Cove.', cta: 'Contact Us', link: '#', image: '/media/admin-uploads/tenant-1/2026/07/visitcontactcove.png' },
+        { title: 'Card Title 1', description: 'Add a short description for this card.', cta: 'Learn More', link: '#', image: '/media/admin-uploads/default/placeholder-1.png' },
+        { title: 'Card Title 2', description: 'Add a short description for this card.', cta: 'Learn More', link: '#', image: '/media/admin-uploads/default/placeholder-2.png' },
+        { title: 'Card Title 3', description: 'Add a short description for this card.', cta: 'Learn More', link: '#', image: '/media/admin-uploads/default/placeholder-3.png' },
+        { title: 'Card Title 4', description: 'Add a short description for this card.', cta: 'Learn More', link: '#', image: '/media/admin-uploads/default/placeholder-4.png' },
+        { title: 'Card Title 5', description: 'Add a short description for this card.', cta: 'Learn More', link: '#', image: '/media/admin-uploads/default/placeholder-5.png' },
+        { title: 'Card Title 6', description: 'Add a short description for this card.', cta: 'Learn More', link: '#', image: '/media/admin-uploads/default/placeholder-6.png' },
       ],
     };
     default: return {};
@@ -339,7 +339,7 @@ function IntroTextConfig({ config, onChange }: { config: any; onChange: (c: any)
     <div className="space-y-4">
       <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide border-b pb-1">English</p>
       <div><Label className="text-xs">Golden Label (top)</Label><Input value={config.label ?? ''} onChange={e => onChange({ ...config, label: e.target.value })} placeholder="TIMELESS DESIGN, DISTINCTIVE LIVING." /></div>
-      <div><Label className="text-xs">Heading</Label><Input value={config.heading ?? ''} onChange={e => onChange({ ...config, heading: e.target.value })} placeholder="Discover the World of Cove" /></div>
+      <div><Label className="text-xs">Heading</Label><Input value={config.heading ?? ''} onChange={e => onChange({ ...config, heading: e.target.value })} placeholder="Discover What We Offer" /></div>
       <div><Label className="text-xs">Body Paragraph 1</Label><Textarea rows={3} value={config.body1 ?? ''} onChange={e => onChange({ ...config, body1: e.target.value })} /></div>
       <div><Label className="text-xs">Body Paragraph 2 (italic gold tagline)</Label><Input value={config.body2 ?? ''} onChange={e => onChange({ ...config, body2: e.target.value })} /></div>
 
@@ -359,12 +359,12 @@ function NavCardsConfig({ config, onChange }: { config: any; onChange: (c: any) 
     onChange({ ...config, cards: next });
   };
   const cardLabels = [
-    'Card 1 — Signature Brass Furniture (tall left)',
-    'Card 2 — Company Portfolio (right top)',
-    'Card 3 — Client Services (right bottom)',
-    'Card 4 — About Cove (bottom left)',
-    'Card 5 — Cove Events (bottom center)',
-    'Card 6 — Visit & Contact Cove (bottom right)',
+    'Card 1 (tall left)',
+    'Card 2 (right top)',
+    'Card 3 (right bottom)',
+    'Card 4 (bottom left)',
+    'Card 5 (bottom center)',
+    'Card 6 (bottom right)',
   ];
   return (
     <div className="space-y-5">
