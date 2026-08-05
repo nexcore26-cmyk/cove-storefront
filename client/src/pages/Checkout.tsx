@@ -13,6 +13,7 @@ import { useLocation } from 'wouter';
 import { Check, ChevronRight, CreditCard, Smartphone, Banknote, Loader2, Tag, X } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { useCart } from '@/contexts/CartContext';
+import { useTenantConfig } from '@/contexts/TenantContext';
 import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
 import { cleanName } from '@/lib/cleanName';
@@ -99,6 +100,7 @@ function StepIndicator({ current }: { current: Step }) {
 export default function Checkout() {
   const [, navigate] = useLocation();
   const { items, subtotal, clearCart } = useCart();
+  const { config: tenantConfig } = useTenantConfig();
   const [step, setStep] = useState<Step>('address');
 
   // Pickup mode: skip address fields, only name + phone
@@ -454,7 +456,7 @@ export default function Checkout() {
                     style={{ borderColor: '#9D7D39', backgroundColor: 'rgba(157,125,57,0.05)' }}
                   >
                     <p className="text-xs font-semibold tracking-wider uppercase mb-1" style={{ color: '#9D7D39', fontFamily: 'Montserrat, sans-serif' }}>
-                      Cove Interior Showroom
+                      {tenantConfig?.businessName || 'Store'} Showroom
                     </p>
                     <p className="text-sm" style={{ color: '#242424', fontFamily: 'Montserrat, sans-serif' }}>
                       Kuwait City — We will contact you to arrange pickup time.

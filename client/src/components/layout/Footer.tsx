@@ -5,14 +5,15 @@
  */
 import { useState, useEffect } from 'react';
 import { trpc } from '@/lib/trpc';
+import { useTenantConfig } from '@/contexts/TenantContext';
 
 // ─── SVG Icons (gold outlined style matching WP) ─────────────────────────────
 
 function IconMapPin() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="34" height="34" rx="4" stroke="#9D7D39" strokeWidth="1.2" fill="none"/>
-      <path d="M18 8C14.134 8 11 11.134 11 15c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#9D7D39"/>
+      <rect x="1" y="1" width="34" height="34" rx="4" stroke="var(--brand-primary)" strokeWidth="1.2" fill="none"/>
+      <path d="M18 8C14.134 8 11 11.134 11 15c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="var(--brand-primary)"/>
     </svg>
   );
 }
@@ -20,8 +21,8 @@ function IconMapPin() {
 function IconPhone() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="34" height="34" rx="4" stroke="#9D7D39" strokeWidth="1.2" fill="none"/>
-      <path d="M13.5 10h-1a2 2 0 0 0-2 2v1c0 6.627 5.373 12 12 12h1a2 2 0 0 0 2-2v-1a1 1 0 0 0-.553-.894l-3-1.5a1 1 0 0 0-1.17.22l-.97 1.07A9.017 9.017 0 0 1 15.1 16.2l1.07-.97a1 1 0 0 0 .22-1.17l-1.5-3A1 1 0 0 0 13.5 10z" fill="#9D7D39"/>
+      <rect x="1" y="1" width="34" height="34" rx="4" stroke="var(--brand-primary)" strokeWidth="1.2" fill="none"/>
+      <path d="M13.5 10h-1a2 2 0 0 0-2 2v1c0 6.627 5.373 12 12 12h1a2 2 0 0 0 2-2v-1a1 1 0 0 0-.553-.894l-3-1.5a1 1 0 0 0-1.17.22l-.97 1.07A9.017 9.017 0 0 1 15.1 16.2l1.07-.97a1 1 0 0 0 .22-1.17l-1.5-3A1 1 0 0 0 13.5 10z" fill="var(--brand-primary)"/>
     </svg>
   );
 }
@@ -29,9 +30,9 @@ function IconPhone() {
 function IconMail() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="34" height="34" rx="4" stroke="#9D7D39" strokeWidth="1.2" fill="none"/>
-      <rect x="9" y="12" width="18" height="13" rx="2" stroke="#9D7D39" strokeWidth="1.4" fill="none"/>
-      <path d="M9 14l9 6 9-6" stroke="#9D7D39" strokeWidth="1.4" fill="none"/>
+      <rect x="1" y="1" width="34" height="34" rx="4" stroke="var(--brand-primary)" strokeWidth="1.2" fill="none"/>
+      <rect x="9" y="12" width="18" height="13" rx="2" stroke="var(--brand-primary)" strokeWidth="1.4" fill="none"/>
+      <path d="M9 14l9 6 9-6" stroke="var(--brand-primary)" strokeWidth="1.4" fill="none"/>
     </svg>
   );
 }
@@ -39,10 +40,10 @@ function IconMail() {
 function IconInstagram() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="34" height="34" rx="4" stroke="#9D7D39" strokeWidth="1.2" fill="none"/>
-      <rect x="10" y="10" width="16" height="16" rx="4" stroke="#9D7D39" strokeWidth="1.4" fill="none"/>
-      <circle cx="18" cy="18" r="4" stroke="#9D7D39" strokeWidth="1.4" fill="none"/>
-      <circle cx="23" cy="13" r="1" fill="#9D7D39"/>
+      <rect x="1" y="1" width="34" height="34" rx="4" stroke="var(--brand-primary)" strokeWidth="1.2" fill="none"/>
+      <rect x="10" y="10" width="16" height="16" rx="4" stroke="var(--brand-primary)" strokeWidth="1.4" fill="none"/>
+      <circle cx="18" cy="18" r="4" stroke="var(--brand-primary)" strokeWidth="1.4" fill="none"/>
+      <circle cx="23" cy="13" r="1" fill="var(--brand-primary)"/>
     </svg>
   );
 }
@@ -94,8 +95,10 @@ function BadgeApplePay() {
 
 // ─── Footer component ─────────────────────────────────────────────────────────
 export default function Footer() {
+  const { config: tenantConfig } = useTenantConfig();
   const { data: savedSettings } = trpc.footerSettings.get.useQuery(undefined, { staleTime: 60_000, retry: false });
-  const logoUrl = (savedSettings as any)?.logoUrl || '/brand/cove-logo.png';
+  const { data: savedHeaderSettings } = trpc.headerSettings.get.useQuery(undefined, { staleTime: 60_000, retry: false });
+  const logoUrl = (savedSettings as any)?.logoUrl || tenantConfig?.logoUrl || '/brand/cove-logo.png';
 
   const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
@@ -105,66 +108,72 @@ export default function Footer() {
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  const HEADER_BG = '/media/admin-uploads/tenant-1/2026/07/heaader.jpg';
+  // Reuses the same background image configured for the header (Header
+  // Builder), rather than a hardcoded per-tenant asset path.
+  const HEADER_BG = (savedHeaderSettings as any)?.desktop?.mainHeader?.backgroundImage
+    || (savedHeaderSettings as any)?.mobile?.mainHeader?.backgroundImage
+    || '';
 
   // Contact widget data
   const widgets = [
     {
       icon: <IconMapPin />,
-      href: 'https://maps.app.goo.gl/dfMyPhjT1eSz4tfG7',
-      label: 'Location',
+      href: tenantConfig?.contactAddress ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(tenantConfig.contactAddress)}` : '#',
+      label: tenantConfig?.contactAddress ? 'Location' : '',
       external: true,
     },
     {
       icon: <IconPhone />,
-      href: 'tel:+96522464414',
-      label: '965 2246 4414',
+      href: tenantConfig?.contactPhone ? `tel:${tenantConfig.contactPhone}` : '#',
+      label: tenantConfig?.contactPhone || '',
       external: false,
     },
     {
       icon: <IconMail />,
-      href: 'mailto:cove@coveinterior.com',
-      label: 'cove@coveinterior.com',
+      href: tenantConfig?.contactEmail ? `mailto:${tenantConfig.contactEmail}` : '#',
+      label: tenantConfig?.contactEmail || '',
       external: false,
     },
     {
       icon: <IconInstagram />,
-      href: 'https://www.instagram.com/brass.official/',
-      label: 'brass.official',
+      href: tenantConfig?.socialLinks?.instagram || '#',
+      label: tenantConfig?.socialLinks?.instagram?.replace(/^https?:\/\/(www\.)?instagram\.com\//, '').replace(/\/$/, '') || '',
       external: true,
     },
-  ];
+  ].filter((w) => w.label);
 
   return (
     <footer
       style={{
-        backgroundColor: '#0d0d0b',
-        color: '#FAFAF8',
+        backgroundColor: 'var(--brand-secondary)',
+        color: 'var(--brand-background)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
       {/* Background image — using img tag for reliable mobile rendering */}
-      <img
-        src={HEADER_BG}
-        alt=""
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'right top',
-          pointerEvents: 'none',
-          zIndex: 0,
-        }}
-      />
+      {HEADER_BG && (
+        <img
+          src={HEADER_BG}
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'right top',
+            pointerEvents: 'none',
+            zIndex: 0,
+          }}
+        />
+      )}
       {/* Dark overlay so text stays readable over the image */}
       <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(10,10,8,0.55)', pointerEvents: 'none', zIndex: 1 }} />
 
       {/* Gold top border */}
-      <div style={{ height: '1px', backgroundColor: '#9D7D39', position: 'relative', zIndex: 1 }} />
+      <div style={{ height: '1px', backgroundColor: 'var(--brand-primary)', position: 'relative', zIndex: 1 }} />
 
       {/* Contact info section */}
       <div
@@ -204,7 +213,7 @@ export default function Footer() {
               fontFamily: 'Montserrat, sans-serif',
               fontSize: 14,
               lineHeight: 1.6,
-              color: '#FAFAF8',
+              color: 'var(--brand-background)',
               margin: 0,
               textAlign: isDesktop ? 'left' : undefined,
             }}>
@@ -223,25 +232,29 @@ export default function Footer() {
         <div style={{ marginBottom: 16 }}>
           <img
             src={logoUrl}
-            alt="Cove Interior"
+            alt={tenantConfig?.businessName || 'Store'}
             style={{ height: 56, width: 'auto', objectFit: 'contain', display: 'inline-block' }}
           />
         </div>
 
         {/* Copyright */}
         <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 13, color: '#8A8A82', margin: '0 0 12px' }}>
-          Cove {new Date().getFullYear()} all copyrights reserved.
+          {(tenantConfig?.copyrightText || '{businessName} {year} all rights reserved.')
+            .replace('{year}', String(new Date().getFullYear()))
+            .replace('{businessName}', tenantConfig?.businessName || 'Store')}
         </p>
 
         {/* Full address */}
-        <a
-          href="https://maps.app.goo.gl/dfMyPhjT1eSz4tfG7"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 13, color: '#8A8A82', textDecoration: 'none', display: 'block', margin: '0 0 24px' }}
-        >
-          Kuwait City, Murgab, Abdulla AL Mubarak St, Star Tower, Floor #11, Office #5.
-        </a>
+        {tenantConfig?.contactAddress && (
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(tenantConfig.contactAddress)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontSize: 13, color: '#8A8A82', textDecoration: 'none', display: 'block', margin: '0 0 24px' }}
+          >
+            {tenantConfig.contactAddress}
+          </a>
+        )}
 
         {/* Payment badges */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12 }}>

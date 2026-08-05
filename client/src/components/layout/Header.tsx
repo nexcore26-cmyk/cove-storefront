@@ -7,6 +7,7 @@ import { Link, useLocation } from 'wouter';
 import { ShoppingBag, Search, User, Menu, X, ChevronDown, ChevronRight, Heart, MapPin, Globe, Mail, Phone } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTenantConfig } from '@/contexts/TenantContext';
 import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
 
@@ -46,8 +47,8 @@ const makeRow = (overrides: Partial<HeaderRow> = {}): HeaderRow => {
   return {
     enabled: true,
     height: 64,
-    backgroundColor: '#111110',
-    textColor: '#FAFAF8',
+    backgroundColor: 'var(--brand-secondary)',
+    textColor: 'var(--brand-background)',
     borderBottom: false,
     ...rest,
     columns: { left: [], center: [], right: [], ...(columns || {}) },
@@ -56,14 +57,14 @@ const makeRow = (overrides: Partial<HeaderRow> = {}): HeaderRow => {
 
 const fallbackHeaderSettings = (): HeaderSettings => ({
   desktop: {
-    topBar: makeRow({ height: 32, backgroundColor: '#9D7D39', textColor: '#FAFAF8', columns: { left: [], center: [{ id: 'desktop-shipping-text', type: 'textHtml', html: 'Free shipping on orders over 50 KWD — Kuwait & GCC' }], right: [] } }),
-    mainHeader: makeRow({ height: 64, backgroundColor: '#111110', textColor: '#FAFAF8', columns: { left: [{ id: 'desktop-logo', type: 'logo' }], center: [{ id: 'desktop-main-menu', type: 'mainMenu', menuKey: 'header' }], right: [{ id: 'desktop-language', type: 'languageSwitcher' }, { id: 'desktop-search', type: 'search' }, { id: 'desktop-account', type: 'account' }, { id: 'desktop-wishlist', type: 'wishlist' }, { id: 'desktop-cart', type: 'cart' }] } }),
-    bottomHeader: makeRow({ enabled: false, height: 44, backgroundColor: '#111110', textColor: '#FAFAF8', borderBottom: true }),
+    topBar: makeRow({ height: 32, backgroundColor: 'var(--brand-primary)', textColor: 'var(--brand-background)', columns: { left: [], center: [{ id: 'desktop-shipping-text', type: 'textHtml', html: 'Free shipping on orders over 50 KWD — Kuwait & GCC' }], right: [] } }),
+    mainHeader: makeRow({ height: 64, backgroundColor: 'var(--brand-secondary)', textColor: 'var(--brand-background)', columns: { left: [{ id: 'desktop-logo', type: 'logo' }], center: [{ id: 'desktop-main-menu', type: 'mainMenu', menuKey: 'header' }], right: [{ id: 'desktop-language', type: 'languageSwitcher' }, { id: 'desktop-search', type: 'search' }, { id: 'desktop-account', type: 'account' }, { id: 'desktop-wishlist', type: 'wishlist' }, { id: 'desktop-cart', type: 'cart' }] } }),
+    bottomHeader: makeRow({ enabled: false, height: 44, backgroundColor: 'var(--brand-secondary)', textColor: 'var(--brand-background)', borderBottom: true }),
   },
   mobile: {
-    topBar: makeRow({ enabled: false, height: 30, backgroundColor: '#9D7D39', textColor: '#FAFAF8', columns: { left: [], center: [{ id: 'mobile-top-text', type: 'textHtml', html: 'Free shipping over 50 KWD' }], right: [] } }),
-    mainHeader: makeRow({ height: 58, backgroundColor: '#111110', textColor: '#FAFAF8', columns: { left: [{ id: 'mobile-menu-icon', type: 'mobileMenuIcon' }], center: [{ id: 'mobile-logo', type: 'logo' }], right: [{ id: 'mobile-search', type: 'search' }, { id: 'mobile-cart', type: 'cart' }] } }),
-    bottomHeader: makeRow({ enabled: false, height: 44, backgroundColor: '#111110', textColor: '#FAFAF8' }),
+    topBar: makeRow({ enabled: false, height: 30, backgroundColor: 'var(--brand-primary)', textColor: 'var(--brand-background)', columns: { left: [], center: [{ id: 'mobile-top-text', type: 'textHtml', html: 'Free shipping over 50 KWD' }], right: [] } }),
+    mainHeader: makeRow({ height: 58, backgroundColor: 'var(--brand-secondary)', textColor: 'var(--brand-background)', columns: { left: [{ id: 'mobile-menu-icon', type: 'mobileMenuIcon' }], center: [{ id: 'mobile-logo', type: 'logo' }], right: [{ id: 'mobile-search', type: 'search' }, { id: 'mobile-cart', type: 'cart' }] } }),
+    bottomHeader: makeRow({ enabled: false, height: 44, backgroundColor: 'var(--brand-secondary)', textColor: 'var(--brand-background)' }),
   },
 });
 
@@ -155,7 +156,7 @@ function MobileMenuDrawer({
         className="lg:hidden fixed left-0 right-0 bottom-0 z-40 flex flex-col"
         style={{
           top: mobileHeaderHeight,
-          backgroundColor: '#111110',
+          backgroundColor: 'var(--brand-secondary)',
           overflowY: 'auto',
           overflowX: 'hidden',
           animation: 'menuSlideDown 0.38s cubic-bezier(0.4, 0, 0.2, 1) both',
@@ -180,7 +181,7 @@ function MobileMenuDrawer({
                   <button
                     onClick={() => setExpandedId(isExpanded ? null : String(link.id))}
                     className="flex-1 text-left text-2xl font-light transition-colors duration-200"
-                    style={{ fontFamily, fontSize: isAr ? '14px' : undefined, color: isExpanded ? '#9D7D39' : '#FAFAF8', letterSpacing: '0.01em' }}
+                    style={{ fontFamily, fontSize: isAr ? '14px' : undefined, color: isExpanded ? 'var(--brand-primary)' : 'var(--brand-background)', letterSpacing: '0.01em' }}
                   >
                     {label}
                   </button>
@@ -189,8 +190,8 @@ function MobileMenuDrawer({
                     href={link.href}
                     {...linkProps(link)}
                     onClick={onClose}
-                    className="flex-1 text-2xl font-light transition-colors duration-200 hover:text-[#9D7D39]"
-                    style={{ fontFamily, fontSize: isAr ? '14px' : undefined, color: '#FAFAF8', letterSpacing: '0.01em' }}
+                    className="flex-1 text-2xl font-light transition-colors duration-200 hover:text-[var(--brand-primary)]"
+                    style={{ fontFamily, fontSize: isAr ? '14px' : undefined, color: 'var(--brand-background)', letterSpacing: '0.01em' }}
                   >
                     {label}
                   </Link>
@@ -216,7 +217,7 @@ function MobileMenuDrawer({
                       href={child.href}
                       {...linkProps(child)}
                       onClick={onClose}
-                      className="block py-3 text-sm transition-colors duration-200 hover:text-[#9D7D39]"
+                      className="block py-3 text-sm transition-colors duration-200 hover:text-[var(--brand-primary)]"
                       style={{ fontFamily: fontFamilyUI, color: 'rgba(250,250,248,0.65)', letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '11px' }}
                     >
                       {linkLabel(child, locale)}
@@ -237,7 +238,7 @@ function MobileMenuDrawer({
         <Link
           href="/account"
           onClick={onClose}
-          className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase transition-colors duration-200 hover:text-[#9D7D39]"
+          className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase transition-colors duration-200 hover:text-[var(--brand-primary)]"
           style={{ fontFamily: fontFamilyUI, color: 'rgba(250,250,248,0.7)' }}
         >
           <User size={15} />
@@ -246,7 +247,7 @@ function MobileMenuDrawer({
         <Link
           href="/wishlist"
           onClick={onClose}
-          className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase transition-colors duration-200 hover:text-[#9D7D39]"
+          className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase transition-colors duration-200 hover:text-[var(--brand-primary)]"
           style={{ fontFamily: fontFamilyUI, color: 'rgba(250,250,248,0.7)' }}
         >
           <Heart size={15} />
@@ -262,7 +263,7 @@ function MobileMenuDrawer({
         {/* Phone */}
         <a
           href="tel:+96522464414"
-          className="transition-colors duration-200 hover:text-[#9D7D39]"
+          className="transition-colors duration-200 hover:text-[var(--brand-primary)]"
           style={{ color: 'rgba(250,250,248,0.6)' }}
           aria-label="Call us"
         >
@@ -274,7 +275,7 @@ function MobileMenuDrawer({
           href="https://www.instagram.com/brass.official/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors duration-200 hover:text-[#9D7D39]"
+          className="transition-colors duration-200 hover:text-[var(--brand-primary)]"
           style={{ color: 'rgba(250,250,248,0.6)' }}
           aria-label="Brass on Instagram"
         >
@@ -284,7 +285,7 @@ function MobileMenuDrawer({
         {/* Email */}
         <a
           href="mailto:cove@coveinterior.com"
-          className="transition-colors duration-200 hover:text-[#9D7D39]"
+          className="transition-colors duration-200 hover:text-[var(--brand-primary)]"
           style={{ color: 'rgba(250,250,248,0.6)' }}
           aria-label="Email us"
         >
@@ -296,7 +297,7 @@ function MobileMenuDrawer({
           href="https://maps.app.goo.gl/dfMyPhjT1eSz4tfG7"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-colors duration-200 hover:text-[#9D7D39]"
+          className="transition-colors duration-200 hover:text-[var(--brand-primary)]"
           style={{ color: 'rgba(250,250,248,0.6)' }}
           aria-label="Find us on Google Maps"
         >
@@ -315,7 +316,7 @@ function MobileMenuDrawer({
           className="text-xs font-semibold tracking-widest uppercase transition-colors duration-200"
           style={{
             fontFamily: fontFamilyUI,
-            color: locale === 'en' ? '#FAFAF8' : 'rgba(250,250,248,0.4)',
+            color: locale === 'en' ? 'var(--brand-background)' : 'rgba(250,250,248,0.4)',
           }}
         >
           English
@@ -326,7 +327,7 @@ function MobileMenuDrawer({
           className="text-xs font-semibold tracking-widest transition-colors duration-200"
           style={{
             fontFamily: "'Noto Kufi Arabic', sans-serif",
-            color: locale === 'ar' ? '#FAFAF8' : 'rgba(250,250,248,0.4)',
+            color: locale === 'ar' ? 'var(--brand-background)' : 'rgba(250,250,248,0.4)',
           }}
         >
           عربي
@@ -390,7 +391,7 @@ function SearchBar({ onClose, locale }: { onClose: () => void; locale: string })
           className="flex-1 bg-transparent outline-none mx-4 text-base"
           style={{
             fontFamily: fontFamilyUI,
-            color: '#FAFAF8',
+            color: 'var(--brand-background)',
             fontSize: '15px',
             letterSpacing: '0.03em',
           }}
@@ -398,7 +399,7 @@ function SearchBar({ onClose, locale }: { onClose: () => void; locale: string })
         />
         <button
           onClick={onClose}
-          className="inline-flex items-center justify-center transition-colors duration-200 hover:text-[#9D7D39]"
+          className="inline-flex items-center justify-center transition-colors duration-200 hover:text-[var(--brand-primary)]"
           style={{ color: 'rgba(250,250,248,0.6)', flexShrink: 0 }}
           aria-label="Close search"
         >
@@ -429,8 +430,8 @@ function SearchBar({ onClose, locale }: { onClose: () => void; locale: string })
                     <li key={product.id}>
                       <button
                         onClick={() => handleSelect(product.slug)}
-                        className="w-full flex items-center gap-4 py-4 text-left transition-colors duration-150 hover:text-[#9D7D39]"
-                        style={{ color: '#FAFAF8' }}
+                        className="w-full flex items-center gap-4 py-4 text-left transition-colors duration-150 hover:text-[var(--brand-primary)]"
+                        style={{ color: 'var(--brand-background)' }}
                       >
                         {img && (
                           <img
@@ -442,7 +443,7 @@ function SearchBar({ onClose, locale }: { onClose: () => void; locale: string })
                         )}
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-light truncate" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '16px' }}>{product.name}</p>
-                          {price && <p className="text-xs mt-0.5" style={{ fontFamily: fontFamilyUI, color: '#9D7D39', letterSpacing: '0.05em' }}>{price}</p>}
+                          {price && <p className="text-xs mt-0.5" style={{ fontFamily: fontFamilyUI, color: 'var(--brand-primary)', letterSpacing: '0.05em' }}>{price}</p>}
                         </div>
                         <ChevronRight size={14} style={{ color: 'rgba(255,255,255,0.3)', flexShrink: 0 }} />
                       </button>
@@ -469,6 +470,7 @@ export default function Header() {
   const [location] = useLocation();
   const { itemCount, toggleCart } = useCart();
   const { locale, setLocale } = useLanguage();
+  const { config: tenantConfig } = useTenantConfig();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -498,28 +500,29 @@ export default function Header() {
   const isActiveLink = (link: PublicNavLink): boolean => location === link.href || location.startsWith(link.href + '/') || (link.children || []).some(isActiveLink);
   const getMenuTree = (key?: string) => buildNavTree((((publicMenus as any)?.[key || 'header']?.items || []) as PublicNavLink[]).length ? ((publicMenus as any)?.[key || 'header']?.items || []) as PublicNavLink[] : fallbackNavLinks);
 
-  const renderMenu = (element: HeaderElement, mobile = false, activeTextColor = '#9D7D39') => {
+  const renderMenu = (element: HeaderElement, mobile = false, activeTextColor = 'var(--brand-primary)') => {
     const navTree = getMenuTree(element.menuKey || (element.type === 'mobileMenu' ? 'mobile' : 'header'));
     if (mobile) {
       // Mobile menu is now handled by MobileMenuDrawer — this path is kept for compatibility
       return null;
     }
-    return <nav className="hidden lg:flex items-center gap-8">{navTree.map((link) => { const active = isActiveLink(link); const hasChildren = Boolean(link.children?.length); const activeColor = activeTextColor; return <div key={`${link.href}-${link.label}`} className="relative group py-5"><Link href={link.href} {...linkProps(link)} className="gold-underline inline-flex items-center gap-1 text-xs font-semibold tracking-widest uppercase transition-colors duration-200 whitespace-nowrap" style={{ fontFamily: locale === 'ar' ? "'Noto Kufi Arabic', sans-serif" : 'Montserrat, sans-serif', fontSize: locale === 'ar' ? '14px' : undefined, color: active ? activeColor : 'currentColor' }}>{linkLabel(link, locale)}{hasChildren && <ChevronDown size={12} />}</Link>{hasChildren && <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-0 min-w-56 py-3 shadow-xl transition-all duration-150" style={{ backgroundColor: '#1A1A18', color: '#FAFAF8' }}>{link.children!.map((child) => <Link key={`${child.href}-${child.label}`} href={child.href} {...linkProps(child)} className="block px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors duration-150" style={{ fontFamily: locale === 'ar' ? "'Noto Kufi Arabic', sans-serif" : 'Montserrat, sans-serif' }} onMouseEnter={(e) => (e.currentTarget.style.color = activeColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')}>{linkLabel(child, locale)}</Link>)}</div>}</div>; })}</nav>;
+    return <nav className="hidden lg:flex items-center gap-8">{navTree.map((link) => { const active = isActiveLink(link); const hasChildren = Boolean(link.children?.length); const activeColor = activeTextColor; return <div key={`${link.href}-${link.label}`} className="relative group py-5"><Link href={link.href} {...linkProps(link)} className="gold-underline inline-flex items-center gap-1 text-xs font-semibold tracking-widest uppercase transition-colors duration-200 whitespace-nowrap" style={{ fontFamily: locale === 'ar' ? "'Noto Kufi Arabic', sans-serif" : 'Montserrat, sans-serif', fontSize: locale === 'ar' ? '14px' : undefined, color: active ? activeColor : 'currentColor' }}>{linkLabel(link, locale)}{hasChildren && <ChevronDown size={12} />}</Link>{hasChildren && <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-0 min-w-56 py-3 shadow-xl transition-all duration-150" style={{ backgroundColor: '#1A1A18', color: 'var(--brand-background)' }}>{link.children!.map((child) => <Link key={`${child.href}-${child.label}`} href={child.href} {...linkProps(child)} className="block px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-colors duration-150" style={{ fontFamily: locale === 'ar' ? "'Noto Kufi Arabic', sans-serif" : 'Montserrat, sans-serif' }} onMouseEnter={(e) => (e.currentTarget.style.color = activeColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')}>{linkLabel(child, locale)}</Link>)}</div>}</div>; })}</nav>;
   };
 
-  const renderElement = (element: HeaderElement, device: 'desktop' | 'mobile', activeTextColor = '#9D7D39') => {
+  const renderElement = (element: HeaderElement, device: 'desktop' | 'mobile', activeTextColor = 'var(--brand-primary)') => {
     const iconButtonClass = `inline-flex items-center justify-center transition-colors duration-200`;
     switch (element.type) {
       case 'logo': {
-        const logoSrc = element.logoSrc || element.settings?.logoSrc || '/brand/cove-logo.png';
+        const logoSrc = element.logoSrc || element.settings?.logoSrc || tenantConfig?.logoUrl || '/brand/cove-logo.png';
         const logoWidth = Math.min(500, Math.max(10, Number(element.settings?.logoWidth || 104)));
-        return <a href="/" className="inline-flex items-center" aria-label="Cove Interior home"><img src={logoSrc} alt={element.label || 'Cove Interior'} className="h-12 object-contain" style={{ width: `${logoWidth}px` }} /></a>;
+        const businessName = tenantConfig?.businessName || 'Store';
+        return <a href="/" className="inline-flex items-center" aria-label={`${businessName} home`}><img src={logoSrc} alt={element.label || tenantConfig?.logoAltText || businessName} className="h-12 object-contain" style={{ width: `${logoWidth}px` }} /></a>;
       }
       case 'mainMenu': case 'secondaryMenu': case 'categoriesMenu': return renderMenu(element, false, activeTextColor);
       case 'mobileMenu': return renderMenu(element, true, activeTextColor);
       case 'mobileMenuIcon': return <button onClick={() => setMobileOpen(!mobileOpen)} className={`${iconButtonClass} lg:hidden`} onMouseEnter={(e) => (e.currentTarget.style.color = activeTextColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')} aria-label="Menu">{mobileOpen ? <X size={21} /> : <Menu size={21} />}</button>;
       case 'search': return <button onClick={() => setSearchOpen(true)} className={iconButtonClass} onMouseEnter={(e) => (e.currentTarget.style.color = activeTextColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')} aria-label="Search"><Search size={18} /></button>;
-      case 'cart': return <button onClick={toggleCart} className={`relative ${iconButtonClass}`} onMouseEnter={(e) => (e.currentTarget.style.color = activeTextColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')} aria-label="Cart"><ShoppingBag size={18} />{itemCount > 0 && <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-bold" style={{ backgroundColor: activeTextColor, color: '#FAFAF8' }}>{itemCount > 9 ? '9+' : itemCount}</span>}</button>;
+      case 'cart': return <button onClick={toggleCart} className={`relative ${iconButtonClass}`} onMouseEnter={(e) => (e.currentTarget.style.color = activeTextColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')} aria-label="Cart"><ShoppingBag size={18} />{itemCount > 0 && <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-bold" style={{ backgroundColor: activeTextColor, color: 'var(--brand-background)' }}>{itemCount > 9 ? '9+' : itemCount}</span>}</button>;
       case 'wishlist': return <Link href="/wishlist" className={iconButtonClass} onMouseEnter={(e) => (e.currentTarget.style.color = activeTextColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')} aria-label="Wishlist"><Heart size={18} /></Link>;
       case 'account': return <Link href="/account" className={iconButtonClass} onMouseEnter={(e) => (e.currentTarget.style.color = activeTextColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')} aria-label="Account"><User size={18} /></Link>;
       case 'languageSwitcher': return <button onClick={handleLangToggle} className="text-xs font-semibold tracking-wider uppercase transition-colors duration-200" style={{ fontFamily: 'Montserrat, sans-serif' }} onMouseEnter={(e) => (e.currentTarget.style.color = activeTextColor)} onMouseLeave={(e) => (e.currentTarget.style.color = '')} aria-label={locale === 'en' ? 'Switch to Arabic' : 'Switch to English'}>{locale === 'en' ? 'عربي' : 'EN'}</button>;
@@ -536,14 +539,14 @@ export default function Header() {
     const justify = column === 'left' ? 'justify-start' : column === 'center' ? 'justify-center' : 'justify-end';
     // Add right padding on mobile so cart badge (-right-2) is not clipped by the container edge
     const extraClass = (column === 'right' && device === 'mobile') ? 'pr-3' : '';
-    const activeTextColor = row.activeTextColor || '#9D7D39';
+    const activeTextColor = row.activeTextColor || 'var(--brand-primary)';
     return <div className={`flex min-w-0 flex-1 items-center gap-4 ${justify} ${extraClass}`}>{row.columns[column].map((element) => <div key={element.id} className="inline-flex items-center">{renderElement(element, device, activeTextColor)}</div>)}</div>;
   };
 
   const renderRow = (row: HeaderRow, key: string, device: 'desktop' | 'mobile') => {
     if (!row.enabled) return null;
     const borderBottomStyle = row.borderBottom
-      ? `${row.borderBottomHeight ?? 1}px solid ${row.borderBottomColor ?? '#9D7D39'}`
+      ? `${row.borderBottomHeight ?? 1}px solid ${row.borderBottomColor ?? 'var(--brand-primary)'}`
       : 'none';
     return <div key={key} style={{ minHeight: row.height, backgroundColor: row.backgroundColor, backgroundImage: row.backgroundImage ? `url(${row.backgroundImage})` : undefined, backgroundSize: row.backgroundImage ? 'cover' : undefined, backgroundPosition: row.backgroundImage ? 'center' : undefined, backgroundRepeat: row.backgroundImage ? 'no-repeat' : undefined, color: row.textColor, borderBottom: borderBottomStyle }}><div className="container flex items-center" style={{ minHeight: row.height }}>{renderColumn(row, 'left', device)}{renderColumn(row, 'center', device)}{renderColumn(row, 'right', device)}</div></div>;
   };
@@ -553,7 +556,7 @@ export default function Header() {
 
   return (
     <header
-      style={{ backgroundColor: '#111110' }}
+      style={{ backgroundColor: 'var(--brand-secondary)' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-[0_2px_20px_rgba(0,0,0,0.4)]' : ''}`}
     >
       <div className="hidden lg:block">{rowKeys.map((key) => renderRow(headerSettings.desktop[key], `desktop-${key}`, 'desktop'))}</div>
