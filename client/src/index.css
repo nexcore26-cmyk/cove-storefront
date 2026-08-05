@@ -70,14 +70,28 @@
 }
 
 :root {
-  /* ── Cove Brand Colors ── */
-  --obsidian: #111110;
-  --gold: #9D7D39;
-  --gold-light: #C4A96A;
-  --warm-white: #FAFAF8;
+  /* ── Brand tokens ──────────────────────────────────────────────────────
+   * Set here to Cove's current values as the default/fallback (so nothing
+   * is unstyled before the tenant config loads or if it fails to load).
+   * Overridden at runtime per-tenant by TenantProvider (client/src/contexts/
+   * TenantContext.tsx), which calls root.style.setProperty(...) - an inline
+   * style, which wins over this :root rule automatically. Everything below
+   * that represents "the tenant's brand" derives from these five instead of
+   * hardcoding hex directly, so a new tenant needs zero CSS changes. */
+  --brand-primary: #9D7D39;
+  --brand-secondary: #111110;
+  --brand-accent: #C4A96A;
+  --brand-background: #FAFAF8;
+  --brand-foreground: #242424;
+
+  /* ── Cove Brand Colors (aliased to --brand-*) ── */
+  --obsidian: var(--brand-secondary);
+  --gold: var(--brand-primary);
+  --gold-light: var(--brand-accent);
+  --warm-white: var(--brand-background);
   --warm-grey: #8A8A82;
   --sand: #D4C9B8;
-  --charcoal: #242424;
+  --charcoal: var(--brand-foreground);
 
   /* ── Typography ── */
   --font-display-family: 'Cormorant Garamond', Georgia, serif;
@@ -87,25 +101,25 @@
   --radius: 0.25rem;
 
   /* ── Semantic Colors (light mode = warm white body) ── */
-  --background: #FAFAF8;
-  --foreground: #242424;
+  --background: var(--brand-background);
+  --foreground: var(--brand-foreground);
   --card: #ffffff;
-  --card-foreground: #242424;
+  --card-foreground: var(--brand-foreground);
   --popover: #ffffff;
-  --popover-foreground: #242424;
-  --primary: #9D7D39;
-  --primary-foreground: #FAFAF8;
+  --popover-foreground: var(--brand-foreground);
+  --primary: var(--brand-primary);
+  --primary-foreground: var(--brand-background);
   --secondary: #F0EDE8;
-  --secondary-foreground: #242424;
+  --secondary-foreground: var(--brand-foreground);
   --muted: #F0EDE8;
   --muted-foreground: #8A8A82;
-  --accent: #9D7D39;
-  --accent-foreground: #FAFAF8;
+  --accent: var(--brand-primary);
+  --accent-foreground: var(--brand-background);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #FAFAF8;
+  --destructive-foreground: var(--brand-background);
   --border: #E8E4DC;
   --input: #E8E4DC;
-  --ring: #9D7D39;
+  --ring: var(--brand-primary);
 
   /* ── Charts ── */
   --chart-1: #9D7D39;
@@ -115,14 +129,14 @@
   --chart-5: #242424;
 
   /* ── Sidebar (obsidian) ── */
-  --sidebar: #111110;
-  --sidebar-foreground: #FAFAF8;
-  --sidebar-primary: #9D7D39;
-  --sidebar-primary-foreground: #FAFAF8;
+  --sidebar: var(--brand-secondary);
+  --sidebar-foreground: var(--brand-background);
+  --sidebar-primary: var(--brand-primary);
+  --sidebar-primary-foreground: var(--brand-background);
   --sidebar-accent: #1E1E1C;
-  --sidebar-accent-foreground: #FAFAF8;
+  --sidebar-accent-foreground: var(--brand-background);
   --sidebar-border: rgba(255,255,255,0.08);
-  --sidebar-ring: #9D7D39;
+  --sidebar-ring: var(--brand-primary);
 }
 
 /* ─── Base Styles ──────────────────────────────────────────────────────── */
