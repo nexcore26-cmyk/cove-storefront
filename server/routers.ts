@@ -3566,57 +3566,63 @@ const pageBuilderRouter = router({
 
 
 const headerSettingsRouter = router({
-  get: publicProcedure.query(async () => {
+  get: publicProcedure.query(async ({ ctx }) => {
     const { getDb } = await import('./db');
-    const { storeSettings } = await import('../drizzle/schema');
+    const { tenantBranding } = await import('../drizzle/schema');
+    const { eq } = await import('drizzle-orm');
     const db = await getDb();
     if (!db) return null;
-    const [row] = await db.select({ headerSettings: storeSettings.headerSettings }).from(storeSettings).limit(1);
+    const [row] = await db.select({ headerSettings: tenantBranding.headerSettings }).from(tenantBranding).where(eq(tenantBranding.tenantId, ctx.tenantId)).limit(1);
     return row?.headerSettings ?? null;
   }),
 
   save: adminProcedure
     .input(headerSettingsSchema)
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { storeSettings } = await import('../drizzle/schema');
+      const { tenantBranding } = await import('../drizzle/schema');
       const { eq } = await import('drizzle-orm');
+      const { invalidateTenantBrandingCache } = await import('./tenantBranding');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      const [existing] = await db.select().from(storeSettings).limit(1);
+      const [existing] = await db.select().from(tenantBranding).where(eq(tenantBranding.tenantId, ctx.tenantId)).limit(1);
       if (existing) {
-        await db.update(storeSettings).set({ headerSettings: input }).where(eq(storeSettings.id, existing.id));
+        await db.update(tenantBranding).set({ headerSettings: input }).where(eq(tenantBranding.tenantId, ctx.tenantId));
       } else {
-        await db.insert(storeSettings).values({ headerSettings: input } as any);
+        await db.insert(tenantBranding).values({ tenantId: ctx.tenantId, businessName: 'Store', headerSettings: input } as any);
       }
+      invalidateTenantBrandingCache(ctx.tenantId);
       return input;
     }),
 });
 
 const footerSettingsRouter = router({
-  get: publicProcedure.query(async () => {
+  get: publicProcedure.query(async ({ ctx }) => {
     const { getDb } = await import('./db');
-    const { storeSettings } = await import('../drizzle/schema');
+    const { tenantBranding } = await import('../drizzle/schema');
+    const { eq } = await import('drizzle-orm');
     const db = await getDb();
     if (!db) return null;
-    const [row] = await db.select({ footerSettings: storeSettings.footerSettings }).from(storeSettings).limit(1);
+    const [row] = await db.select({ footerSettings: tenantBranding.footerSettings }).from(tenantBranding).where(eq(tenantBranding.tenantId, ctx.tenantId)).limit(1);
     return row?.footerSettings ?? null;
   }),
 
   save: adminProcedure
     .input(footerSettingsSchema)
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { getDb } = await import('./db');
-      const { storeSettings } = await import('../drizzle/schema');
+      const { tenantBranding } = await import('../drizzle/schema');
       const { eq } = await import('drizzle-orm');
+      const { invalidateTenantBrandingCache } = await import('./tenantBranding');
       const db = await getDb();
       if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
-      const [existing] = await db.select().from(storeSettings).limit(1);
+      const [existing] = await db.select().from(tenantBranding).where(eq(tenantBranding.tenantId, ctx.tenantId)).limit(1);
       if (existing) {
-        await db.update(storeSettings).set({ footerSettings: input }).where(eq(storeSettings.id, existing.id));
+        await db.update(tenantBranding).set({ footerSettings: input }).where(eq(tenantBranding.tenantId, ctx.tenantId));
       } else {
-        await db.insert(storeSettings).values({ footerSettings: input } as any);
+        await db.insert(tenantBranding).values({ tenantId: ctx.tenantId, businessName: 'Store', footerSettings: input } as any);
       }
+      invalidateTenantBrandingCache(ctx.tenantId);
       return input;
     }),
 });
